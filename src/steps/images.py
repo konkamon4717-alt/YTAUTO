@@ -27,13 +27,16 @@ def build_prompt(scene_prompt: str, character_sheet: str, style: str,
     return ". ".join(parts)
 
 
-def fetch(prompt: str, out_path, cfg: dict, seed: int, attempts: int = 4) -> None:
-    """ดึงภาพ 1 ใบ ถ้าเซิร์ฟเวอร์ฟรีล่มก็ลองใหม่แบบถอยเวลาเพิ่มขึ้น"""
+MIN_IMAGE_BYTES = 5_000
+
+
+def _try_model(prompt: str, out_path, cfg: dict, seed: int, model: str,
+               attempts: int) -> None:
     url = BASE + urllib.parse.quote(prompt, safe="")
     params = {
-        "width": cfg["video"]["width"],
-        "height": cfg["video"]["height"],
-        "model": cfg["images"]["model"],
+        "width": cfg["images"].get("width") or cfg["video"]["width"],
+        "height": cfg["images"].get("height") or cfg["video"]["height"],
+        "model": model,
         "seed": seed,
         "nologo": "true",
     }
@@ -44,8 +47,10 @@ def fetch(prompt: str, out_path, cfg: dict, seed: int, attempts: int = 4) -> Non
         try:
             response = requests.get(url, params=params, headers=headers, timeout=180)
             response.raise_for_status()
-            if not response.content or len(response.content) < 5_000:
-                raise RuntimeError("ได้ไฟล์ภาพเล็กผิดปกติ น่าจะยังไม่เสร็จ")
+            if not response.headers.get("content-type", "").startswith("image"):
+                raise RuntimeError(f"ไม่ได้ภาพกลับมา: {response.text[:120]}")
+            if len(response.content) < MIN_IMAGE_BYTES:
+                raise RuntimeError("ไฟล์ภาพเล็กผิดปกติ น่าจะยังสร้างไม่เสร็จ")
             with open(out_path, "wb") as fh:
                 fh.write(response.content)
             return
@@ -53,5 +58,23 @@ def fetch(prompt: str, out_path, cfg: dict, seed: int, attempts: int = 4) -> Non
             last_error = exc
             if attempt < attempts - 1:
                 time.sleep(5 * (attempt + 1))
+    raise RuntimeError(str(last_error))
 
-    raise RuntimeError(f"สร้างภาพไม่สำเร็จหลังลอง {attempts} ครั้ง: {last_error}")
+
+def fetch(prompt: str, out_path, cfg: dict, seed: int, attempts: int = 3) -> str:
+    """ดึงภาพ 1 ใบ ไล่ลองทีละรุ่นจนกว่าจะได้ คืนชื่อรุ่นที่สำเร็จ
+
+    แต่ละรุ่นลองซ้ำเองก่อน (บริการฟรีล่มชั่วคราวบ่อย) ถ้ายังไม่ได้ค่อยเปลี่ยนรุ่น
+    กันกรณีรุ่นใดรุ่นหนึ่งถูกถอดออกหรือล่มยาว ซึ่งเกิดขึ้นจริงกับโมเดลชุมชน
+    """
+    errors = []
+    for model in cfg["images"]["models"]:
+        try:
+            _try_model(prompt, out_path, cfg, seed, model, attempts)
+            return model
+        except Exception as exc:  # noqa: BLE001 - ลองรุ่นถัดไป
+            short = model.split("/")[-1]
+            print(f"      ภาพจาก {short} ไม่สำเร็จ: {str(exc)[:110]} — ลองรุ่นถัดไป")
+            errors.append(f"{short}: {exc}")
+
+    raise RuntimeError("สร้างภาพไม่สำเร็จทุกรุ่น:\n  " + "\n  ".join(e[:150] for e in errors))

@@ -11,13 +11,17 @@ video:
   hard_max_seconds: 58
 
 tts:
+  # พากย์ด้วยตัวแรกที่ใช้ได้ ตัวไหนล่มก็ตกไปตัวถัดไป
+  # edge-tts เป็นตัวเดียวที่คืนจังหวะรายคำมาให้ ตัวอื่นจะได้ซับหยาบระดับวรรคแทน
+  backends: [edge-tts, pollinations, gtts]
   voice: th-TH-PremwadeeNeural
   rate: "+8%"
   pitch: "+0Hz"
+  pollinations_model: community/NamanSoni78/FISH-AUDIO-S2.1-PRO
 
 images:
-  provider: pollinations
-  model: flux
+  # ไล่ลองทีละรุ่นจนกว่าจะได้ภาพ กันกรณีรุ่นใดรุ่นหนึ่งล่มหรือถูกถอด
+  models: [community/NamanSoni78/Z-Image-Turbo, flux, turbo]
   scenes: 10
   style: "soft storybook illustration, warm cinematic lighting, gentle painterly texture, muted earthy palette, no text, no watermark"
 

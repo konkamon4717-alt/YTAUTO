@@ -76,14 +76,22 @@ def make_video(cfg: dict, work: Path, story: dict | None = None) -> tuple[Path, 
     offset = 0.0
     scene_durations: list[float] = []
 
+    voice_backend = ""
     for index, scene in enumerate(story["scenes"]):
         part = work / f"voice_{index:02d}.mp3"
-        words = voice.speak(scene["narration"], part, cfg)
+        spoken = voice.speak(scene["narration"], part, cfg)
+        voice_backend = spoken["backend"]
         seconds = render.duration_of(part)
 
-        lines = subtitles.group_words(
-            words, cfg["subtitles"]["max_chars_per_line"], source=scene["narration"]
-        )
+        if spoken["granularity"] == "word":
+            lines = subtitles.group_words(
+                spoken["segments"], cfg["subtitles"]["max_chars_per_line"],
+                source=scene["narration"],
+            )
+        else:
+            # ตัวสำรองพากย์ทีละวรรคอยู่แล้ว แต่ละวรรคจึงเป็นบรรทัดซับได้เลย
+            lines = spoken["segments"]
+
         for line in lines:
             scene_lines.append({**line,
                                 "start": line["start"] + offset,
