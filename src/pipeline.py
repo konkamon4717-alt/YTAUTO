@@ -9,24 +9,68 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from . import config, state, status
-from .steps import images, render, script, subtitles, voice
+from .steps import animate, images, render, script, subtitles, voice
 
 
 def _slug() -> str:
     return datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
 
 
+def _build_clips(scenes: list[dict], stills: list[Path], durations: list[float],
+                 cfg: dict, work: Path) -> list[Path]:
+    """ทำคลิปของแต่ละฉาก พยายามให้ขยับทุกฉาก ฉากไหนไม่ได้ก็ใช้กล้องเคลื่อนบนภาพนิ่งแทน
+
+    ไล่ทำจากฉากสำคัญที่สุดก่อน เพื่อว่าถ้าโควต้าหมดกลางทาง ฉากที่เสียไปจะเป็นฉากที่
+    คนดูสังเกตน้อยที่สุด ไม่ใช่ฉากฮุกหรือฉากหักมุม
+    """
+    clips: list[Path | None] = [None] * len(scenes)
+
+    if not cfg["animation"]["enabled"]:
+        order: list[int] = []
+    else:
+        order = sorted(range(len(scenes)),
+                       key=lambda i: -int(scenes[i].get("importance", 3)))[
+                           : cfg["animation"]["max_shots_per_run"]]
+
+    animator = animate.Animator(cfg)
+    for index in order:
+        shot = animate.Shot(
+            image=stills[index],
+            prompt=scenes[index].get("motion") or scenes[index]["image_prompt"],
+            seconds=durations[index],
+        )
+        raw = work / f"raw_{index:02d}.mp4"
+        backend = animator.animate(shot, raw)
+        if not backend:
+            continue
+        clip = work / f"clip_{index:02d}.mp4"
+        render.conform(raw, durations[index], clip, cfg, work)
+        clips[index] = clip
+        print(f"      ฉาก {index + 1} ขยับแล้ว ({backend})")
+
+    for index, clip in enumerate(clips):
+        if clip is None:
+            fallback = work / f"clip_{index:02d}.mp4"
+            render.ken_burns(stills[index], durations[index], fallback, cfg,
+                             zoom_in=index % 2 == 0)
+            clips[index] = fallback
+
+    animated = sum(animator.used.values())
+    print(f"      สรุป: ขยับ {animated}/{len(scenes)} ฉาก ({animator.summary()})")
+    return [c for c in clips if c]
+
+
 def make_video(cfg: dict, work: Path, story: dict | None = None) -> tuple[Path, dict]:
     work.mkdir(parents=True, exist_ok=True)
 
     if story is None:
-        print("[1/5] ให้ Gemini คิดเรื่อง...")
+        print("[1/6] ให้ Gemini คิดเรื่อง...")
         story = script.generate(cfg, state.recent_premises())
     else:
-        print("[1/5] ใช้เรื่องจากไฟล์ที่กำหนดมา (ข้าม Gemini)")
+        print("[1/6] ใช้เรื่องจากไฟล์ที่กำหนดมา (ข้าม Gemini)")
     print(f"      เรื่อง: {story['title']}")
 
-    print("[2/5] พากย์เสียงทีละฉาก...")
+    print("[2/6] พากย์เสียงทีละฉาก...")
     voice_parts: list[Path] = []
     scene_lines: list[dict] = []
     offset = 0.0
@@ -56,24 +100,25 @@ def make_video(cfg: dict, work: Path, story: dict | None = None) -> tuple[Path, 
             f"เรื่องยาวเกิน ({total:.1f}s > {cfg['video']['hard_max_seconds']}s) — ทิ้งรอบนี้แล้วให้ไปคิดใหม่"
         )
 
-    print("[3/5] สร้างภาพประกอบ...")
-    clips: list[Path] = []
+    scenes = story["scenes"]
+
+    print("[3/6] สร้างภาพประกอบ...")
+    stills: list[Path] = []
     seed = int(time.time())
-    for index, scene in enumerate(story["scenes"]):
+    for index, scene in enumerate(scenes):
         image_path = work / f"scene_{index:02d}.jpg"
         prompt = images.build_prompt(
             scene["image_prompt"], story["character_sheet"], cfg["images"]["style"],
             has_main_character=scene.get("has_main_character", True),
         )
         images.fetch(prompt, image_path, cfg, seed=seed + index)
+        stills.append(image_path)
+        print(f"      ภาพ {index + 1}/{len(scenes)}")
 
-        clip = work / f"clip_{index:02d}.mp4"
-        render.ken_burns(image_path, scene_durations[index], clip, cfg,
-                         zoom_in=index % 2 == 0)
-        clips.append(clip)
-        print(f"      ฉาก {index + 1}/{len(story['scenes'])} เสร็จ")
+    print("[4/6] ทำให้ภาพขยับ...")
+    clips = _build_clips(scenes, stills, scene_durations, cfg, work)
 
-    print("[4/5] ตัดต่อ...")
+    print("[5/6] ตัดต่อ...")
     subs_path = work / "subs.ass"
     subtitles.write_ass(scene_lines, subs_path, cfg)
 
@@ -98,12 +143,12 @@ def run_once(cfg: dict, upload_enabled: bool, story: dict | None = None) -> dict
 
         video_id = None
         if upload_enabled:
-            print("[5/5] อัปโหลดขึ้น YouTube...")
+            print("[6/6] อัปโหลดขึ้น YouTube...")
             from .steps import upload as uploader
             video_id = uploader.upload(final, story, cfg)
             print(f"      https://youtube.com/watch?v={video_id}")
         else:
-            print("[5/5] ข้ามการอัปโหลด (โหมดทดลอง)")
+            print("[6/6] ข้ามการอัปโหลด (โหมดทดลอง)")
 
         entry = {
             "ok": True,

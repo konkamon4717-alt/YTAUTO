@@ -18,7 +18,7 @@ tts:
 images:
   provider: pollinations
   model: flux
-  scenes: 6
+  scenes: 10
   style: "soft storybook illustration, warm cinematic lighting, gentle painterly texture, muted earthy palette, no text, no watermark"
 
 llm:
@@ -39,6 +39,14 @@ upload:
   made_for_kids: false
   self_declared_ai: true
   localizations: [en, es, pt, hi]
+
+animation:
+  # ทำให้ทุกฉากขยับ เรียงชั้นจากดีสุดลงมา ชั้นไหนตันก็ตกไปชั้นถัดไปเอง
+  # modal กับ kaggle จะเปิดใช้ได้เมื่อสมัครบริการและตั้งค่าเสร็จ
+  enabled: true
+  backends: [huggingface]
+  # เพดานกันบั๊กวนลูปเผาโควต้า ไม่เกี่ยวกับโควต้าจริงของผู้ให้บริการ
+  max_shots_per_run: 40
 
 run:
   per_day: 3

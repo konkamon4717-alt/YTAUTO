@@ -49,6 +49,43 @@ def ken_burns(image: Path, seconds: float, out_path: Path, cfg: dict, zoom_in: b
     ])
 
 
+def conform(clip: Path, seconds: float, out_path: Path, cfg: dict, work: Path) -> None:
+    """ปรับคลิปที่ได้จากโมเดลให้พอดีกับผืนผ้าใบและความยาวของฉาก
+
+    โมเดลฟรีคืนมาที่ 480x832 / 16fps / ~3.5 วินาที ซึ่งไม่ตรงกับที่เราต้องการสักอย่าง
+    ถ้าสั้นกว่าที่ต้องการจะต่อขาไปขากลับ (boomerang) แล้ววนจนยาวพอ
+    วิธีนี้ไม่มีรอยกระตุกตอนวนซ้ำ เพราะเฟรมสุดท้ายของขาไปคือเฟรมแรกของขากลับ
+    """
+    width, height, fps = cfg["video"]["width"], cfg["video"]["height"], cfg["video"]["fps"]
+    source = clip
+
+    if duration_of(clip) < seconds - 0.05:
+        boomerang = work / f"boom_{clip.stem}.mp4"
+        _run([
+            "ffmpeg", "-y", "-i", str(clip),
+            "-filter_complex", "[0:v]split[a][b];[b]reverse[r];[a][r]concat=n=2:v=1[out]",
+            "-map", "[out]", "-an",
+            "-c:v", "libx264", "-preset", "veryfast", "-crf", "18",
+            "-pix_fmt", "yuv420p", str(boomerang),
+        ])
+        source = boomerang
+
+    loops = max(int(seconds // max(duration_of(source), 0.1)) + 1, 1)
+    vf = (
+        f"scale={width}:{height}:force_original_aspect_ratio=increase:flags=lanczos,"
+        f"crop={width}:{height},"
+        # โมเดลคืนภาพเล็กกว่าผืนผ้าใบมาก ขยายแล้วจะนุ่ม ชาร์ปเบา ๆ กลับมาให้คมพอดู
+        f"unsharp=5:5:0.45:5:5:0.0,"
+        f"fps={fps},setsar=1"
+    )
+    _run([
+        "ffmpeg", "-y", "-stream_loop", str(loops), "-i", str(source),
+        "-t", f"{seconds:.3f}", "-vf", vf, "-an",
+        "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+        "-pix_fmt", "yuv420p", "-r", str(fps), str(out_path),
+    ])
+
+
 def _concat_file(paths: list[Path], list_path: Path) -> None:
     lines = [f"file '{p.as_posix()}'" for p in paths]
     list_path.write_text("\n".join(lines) + "\n", encoding="utf-8")

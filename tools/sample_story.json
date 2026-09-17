@@ -2,38 +2,56 @@
   "premise": "เด็กชายขายไข่ที่ชอบโกงลูกค้าทีละฟอง จนวันหนึ่งได้รู้ว่าคนที่เขาโกงมาตลอดคือคนที่ช่วยชีวิตแม่เขาไว้",
   "title": "ไข่ฟองที่หายไป",
   "description": "นิทานสั้นเรื่องความซื่อสัตย์ที่ลงเอยไม่เหมือนที่คิด\nฟังจบใน 1 นาที",
-  "hashtags": ["นิทาน", "นิทานสอนใจ", "เรื่องสั้น", "นิทานก่อนนอน", "ข้อคิด"],
+  "hashtags": [
+    "นิทาน",
+    "นิทานสอนใจ",
+    "เรื่องสั้น",
+    "นิทานก่อนนอน",
+    "ข้อคิด"
+  ],
   "character_sheet": "a thin 12-year-old Thai boy with messy black hair, wearing a faded light blue shirt",
   "scenes": [
     {
       "narration": "ทุกเช้าเด็กชายจะนับไข่ใส่ตะกร้าลูกค้า สิบฟอง แต่หยิบออกหนึ่งฟองตอนไม่มีใครมอง",
       "image_prompt": "a boy counting eggs into a woven basket at a dim morning market stall, one hand secretly slipping an egg back",
-      "has_main_character": true
+      "has_main_character": true,
+      "motion": "his hands move slowly over the eggs, eyes glance sideways, camera pushes in gently",
+      "importance": 5
     },
     {
       "narration": "เขาทำแบบนี้มาสามปี ไม่มีใครจับได้สักครั้ง",
       "image_prompt": "the same boy walking home along a narrow village lane at dusk, basket under his arm, long shadow behind him",
-      "has_main_character": true
+      "has_main_character": true,
+      "motion": "he walks slowly away, his long shadow stretches, dust drifts in the light",
+      "importance": 3
     },
     {
       "narration": "ลูกค้าประจำของเขาคือหญิงชราตาฝ้าฟาง ที่ซื้อไข่สิบฟองทุกวันโดยไม่เคยนับ",
       "image_prompt": "an elderly Thai woman with cloudy eyes receiving a basket of eggs, smiling gently, warm afternoon light",
-      "has_main_character": false
+      "has_main_character": false,
+      "motion": "she smiles faintly, her head tilts, warm light shifts across her face",
+      "importance": 4
     },
     {
       "narration": "จนเช้าวันหนึ่ง แม่ของเขาล้มป่วย และเขาไม่มีเงินพอจะพาไปหาหมอ",
       "image_prompt": "the boy kneeling beside his sick mother lying on a thin mattress in a small wooden house, worried expression",
-      "has_main_character": true
+      "has_main_character": true,
+      "motion": "his shoulders tremble slightly, he leans closer, curtain sways behind him",
+      "importance": 4
     },
     {
       "narration": "หญิงชราเดินมาที่บ้าน วางถุงเงินไว้ตรงหัวเตียง แล้วบอกว่าเก็บไว้ทีละฟองมาสามปีแล้ว",
       "image_prompt": "the elderly woman placing a small cloth money pouch on a wooden bedside table, the boy staring in shock",
-      "has_main_character": false
+      "has_main_character": false,
+      "motion": "her hand sets the pouch down slowly, he looks up in disbelief",
+      "importance": 5
     },
     {
       "narration": "เธอรู้มาตลอด แต่เธอเลือกจะรอให้เขาต้องการมันจริง ๆ แล้วคุณล่ะ เคยให้อภัยใครแบบนี้ไหม",
       "image_prompt": "close up of the old woman's weathered hands folded calmly, soft golden light, blurred figure of the boy behind",
-      "has_main_character": false
+      "has_main_character": false,
+      "motion": "her folded hands rest still, dust floats in the golden light, camera drifts back",
+      "importance": 5
     }
   ],
   "localizations": [
