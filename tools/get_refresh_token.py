@@ -18,8 +18,14 @@ from pathlib import Path
 
 from google_auth_oauthlib.flow import InstalledAppFlow
 
-SCOPES = ["https://www.googleapis.com/auth/youtube.upload",
-          "https://www.googleapis.com/auth/youtube"]
+SCOPES = [
+    "https://www.googleapis.com/auth/youtube.upload",
+    "https://www.googleapis.com/auth/youtube",
+    # สองอันนี้ไว้ดูยอดวิวรายวัน เวลาที่ดู และรายได้ในห้องควบคุม
+    # ไม่มีก็อัปโหลดได้ปกติ แค่ดูสถิติเชิงลึกไม่ได้
+    "https://www.googleapis.com/auth/yt-analytics.readonly",
+    "https://www.googleapis.com/auth/yt-analytics-monetary.readonly",
+]
 
 ROOT = Path(__file__).resolve().parent.parent
 ENV = ROOT / ".env"

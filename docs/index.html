@@ -117,6 +117,30 @@
           font-family:"IBM Plex Mono",monospace; word-break:break-word}
   a{color:var(--indigo)} a:hover{text-decoration:none}
 
+  /* ปุ่มสั่งงาน — มีเฉพาะตอนเปิดจากเครื่องตัวเอง หน้าบน GitHub Pages สั่งงานไม่ได้ */
+  .btns{display:flex; flex-wrap:wrap; gap:9px}
+  button{background:var(--panel); color:var(--ink); border:1px solid var(--line);
+         border-radius:10px; padding:9px 16px; font:inherit; font-size:14px; cursor:pointer}
+  button:hover:not(:disabled){border-color:var(--gold); color:var(--gold)}
+  button:disabled{opacity:.45; cursor:not-allowed}
+  button.primary{border-color:var(--gold); color:var(--gold)}
+  .job{margin-top:14px; border:1px solid var(--line); border-radius:12px;
+       background:var(--panel); overflow:hidden}
+  .job-head{display:flex; justify-content:space-between; padding:10px 15px;
+            border-bottom:1px solid var(--line-soft); font-size:13px; font-weight:500}
+  .job-time{color:var(--ink-3); font-family:"IBM Plex Mono",monospace;
+            font-variant-numeric:tabular-nums}
+  .job-log{margin:0; padding:13px 15px; max-height:260px; overflow:auto;
+           background:var(--sunk); font-family:"IBM Plex Mono",monospace;
+           font-size:12px; line-height:1.6; white-space:pre-wrap; word-break:break-word}
+
+  /* คลิปตัวอย่าง */
+  .clip{background:var(--panel); border:1px solid var(--line); border-radius:12px;
+        padding:14px; display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap}
+  .clip video{width:220px; max-width:100%; border-radius:8px; background:#000; display:block}
+  .clip-note{color:var(--ink-3); font-size:12.5px;
+             font-family:"IBM Plex Mono",monospace}
+
   .empty{color:var(--ink-3); font-size:14px; background:var(--panel);
          border:1px dashed var(--line); border-radius:12px; padding:22px; text-align:center}
   footer{margin-top:44px; padding-top:18px; border-top:1px solid var(--line);
@@ -141,8 +165,34 @@
     </div>
   </div>
 
+  <section id="control" hidden>
+    <h2>สั่งงาน</h2>
+    <div class="btns" id="btns"></div>
+    <div class="job" id="job" hidden>
+      <div class="job-head">
+        <span id="job-name"></span>
+        <span class="job-time" id="job-time"></span>
+      </div>
+      <pre class="job-log" id="job-log"></pre>
+    </div>
+  </section>
+
+  <h2>ช่อง</h2>
+  <div class="meters" id="channel"></div>
+
   <h2>โควต้าที่ใช้ไป</h2>
   <div class="meters" id="meters"></div>
+
+  <section id="clip-box" hidden>
+    <h2>คลิปล่าสุดที่สร้างไว้</h2>
+    <div class="clip">
+      <video id="clip" controls preload="metadata"></video>
+      <div class="clip-note" id="clip-note"></div>
+    </div>
+  </section>
+
+  <h2>คลิปบนช่อง</h2>
+  <div class="svc" id="videos"><div class="row"><span class="detail">ยังไม่ได้ดึงข้อมูล</span></div></div>
 
   <h2>บริการที่ระบบพึ่งพา</h2>
   <div class="svc" id="services"><div class="row"><span class="detail">กำลังโหลด…</span></div></div>
@@ -318,9 +368,131 @@ function renderRuns(runs) {
   }).join("") + `</div>`;
 }
 
+function renderChannel(ch) {
+  if (!ch) {
+    $("channel").innerHTML =
+      `<div class="meter"><div class="k">ยังไม่ได้ดึงข้อมูลช่อง</div>
+       <div class="foot" style="margin-top:6px">สั่ง <code>python -m src.stats</code> หรือกดปุ่ม "ดึงตัวเลขช่อง"</div></div>`;
+    $("videos").innerHTML =
+      `<div class="row"><span class="detail">ยังไม่ได้ดึงข้อมูล</span></div>`;
+    return;
+  }
+
+  const c = ch.channel;
+  const a = ch.analytics;
+  // รายได้มีสามสถานะที่ต่างกัน: ยังไม่มีสิทธิ์ดู / มีสิทธิ์แต่ช่องยังไม่เข้า YPP / ดูได้
+  let money = "—", moneyFoot = "ต้องผ่าน YPP ก่อนถึงจะมีรายได้";
+  if (a === null) moneyFoot = "token ยังไม่มีสิทธิ์อ่าน Analytics";
+  else if (a?.revenue?.unavailable) moneyFoot = "ช่องยังไม่ผ่าน YPP";
+  else if (a?.revenue?.estimated_revenue_usd != null) {
+    money = "$" + Number(a.revenue.estimated_revenue_usd).toFixed(2);
+    moneyFoot = "ประมาณการ 28 วันล่าสุด";
+  }
+
+  const gained = (a?.daily ?? []).reduce((n, d) => n + (d.subscribersGained ?? 0), 0);
+  const watched = (a?.daily ?? []).reduce((n, d) => n + (d.estimatedMinutesWatched ?? 0), 0);
+
+  $("channel").innerHTML = `
+    <div class="meter">
+      <div class="k">ผู้ติดตาม</div>
+      <div class="v">${c.subscribers.toLocaleString()}</div>
+      <div class="foot">${gained ? `+${gained} ใน 28 วัน` : "เป้าหมาย YPP 1,000 คน"}</div>
+      ${mini(c.subscribers, 1000)}
+    </div>
+    <div class="meter">
+      <div class="k">ยอดวิวรวม</div>
+      <div class="v">${c.views.toLocaleString()}</div>
+      <div class="foot">${watched ? `ดูรวม ${Math.round(watched).toLocaleString()} นาที` : "ทั้งช่อง"}</div>
+    </div>
+    <div class="meter">
+      <div class="k">คลิปที่เผยแพร่</div>
+      <div class="v">${c.videos.toLocaleString()}</div>
+      <div class="foot">นับเฉพาะที่เป็นสาธารณะ</div>
+    </div>
+    <div class="meter">
+      <div class="k">รายได้ประมาณการ</div>
+      <div class="v">${money}</div>
+      <div class="foot">${moneyFoot}</div>
+    </div>`;
+
+  const vids = ch.videos ?? [];
+  $("videos").innerHTML = vids.length ? vids.map(v => `
+    <div class="row">
+      <span class="pill ${v.privacy === "public" ? "p-good" : "p-warn"}">${esc(v.privacy)}</span>
+      <span class="detail" title="${esc(v.title)}">
+        <a href="https://youtube.com/watch?v=${esc(v.id)}" target="_blank" rel="noopener">${esc(v.title)}</a>
+      </span>
+      <span class="ms">${v.views.toLocaleString()} วิว · ${v.likes} ไลก์</span>
+    </div>`).join("")
+    : `<div class="row"><span class="detail">ยังไม่มีคลิปบนช่อง</span></div>`;
+}
+
+function mini(used, cap) {
+  const pct = Math.min(100, cap ? used / cap * 100 : 0);
+  return `<div class="track"><i style="width:${pct}%"></i></div>`;
+}
+
+// ── ส่วนสั่งงาน มีเฉพาะตอนเปิดจากเครื่องตัวเอง ──
+let commandsReady = false;
+
+async function pollLocal() {
+  let state = null;
+  try {
+    const res = await fetch("api/state", { cache: "no-store" });
+    if (res.ok) state = await res.json();
+  } catch { /* เปิดจาก GitHub Pages = ไม่มี API ซึ่งถูกต้องแล้ว */ }
+
+  if (!state?.local) return false;
+  $("control").hidden = false;
+
+  if (!commandsReady) {
+    $("btns").innerHTML = Object.entries(state.commands).map(([key, label]) =>
+      `<button data-cmd="${key}" class="${key === "publish" ? "primary" : ""}">${esc(label)}</button>`
+    ).join("");
+    $("btns").querySelectorAll("button").forEach(b => {
+      b.onclick = async () => {
+        b.disabled = true;
+        try {
+          const r = await fetch("api/run/" + b.dataset.cmd, { method: "POST" });
+          const d = await r.json();
+          if (!d.ok) alert(d.message || d.error);
+        } catch (e) { alert("สั่งงานไม่สำเร็จ: " + e.message); }
+        pollLocal();
+      };
+    });
+    commandsReady = true;
+  }
+
+  const job = state.job;
+  const busy = job.running;
+  $("btns").querySelectorAll("button").forEach(b => b.disabled = busy);
+
+  if (job.name) {
+    $("job").hidden = false;
+    $("job-name").textContent = busy ? `กำลังรัน: ${job.name}`
+      : `${job.name} — จบแล้ว${job.exit_code ? ` (ล้มเหลว exit ${job.exit_code})` : ""}`;
+    $("job-time").textContent = job.seconds + " วินาที";
+    const log = $("job-log");
+    const atBottom = log.scrollHeight - log.scrollTop - log.clientHeight < 40;
+    log.textContent = job.log.join("\n");
+    if (atBottom) log.scrollTop = log.scrollHeight;
+  }
+
+  if (state.clip) {
+    $("clip-box").hidden = false;
+    const v = $("clip");
+    if (v.dataset.src !== state.clip) { v.src = state.clip; v.dataset.src = state.clip; }
+    $("clip-note").textContent = state.clip_name ?? "";
+  }
+  return busy;
+}
+
 async function load() {
-  const [status, health] = await Promise.all([readJson("status.json"), readJson("health.json")]);
+  const [status, health, channel] = await Promise.all([
+    readJson("status.json"), readJson("health.json"), readJson("channel.json"),
+  ]);
   const runs = status?.runs ?? [];
+  renderChannel(channel);
 
   $("stamp").textContent = health?.checked_at
     ? "ตรวจบริการล่าสุด " + fmt(health.checked_at)
@@ -332,8 +504,15 @@ async function load() {
   renderRuns(runs);
 }
 
+// ตอนมีงานรันอยู่ให้ถี่ขึ้นเพื่อดู log สด ตอนว่างค่อยถี่น้อยลงเพื่อไม่กวนเครื่อง
+async function tick() {
+  const busy = await pollLocal();
+  setTimeout(tick, busy ? 1200 : 6000);
+}
+
 load();
-setInterval(load, 60000);
+tick();
+setInterval(load, 30000);
 </script>
 </body>
 </html>
