@@ -115,8 +115,25 @@ def _post(url: str, *, headers: dict, payload: dict, timeout: int) -> dict:
 
 
 def _gemini(prompt: str, cfg: dict) -> dict:
+    """ลองทีละรุ่นจนกว่าจะได้
+
+    รุ่นเรือธงติด 503 "high demand" บ่อยมาก เจอมาแล้วหลายครั้งรวมถึงตอนที่
+    ทั้งสองชั้นล่มพร้อมกันจนไม่ได้คลิป การถอยไปรุ่นรองที่คนใช้น้อยกว่า
+    ได้บทที่ดีพอ ๆ กัน และดีกว่าไม่ได้บทเลย
+    """
+    errors = []
+    for model in cfg["llm"]["models"]:
+        try:
+            return _gemini_once(prompt, model)
+        except Exception as exc:  # noqa: BLE001 - ลองรุ่นถัดไป
+            errors.append(f"{model}: {str(exc)[:90]}")
+            print(f"      gemini/{model} ไม่ได้ — ลองรุ่นถัดไป")
+    raise RuntimeError("ทุกรุ่นของ Gemini ใช้ไม่ได้: " + " | ".join(errors))
+
+
+def _gemini_once(prompt: str, model: str) -> dict:
     payload = _post(
-        ENDPOINT.format(model=cfg["llm"]["model"]),
+        ENDPOINT.format(model=model),
         # ส่งคีย์ทาง header ไม่ใช่ ?key= เพราะค่าใน URL จะติดไปกับข้อความ error และ log
         headers={"x-goog-api-key": secret("GEMINI_API_KEY")},
         payload={
@@ -137,11 +154,22 @@ def _gemini(prompt: str, cfg: dict) -> dict:
 
 
 def _pollinations(prompt: str, cfg: dict) -> dict:
-    """ตัวสำรอง ใช้โมเดลฟรีของ Pollinations
+    """ตัวสำรอง ไล่ลองโมเดลฟรีของ Pollinations ทีละตัว
 
-    ตัวนี้ไม่รับ responseSchema แบบ Gemini เลยต้องอธิบายโครงสร้างไปในคำสั่งแทน
-    แล้วสั่งให้ตอบเป็น json_object
+    โมเดลชุมชนบางตัวช้ามากจน timeout หรือหายไปดื้อ ๆ การมีหลายตัวให้ไล่
+    ทำให้ตัวเดียวล่มไม่ทำให้ทั้งชั้นนี้ล่ม
     """
+    errors = []
+    for model in cfg["llm"]["fallback_models"]:
+        try:
+            return _pollinations_once(prompt, model)
+        except Exception as exc:  # noqa: BLE001 - ลองตัวถัดไป
+            errors.append(f"{model.split('/')[-1]}: {str(exc)[:80]}")
+            print(f"      pollinations/{model.split('/')[-1]} ไม่ได้ — ลองตัวถัดไป")
+    raise RuntimeError("ทุกโมเดลของ Pollinations ใช้ไม่ได้: " + " | ".join(errors))
+
+
+def _pollinations_once(prompt: str, model: str) -> dict:
     full = (
         f"{prompt}\n\n"
         "ตอบเป็น JSON ล้วน ๆ เท่านั้น ห้ามมีข้อความอื่นนอก JSON "
@@ -153,7 +181,7 @@ def _pollinations(prompt: str, cfg: dict) -> dict:
         headers={"Authorization": f"Bearer {secret('POLLINATIONS_TOKEN')}",
                  "Content-Type": "application/json"},
         payload={
-            "model": cfg["llm"]["fallback_model"],
+            "model": model,
             "messages": [{"role": "user", "content": full}],
             "response_format": {"type": "json_object"},
             # โมเดลชุมชนหลายตัวไม่ยอมรับ temperature เกิน 1.0 — 1.0 คือค่าสูงสุดที่ปลอดภัย

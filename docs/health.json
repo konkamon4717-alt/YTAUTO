@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-17T08:21:24+00:00",
+  "checked_at": "2026-09-17T08:46:32+00:00",
   "healthy": true,
   "checks": [
     {
@@ -7,42 +7,42 @@
       "ok": true,
       "essential": true,
       "detail": "nithan1min | ผู้ติดตาม 0 | คลิป 0",
-      "ms": 1789
+      "ms": 1895
     },
     {
       "name": "pollinations",
       "ok": true,
       "essential": true,
       "detail": "375 โมเดล | รุ่นภาพที่ตั้งไว้ยังอยู่ครบ",
-      "ms": 381
+      "ms": 695
     },
     {
       "name": "edge-tts",
       "ok": true,
       "essential": false,
       "detail": "th-TH-PremwadeeNeural พร้อมใช้",
-      "ms": 3140
+      "ms": 1882
     },
     {
       "name": "gemini",
-      "ok": true,
+      "ok": false,
       "essential": false,
-      "detail": "gemini-3.8-flash พร้อมใช้",
-      "ms": 283
+      "detail": "KeyError: 'model'",
+      "ms": 214
     },
     {
       "name": "kaggle",
       "ok": true,
       "essential": false,
       "detail": "เชื่อมต่อได้",
-      "ms": 2932
+      "ms": 2340
     },
     {
       "name": "huggingface",
       "ok": true,
       "essential": false,
       "detail": "zerogpu-aoti/wan2-2-fp8da-aoti-faster กำลังทำงาน",
-      "ms": 339
+      "ms": 328
     }
   ]
 }

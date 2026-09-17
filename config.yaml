@@ -30,8 +30,13 @@ images:
 llm:
   # เขียนบทด้วยตัวแรกที่ใช้ได้ ตัวไหนเจ๊งก็ตกไปตัวถัดไปเอง
   backends: [gemini, pollinations]
-  model: gemini-3.8-flash
-  fallback_model: community/NamanSoni78/opus-5-max
+  # ไล่ลองทีละรุ่นในแต่ละชั้น — รุ่นเรือธงติด 503 "high demand" บ่อยมาก
+  # เคยเจอตอนที่ทั้งสองชั้นล่มพร้อมกันจนไม่ได้คลิปเลย รุ่นรองได้บทดีพอ ๆ กัน
+  models: [gemini-3.8-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3.1-flash-lite]
+  fallback_models:
+    - community/NamanSoni78/opus-5-max
+    - community/NamanSoni78/GPT-5.5-xHigh
+    - community/NamanSoni78/Glm-5.3-Thinking-Max
 
 subtitles:
   font: "Noto Sans Thai"
