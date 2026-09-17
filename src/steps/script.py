@@ -97,7 +97,8 @@ def generate(cfg: dict, avoid: list[str]) -> dict:
 
     response = requests.post(
         ENDPOINT.format(model=cfg["llm"]["model"]),
-        params={"key": secret("GEMINI_API_KEY")},
+        # ส่งคีย์ทาง header ไม่ใช่ ?key= เพราะค่าใน URL จะติดไปกับข้อความ error และ log
+        headers={"x-goog-api-key": secret("GEMINI_API_KEY")},
         json={
             "contents": [{"parts": [{"text": prompt}]}],
             "generationConfig": {

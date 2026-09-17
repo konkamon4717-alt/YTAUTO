@@ -22,7 +22,7 @@ images:
   style: "soft storybook illustration, warm cinematic lighting, gentle painterly texture, muted earthy palette, no text, no watermark"
 
 llm:
-  model: gemini-2.5-flash
+  model: gemini-3.8-flash
 
 subtitles:
   font: "Noto Sans Thai"

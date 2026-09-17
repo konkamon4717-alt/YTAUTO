@@ -30,6 +30,8 @@ def load() -> dict:
 
 
 def secret(name: str, required: bool = True) -> str:
+    # เรียก secret() ตรง ๆ ได้โดยไม่ต้อง load() ก่อน — สคริปต์เล็ก ๆ จะได้ไม่พลาด
+    _load_dotenv()
     value = os.environ.get(name, "")
     if required and not value:
         raise RuntimeError(
