@@ -1,10 +1,16 @@
-"""สร้างภาพประกอบผ่าน Pollinations (ฟรี ไม่ต้องใช้ API key)"""
+"""สร้างภาพประกอบผ่าน Pollinations
+
+ใช้ endpoint ใหม่ gen.pollinations.ai พร้อม Bearer token — ตัวเก่า image.pollinations.ai
+แปะลายน้ำ pollinations.ai มุมล่างขวาทุกใบ และไม่สนใจ token ที่ส่งไปไม่ว่าจะส่งแบบไหน
+"""
 import time
 import urllib.parse
 
 import requests
 
-BASE = "https://image.pollinations.ai/prompt/"
+from ..config import secret
+
+BASE = "https://gen.pollinations.ai/image/"
 
 
 def build_prompt(scene_prompt: str, character_sheet: str, style: str,
@@ -30,13 +36,13 @@ def fetch(prompt: str, out_path, cfg: dict, seed: int, attempts: int = 4) -> Non
         "model": cfg["images"]["model"],
         "seed": seed,
         "nologo": "true",
-        "referrer": "yt-auto",
     }
+    headers = {"Authorization": f"Bearer {secret('POLLINATIONS_TOKEN')}"}
 
     last_error: Exception | None = None
     for attempt in range(attempts):
         try:
-            response = requests.get(url, params=params, timeout=180)
+            response = requests.get(url, params=params, headers=headers, timeout=180)
             response.raise_for_status()
             if not response.content or len(response.content) < 5_000:
                 raise RuntimeError("ได้ไฟล์ภาพเล็กผิดปกติ น่าจะยังไม่เสร็จ")
