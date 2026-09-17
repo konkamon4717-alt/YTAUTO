@@ -3,178 +3,324 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>yt-auto — สถานะระบบ</title>
+<title>ห้องควบคุม nithan1min</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+  /* โทนสีอิงจากปกช่อง — นกฮูกพ่อมด คราม/ทอง */
   :root{
-    --bg:#0f1115; --panel:#171a21; --line:#252a35; --text:#e6e8ee;
-    --muted:#8b93a5; --ok:#3ddc97; --bad:#ff6b6b; --warn:#ffc857; --accent:#6ea8fe;
+    --ground:#f7f5f0; --panel:#ffffff; --sunk:#efece4;
+    --line:#ddd7ca; --line-soft:#e9e4d9;
+    --ink:#1e1c28; --ink-2:#55506a; --ink-3:#8b8598;
+    --gold:#b07d21; --gold-soft:#f0e3c4;
+    --indigo:#3b3a78;
+    --good:#2e7d5b; --good-bg:#dceee5;
+    --warn:#9a6a10; --warn-bg:#f8ecd0;
+    --bad:#a53434;  --bad-bg:#f6dede;
+    --shadow:0 1px 2px rgba(30,28,40,.06), 0 8px 24px -12px rgba(30,28,40,.18);
   }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#14131c; --panel:#1c1b26; --sunk:#232231;
+      --line:#302e40; --line-soft:#282737;
+      --ink:#eceaf4; --ink-2:#a9a4bd; --ink-3:#736e88;
+      --gold:#e0b45c; --gold-soft:#3a2f18;
+      --indigo:#9d9ae8;
+      --good:#5fd39e; --good-bg:#16301f;
+      --warn:#e5b35c; --warn-bg:#332614;
+      --bad:#f08a8a;  --bad-bg:#351b1b;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.7);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#14131c; --panel:#1c1b26; --sunk:#232231;
+    --line:#302e40; --line-soft:#282737;
+    --ink:#eceaf4; --ink-2:#a9a4bd; --ink-3:#736e88;
+    --gold:#e0b45c; --gold-soft:#3a2f18;
+    --indigo:#9d9ae8;
+    --good:#5fd39e; --good-bg:#16301f;
+    --warn:#e5b35c; --warn-bg:#332614;
+    --bad:#f08a8a;  --bad-bg:#351b1b;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.7);
+  }
+
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--text);
-       font-family:"IBM Plex Sans Thai",system-ui,sans-serif;font-size:15px;line-height:1.6}
-  .wrap{max-width:900px;margin:0 auto;padding:28px 16px 64px}
-  h1{font-size:22px;margin:0 0 4px;font-weight:600}
-  .sub{color:var(--muted);font-size:13px;margin-bottom:24px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:24px}
-  .tile{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-  .tile .k{color:var(--muted);font-size:12px;letter-spacing:.02em}
-  .tile .v{font-size:20px;font-weight:600;margin-top:2px}
-  .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;vertical-align:1px}
-  .ok{background:var(--ok)} .bad{background:var(--bad)} .warn{background:var(--warn)} .idle{background:var(--muted)}
-  .bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin-top:9px}
-  .bar > i{display:block;height:100%;background:var(--accent);border-radius:3px}
-  h2{font-size:14px;color:var(--muted);font-weight:500;margin:26px 0 10px;
-     text-transform:uppercase;letter-spacing:.06em}
-  .row{background:var(--panel);border:1px solid var(--line);border-radius:10px;
-       padding:12px 14px;margin-bottom:8px;display:flex;gap:12px;align-items:flex-start}
-  .row .body{flex:1;min-width:0}
-  .row .title{font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .row .meta{color:var(--muted);font-size:12px;margin-top:2px}
-  .row .err{color:var(--bad);font-size:12px;margin-top:4px;
-            font-family:ui-monospace,monospace;word-break:break-all}
-  a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-  .btns{display:flex;flex-wrap:wrap;gap:8px}
-  button{background:var(--panel);color:var(--text);border:1px solid var(--line);
-         border-radius:9px;padding:9px 15px;font:inherit;font-size:14px;cursor:pointer}
-  button:hover:not(:disabled){border-color:var(--accent)}
-  button:disabled{opacity:.4;cursor:not-allowed}
-  .note{color:var(--muted);font-size:12px;margin-top:10px}
-  .empty{color:var(--muted);font-size:13px;padding:14px 0}
+  html,body{margin:0}
+  body{
+    background:var(--ground); color:var(--ink);
+    font-family:"IBM Plex Sans Thai",system-ui,-apple-system,sans-serif;
+    font-size:15px; line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:940px; margin:0 auto; padding-block:32px 72px; padding-left:16px; padding-right:16px}
+
+  header{display:flex; flex-wrap:wrap; gap:14px 20px; align-items:baseline;
+         justify-content:space-between; margin-bottom:26px}
+  h1{font-size:23px; font-weight:600; margin:0; letter-spacing:-.01em}
+  h1 small{display:block; font-size:12px; font-weight:400; color:var(--ink-3);
+           letter-spacing:.08em; text-transform:uppercase; margin-bottom:3px}
+  .stamp{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12px; color:var(--ink-3)}
+
+  /* แถบสรุปบนสุด — สีพื้นเปลี่ยนตามสถานะ อ่านได้ตั้งแต่ชายตามอง */
+  .verdict{border-radius:14px; padding:18px 20px; margin-bottom:26px;
+           display:flex; gap:16px; align-items:center; border:1px solid transparent}
+  .verdict .mark{font-size:26px; line-height:1}
+  .verdict .head{font-weight:600; font-size:17px}
+  .verdict .sub{font-size:13.5px; opacity:.85; margin-top:1px}
+  .v-good{background:var(--good-bg); border-color:color-mix(in srgb,var(--good) 30%,transparent); color:var(--good)}
+  .v-warn{background:var(--warn-bg); border-color:color-mix(in srgb,var(--warn) 30%,transparent); color:var(--warn)}
+  .v-bad {background:var(--bad-bg);  border-color:color-mix(in srgb,var(--bad) 30%,transparent);  color:var(--bad)}
+  .verdict .head,.verdict .sub{color:var(--ink)}
+
+  h2{font-size:12px; font-weight:600; color:var(--ink-3); margin:32px 0 12px;
+     letter-spacing:.1em; text-transform:uppercase}
+
+  /* บริการ — เป็นรายการ ไม่ใช่การ์ด เพราะเป็นของชนิดเดียวกันเรียงกัน */
+  .svc{border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--panel)}
+  .svc .row{display:flex; gap:12px; align-items:center; padding:12px 16px;
+            border-top:1px solid var(--line-soft)}
+  .svc .row:first-child{border-top:0}
+  .svc .name{font-weight:500; min-width:112px}
+  .svc .detail{color:var(--ink-2); font-size:13.5px; flex:1; min-width:0;
+               overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+  .svc .ms{font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--ink-3);
+           font-variant-numeric:tabular-nums}
+  .pill{font-size:11.5px; font-weight:500; padding:2px 9px; border-radius:99px; white-space:nowrap}
+  .p-good{background:var(--good-bg); color:var(--good)}
+  .p-warn{background:var(--warn-bg); color:var(--warn)}
+  .p-bad {background:var(--bad-bg);  color:var(--bad)}
+  .role{font-size:11px; color:var(--ink-3)}
+
+  /* มาตรวัดโควต้า */
+  .meters{display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:14px}
+  .meter{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:15px 17px}
+  .meter .k{font-size:12px; color:var(--ink-3)}
+  .meter .v{font-family:"IBM Plex Mono",monospace; font-size:20px; font-weight:500;
+            font-variant-numeric:tabular-nums; margin:3px 0 2px}
+  .meter .foot{font-size:11.5px; color:var(--ink-3)}
+  .track{height:5px; background:var(--sunk); border-radius:99px; overflow:hidden; margin-top:9px}
+  .track i{display:block; height:100%; border-radius:99px; background:var(--gold)}
+  .track i.hot{background:var(--bad)}
+
+  /* ไทม์ไลน์รอบผลิต — เส้นเดียวไล่ลง ไม่ใช่การ์ดซ้อน */
+  .runs{border-left:2px solid var(--line); margin-left:5px; padding-left:0}
+  .run{position:relative; padding:11px 0 11px 22px}
+  .run::before{content:""; position:absolute; left:-6px; top:19px; width:10px; height:10px;
+               border-radius:50%; background:var(--good); border:2px solid var(--ground)}
+  .run.fail::before{background:var(--bad)}
+  .run .t{font-weight:500}
+  .run .m{font-size:12.5px; color:var(--ink-3); margin-top:1px;
+          font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums}
+  .run .e{font-size:12.5px; color:var(--bad); margin-top:4px;
+          font-family:"IBM Plex Mono",monospace; word-break:break-word}
+  a{color:var(--indigo)} a:hover{text-decoration:none}
+
+  .empty{color:var(--ink-3); font-size:14px; background:var(--panel);
+         border:1px dashed var(--line); border-radius:12px; padding:22px; text-align:center}
+  footer{margin-top:44px; padding-top:18px; border-top:1px solid var(--line);
+         color:var(--ink-3); font-size:12px; display:flex; flex-wrap:wrap; gap:6px 16px}
+  code{font-family:"IBM Plex Mono",monospace; font-size:12px; background:var(--sunk);
+       padding:1px 5px; border-radius:4px}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>yt-auto</h1>
-  <div class="sub" id="updated">กำลังโหลด…</div>
 
-  <div class="grid">
-    <div class="tile"><div class="k">สถานะระบบ</div><div class="v" id="t-health">—</div></div>
-    <div class="tile"><div class="k">คลิปวันนี้</div><div class="v" id="t-today">—</div></div>
-    <div class="tile">
-      <div class="k">โควต้า YouTube API</div><div class="v" id="t-quota">—</div>
-      <div class="bar"><i id="t-quota-bar" style="width:0%"></i></div>
+  <header>
+    <h1><small>ห้องควบคุม</small>nithan1min</h1>
+    <div class="stamp" id="stamp">กำลังอ่านสถานะ…</div>
+  </header>
+
+  <div class="verdict v-warn" id="verdict">
+    <span class="mark" id="v-mark">•</span>
+    <div>
+      <div class="head" id="v-head">กำลังตรวจ</div>
+      <div class="sub" id="v-sub">อ่านไฟล์สถานะ</div>
     </div>
-    <div class="tile"><div class="k">สำเร็จ 20 รอบล่าสุด</div><div class="v" id="t-rate">—</div></div>
   </div>
 
-  <h2>สั่งงาน</h2>
-  <div class="btns">
-    <button id="b-run">สร้างคลิปเดี๋ยวนี้</button>
-    <button id="b-test">ทดลองสร้าง (ไม่อัป)</button>
-    <button id="b-pause">หยุดชั่วคราว</button>
-    <button id="b-resume">เริ่มใหม่</button>
-    <button id="b-alive">Keep alive</button>
-  </div>
-  <div class="note" id="ctrl-note"></div>
+  <h2>โควต้าที่ใช้ไป</h2>
+  <div class="meters" id="meters"></div>
 
-  <h2>รอบล่าสุด</h2>
+  <h2>บริการที่ระบบพึ่งพา</h2>
+  <div class="svc" id="services"><div class="row"><span class="detail">กำลังโหลด…</span></div></div>
+
+  <h2>รอบผลิตล่าสุด</h2>
   <div id="runs"><div class="empty">กำลังโหลด…</div></div>
+
+  <footer>
+    <span>อ่านจาก <code>status.json</code> และ <code>health.json</code></span>
+    <span>รีเฟรชเองทุก 60 วินาที</span>
+  </footer>
 </div>
 
 <script>
-// ───────── ตั้งค่าตรงนี้หลังสร้าง repo แล้ว ─────────
-const REPO = "konkamon4717-alt/YTAUTO";
-const WORKER_URL = "";  // URL ของ Cloudflare Worker ปล่อยว่างไว้ = ปุ่มสั่งงานจะปิด
-// ──────────────────────────────────────────────────
+// โควต้าจริงของแต่ละบริการ ใช้คำนวณมาตรวัด
+const YT_UPLOAD_COST = 1600;      // หน่วยต่อการอัปโหลด 1 คลิป
+const YT_DAILY_QUOTA = 10000;
+const KAGGLE_WEEKLY_HOURS = 30;
+const SHOT_SECONDS = 150;         // เวลาเรนเดอร์ต่อช็อตที่วัดได้จริงบน T4
 
-const UPLOAD_COST = 1600, DAILY_QUOTA = 10000;
-const $ = id => document.getElementById(id);
-
-const fmtTime = iso => new Date(iso).toLocaleString("th-TH",
-  { dateStyle: "short", timeStyle: "short" });
-
-const isToday = iso => {
-  const d = new Date(iso), n = new Date();
-  return d.toDateString() === n.toDateString();
+// บริการไหนล้มแล้วไม่ได้คลิป กับบริการไหนล้มแล้วแค่คุณภาพลด
+const ROLE = {
+  youtube: "ขาดไม่ได้", pollinations: "ขาดไม่ได้",
+  "edge-tts": "มีตัวสำรอง", gemini: "มีตัวสำรอง",
+  kaggle: "มีตัวสำรอง", huggingface: "มีตัวสำรอง",
 };
 
-async function load() {
-  let data = { runs: [], updated_at: null };
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g,
+  c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+const fmt = iso => iso
+  ? new Date(iso).toLocaleString("th-TH", {dateStyle:"short", timeStyle:"short"})
+  : "—";
+
+const sameDay = (iso, now) => {
+  if (!iso) return false;
+  const d = new Date(iso);
+  return d.toDateString() === now.toDateString();
+};
+
+async function readJson(name) {
   try {
-    const res = await fetch("status.json?t=" + Date.now());
-    if (res.ok) data = await res.json();
-  } catch (_) { /* ยังไม่เคยรัน = ไม่มีไฟล์ ไม่ใช่เรื่องผิดปกติ */ }
-
-  const runs = data.runs || [];
-  $("updated").textContent = data.updated_at
-    ? "อัปเดตล่าสุด " + fmtTime(data.updated_at)
-    : "ยังไม่เคยรัน";
-
-  const todayRuns = runs.filter(r => isToday(r.at));
-  const uploaded = todayRuns.filter(r => r.ok && r.video_id).length;
-  const recent = runs.slice(0, 20);
-  const okCount = recent.filter(r => r.ok).length;
-
-  const last = runs[0];
-  const health = !last ? ["idle", "ยังไม่เริ่ม"]
-    : last.ok ? ["ok", "ปกติ"] : ["bad", "รอบล่าสุดล้ม"];
-  $("t-health").innerHTML = `<span class="dot ${health[0]}"></span>${health[1]}`;
-
-  $("t-today").textContent = `${uploaded} คลิป`;
-
-  const used = uploaded * UPLOAD_COST;
-  $("t-quota").textContent = `${used.toLocaleString()} / ${DAILY_QUOTA.toLocaleString()}`;
-  $("t-quota-bar").style.width = Math.min(100, used / DAILY_QUOTA * 100) + "%";
-
-  $("t-rate").textContent = recent.length ? `${okCount}/${recent.length}` : "—";
-
-  $("runs").innerHTML = runs.length ? runs.map(r => `
-    <div class="row">
-      <span class="dot ${r.ok ? "ok" : "bad"}" style="margin-top:9px"></span>
-      <div class="body">
-        <div class="title">${esc(r.title || (r.ok ? "(ไม่มีชื่อ)" : "ล้มเหลว"))}</div>
-        <div class="meta">
-          ${fmtTime(r.at)} · ใช้เวลา ${r.seconds || "?"} วิ
-          ${r.video_id ? ` · <a href="https://youtube.com/watch?v=${r.video_id}" target="_blank" rel="noopener">ดูคลิป</a>` : ""}
-        </div>
-        ${r.error ? `<div class="err">${esc(r.error)}</div>` : ""}
-      </div>
-    </div>`).join("") : `<div class="empty">ยังไม่มีประวัติการรัน</div>`;
+    const res = await fetch(`${name}?t=${Date.now()}`);
+    return res.ok ? await res.json() : null;
+  } catch { return null; }   // ยังไม่เคยรัน = ไม่มีไฟล์ ไม่ใช่เรื่องผิดปกติ
 }
 
-function esc(s) {
-  return String(s).replace(/[&<>"']/g, c =>
-    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+function renderVerdict(health, runs) {
+  const box = $("verdict");
+  const broken = (health?.checks ?? []).filter(c => !c.ok);
+  const essentialDown = broken.filter(c => c.essential);
+  const lastFailed = runs[0] && !runs[0].ok;
+
+  let cls = "v-good", mark = "✓", head = "ระบบปกติ", sub;
+
+  if (essentialDown.length) {
+    cls = "v-bad"; mark = "✕";
+    head = "รอบผลิตจะไม่ได้คลิป";
+    sub = `บริการที่ขาดไม่ได้ล้ม: ${essentialDown.map(c => c.name).join(", ")}`;
+  } else if (lastFailed) {
+    cls = "v-bad"; mark = "✕";
+    head = "รอบล่าสุดล้มเหลว";
+    sub = runs[0].error ?? "ไม่ทราบสาเหตุ";
+  } else if (broken.length) {
+    cls = "v-warn"; mark = "!";
+    head = "เดินได้ แต่คุณภาพจะลด";
+    sub = `ตัวสำรองล้ม: ${broken.map(c => c.name).join(", ")} — ระบบจะถอยไปชั้นถัดไป`;
+  } else if (!health && !runs.length) {
+    cls = "v-warn"; mark = "•";
+    head = "ยังไม่เคยรัน";
+    sub = "สั่ง python -m src.health เพื่อตรวจบริการครั้งแรก";
+  } else {
+    sub = health
+      ? `ตรวจครบ ${health.checks.length} บริการ ผ่านหมด`
+      : "ยังไม่มีผลตรวจบริการ";
+  }
+
+  box.className = "verdict " + cls;
+  $("v-mark").textContent = mark;
+  $("v-head").textContent = head;
+  $("v-sub").textContent = sub;
 }
 
-// ปุ่มสั่งงานต้องผ่าน Worker เท่านั้น — ห้ามเอา token มาไว้ในหน้านี้
-const controls = [
-  ["b-run",    "run",     { count: "1", upload: "true" }],
-  ["b-test",   "run",     { count: "1", upload: "false" }],
-  ["b-pause",  "control", { action: "pause" }],
-  ["b-resume", "control", { action: "resume" }],
-  ["b-alive",  "keepalive", {}],
-];
+function renderMeters(runs) {
+  const now = new Date();
+  const today = runs.filter(r => sameDay(r.at, now));
+  const uploaded = today.filter(r => r.ok && r.video_id).length;
+  const ytUsed = uploaded * YT_UPLOAD_COST;
 
-if (!WORKER_URL) {
-  controls.forEach(([id]) => $(id).disabled = true);
-  $("ctrl-note").textContent =
-    "ปุ่มสั่งงานยังปิดอยู่ — ตั้งค่า WORKER_URL ในไฟล์ docs/index.html ก่อน " +
-    "(ระหว่างนี้สั่งรันได้จากแท็บ Actions ใน GitHub)";
-} else {
-  controls.forEach(([id, cmd, body]) => {
-    $(id).onclick = async () => {
-      const btn = $(id), label = btn.textContent;
-      btn.disabled = true; btn.textContent = "กำลังส่ง…";
-      try {
-        const res = await fetch(`${WORKER_URL}/${cmd}`, {
-          method: "POST",
-          headers: { "content-type": "application/json" },
-          credentials: "include",
-          body: JSON.stringify(body),
-        });
-        $("ctrl-note").textContent = res.ok
-          ? "ส่งคำสั่งแล้ว — รอสักครู่แล้วรีเฟรช"
-          : `ส่งไม่สำเร็จ (${res.status})`;
-      } catch (e) {
-        $("ctrl-note").textContent = "ติดต่อ Worker ไม่ได้: " + e.message;
-      }
-      btn.textContent = label; btn.disabled = false;
-    };
-  });
+  // ประมาณเวลา GPU ที่ใช้สัปดาห์นี้จากจำนวนฉากที่ขยับได้
+  const weekAgo = now.getTime() - 7 * 864e5;
+  const weekRuns = runs.filter(r => r.at && new Date(r.at).getTime() > weekAgo);
+  const shots = weekRuns.reduce((n, r) => n + (r.animated ?? 0), 0);
+  const gpuHours = shots * SHOT_SECONDS / 3600;
+
+  const okRecent = runs.slice(0, 20);
+  const okCount = okRecent.filter(r => r.ok).length;
+
+  const bar = (used, cap) => {
+    const pct = Math.min(100, cap ? used / cap * 100 : 0);
+    return `<div class="track"><i class="${pct > 85 ? "hot" : ""}" style="width:${pct}%"></i></div>`;
+  };
+
+  $("meters").innerHTML = `
+    <div class="meter">
+      <div class="k">คลิปที่ปล่อยวันนี้</div>
+      <div class="v">${uploaded}<span style="font-size:13px;color:var(--ink-3)"> / 3</span></div>
+      <div class="foot">เป้าหมายวันละ 3 คลิป</div>
+      ${bar(uploaded, 3)}
+    </div>
+    <div class="meter">
+      <div class="k">โควต้า YouTube วันนี้</div>
+      <div class="v">${ytUsed.toLocaleString()}</div>
+      <div class="foot">จาก ${YT_DAILY_QUOTA.toLocaleString()} หน่วย · อัปได้สูงสุด 6 คลิป</div>
+      ${bar(ytUsed, YT_DAILY_QUOTA)}
+    </div>
+    <div class="meter">
+      <div class="k">GPU Kaggle สัปดาห์นี้</div>
+      <div class="v">${gpuHours.toFixed(1)}<span style="font-size:13px;color:var(--ink-3)"> ชม.</span></div>
+      <div class="foot">จาก ${KAGGLE_WEEKLY_HOURS} ชม. · ${shots} ช็อตที่ขยับ</div>
+      ${bar(gpuHours, KAGGLE_WEEKLY_HOURS)}
+    </div>
+    <div class="meter">
+      <div class="k">สำเร็จ 20 รอบล่าสุด</div>
+      <div class="v">${okRecent.length ? `${okCount}/${okRecent.length}` : "—"}</div>
+      <div class="foot">นับเฉพาะรอบที่มีบันทึกไว้</div>
+      ${bar(okCount, okRecent.length)}
+    </div>`;
+}
+
+function renderServices(health) {
+  if (!health?.checks?.length) {
+    $("services").innerHTML =
+      `<div class="row"><span class="detail">ยังไม่มีผลตรวจ — สั่ง <code>python -m src.health</code></span></div>`;
+    return;
+  }
+  $("services").innerHTML = health.checks.map(c => {
+    const cls = c.ok ? "p-good" : (c.essential ? "p-bad" : "p-warn");
+    const label = c.ok ? "ปกติ" : (c.essential ? "ล้ม" : "เตือน");
+    return `<div class="row">
+      <span class="name">${esc(c.name)}</span>
+      <span class="pill ${cls}">${label}</span>
+      <span class="role">${esc(ROLE[c.name] ?? "")}</span>
+      <span class="detail" title="${esc(c.detail)}">${esc(c.detail)}</span>
+      <span class="ms">${c.ms ?? "—"} ms</span>
+    </div>`;
+  }).join("");
+}
+
+function renderRuns(runs) {
+  if (!runs.length) {
+    $("runs").innerHTML = `<div class="empty">ยังไม่มีประวัติการผลิต</div>`;
+    return;
+  }
+  $("runs").innerHTML = `<div class="runs">` + runs.map(r => {
+    const link = r.video_id
+      ? ` · <a href="https://youtube.com/watch?v=${esc(r.video_id)}" target="_blank" rel="noopener">เปิดคลิป</a>`
+      : "";
+    const moved = r.animated != null ? ` · ขยับ ${r.animated} ฉาก` : "";
+    return `<div class="run${r.ok ? "" : " fail"}">
+      <div class="t">${esc(r.title || (r.ok ? "ไม่มีชื่อ" : "รอบที่ล้มเหลว"))}</div>
+      <div class="m">${fmt(r.at)} · ${r.seconds ?? "?"} วินาที${moved}${link}</div>
+      ${r.error ? `<div class="e">${esc(r.error)}</div>` : ""}
+    </div>`;
+  }).join("") + `</div>`;
+}
+
+async function load() {
+  const [status, health] = await Promise.all([readJson("status.json"), readJson("health.json")]);
+  const runs = status?.runs ?? [];
+
+  $("stamp").textContent = health?.checked_at
+    ? "ตรวจบริการล่าสุด " + fmt(health.checked_at)
+    : (status?.updated_at ? "ผลิตล่าสุด " + fmt(status.updated_at) : "ยังไม่มีข้อมูล");
+
+  renderVerdict(health, runs);
+  renderMeters(runs);
+  renderServices(health);
+  renderRuns(runs);
 }
 
 load();
