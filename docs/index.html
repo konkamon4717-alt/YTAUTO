@@ -111,6 +111,8 @@
   .run .t{font-weight:500}
   .run .m{font-size:12.5px; color:var(--ink-3); margin-top:1px;
           font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums}
+  .run .by{font-size:11.5px; color:var(--ink-3); margin-top:3px;
+           font-family:"IBM Plex Mono",monospace}
   .run .e{font-size:12.5px; color:var(--bad); margin-top:4px;
           font-family:"IBM Plex Mono",monospace; word-break:break-word}
   a{color:var(--indigo)} a:hover{text-decoration:none}
@@ -300,10 +302,17 @@ function renderRuns(runs) {
     const link = r.video_id
       ? ` · <a href="https://youtube.com/watch?v=${esc(r.video_id)}" target="_blank" rel="noopener">เปิดคลิป</a>`
       : "";
-    const moved = r.animated != null ? ` · ขยับ ${r.animated} ฉาก` : "";
+    // แสดงว่าแต่ละรอบทำงานด้วยชั้นไหน จะได้เห็นว่าระบบถอยลงชั้นล่างบ่อยแค่ไหน
+    const moved = r.animated != null
+      ? ` · ขยับ ${r.animated}/${r.scenes ?? "?"} ฉาก` : "";
+    const how = Object.entries(r.backends ?? {})
+      .map(([k, n]) => `${k}×${n}`).join(" ");
+    const by = [r.writer, r.voice, how || (r.animated === 0 ? "parallax" : "")]
+      .filter(Boolean).join(" · ");
     return `<div class="run${r.ok ? "" : " fail"}">
       <div class="t">${esc(r.title || (r.ok ? "ไม่มีชื่อ" : "รอบที่ล้มเหลว"))}</div>
       <div class="m">${fmt(r.at)} · ${r.seconds ?? "?"} วินาที${moved}${link}</div>
+      ${by ? `<div class="by">${esc(by)}</div>` : ""}
       ${r.error ? `<div class="e">${esc(r.error)}</div>` : ""}
     </div>`;
   }).join("") + `</div>`;

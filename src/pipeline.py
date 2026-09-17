@@ -17,7 +17,7 @@ def _slug() -> str:
 
 
 def _build_clips(scenes: list[dict], stills: list[Path], durations: list[float],
-                 cfg: dict, work: Path) -> list[Path]:
+                 cfg: dict, work: Path) -> tuple[list[Path], dict]:
     """ทำคลิปของแต่ละฉาก พยายามให้ขยับทุกฉาก ฉากไหนไม่ได้ก็ใช้กล้องเคลื่อนบนภาพนิ่งแทน
 
     ไล่ทำจากฉากสำคัญที่สุดก่อน เพื่อว่าถ้าโควต้าหมดกลางทาง ฉากที่เสียไปจะเป็นฉากที่
@@ -62,10 +62,12 @@ def _build_clips(scenes: list[dict], stills: list[Path], durations: list[float],
 
     animated = sum(animator.used.values())
     print(f"      สรุป: ขยับ {animated}/{len(scenes)} ฉาก ({animator.summary()})")
-    return [c for c in clips if c]
+    return [c for c in clips if c], {"animated": animated,
+                                     "scenes": len(scenes),
+                                     "backends": dict(animator.used)}
 
 
-def make_video(cfg: dict, work: Path, story: dict | None = None) -> tuple[Path, dict]:
+def make_video(cfg: dict, work: Path, story: dict | None = None) -> tuple[Path, dict, dict]:
     work.mkdir(parents=True, exist_ok=True)
 
     if story is None:
@@ -129,7 +131,7 @@ def make_video(cfg: dict, work: Path, story: dict | None = None) -> tuple[Path, 
         print(f"      ภาพ {index + 1}/{len(scenes)}")
 
     print("[4/6] ทำให้ภาพขยับ...")
-    clips = _build_clips(scenes, stills, scene_durations, cfg, work)
+    clips, anim_stats = _build_clips(scenes, stills, scene_durations, cfg, work)
 
     print("[5/6] ตัดต่อ...")
     subs_path = work / "subs.ass"
@@ -144,7 +146,8 @@ def make_video(cfg: dict, work: Path, story: dict | None = None) -> tuple[Path, 
     render.finalize(silent, voice_track, subs_path, final, cfg)
     print(f"      ได้ไฟล์ {final.name} ({final.stat().st_size / 1_000_000:.1f} MB)")
 
-    return final, story
+    anim_stats["voice"] = voice_backend
+    return final, story, anim_stats
 
 
 def run_once(cfg: dict, upload_enabled: bool, story: dict | None = None) -> dict:
@@ -152,7 +155,7 @@ def run_once(cfg: dict, upload_enabled: bool, story: dict | None = None) -> dict
     started = time.time()
 
     try:
-        final, story = make_video(cfg, work, story)
+        final, story, anim_stats = make_video(cfg, work, story)
 
         video_id = None
         if upload_enabled:
@@ -169,6 +172,8 @@ def run_once(cfg: dict, upload_enabled: bool, story: dict | None = None) -> dict
             "premise": story["premise"],
             "video_id": video_id,
             "seconds": round(time.time() - started),
+            "writer": story.get("_writer"),
+            **anim_stats,
         }
         state.record(story["premise"], entry)
         return entry
