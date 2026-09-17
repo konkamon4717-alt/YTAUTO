@@ -13,6 +13,7 @@
 import argparse
 import http.server
 import json
+import os
 import socketserver
 import subprocess
 import sys
@@ -55,8 +56,12 @@ class Job:
             self.log.clear()
             self.log.append(f"$ {' '.join(args[-4:])}")
 
+            # -u กับ PYTHONUNBUFFERED บังคับให้ลูกพิมพ์ออกมาทันทีทีละบรรทัด
+            # ไม่ใส่แล้ว Python จะพักข้อความไว้ใน buffer เพราะปลายทางไม่ใช่หน้าจอจริง
+            # ทำให้ log ที่ควรจะสด กลายเป็นเห็นทีเดียวตอนโปรแกรมจบไปแล้ว
+            env = dict(os.environ, PYTHONUNBUFFERED="1", PYTHONIOENCODING="utf-8")
             self.process = subprocess.Popen(
-                [sys.executable, *args], cwd=str(ROOT),
+                [sys.executable, "-u", *args], cwd=str(ROOT), env=env,
                 stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                 text=True, encoding="utf-8", errors="replace", bufsize=1,
             )
