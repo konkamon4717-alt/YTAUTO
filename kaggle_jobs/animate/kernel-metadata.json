@@ -1,0 +1,15 @@
+{
+  "id": "jetkonkamon/yt-auto-animate",
+  "title": "yt-auto-animate",
+  "code_file": "animate.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "jetkonkamon/yt-auto-shots"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}

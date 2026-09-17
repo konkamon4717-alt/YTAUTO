@@ -50,6 +50,9 @@ def _run(args: list[str], timeout: int = 600) -> str:
         [str(Path(__file__).resolve().parents[2] / ".venv" / "Scripts" / "kaggle.exe")
          if os.name == "nt" else "kaggle", *args],
         capture_output=True, text=True, env=_env(), timeout=timeout,
+        # kaggle CLI พิมพ์อักขระ block ของแถบ progress ออกมา ถ้าปล่อยให้ Python
+        # เดา encoding เองบน Windows จะได้ cp1252 แล้วพังตอนอ่านผลทั้งที่งานสำเร็จ
+        encoding="utf-8", errors="replace",
     )
     output = (result.stdout or "") + (result.stderr or "")
     if result.returncode != 0:
@@ -77,6 +80,47 @@ def write_metadata(folder: Path, slug: str, code_file: str,
     (folder / "kernel-metadata.json").write_text(
         json.dumps(meta, indent=2), encoding="utf-8"
     )
+
+
+def ensure_dataset(folder: Path, slug: str, title: str | None = None) -> str:
+    """อัปโหลดโฟลเดอร์เป็น Kaggle Dataset (สร้างใหม่ครั้งแรก ครั้งถัดไปเป็นเวอร์ชันใหม่)
+
+    ภาพต้นทางต้องเข้าไปอยู่ใน /kaggle/input ให้ได้ ซึ่งทำได้ทางเดียวคือผ่าน Dataset
+    จะฝัง base64 ไปในตัวสคริปต์ไม่ได้ เพราะภาพ 10 ใบรวมกันเกินขนาดที่ Kaggle รับ
+    """
+    username = os.environ.get("KAGGLE_USERNAME", "")
+    full = f"{username}/{slug}"
+    (folder / "dataset-metadata.json").write_text(
+        json.dumps({"title": title or slug, "id": full,
+                    "licenses": [{"name": "CC0-1.0"}]}, indent=2),
+        encoding="utf-8",
+    )
+
+    try:
+        _run(["datasets", "version", "-p", str(folder),
+              "-m", f"shots {int(time.time())}", "--dir-mode", "zip"], timeout=900)
+    except KaggleError as exc:
+        # ยังไม่เคยมี dataset นี้ -> สร้างใหม่ ข้อความ error ของ Kaggle ไม่คงที่
+        # เลยดักกว้างไว้แล้วให้ create เป็นตัวตัดสินว่าพังจริงหรือเปล่า
+        if "not found" not in str(exc).lower() and "404" not in str(exc):
+            print(f"      อัปเดต dataset ไม่ได้ ({str(exc)[:120]}) — ลองสร้างใหม่")
+        _run(["datasets", "create", "-p", str(folder), "--dir-mode", "zip"], timeout=900)
+
+    return full
+
+
+def wait_for_dataset(slug: str, timeout_minutes: int = 10) -> None:
+    """Kaggle ใช้เวลาประมวลผลไฟล์ที่อัปใหม่ ถ้ายิง kernel เร็วไปจะได้ไฟล์เวอร์ชันเก่า"""
+    deadline = time.time() + timeout_minutes * 60
+    while time.time() < deadline:
+        try:
+            output = _run(["datasets", "status", slug], timeout=120).lower()
+            if "ready" in output or "complete" in output:
+                return
+        except KaggleError:
+            pass
+        time.sleep(15)
+    print("      เตือน: dataset ยังไม่ขึ้นสถานะพร้อม จะลองยิงงานต่อไปเลย")
 
 
 def push(folder: Path) -> str:

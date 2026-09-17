@@ -32,21 +32,26 @@ def _build_clips(scenes: list[dict], stills: list[Path], durations: list[float],
                        key=lambda i: -int(scenes[i].get("importance", 3)))[
                            : cfg["animation"]["max_shots_per_run"]]
 
-    animator = animate.Animator(cfg)
-    for index in order:
-        shot = animate.Shot(
-            image=stills[index],
-            prompt=scenes[index].get("motion") or scenes[index]["image_prompt"],
-            seconds=durations[index],
+    animator = animate.Animator({**cfg, "_work": str(work)})
+    shots = [
+        animate.Shot(
+            image=stills[i],
+            prompt=scenes[i].get("motion") or scenes[i]["image_prompt"],
+            seconds=durations[i],
         )
-        raw = work / f"raw_{index:02d}.mp4"
-        backend = animator.animate(shot, raw)
-        if not backend:
-            continue
-        clip = work / f"clip_{index:02d}.mp4"
-        render.conform(raw, durations[index], clip, cfg, work)
-        clips[index] = clip
-        print(f"      ฉาก {index + 1} ขยับแล้ว ({backend})")
+        for i in order
+    ]
+    raws = [work / f"raw_{i:02d}.mp4" for i in order]
+
+    if shots:
+        winners = animator.animate_all(shots, raws)
+        for index, raw, backend in zip(order, raws, winners):
+            if not backend or not raw.exists():
+                continue
+            clip = work / f"clip_{index:02d}.mp4"
+            render.conform(raw, durations[index], clip, cfg, work)
+            clips[index] = clip
+            print(f"      ฉาก {index + 1} ขยับแล้ว ({backend})")
 
     for index, clip in enumerate(clips):
         if clip is None:

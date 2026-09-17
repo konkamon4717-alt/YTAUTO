@@ -49,9 +49,13 @@ upload:
 
 animation:
   # ทำให้ทุกฉากขยับ เรียงชั้นจากดีสุดลงมา ชั้นไหนตันก็ตกไปชั้นถัดไปเอง
-  # modal กับ kaggle จะเปิดใช้ได้เมื่อสมัครบริการและตั้งค่าเสร็จ
   enabled: true
-  backends: [huggingface]
+  # kaggle ส่งทั้งรอบไปทีเดียว รอ 30-60 นาที แต่โควต้าเยอะพอทำทุกฉากทุกวัน
+  # huggingface ได้ผลทันทีแต่ ~7 ช็อต/วัน จึงเหมาะเป็นตัวรับช็อตที่ kaggle ทำไม่ทัน
+  backends: [kaggle, huggingface]
+  kaggle_dataset: yt-auto-shots
+  kaggle_kernel: yt-auto-animate
+  kaggle_timeout_minutes: 90
   # เพดานกันบั๊กวนลูปเผาโควต้า ไม่เกี่ยวกับโควต้าจริงของผู้ให้บริการ
   max_shots_per_run: 40
 

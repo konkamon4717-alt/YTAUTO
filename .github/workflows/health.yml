@@ -1,0 +1,48 @@
+name: health
+
+# ตรวจทุกบริการที่ระบบพึ่งพา ทุกเช้าก่อนรอบผลิตรอบแรก
+# เป้าหมายคือรู้ว่าอะไรกำลังจะพัง "ก่อน" คลิปจะหายไปหลายวันโดยไม่มีใครสังเกต
+on:
+  schedule:
+    - cron: "30 23 * * *"   # 06:30 เวลาไทย ก่อนรอบผลิต 07:00
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: ตรวจสุขภาพ
+        id: check
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          POLLINATIONS_TOKEN: ${{ secrets.POLLINATIONS_TOKEN }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_API_TOKEN: ${{ secrets.KAGGLE_API_TOKEN }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python -m src.health
+
+      - name: บันทึกผลขึ้น dashboard
+        if: always()
+        run: |
+          git config user.name  "yt-auto bot"
+          git config user.email "actions@github.com"
+          git add docs/health.json
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: ผลตรวจสุขภาพ $(date -u +%F)"
+            git pull --rebase --autostash origin ${{ github.ref_name }} || true
+            git push
+          fi
