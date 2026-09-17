@@ -56,8 +56,8 @@ def _build_clips(scenes: list[dict], stills: list[Path], durations: list[float],
     for index, clip in enumerate(clips):
         if clip is None:
             fallback = work / f"clip_{index:02d}.mp4"
-            render.ken_burns(stills[index], durations[index], fallback, cfg,
-                             zoom_in=index % 2 == 0)
+            move = render.CAMERA_MOVES[index % len(render.CAMERA_MOVES)]
+            render.ken_burns(stills[index], durations[index], fallback, cfg, move=move)
             clips[index] = fallback
 
     animated = sum(animator.used.values())

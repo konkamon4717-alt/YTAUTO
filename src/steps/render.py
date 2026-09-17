@@ -25,20 +25,49 @@ def duration_of(path: Path) -> float:
     return float(json.loads(result.stdout)["format"]["duration"])
 
 
-def ken_burns(image: Path, seconds: float, out_path: Path, cfg: dict, zoom_in: bool) -> None:
-    """ทำภาพนิ่งให้ขยับช้า ๆ กันคนดูเบื่อ"""
-    width, height, fps = cfg["video"]["width"], cfg["video"]["height"], cfg["video"]["fps"]
-    frames = max(int(seconds * fps), 1)
+# การเคลื่อนกล้องบนภาพนิ่ง สลับไปเรื่อย ๆ ตามลำดับฉาก
+# ระยะทางของทุกท่าถูกคิดจาก "จำนวนเฟรมของฉากนั้น" ไม่ใช่อัตราต่อเฟรมคงที่
+# ฉากสั้นกับฉากยาวจึงเคลื่อนครบระยะเท่ากัน ไม่ใช่ฉากสั้นแทบไม่ขยับ
+CAMERA_MOVES = ("in", "left", "out", "right", "in", "up")
 
-    if zoom_in:
-        zoom = f"min(1.0+0.0009*on,1.18)"
+ZOOM_RANGE = 0.30   # ซูมเข้า/ออก 30% ตลอดฉาก
+PAN_ZOOM = 1.26     # ซูมค้างไว้เท่านี้ตอนแพน เพื่อให้มีพื้นที่ให้เลื่อน
+
+
+def ken_burns(image: Path, seconds: float, out_path: Path, cfg: dict,
+              move: str = "in") -> None:
+    """ทำภาพนิ่งให้ขยับ ใช้เมื่อโมเดลวิดีโอใช้ไม่ได้
+
+    ของเดิมซูม 10% ตลอด 4 วินาทีซึ่งตาแทบจับไม่ได้ และทุกฉากซูมทิศเดียวกัน
+    เลยดูเหมือนภาพนิ่งทั้งคลิป ตอนนี้เพิ่มระยะและสลับทิศทุกฉาก
+    """
+    width, height, fps = cfg["video"]["width"], cfg["video"]["height"], cfg["video"]["fps"]
+    frames = max(int(seconds * fps), 2)
+    last = frames - 1
+
+    if move == "in":
+        zoom = f"min(1.0+{ZOOM_RANGE}*on/{last},{1 + ZOOM_RANGE})"
+        x, y = "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"
+    elif move == "out":
+        zoom = f"max({1 + ZOOM_RANGE}-{ZOOM_RANGE}*on/{last},1.0)"
+        x, y = "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"
     else:
-        zoom = f"max(1.18-0.0009*on,1.0)"
+        zoom = str(PAN_ZOOM)
+        span_x, span_y = "(iw-iw/zoom)", "(ih-ih/zoom)"
+        centre_x, centre_y = f"{span_x}/2", f"{span_y}/2"
+        if move == "left":
+            x, y = f"{span_x}*(1-on/{last})", centre_y
+        elif move == "right":
+            x, y = f"{span_x}*on/{last}", centre_y
+        elif move == "up":
+            x, y = centre_x, f"{span_y}*(1-on/{last})"
+        else:  # down
+            x, y = centre_x, f"{span_y}*on/{last}"
 
     vf = (
         f"scale={width * 2}:{height * 2}:force_original_aspect_ratio=increase,"
         f"crop={width * 2}:{height * 2},"
-        f"zoompan=z='{zoom}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
+        f"zoompan=z='{zoom}':x='{x}':y='{y}'"
         f":d={frames}:s={width}x{height}:fps={fps},setsar=1"
     )
 
