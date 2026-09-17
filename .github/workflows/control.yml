@@ -1,0 +1,31 @@
+name: control
+
+# ใช้สั่ง pause / resume จากหน้า dashboard หรือจากแอป GitHub บนมือถือ
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "pause หรือ resume"
+        required: true
+        type: choice
+        options: [pause, resume]
+
+permissions:
+  contents: write
+
+jobs:
+  toggle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          if [ "${{ inputs.action }}" = "pause" ]; then
+            date -u +%FT%TZ > data/PAUSED
+          else
+            rm -f data/PAUSED
+          fi
+          git config user.name  "yt-auto bot"
+          git config user.email "actions@github.com"
+          git add -A data/
+          git diff --staged --quiet || git commit -m "chore: ${{ inputs.action }}"
+          git push

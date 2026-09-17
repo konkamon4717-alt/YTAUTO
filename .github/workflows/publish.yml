@@ -1,0 +1,85 @@
+name: publish
+
+on:
+  schedule:
+    # เวลาไทย 07:00 / 12:00 / 19:00 (GitHub ใช้ UTC)
+    - cron: "0 0 * * *"
+    - cron: "0 5 * * *"
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "จำนวนคลิป"
+        default: "1"
+      upload:
+        description: "อัปโหลดขึ้น YouTube จริงไหม"
+        type: boolean
+        default: true
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: เช็คว่าถูกสั่ง pause ไว้หรือเปล่า
+        id: gate
+        run: |
+          if [ -f data/PAUSED ]; then
+            echo "::notice::ระบบถูกสั่งหยุดไว้ — ข้ามรอบนี้ (ไม่นับว่าพัง)"
+            echo "paused=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "paused=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.paused == 'false'
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: ติดตั้ง ffmpeg และฟอนต์ไทย
+        if: steps.gate.outputs.paused == 'false'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-noto-core
+          mkdir -p assets/fonts
+          find /usr/share/fonts -name 'NotoSansThai*' -exec cp {} assets/fonts/ \;
+          ls -la assets/fonts
+
+      - name: ติดตั้ง dependency
+        if: steps.gate.outputs.paused == 'false'
+        run: pip install -r requirements.txt
+
+      - name: สร้างและอัปโหลดคลิป
+        if: steps.gate.outputs.paused == 'false'
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          UPLOAD_FLAG=""
+          if [ "${{ inputs.upload }}" = "false" ]; then UPLOAD_FLAG="--no-upload"; fi
+          python -m src.pipeline --count "${{ inputs.count || 1 }}" $UPLOAD_FLAG
+
+      - name: บันทึกสถานะกลับเข้า repo
+        if: always() && steps.gate.outputs.paused == 'false'
+        run: |
+          git config user.name  "yt-auto bot"
+          git config user.email "actions@github.com"
+          git add data/history.json docs/status.json 2>/dev/null || true
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: อัปเดตสถานะ $(date -u +%F' '%T)"
+            git pull --rebase --autostash origin ${{ github.ref_name }} || true
+            git push
+          fi

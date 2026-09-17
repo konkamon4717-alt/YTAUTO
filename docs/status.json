@@ -1,0 +1,49 @@
+{
+  "updated_at": "2026-09-17T02:22:34+00:00",
+  "runs": [
+    {
+      "ok": true,
+      "title": "ไข่ฟองที่หายไป",
+      "premise": "เด็กชายขายไข่ที่ชอบโกงลูกค้าทีละฟอง จนวันหนึ่งได้รู้ว่าคนที่เขาโกงมาตลอดคือคนที่ช่วยชีวิตแม่เขาไว้",
+      "video_id": null,
+      "seconds": 244,
+      "at": "2026-09-17T02:22:34+00:00"
+    },
+    {
+      "ok": true,
+      "title": "ไข่ฟองที่หายไป",
+      "premise": "เด็กชายขายไข่ที่ชอบโกงลูกค้าทีละฟอง จนวันหนึ่งได้รู้ว่าคนที่เขาโกงมาตลอดคือคนที่ช่วยชีวิตแม่เขาไว้",
+      "video_id": null,
+      "seconds": 246,
+      "at": "2026-09-17T02:17:21+00:00"
+    },
+    {
+      "ok": true,
+      "title": "ไข่ฟองที่หายไป",
+      "premise": "เด็กชายขายไข่ที่ชอบโกงลูกค้าทีละฟอง จนวันหนึ่งได้รู้ว่าคนที่เขาโกงมาตลอดคือคนที่ช่วยชีวิตแม่เขาไว้",
+      "video_id": null,
+      "seconds": 247,
+      "at": "2026-09-17T02:10:18+00:00"
+    },
+    {
+      "ok": true,
+      "title": "ไข่ฟองที่หายไป",
+      "premise": "เด็กชายขายไข่ที่ชอบโกงลูกค้าทีละฟอง จนวันหนึ่งได้รู้ว่าคนที่เขาโกงมาตลอดคือคนที่ช่วยชีวิตแม่เขาไว้",
+      "video_id": null,
+      "seconds": 257,
+      "at": "2026-09-17T02:03:59+00:00"
+    },
+    {
+      "ok": false,
+      "error": "RuntimeError: FFmpeg ล้มเหลว:\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf63.1.101\n  Duration: 00:00:30.67, start: 0.000000, bitrate: 933 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuvj420p(pc, bt470bg/unknown/unknown, progressive), 1080x1920 [SAR 1:1 DAR 9:16], 930 kb/s, 30 fps, 30 tb",
+      "seconds": 245,
+      "at": "2026-09-17T01:56:37+00:00"
+    },
+    {
+      "ok": false,
+      "error": "WSServerHandshakeError: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=c9d844790b1c4685974bbe6439d04415'",
+      "seconds": 1,
+      "at": "2026-09-17T01:51:58+00:00"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+name: keepalive
+
+# GitHub จะปิด cron อัตโนมัติถ้า repo ไม่มีความเคลื่อนไหว 60 วัน
+# workflow นี้แตะไฟล์ heartbeat ทุกสัปดาห์เพื่อกันไม่ให้โดนปิด
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          date -u +%FT%TZ > data/heartbeat.txt
+          git config user.name  "yt-auto bot"
+          git config user.email "actions@github.com"
+          git add data/heartbeat.txt
+          git diff --staged --quiet || git commit -m "chore: keepalive"
+          git push

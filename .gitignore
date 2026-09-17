@@ -1,0 +1,8 @@
+.env
+out/
+__pycache__/
+*.pyc
+.venv/
+assets/fonts/*.ttf
+assets/music/*.mp3
+token.json

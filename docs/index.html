@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>yt-auto — สถานะระบบ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --line:#252a35; --text:#e6e8ee;
+    --muted:#8b93a5; --ok:#3ddc97; --bad:#ff6b6b; --warn:#ffc857; --accent:#6ea8fe;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+       font-family:"IBM Plex Sans Thai",system-ui,sans-serif;font-size:15px;line-height:1.6}
+  .wrap{max-width:900px;margin:0 auto;padding:28px 16px 64px}
+  h1{font-size:22px;margin:0 0 4px;font-weight:600}
+  .sub{color:var(--muted);font-size:13px;margin-bottom:24px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:24px}
+  .tile{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .tile .k{color:var(--muted);font-size:12px;letter-spacing:.02em}
+  .tile .v{font-size:20px;font-weight:600;margin-top:2px}
+  .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;vertical-align:1px}
+  .ok{background:var(--ok)} .bad{background:var(--bad)} .warn{background:var(--warn)} .idle{background:var(--muted)}
+  .bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin-top:9px}
+  .bar > i{display:block;height:100%;background:var(--accent);border-radius:3px}
+  h2{font-size:14px;color:var(--muted);font-weight:500;margin:26px 0 10px;
+     text-transform:uppercase;letter-spacing:.06em}
+  .row{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+       padding:12px 14px;margin-bottom:8px;display:flex;gap:12px;align-items:flex-start}
+  .row .body{flex:1;min-width:0}
+  .row .title{font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .row .meta{color:var(--muted);font-size:12px;margin-top:2px}
+  .row .err{color:var(--bad);font-size:12px;margin-top:4px;
+            font-family:ui-monospace,monospace;word-break:break-all}
+  a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+  .btns{display:flex;flex-wrap:wrap;gap:8px}
+  button{background:var(--panel);color:var(--text);border:1px solid var(--line);
+         border-radius:9px;padding:9px 15px;font:inherit;font-size:14px;cursor:pointer}
+  button:hover:not(:disabled){border-color:var(--accent)}
+  button:disabled{opacity:.4;cursor:not-allowed}
+  .note{color:var(--muted);font-size:12px;margin-top:10px}
+  .empty{color:var(--muted);font-size:13px;padding:14px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>yt-auto</h1>
+  <div class="sub" id="updated">กำลังโหลด…</div>
+
+  <div class="grid">
+    <div class="tile"><div class="k">สถานะระบบ</div><div class="v" id="t-health">—</div></div>
+    <div class="tile"><div class="k">คลิปวันนี้</div><div class="v" id="t-today">—</div></div>
+    <div class="tile">
+      <div class="k">โควต้า YouTube API</div><div class="v" id="t-quota">—</div>
+      <div class="bar"><i id="t-quota-bar" style="width:0%"></i></div>
+    </div>
+    <div class="tile"><div class="k">สำเร็จ 20 รอบล่าสุด</div><div class="v" id="t-rate">—</div></div>
+  </div>
+
+  <h2>สั่งงาน</h2>
+  <div class="btns">
+    <button id="b-run">สร้างคลิปเดี๋ยวนี้</button>
+    <button id="b-test">ทดลองสร้าง (ไม่อัป)</button>
+    <button id="b-pause">หยุดชั่วคราว</button>
+    <button id="b-resume">เริ่มใหม่</button>
+    <button id="b-alive">Keep alive</button>
+  </div>
+  <div class="note" id="ctrl-note"></div>
+
+  <h2>รอบล่าสุด</h2>
+  <div id="runs"><div class="empty">กำลังโหลด…</div></div>
+</div>
+
+<script>
+// ───────── ตั้งค่าตรงนี้หลังสร้าง repo แล้ว ─────────
+const REPO = "";        // เช่น "myname/yt-auto"
+const WORKER_URL = "";  // URL ของ Cloudflare Worker ปล่อยว่างไว้ = ปุ่มสั่งงานจะปิด
+// ──────────────────────────────────────────────────
+
+const UPLOAD_COST = 1600, DAILY_QUOTA = 10000;
+const $ = id => document.getElementById(id);
+
+const fmtTime = iso => new Date(iso).toLocaleString("th-TH",
+  { dateStyle: "short", timeStyle: "short" });
+
+const isToday = iso => {
+  const d = new Date(iso), n = new Date();
+  return d.toDateString() === n.toDateString();
+};
+
+async function load() {
+  let data = { runs: [], updated_at: null };
+  try {
+    const res = await fetch("status.json?t=" + Date.now());
+    if (res.ok) data = await res.json();
+  } catch (_) { /* ยังไม่เคยรัน = ไม่มีไฟล์ ไม่ใช่เรื่องผิดปกติ */ }
+
+  const runs = data.runs || [];
+  $("updated").textContent = data.updated_at
+    ? "อัปเดตล่าสุด " + fmtTime(data.updated_at)
+    : "ยังไม่เคยรัน";
+
+  const todayRuns = runs.filter(r => isToday(r.at));
+  const uploaded = todayRuns.filter(r => r.ok && r.video_id).length;
+  const recent = runs.slice(0, 20);
+  const okCount = recent.filter(r => r.ok).length;
+
+  const last = runs[0];
+  const health = !last ? ["idle", "ยังไม่เริ่ม"]
+    : last.ok ? ["ok", "ปกติ"] : ["bad", "รอบล่าสุดล้ม"];
+  $("t-health").innerHTML = `<span class="dot ${health[0]}"></span>${health[1]}`;
+
+  $("t-today").textContent = `${uploaded} คลิป`;
+
+  const used = uploaded * UPLOAD_COST;
+  $("t-quota").textContent = `${used.toLocaleString()} / ${DAILY_QUOTA.toLocaleString()}`;
+  $("t-quota-bar").style.width = Math.min(100, used / DAILY_QUOTA * 100) + "%";
+
+  $("t-rate").textContent = recent.length ? `${okCount}/${recent.length}` : "—";
+
+  $("runs").innerHTML = runs.length ? runs.map(r => `
+    <div class="row">
+      <span class="dot ${r.ok ? "ok" : "bad"}" style="margin-top:9px"></span>
+      <div class="body">
+        <div class="title">${esc(r.title || (r.ok ? "(ไม่มีชื่อ)" : "ล้มเหลว"))}</div>
+        <div class="meta">
+          ${fmtTime(r.at)} · ใช้เวลา ${r.seconds || "?"} วิ
+          ${r.video_id ? ` · <a href="https://youtube.com/watch?v=${r.video_id}" target="_blank" rel="noopener">ดูคลิป</a>` : ""}
+        </div>
+        ${r.error ? `<div class="err">${esc(r.error)}</div>` : ""}
+      </div>
+    </div>`).join("") : `<div class="empty">ยังไม่มีประวัติการรัน</div>`;
+}
+
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, c =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+// ปุ่มสั่งงานต้องผ่าน Worker เท่านั้น — ห้ามเอา token มาไว้ในหน้านี้
+const controls = [
+  ["b-run",    "run",     { count: "1", upload: "true" }],
+  ["b-test",   "run",     { count: "1", upload: "false" }],
+  ["b-pause",  "control", { action: "pause" }],
+  ["b-resume", "control", { action: "resume" }],
+  ["b-alive",  "keepalive", {}],
+];
+
+if (!WORKER_URL) {
+  controls.forEach(([id]) => $(id).disabled = true);
+  $("ctrl-note").textContent =
+    "ปุ่มสั่งงานยังปิดอยู่ — ตั้งค่า WORKER_URL ในไฟล์ docs/index.html ก่อน " +
+    "(ระหว่างนี้สั่งรันได้จากแท็บ Actions ใน GitHub)";
+} else {
+  controls.forEach(([id, cmd, body]) => {
+    $(id).onclick = async () => {
+      const btn = $(id), label = btn.textContent;
+      btn.disabled = true; btn.textContent = "กำลังส่ง…";
+      try {
+        const res = await fetch(`${WORKER_URL}/${cmd}`, {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify(body),
+        });
+        $("ctrl-note").textContent = res.ok
+          ? "ส่งคำสั่งแล้ว — รอสักครู่แล้วรีเฟรช"
+          : `ส่งไม่สำเร็จ (${res.status})`;
+      } catch (e) {
+        $("ctrl-note").textContent = "ติดต่อ Worker ไม่ได้: " + e.message;
+      }
+      btn.textContent = label; btn.disabled = false;
+    };
+  });
+}
+
+load();
+setInterval(load, 60000);
+</script>
+</body>
+</html>

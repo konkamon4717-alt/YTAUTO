@@ -1,0 +1,44 @@
+channel:
+  name: "นิทานหนึ่งนาที"
+  language: th
+  locale: th-TH
+
+video:
+  width: 1080
+  height: 1920
+  fps: 30
+  target_seconds: 45
+  hard_max_seconds: 58
+
+tts:
+  voice: th-TH-PremwadeeNeural
+  rate: "+8%"
+  pitch: "+0Hz"
+
+images:
+  provider: pollinations
+  model: flux
+  scenes: 6
+  style: "soft storybook illustration, warm cinematic lighting, gentle painterly texture, muted earthy palette, no text, no watermark"
+
+llm:
+  model: gemini-2.5-flash
+
+subtitles:
+  font: "Noto Sans Thai"
+  font_size: 92
+  max_chars_per_line: 20
+  primary_color: "&H00FFFFFF"
+  outline_color: "&H00000000"
+  outline: 6
+  margin_v: 480
+
+upload:
+  privacy: private
+  category_id: "24"
+  made_for_kids: false
+  self_declared_ai: true
+  localizations: [en, es, pt, hi]
+
+run:
+  per_day: 3
