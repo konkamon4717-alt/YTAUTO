@@ -14,3 +14,7 @@ __pycache__/
 # ของหนักที่โหลดใหม่ได้
 assets/fonts/*.ttf
 assets/music/*.mp3
+
+# คลิปตัวอย่างที่สร้างระหว่างทดสอบ ไม่ต้องเก็บใน git
+preview.mp4
+*.mp4
