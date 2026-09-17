@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — yt-auto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#0f1115; --panel:#171a21; --line:#252a35; --text:#e6e8ee; --muted:#8b93a5; --accent:#6ea8fe; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+       font-family:"IBM Plex Sans Thai",system-ui,sans-serif;font-size:16px;line-height:1.75}
+  .wrap{max-width:720px;margin:0 auto;padding:48px 20px 80px}
+  h1{font-size:26px;margin:0 0 6px;font-weight:600}
+  .sub{color:var(--muted);font-size:14px;margin-bottom:36px}
+  h2{font-size:17px;margin:34px 0 10px;font-weight:600}
+  p,li{color:var(--text)}
+  ul{padding-left:20px}
+  li{margin-bottom:7px}
+  a{color:var(--accent)}
+  .note{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+        padding:16px 18px;margin:22px 0;color:var(--muted);font-size:14px}
+  footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);
+         color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Privacy Policy</h1>
+  <div class="sub">yt-auto · ปรับปรุงล่าสุด 17 กันยายน 2026</div>
+
+  <div class="note">
+    yt-auto เป็นเครื่องมือส่วนตัวที่เจ้าของใช้เผยแพร่คลิปขึ้นช่อง YouTube ของตัวเองโดยอัตโนมัติ
+    ไม่ได้เปิดให้บุคคลอื่นสมัครหรือเข้าใช้งาน
+    <br><br>
+    This is a personal, single-user tool used by its owner to publish videos to their own
+    YouTube channel. It is not offered to other users.
+  </div>
+
+  <h2>ข้อมูลที่เข้าถึง / Data accessed</h2>
+  <p>
+    แอปขอสิทธิ์เข้าถึงบัญชี YouTube ของเจ้าของแอปเพียงบัญชีเดียว เพื่ออัปโหลดวิดีโอ
+    และตั้งค่าชื่อ คำอธิบาย และภาษาของวิดีโอที่แอปสร้างขึ้นเอง
+  </p>
+  <p>
+    The app requests access to the owner's own YouTube account only, solely to upload videos
+    and set the title, description, and language metadata of videos it generates.
+  </p>
+  <ul>
+    <li>ไม่เก็บ ไม่อ่าน และไม่ประมวลผลข้อมูลของผู้ใช้รายอื่น</li>
+    <li>ไม่เข้าถึงอีเมล รายชื่อผู้ติดต่อ หรือไฟล์ใน Google Drive</li>
+    <li>ไม่อ่านความคิดเห็น ข้อความส่วนตัว หรือข้อมูลผู้ชม</li>
+  </ul>
+
+  <h2>การเก็บรักษาข้อมูล / Data storage</h2>
+  <p>
+    ข้อมูลรับรอง (OAuth refresh token) ถูกเก็บเป็นความลับใน GitHub Actions Secrets
+    ของที่เก็บโค้ดส่วนตัวของเจ้าของ และใช้เพื่อเรียก YouTube Data API เท่านั้น
+  </p>
+  <ul>
+    <li>ไม่ถูกส่งต่อให้บุคคลที่สาม</li>
+    <li>ไม่ถูกใช้เพื่อการโฆษณาหรือวิเคราะห์พฤติกรรม</li>
+    <li>ไม่ถูกขายหรือแลกเปลี่ยน</li>
+  </ul>
+  <p>
+    Credentials are stored as encrypted secrets in the owner's own repository and are used
+    only to call the YouTube Data API. They are never shared, sold, or used for advertising.
+  </p>
+
+  <h2>การเพิกถอนสิทธิ์ / Revoking access</h2>
+  <p>
+    เจ้าของบัญชีสามารถเพิกถอนสิทธิ์ของแอปได้ตลอดเวลาที่
+    <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">
+      myaccount.google.com/permissions</a>
+    เมื่อเพิกถอนแล้ว แอปจะไม่สามารถเข้าถึงบัญชีได้อีก
+  </p>
+
+  <h2>เนื้อหาที่สร้างขึ้น / Generated content</h2>
+  <p>
+    วิดีโอที่แอปเผยแพร่สร้างขึ้นด้วยปัญญาประดิษฐ์ และถูกระบุว่าเป็นเนื้อหาสังเคราะห์
+    ตามข้อกำหนดของ YouTube ทุกครั้ง
+  </p>
+
+  <h2>ติดต่อ / Contact</h2>
+  <p>
+    หากมีข้อสงสัยเกี่ยวกับนโยบายนี้ ติดต่อเจ้าของแอปได้ทางอีเมลที่ระบุไว้ในหน้าขอสิทธิ์ของแอป
+  </p>
+
+  <footer>
+    yt-auto — personal automation project. Not a commercial service.
+  </footer>
+</div>
+</body>
+</html>
