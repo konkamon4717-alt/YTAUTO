@@ -1,8 +1,16 @@
+# ค่าลับ - ห้ามหลุดขึ้น git เด็ดขาด
 .env
+client_secret*.json
+kaggle.json
+token.json
+*.credentials.json
+
+# ไฟล์ระหว่างทาง
 out/
 __pycache__/
 *.pyc
 .venv/
+
+# ของหนักที่โหลดใหม่ได้
 assets/fonts/*.ttf
 assets/music/*.mp3
-token.json
