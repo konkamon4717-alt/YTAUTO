@@ -23,13 +23,20 @@ class KaggleError(RuntimeError):
 
 
 def _env() -> dict:
+    """เตรียม environment ให้ kaggle CLI
+
+    Kaggle เปลี่ยนวิธียืนยันตัวตนแล้ว เวอร์ชันใหม่ใช้ KAGGLE_API_TOKEN ตัวเดียว
+    (คีย์ขึ้นต้นด้วย KGA) ส่วน KAGGLE_USERNAME/KAGGLE_KEY แบบเดิมใช้ไม่ได้อีกต่อไป
+    แต่ยังต้องมี username ไว้ประกอบเป็น slug ของ kernel
+    """
     env = os.environ.copy()
-    if not env.get("KAGGLE_USERNAME") or not env.get("KAGGLE_KEY"):
+    if not env.get("KAGGLE_API_TOKEN"):
         raise KaggleError(
-            "ไม่พบ KAGGLE_USERNAME / KAGGLE_KEY — ใส่ใน .env (เครื่องตัวเอง) "
-            "หรือ Repository secrets (GitHub Actions)"
+            "ไม่พบ KAGGLE_API_TOKEN — เอามาจาก kaggle.com/settings/api แล้วใส่ใน .env "
+            "(เครื่องตัวเอง) หรือ Repository secrets (GitHub Actions)"
         )
-    # ปิด output สีและ prompt ของ kaggle CLI เวลารันในระบบอัตโนมัติ
+    if not env.get("KAGGLE_USERNAME"):
+        raise KaggleError("ไม่พบ KAGGLE_USERNAME — ใช้ชื่อที่อยู่ใน URL โปรไฟล์ Kaggle")
     env["KAGGLE_CONFIG_DIR"] = env.get("KAGGLE_CONFIG_DIR", str(Path.home() / ".kaggle"))
     return env
 
