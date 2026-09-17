@@ -1,6 +1,19 @@
 {
-  "updated_at": "2026-09-17T08:43:45+00:00",
+  "updated_at": "2026-09-17T09:10:01+00:00",
   "runs": [
+    {
+      "ok": true,
+      "title": "ความลับของนาฬิกาเรือนเก่าที่หยุดเดินทุกเดือน",
+      "premise": "ช่างซ่อมนาฬิกาหนุ่มพบว่ายายที่นำนาฬิกามาซ่อมฟรีทุกเดือนไม่ได้ทำมันพัง แต่ตั้งใจหมุนกลับเพราะแค่อยากมีเพื่อนคุยแก้เหงา",
+      "video_id": "L52UHMV1E0g",
+      "seconds": 308,
+      "writer": "gemini",
+      "animated": 0,
+      "scenes": 6,
+      "backends": {},
+      "voice": "pollinations",
+      "at": "2026-09-17T09:10:01+00:00"
+    },
     {
       "ok": false,
       "error": "RuntimeError: เขียนบทไม่สำเร็จทุกตัว:\n  gemini: RuntimeError: HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Pl\n  pollinations: ReadTimeout: HTTPSConnectionPool(host='gen.pollinations.ai', port=443): Read timed out. (read timeout=240)",

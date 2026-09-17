@@ -1,0 +1,6 @@
+# ค่าที่แก้จากห้องควบคุม — ทับค่าใน config.yaml
+# ลบไฟล์นี้ทิ้งเมื่อไหร่ ระบบจะกลับไปใช้ค่าตั้งต้นทั้งหมด
+upload:
+  privacy: public
+animation:
+  enabled: false
