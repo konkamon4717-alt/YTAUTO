@@ -23,7 +23,9 @@ images:
   # ไล่ลองทีละรุ่นจนกว่าจะได้ภาพ กันกรณีรุ่นใดรุ่นหนึ่งล่มหรือถูกถอด
   models: [community/NamanSoni78/Z-Image-Turbo, flux, turbo]
   scenes: 10
-  style: "soft storybook illustration, warm cinematic lighting, gentle painterly texture, muted earthy palette, no text, no watermark"
+  # สไตล์ตายตัวของช่อง ให้เข้าชุดกับปกช่อง (นกฮูกพ่อมดสีน้ำ) คนดูเลื่อนเจอต้องจำได้ทันที
+  # เส้นหมึกชัดสีแบนยังช่วยให้โมเดลวิดีโอทำภาพบิดเบี้ยวน้อยกว่าภาพกึ่งเสมือนจริงด้วย
+  style: "whimsical watercolor storybook illustration, soft glowing magical light, rich saturated fairytale colours, delicate ink linework, dreamy atmosphere, no text, no watermark"
 
 llm:
   # เขียนบทด้วยตัวแรกที่ใช้ได้ ตัวไหนเจ๊งก็ตกไปตัวถัดไปเอง
