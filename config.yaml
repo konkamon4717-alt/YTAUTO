@@ -22,7 +22,10 @@ images:
   style: "soft storybook illustration, warm cinematic lighting, gentle painterly texture, muted earthy palette, no text, no watermark"
 
 llm:
+  # เขียนบทด้วยตัวแรกที่ใช้ได้ ตัวไหนเจ๊งก็ตกไปตัวถัดไปเอง
+  backends: [gemini, pollinations]
   model: gemini-3.8-flash
+  fallback_model: community/NamanSoni78/opus-5-max
 
 subtitles:
   font: "Noto Sans Thai"

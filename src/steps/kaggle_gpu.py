@@ -38,6 +38,10 @@ def _env() -> dict:
     if not env.get("KAGGLE_USERNAME"):
         raise KaggleError("ไม่พบ KAGGLE_USERNAME — ใช้ชื่อที่อยู่ใน URL โปรไฟล์ Kaggle")
     env["KAGGLE_CONFIG_DIR"] = env.get("KAGGLE_CONFIG_DIR", str(Path.home() / ".kaggle"))
+    # kaggle CLI พิมพ์แถบ progress ด้วยอักขระ block (U+2588) ซึ่งคอนโซล Windows
+    # ที่ใช้ code page เดิมเข้ารหัสไม่ได้ แล้วจะพังทั้งคำสั่งทั้งที่งานสำเร็จไปแล้ว
+    env["PYTHONIOENCODING"] = "utf-8"
+    env["PYTHONUTF8"] = "1"
     return env
 
 
@@ -102,7 +106,8 @@ def wait(slug: str, timeout_minutes: int = 45) -> str:
 def fetch_output(slug: str, dest: Path) -> list[Path]:
     """ดึงไฟล์ผลลัพธ์กลับมา แล้วคืนรายการไฟล์ที่ได้"""
     dest.mkdir(parents=True, exist_ok=True)
-    _run(["kernels", "output", slug, "-p", str(dest)])
+    # --force ไม่งั้นไฟล์จากรอบก่อนที่ยังค้างอยู่จะถูกใช้แทนผลรอบใหม่แบบเงียบ ๆ
+    _run(["kernels", "output", slug, "-p", str(dest), "--force"])
 
     # ผลลัพธ์บางครั้งมาเป็น zip ก้อนเดียว แตกออกให้เรียบร้อย
     for archive in list(dest.glob("*.zip")):
