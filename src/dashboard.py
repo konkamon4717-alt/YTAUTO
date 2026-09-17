@@ -98,6 +98,39 @@ def latest_clip() -> Path | None:
     return clips[0] if clips else None
 
 
+def latest_scenes() -> list[Path]:
+    """ภาพนิ่งของรอบล่าสุด ไว้ตรวจคุณภาพก่อนตัดสินใจปล่อย"""
+    clip = latest_clip()
+    return sorted(clip.parent.glob("scene_*.jpg")) if clip else []
+
+
+# ค่าที่ยอมให้แก้จากหน้าเว็บ — จงใจจำกัดไว้เฉพาะตัวที่แก้แล้วไม่พังระบบ
+# ตัวที่ไม่อยู่ในนี้ต้องแก้ใน config.yaml เอง เพื่อบังคับให้คิดก่อนแก้
+EDITABLE = {
+    "upload.privacy":            ("การเผยแพร่", ["private", "unlisted", "public"]),
+    "animation.enabled":         ("เปิดภาพเคลื่อนไหว", [True, False]),
+    "animation.max_shots_per_run": ("ขยับกี่ฉากต่อคลิป", list(range(0, 11))),
+    "images.scenes":             ("จำนวนฉากต่อคลิป", [6, 8, 10, 12]),
+    "video.target_seconds":      ("ความยาวเป้าหมาย (วิ)", [30, 40, 45, 50, 55]),
+    "run.per_day":               ("คลิปต่อวัน", [1, 2, 3, 4, 5, 6]),
+}
+
+
+def _dig(cfg: dict, path: str):
+    node = cfg
+    for part in path.split("."):
+        node = node.get(part, {})
+    return node
+
+
+def _nest(path: str, value) -> dict:
+    parts = path.split(".")
+    out = {parts[-1]: value}
+    for part in reversed(parts[:-1]):
+        out = {part: out}
+    return out
+
+
 class Handler(http.server.SimpleHTTPRequestHandler):
 
     def _json(self, payload: dict, status: int = 200) -> None:
@@ -120,6 +153,39 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 "clip_name": clip.parent.name if clip else None,
             })
 
+        if self.path.startswith("/api/config"):
+            from . import config as cfgmod
+            cfg = cfgmod.load()
+            return self._json({
+                "fields": [
+                    {"path": p, "label": label, "options": opts, "value": _dig(cfg, p)}
+                    for p, (label, opts) in EDITABLE.items()
+                ],
+                "has_overrides": cfgmod.LOCAL.exists(),
+            })
+
+        if self.path.startswith("/api/scenes"):
+            scenes = latest_scenes()
+            return self._json({
+                "folder": scenes[0].parent.name if scenes else None,
+                "scenes": [f"/api/scene/{i}?t={int(p.stat().st_mtime)}"
+                           for i, p in enumerate(scenes)],
+            })
+
+        if self.path.startswith("/api/scene/"):
+            index = self.path.split("/api/scene/")[-1].split("?")[0]
+            scenes = latest_scenes()
+            if not index.isdigit() or int(index) >= len(scenes):
+                return self._json({"error": "ไม่พบภาพ"}, 404)
+            data = scenes[int(index)].read_bytes()
+            self.send_response(200)
+            self.send_header("Content-Type", "image/jpeg")
+            self.send_header("Content-Length", str(len(data)))
+            self.send_header("Cache-Control", "no-store")
+            self.end_headers()
+            self.wfile.write(data)
+            return
+
         if self.path.startswith("/api/clip"):
             clip = latest_clip()
             if not clip:
@@ -135,17 +201,61 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
         super().do_GET()
 
+    def _body(self) -> dict:
+        length = int(self.headers.get("Content-Length") or 0)
+        if not length:
+            return {}
+        try:
+            return json.loads(self.rfile.read(length).decode("utf-8"))
+        except json.JSONDecodeError:
+            return {}
+
     def do_POST(self) -> None:  # noqa: N802
-        if not self.path.startswith("/api/run/"):
-            return self._json({"error": "ไม่รู้จักคำสั่งนี้"}, 404)
+        if self.path.startswith("/api/run/"):
+            key = self.path.rsplit("/", 1)[-1].split("?")[0]
+            if key not in COMMANDS:
+                return self._json({"error": f"ไม่รู้จักคำสั่ง {key}"}, 400)
+            label, args = COMMANDS[key]
+            ok, message = JOB.start(label, args)
+            return self._json({"ok": ok, "message": message}, 200 if ok else 409)
 
-        key = self.path.rsplit("/", 1)[-1].split("?")[0]
-        if key not in COMMANDS:
-            return self._json({"error": f"ไม่รู้จักคำสั่ง {key}"}, 400)
+        if self.path.startswith("/api/config"):
+            from . import config as cfgmod
+            body = self._body()
+            path, value = body.get("path"), body.get("value")
+            if path not in EDITABLE:
+                return self._json({"error": f"แก้ {path} จากหน้าเว็บไม่ได้"}, 400)
 
-        label, args = COMMANDS[key]
-        ok, message = JOB.start(label, args)
-        return self._json({"ok": ok, "message": message}, 200 if ok else 409)
+            label, options = EDITABLE[path]
+            if value not in options:
+                return self._json({"error": f"{label}: ค่า {value!r} ไม่อยู่ในตัวเลือก"}, 400)
+
+            cfgmod.save_overrides(_nest(path, value))
+            return self._json({"ok": True, "message": f"ตั้ง {label} เป็น {value} แล้ว"})
+
+        if self.path.startswith("/api/video/"):
+            rest = self.path.split("/api/video/")[-1]
+            video_id, _, action = rest.partition("/")
+            if action.split("?")[0] != "privacy":
+                return self._json({"error": "ไม่รู้จักคำสั่งนี้"}, 404)
+
+            privacy = (self._body().get("privacy") or "").strip()
+            if privacy not in ("private", "unlisted", "public"):
+                return self._json({"error": f"ค่า privacy ไม่ถูกต้อง: {privacy!r}"}, 400)
+
+            try:
+                from .steps import upload
+                youtube = upload.client()
+                youtube.videos().update(
+                    part="status",
+                    body={"id": video_id, "status": {"privacyStatus": privacy}},
+                ).execute()
+            except Exception as exc:  # noqa: BLE001 - แสดง error ให้เห็นบนหน้าเว็บ
+                return self._json({"error": f"{type(exc).__name__}: {exc}"[:220]}, 502)
+
+            return self._json({"ok": True, "message": f"เปลี่ยนเป็น {privacy} แล้ว"})
+
+        return self._json({"error": "ไม่รู้จักคำสั่งนี้"}, 404)
 
     def end_headers(self) -> None:
         # ไฟล์สถานะเปลี่ยนตลอด ห้ามให้เบราว์เซอร์แคช ไม่งั้นจะเห็นของเก่า

@@ -134,6 +134,19 @@
            background:var(--sunk); font-family:"IBM Plex Mono",monospace;
            font-size:12px; line-height:1.6; white-space:pre-wrap; word-break:break-word}
 
+  /* ค่าตั้ง — คู่ label/ค่า เรียงเป็นแถว ไม่ใช่การ์ด เพราะเป็นของชนิดเดียวกัน */
+  .settings{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:10px}
+  .setting{background:var(--panel); border:1px solid var(--line); border-radius:11px;
+           padding:11px 14px; display:flex; flex-direction:column; gap:6px}
+  .setting label{font-size:12px; color:var(--ink-3)}
+  .setting select{background:var(--sunk); color:var(--ink); border:1px solid var(--line);
+                  border-radius:8px; padding:7px 9px; font:inherit; font-size:14px; width:100%}
+  .setting select:disabled{opacity:.5}
+
+  /* ภาพนิ่งของรอบล่าสุด ไว้ไล่ดูคุณภาพเร็ว ๆ */
+  .scenes{display:flex; gap:8px; overflow-x:auto; margin-top:12px; padding-bottom:4px}
+  .scenes img{height:132px; border-radius:7px; border:1px solid var(--line); flex:0 0 auto}
+
   /* คลิปตัวอย่าง */
   .clip{background:var(--panel); border:1px solid var(--line); border-radius:12px;
         padding:14px; display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap}
@@ -177,6 +190,12 @@
     </div>
   </section>
 
+  <section id="settings-box" hidden>
+    <h2>ค่าตั้ง</h2>
+    <div class="settings" id="settings"></div>
+    <div class="note" id="settings-note"></div>
+  </section>
+
   <h2>ช่อง</h2>
   <div class="meters" id="channel"></div>
 
@@ -189,6 +208,7 @@
       <video id="clip" controls preload="metadata"></video>
       <div class="clip-note" id="clip-note"></div>
     </div>
+    <div class="scenes" id="scenes"></div>
   </section>
 
   <h2>คลิปบนช่อง</h2>
@@ -423,8 +443,83 @@ function renderChannel(ch) {
         <a href="https://youtube.com/watch?v=${esc(v.id)}" target="_blank" rel="noopener">${esc(v.title)}</a>
       </span>
       <span class="ms">${v.views.toLocaleString()} วิว · ${v.likes} ไลก์</span>
+      ${isLocal ? `<select class="vp" data-id="${esc(v.id)}">
+        ${["private", "unlisted", "public"].map(p =>
+          `<option value="${p}"${p === v.privacy ? " selected" : ""}>${p}</option>`).join("")}
+      </select>` : ""}
     </div>`).join("")
     : `<div class="row"><span class="detail">ยังไม่มีคลิปบนช่อง</span></div>`;
+
+  // เปลี่ยนการเผยแพร่ของคลิปที่อัปไปแล้ว — จุดที่ต้องใช้จริงตอนพอใจคุณภาพแล้ว
+  $("videos").querySelectorAll(".vp").forEach(sel => {
+    sel.onchange = async () => {
+      const before = sel.dataset.was ?? sel.value;
+      sel.disabled = true;
+      try {
+        const r = await fetch(`api/video/${sel.dataset.id}/privacy`, {
+          method: "POST", headers: { "content-type": "application/json" },
+          body: JSON.stringify({ privacy: sel.value }),
+        });
+        const d = await r.json();
+        if (!d.ok) { alert(d.error || "เปลี่ยนไม่สำเร็จ"); sel.value = before; }
+        else setTimeout(load, 1500);
+      } catch (e) { alert("เปลี่ยนไม่สำเร็จ: " + e.message); sel.value = before; }
+      sel.disabled = false;
+    };
+  });
+}
+
+async function renderSettings() {
+  let data = null;
+  try {
+    const res = await fetch("api/config", { cache: "no-store" });
+    if (res.ok) data = await res.json();
+  } catch { /* ไม่ใช่โหมดในเครื่อง */ }
+  if (!data) return;
+
+  $("settings-box").hidden = false;
+  $("settings").innerHTML = data.fields.map(f => `
+    <div class="setting">
+      <label for="set-${esc(f.path)}">${esc(f.label)}</label>
+      <select id="set-${esc(f.path)}" data-path="${esc(f.path)}">
+        ${f.options.map(o =>
+          `<option value="${esc(String(o))}"${String(o) === String(f.value) ? " selected" : ""}>${esc(String(o))}</option>`
+        ).join("")}
+      </select>
+    </div>`).join("");
+
+  $("settings-note").textContent = data.has_overrides
+    ? "ค่าที่แก้จากหน้านี้เก็บใน config.local.yaml — ลบไฟล์นั้นเพื่อกลับไปใช้ค่าตั้งต้น"
+    : "แก้จากที่นี่ได้เลย ค่าตั้งต้นใน config.yaml จะไม่ถูกแตะ";
+
+  $("settings").querySelectorAll("select").forEach(sel => {
+    sel.onchange = async () => {
+      sel.disabled = true;
+      // ค่าตัวเลขกับ true/false ต้องส่งเป็นชนิดเดิม ไม่ใช่ข้อความ
+      let value = sel.value;
+      if (value === "true" || value === "false") value = value === "true";
+      else if (/^-?\d+$/.test(value)) value = Number(value);
+      try {
+        const r = await fetch("api/config", {
+          method: "POST", headers: { "content-type": "application/json" },
+          body: JSON.stringify({ path: sel.dataset.path, value }),
+        });
+        const d = await r.json();
+        $("settings-note").textContent = d.ok ? d.message : (d.error || "บันทึกไม่สำเร็จ");
+      } catch (e) { $("settings-note").textContent = "บันทึกไม่สำเร็จ: " + e.message; }
+      sel.disabled = false;
+    };
+  });
+}
+
+async function renderScenes() {
+  try {
+    const res = await fetch("api/scenes", { cache: "no-store" });
+    if (!res.ok) return;
+    const d = await res.json();
+    $("scenes").innerHTML = (d.scenes ?? []).map((src, i) =>
+      `<img src="${esc(src)}" alt="ฉาก ${i + 1}" loading="lazy">`).join("");
+  } catch { /* ไม่ใช่โหมดในเครื่อง */ }
 }
 
 function mini(used, cap) {
@@ -434,6 +529,8 @@ function mini(used, cap) {
 
 // ── ส่วนสั่งงาน มีเฉพาะตอนเปิดจากเครื่องตัวเอง ──
 let commandsReady = false;
+let isLocal = false;
+let lastExit = undefined;
 
 async function pollLocal() {
   let state = null;
@@ -443,6 +540,7 @@ async function pollLocal() {
   } catch { /* เปิดจาก GitHub Pages = ไม่มี API ซึ่งถูกต้องแล้ว */ }
 
   if (!state?.local) return false;
+  isLocal = true;
   $("control").hidden = false;
 
   if (!commandsReady) {
@@ -478,6 +576,11 @@ async function pollLocal() {
     if (atBottom) log.scrollTop = log.scrollHeight;
   }
 
+  if (job.exit_code !== null && job.exit_code !== lastExit) {
+    lastExit = job.exit_code;
+    load(); renderScenes(); renderSettings();
+  }
+
   if (state.clip) {
     $("clip-box").hidden = false;
     const v = $("clip");
@@ -511,6 +614,8 @@ async function tick() {
 }
 
 load();
+renderSettings();
+renderScenes();
 tick();
 setInterval(load, 30000);
 </script>
