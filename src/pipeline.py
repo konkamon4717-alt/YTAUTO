@@ -85,9 +85,15 @@ def make_video(cfg: dict, work: Path, story: dict | None = None) -> tuple[Path, 
 
     # พากย์ทั้งคลิปรวดเดียวด้วยเสียงเดียวกัน ไม่ใช่เลือกตัวพากย์ทีละฉาก
     # ไม่งั้นฉากที่ตัวหลักล้มจะได้เสียงคนละคน แล้วคลิปจะสลับเสียงกลางเรื่อง
-    parts = [work / f"voice_{i:02d}.mp3" for i in range(len(story["scenes"]))]
-    spoken_all = voice.speak_all(
-        [s["narration"] for s in story["scenes"]], parts, cfg)
+    narrations = [s["narration"] for s in story["scenes"]]
+
+    # ประโยคปิดของช่อง พากย์รวมไปกับฉากอื่นเพื่อให้เป็นเสียงเดียวกัน
+    closing = (cfg.get("brand") or {}).get("closing_line", "").strip()
+    if closing:
+        narrations.append(closing)
+
+    parts = [work / f"voice_{i:02d}.mp3" for i in range(len(narrations))]
+    spoken_all = voice.speak_all(narrations, parts, cfg)
     voice_backend = spoken_all[0]["backend"]
 
     for index, scene in enumerate(story["scenes"]):
@@ -113,11 +119,16 @@ def make_video(cfg: dict, work: Path, story: dict | None = None) -> tuple[Path, 
         scene_durations.append(seconds)
         offset += seconds
 
-    total = sum(scene_durations)
-    print(f"      ความยาวรวม {total:.1f} วินาที")
+    # ฉากปิดต้องนับรวมในเพดานความยาวด้วย ไม่งั้นเรื่องที่ยาวพอดีจะทะลุเพดาน
+    # หลังต่อฉากปิดโดยไม่มีอะไรจับได้
+    outro_seconds = render.duration_of(parts[-1]) if closing else 0.0
+    total = sum(scene_durations) + outro_seconds
+    print(f"      ความยาวรวม {total:.1f} วินาที"
+          + (f" (เรื่อง {total - outro_seconds:.1f} + ปิดท้าย {outro_seconds:.1f})"
+             if closing else ""))
     if total > cfg["video"]["hard_max_seconds"]:
         raise RuntimeError(
-            f"เรื่องยาวเกิน ({total:.1f}s > {cfg['video']['hard_max_seconds']}s) — ทิ้งรอบนี้แล้วให้ไปคิดใหม่"
+            f"ยาวเกิน ({total:.1f}s > {cfg['video']['hard_max_seconds']}s) — ทิ้งรอบนี้แล้วให้ไปคิดใหม่"
         )
 
     scenes = story["scenes"]
@@ -137,6 +148,27 @@ def make_video(cfg: dict, work: Path, story: dict | None = None) -> tuple[Path, 
 
     print("[4/6] ทำให้ภาพขยับ...")
     clips, anim_stats = _build_clips(scenes, stills, scene_durations, cfg, work)
+
+    if closing:
+        outro_spoken = spoken_all[-1]
+        outro_path = parts[-1]
+
+        lines = (subtitles.group_words(
+                     outro_spoken["segments"], cfg["subtitles"]["max_chars_per_line"],
+                     source=closing)
+                 if outro_spoken["granularity"] == "word"
+                 else outro_spoken["segments"])
+        for line in lines:
+            scene_lines.append({**line,
+                                "start": line["start"] + offset,
+                                "end": line["end"] + offset})
+
+        outro_clip = work / f"clip_{len(scenes):02d}.mp4"
+        # ใช้ภาพฉากสุดท้ายซ้ำ ซูมออกช้า ๆ ให้รู้สึกว่าเรื่องจบลง
+        render.ken_burns(stills[-1], outro_seconds, outro_clip, cfg, move="out")
+        clips.append(outro_clip)
+        voice_parts.append(outro_path)
+        print(f"      ต่อฉากปิดของช่อง ({outro_seconds:.1f} วินาที)")
 
     print("[5/6] ตัดต่อ...")
     subs_path = work / "subs.ass"
