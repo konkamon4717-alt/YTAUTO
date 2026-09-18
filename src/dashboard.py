@@ -30,8 +30,16 @@ DOCS = ROOT / "docs"
 MAX_LOG_LINES = 400
 
 
+LOG_FILE = OUT / "last_job.log"
+
+
 class Job:
-    """งานที่กำลังรันอยู่ ครั้งละงานเดียวเท่านั้น"""
+    """งานที่กำลังรันอยู่ ครั้งละงานเดียวเท่านั้น
+
+    เขียน log ลงไฟล์ด้วย เพราะเก็บไว้ในหน่วยความจำอย่างเดียวแปลว่า
+    เซิร์ฟเวอร์รีสตาร์ทเมื่อไหร่ ประวัติของรอบล่าสุดหายหมด
+    ซึ่งเป็นตอนที่ต้องการดูที่สุด (รอบที่พังแล้วเราเพิ่งกลับมาดู)
+    """
 
     def __init__(self) -> None:
         self.lock = threading.Lock()
@@ -40,6 +48,39 @@ class Job:
         self.started = 0.0
         self.log: deque[str] = deque(maxlen=MAX_LOG_LINES)
         self.exit_code: int | None = None
+        self.elapsed: int = 0
+        self._restore()
+
+    def _restore(self) -> None:
+        """อ่าน log ของรอบก่อนกลับมา ให้เปิดหน้าเว็บแล้วยังเห็นว่าเกิดอะไรขึ้น"""
+        try:
+            saved = json.loads(LOG_FILE.read_text(encoding="utf-8"))
+            self.name = saved.get("name", "")
+            self.exit_code = saved.get("exit_code")
+            self.log.extend(saved.get("log", []))
+            self.started = saved.get("started", 0.0)
+            self.elapsed = saved.get("elapsed", 0)
+        except Exception:  # noqa: BLE001 - ไม่มีไฟล์หรือไฟล์พัง = เริ่มใหม่ ไม่ใช่ error
+            pass
+
+    def _persist(self) -> None:
+        try:
+            LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
+            LOG_FILE.write_text(json.dumps({
+                "name": self.name, "exit_code": self.exit_code,
+                "started": self.started, "elapsed": self.elapsed,
+                "log": list(self.log),
+            }, ensure_ascii=False), encoding="utf-8")
+        except Exception:  # noqa: BLE001 - เขียน log ไม่ได้ต้องไม่ทำให้งานล้ม
+            pass
+
+    def stop(self) -> tuple[bool, str]:
+        with self.lock:
+            if not self.running:
+                return False, "ไม่มีงานที่กำลังรันอยู่"
+            self.process.terminate()
+            self.log.append("— ถูกสั่งหยุดจากห้องควบคุม —")
+            return True, f"สั่งหยุด '{self.name}' แล้ว"
 
     @property
     def running(self) -> bool:
@@ -70,16 +111,24 @@ class Job:
 
     def _pump(self) -> None:
         assert self.process and self.process.stdout
+        since = time.time()
         for line in self.process.stdout:
             self.log.append(line.rstrip())
+            # เขียนลงไฟล์เป็นช่วง ๆ ไม่ใช่ทุกบรรทัด จะได้ไม่กวนดิสก์
+            if time.time() - since > 3:
+                self._persist()
+                since = time.time()
         self.exit_code = self.process.wait()
+        self.elapsed = round(time.time() - self.started)
         self.log.append(f"— จบแล้ว (exit {self.exit_code}) —")
+        self._persist()
 
     def snapshot(self) -> dict:
         return {
             "running": self.running,
             "name": self.name,
-            "seconds": round(time.time() - self.started) if self.started else 0,
+            "seconds": (round(time.time() - self.started) if self.running
+                        else self.elapsed),
             "exit_code": self.exit_code,
             "log": list(self.log),
         }
@@ -224,6 +273,10 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             ok, message = JOB.start(label, args)
             return self._json({"ok": ok, "message": message}, 200 if ok else 409)
 
+        if self.path.startswith("/api/stop"):
+            ok, message = JOB.stop()
+            return self._json({"ok": ok, "message": message}, 200 if ok else 409)
+
         if self.path.startswith("/api/config"):
             from . import config as cfgmod
             body = self._body()
@@ -287,10 +340,22 @@ def main() -> int:
         return 1
 
     handler = partial(Handler, directory=str(DOCS))
-    socketserver.TCPServer.allow_reuse_address = True
+    # บน Windows ค่านี้ทำให้โปรเซสที่สอง "แย่ง" พอร์ตไปได้เลยแทนที่จะถูกปฏิเสธ
+    # ผลคือมีเซิร์ฟเวอร์สองตัวทับกันโดยไม่มีใครรู้ว่าตัวไหนตอบ request
+    # ปิดไว้เพื่อให้การชนพอร์ตถูกตรวจจับได้จริง
+    socketserver.TCPServer.allow_reuse_address = (os.name != "nt")
 
-    # 127.0.0.1 เท่านั้น ปุ่มในหน้านี้สั่งรันโปรแกรมได้ ห้ามเปิดออกเน็ตเด็ดขาด
-    with socketserver.ThreadingTCPServer(("127.0.0.1", args.port), handler) as httpd:
+    try:
+        # 127.0.0.1 เท่านั้น ปุ่มในหน้านี้สั่งรันโปรแกรมได้ ห้ามเปิดออกเน็ตเด็ดขาด
+        httpd = socketserver.ThreadingTCPServer(("127.0.0.1", args.port), handler)
+    except OSError as exc:
+        print(f"เปิดพอร์ต {args.port} ไม่ได้: {exc}")
+        print("น่าจะมีห้องควบคุมเปิดอยู่แล้ว — ลองเปิด "
+              f"http://127.0.0.1:{args.port} ดูก่อน")
+        print(f"ถ้าอยากเปิดอีกหน้าต่าง ใช้ --port ตัวอื่น เช่น --port {args.port + 1}")
+        return 1
+
+    with httpd:
         url = f"http://127.0.0.1:{args.port}/"
         print(f"ห้องควบคุมเปิดที่ {url}")
         print("กด Ctrl+C เพื่อปิด")

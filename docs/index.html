@@ -130,6 +130,9 @@
             border-bottom:1px solid var(--line-soft); font-size:13px; font-weight:500}
   .job-time{color:var(--ink-3); font-family:"IBM Plex Mono",monospace;
             font-variant-numeric:tabular-nums}
+  button.stop{padding:3px 11px; font-size:12.5px; margin-left:10px;
+              border-color:var(--bad); color:var(--bad)}
+  button.stop:hover:not(:disabled){background:var(--bad-bg)}
   .job-log{margin:0; padding:13px 15px; max-height:260px; overflow:auto;
            background:var(--sunk); font-family:"IBM Plex Mono",monospace;
            font-size:12px; line-height:1.6; white-space:pre-wrap; word-break:break-word}
@@ -184,7 +187,10 @@
     <div class="job" id="job" hidden>
       <div class="job-head">
         <span id="job-name"></span>
-        <span class="job-time" id="job-time"></span>
+        <span>
+          <span class="job-time" id="job-time"></span>
+          <button id="job-stop" class="stop" hidden>หยุด</button>
+        </span>
       </div>
       <pre class="job-log" id="job-log"></pre>
     </div>
@@ -531,6 +537,7 @@ function mini(used, cap) {
 let commandsReady = false;
 let isLocal = false;
 let lastExit = undefined;
+let stopWired = false;
 
 async function pollLocal() {
   let state = null;
@@ -570,6 +577,7 @@ async function pollLocal() {
     $("job-name").textContent = busy ? `กำลังรัน: ${job.name}`
       : `${job.name} — จบแล้ว${job.exit_code ? ` (ล้มเหลว exit ${job.exit_code})` : ""}`;
     $("job-time").textContent = job.seconds + " วินาที";
+    $("job-stop").hidden = !busy;
     const log = $("job-log");
     const atBottom = log.scrollHeight - log.scrollTop - log.clientHeight < 40;
     log.textContent = job.log.join("\n");
@@ -579,6 +587,19 @@ async function pollLocal() {
   if (job.exit_code !== null && job.exit_code !== lastExit) {
     lastExit = job.exit_code;
     load(); renderScenes(); renderSettings();
+  }
+
+  if (!stopWired) {
+    $("job-stop").onclick = async () => {
+      $("job-stop").disabled = true;
+      try {
+        const r = await fetch("api/stop", { method: "POST" });
+        const d = await r.json();
+        if (!d.ok) alert(d.message || d.error);
+      } catch (e) { alert("สั่งหยุดไม่สำเร็จ: " + e.message); }
+      $("job-stop").disabled = false;
+    };
+    stopWired = true;
   }
 
   if (state.clip) {
