@@ -3,4 +3,4 @@
 upload:
   privacy: public
 animation:
-  enabled: false
+  enabled: true

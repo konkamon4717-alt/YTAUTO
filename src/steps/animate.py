@@ -57,10 +57,16 @@ def _hf_batch(shots: list[Shot], outs: list[Path], cfg: dict) -> list[bool]:
 
     for index, (shot, out) in enumerate(zip(shots, outs)):
         try:
+            # ขอคลิปสั้นเสมอ แล้วให้ render.conform() ต่อขาไป-ขากลับยืดเอง
+            #
+            # โควต้า ZeroGPU นับเป็น "วินาที GPU" ไม่ใช่จำนวนครั้ง ขอ 5 วินาที
+            # มันคิด ~110 วินาที GPU ขอ 2.5 วินาทีคิดราวครึ่งเดียว
+            # จำนวนช็อตที่ได้ต่อวันจึงเพิ่มเป็นเท่าตัวโดยความยาวฉากเท่าเดิม
+            wanted = _clamp(cfg["animation"].get("request_seconds", 2.5), 2.0, 5.0)
             result = client.predict(
                 input_image=handle_file(str(shot.image)),
                 prompt=f"{shot.prompt}. {MOTION_SUFFIX}",
-                duration_seconds=_clamp(shot.seconds, 2.0, 5.0),
+                duration_seconds=wanted,
                 api_name="/generate_video",
             )
         except Exception as exc:  # noqa: BLE001 - gradio ห่อ error ของ Space มาอีกชั้น

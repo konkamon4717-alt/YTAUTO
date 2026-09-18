@@ -70,6 +70,11 @@ animation:
   # หลักการ: ฉากที่ขยับสวยสำคัญกว่าฉากที่ขยับได้ครบ
   # ฉากที่ไม่ได้คิวขยับจะได้กล้องเคลื่อนบนภาพนิ่งซึ่งคมชัดเต็ม 1080x1920
   backends: [huggingface]
+  # ขอคลิปจากโมเดลสั้น ๆ แล้วให้ boomerang ยืดเต็มฉากเอง
+  # โควต้า ZeroGPU นับเป็น "วินาที GPU" ไม่ใช่จำนวนครั้ง — ขอ 5 วิคิด ~110 วิ GPU
+  # ขอ 2.5 วิคิดราวครึ่งเดียว จำนวนช็อตต่อวันจึงเพิ่มเป็นเท่าตัว
+  request_seconds: 2.5
+
   kaggle_dataset: yt-auto-shots
   kaggle_kernel: yt-auto-animate
   kaggle_timeout_minutes: 90
