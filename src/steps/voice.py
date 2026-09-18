@@ -11,6 +11,7 @@ edge-tts เป็นตัวหลักเพราะฟรี เสีย�
 แค่หยาบกว่าระดับคำเท่านั้น
 """
 import asyncio
+import time
 import os
 import subprocess
 from pathlib import Path
@@ -52,9 +53,26 @@ async def _edge_stream(text: str, out_path: Path, cfg: dict) -> list[dict]:
     return words
 
 
+EDGE_RETRIES = 3
+EDGE_WAIT = 4
+
+
 def _edge(text: str, out_path: Path, cfg: dict) -> VoiceResult:
-    words = asyncio.run(_edge_stream(text, out_path, cfg))
-    return VoiceResult(backend="edge-tts", granularity="word", segments=words)
+    """edge-tts ล้มแบบชั่วคราวบ่อย (NoAudioReceived) ลองซ้ำก่อนยอมแพ้
+
+    สำคัญกว่าที่คิด เพราะการถอยไปตัวสำรองแปลว่า "เปลี่ยนเสียงพากย์"
+    ซึ่งผู้ฟังจับได้ทันที การลองซ้ำสองสามครั้งจึงคุ้มกว่าเปลี่ยนเสียง
+    """
+    last: Exception | None = None
+    for attempt in range(EDGE_RETRIES):
+        try:
+            words = asyncio.run(_edge_stream(text, out_path, cfg))
+            return VoiceResult(backend="edge-tts", granularity="word", segments=words)
+        except Exception as exc:  # noqa: BLE001 - ล้มชั่วคราว ลองใหม่
+            last = exc
+            if attempt < EDGE_RETRIES - 1:
+                time.sleep(EDGE_WAIT * (attempt + 1))
+    raise RuntimeError(f"ลอง {EDGE_RETRIES} ครั้งแล้วยังไม่ได้: {last}")
 
 
 # ---------- ตัวสำรอง: พากย์ทีละวรรค ----------
@@ -141,9 +159,12 @@ def _speak_by_phrase(name: str, text: str, out_path: Path, cfg: dict) -> VoiceRe
         parts.append(part)
         offset += seconds
 
+    # ต้องเป็น path แบบเต็ม เพราะ FFmpeg หาไฟล์ในรายการนี้โดยอิงจากตำแหน่งของ
+    # ไฟล์รายการเอง ไม่ใช่จากที่รันคำสั่ง ใส่ path สัมพัทธ์ลงไปมันจะไปหาซ้อนอีกชั้น
     listing = work / "concat.txt"
-    listing.write_text("\n".join(f"file '{p.as_posix()}'" for p in parts) + "\n",
-                       encoding="utf-8")
+    listing.write_text(
+        "\n".join(f"file '{p.resolve().as_posix()}'" for p in parts) + "\n",
+        encoding="utf-8")
     result = subprocess.run(
         ["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(listing),
          "-c", "copy", str(out_path)],
@@ -157,20 +178,42 @@ def _speak_by_phrase(name: str, text: str, out_path: Path, cfg: dict) -> VoiceRe
 
 # ---------- ทางเข้าหลัก ----------
 
-def speak(text: str, out_path, cfg: dict) -> VoiceResult:
-    """พากย์ด้วยตัวแรกที่ใช้ได้ ตกไปตัวถัดไปเมื่อเจ๊ง"""
-    out_path = Path(out_path)
-    errors = []
+def _speak_one(name: str, text: str, out_path: Path, cfg: dict) -> VoiceResult:
+    if name == "edge-tts":
+        return _edge(text, out_path, cfg)
+    if name in PHRASE_BACKENDS:
+        return _speak_by_phrase(name, text, out_path, cfg)
+    raise RuntimeError(f"ไม่รู้จักตัวพากย์ {name}")
 
+
+def speak_all(texts: list[str], out_paths: list[Path], cfg: dict) -> list[VoiceResult]:
+    """พากย์ทั้งคลิปด้วยเสียงเดียวกัน
+
+    ต้องเลือกตัวพากย์ "ครั้งเดียวต่อคลิป" ไม่ใช่ทีละฉาก เพราะแต่ละตัวเสียงคนละคน
+    ของเดิมเลือกทีละฉาก พอ edge-tts ล้มบางฉากเลยได้คลิปที่เสียงผู้หญิงสลับผู้ชาย
+    กลางเรื่อง ซึ่งผู้ฟังจับได้ทันทีและทำลายเอกลักษณ์ของช่อง
+
+    ตัวไหนทำไม่ครบทุกฉาก ถือว่าใช้ไม่ได้ทั้งตัว แล้วเริ่มใหม่ด้วยตัวถัดไป
+    """
+    errors = []
     for name in cfg["tts"]["backends"]:
         try:
-            if name == "edge-tts":
-                return _edge(text, out_path, cfg)
-            if name in PHRASE_BACKENDS:
-                return _speak_by_phrase(name, text, out_path, cfg)
-        except Exception as exc:  # noqa: BLE001 - ลองตัวถัดไปเสมอ
-            message = f"{name}: {type(exc).__name__}: {str(exc)[:120]}"
-            print(f"      พากย์เสียงด้วย {message} — ลองตัวถัดไป")
+            results = [
+                _speak_one(name, text, Path(path), cfg)
+                for text, path in zip(texts, out_paths)
+            ]
+            if name != cfg["tts"]["backends"][0]:
+                print(f"      พากย์ทั้งคลิปด้วยเสียงสำรอง '{name}'")
+            return results
+        except Exception as exc:  # noqa: BLE001 - ทั้งตัวใช้ไม่ได้ ไปตัวถัดไป
+            message = f"{name}: {type(exc).__name__}: {str(exc)[:110]}"
+            print(f"      พากย์ด้วย {message}")
+            print(f"      — เปลี่ยนตัวพากย์ทั้งคลิป ไม่ผสมเสียงกลางเรื่อง")
             errors.append(message)
 
     raise RuntimeError("พากย์เสียงไม่สำเร็จทุกตัว:\n  " + "\n  ".join(errors))
+
+
+def speak(text: str, out_path, cfg: dict) -> VoiceResult:
+    """พากย์ฉากเดียว — ใช้ตอนทดสอบเท่านั้น ของจริงใช้ speak_all"""
+    return speak_all([text], [Path(out_path)], cfg)[0]

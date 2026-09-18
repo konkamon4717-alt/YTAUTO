@@ -83,11 +83,16 @@ def make_video(cfg: dict, work: Path, story: dict | None = None) -> tuple[Path, 
     offset = 0.0
     scene_durations: list[float] = []
 
-    voice_backend = ""
+    # พากย์ทั้งคลิปรวดเดียวด้วยเสียงเดียวกัน ไม่ใช่เลือกตัวพากย์ทีละฉาก
+    # ไม่งั้นฉากที่ตัวหลักล้มจะได้เสียงคนละคน แล้วคลิปจะสลับเสียงกลางเรื่อง
+    parts = [work / f"voice_{i:02d}.mp3" for i in range(len(story["scenes"]))]
+    spoken_all = voice.speak_all(
+        [s["narration"] for s in story["scenes"]], parts, cfg)
+    voice_backend = spoken_all[0]["backend"]
+
     for index, scene in enumerate(story["scenes"]):
-        part = work / f"voice_{index:02d}.mp3"
-        spoken = voice.speak(scene["narration"], part, cfg)
-        voice_backend = spoken["backend"]
+        part = parts[index]
+        spoken = spoken_all[index]
         seconds = render.duration_of(part)
 
         if spoken["granularity"] == "word":

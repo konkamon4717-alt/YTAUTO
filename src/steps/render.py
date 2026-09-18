@@ -116,7 +116,9 @@ def conform(clip: Path, seconds: float, out_path: Path, cfg: dict, work: Path) -
 
 
 def _concat_file(paths: list[Path], list_path: Path) -> None:
-    lines = [f"file '{p.as_posix()}'" for p in paths]
+    # ต้องเป็น path แบบเต็ม เพราะ FFmpeg หาไฟล์ในรายการนี้โดยอิงจากตำแหน่งของ
+    # ไฟล์รายการเอง ไม่ใช่จากที่รันคำสั่ง ใส่ path สัมพัทธ์ลงไปมันจะไปหาซ้อนอีกชั้น
+    lines = [f"file '{p.resolve().as_posix()}'" for p in paths]
     list_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
