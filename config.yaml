@@ -56,6 +56,9 @@ subtitles:
   margin_v: 480
 
 upload:
+  # ปกคลิป — Shorts feed ไม่แสดงปก แต่หน้าช่อง ผลค้นหา และตอนแชร์ลิงก์แสดง
+  # จึงช่วยให้หน้าช่องดูเป็นมืออาชีพ ไม่ได้ช่วยเรื่องวิวใน feed โดยตรง
+  thumbnail: true
   privacy: private
   category_id: "24"
   made_for_kids: false

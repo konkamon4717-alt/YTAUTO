@@ -60,7 +60,23 @@ def upload(video_path: Path, story: dict, cfg: dict) -> str:
 
     video_id = response["id"]
     _add_localizations(youtube, video_id, story, cfg)
+    _set_thumbnail(youtube, video_id, cfg)
     return video_id
+
+
+def _set_thumbnail(youtube, video_id: str, cfg: dict) -> None:
+    """อัปปกที่สร้างไว้ ถ้ามี — ต้องยืนยันเบอร์โทรในช่องก่อนถึงจะใช้ได้"""
+    cover = cfg.get("_thumbnail")
+    if not cover or not Path(cover).exists():
+        return
+    try:
+        youtube.thumbnails().set(
+            videoId=video_id,
+            media_body=MediaFileUpload(str(cover), mimetype="image/jpeg"),
+        ).execute()
+        print("      ใส่ปกคลิปแล้ว")
+    except Exception as exc:  # noqa: BLE001 - ปกล้มไม่ควรทำให้คลิปที่อัปแล้วนับว่าพัง
+        print(f"[warn] ใส่ปกไม่สำเร็จ: {str(exc)[:160]}")
 
 
 def _add_localizations(youtube, video_id: str, story: dict, cfg: dict) -> None:

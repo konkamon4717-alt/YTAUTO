@@ -17,6 +17,7 @@ SCHEMA = {
         "description": {"type": "string"},
         "hashtags": {"type": "array", "items": {"type": "string"}},
         "character_sheet": {"type": "string"},
+        "thumbnail_text": {"type": "string"},
         "scenes": {
             "type": "array",
             "items": {
@@ -45,7 +46,8 @@ SCHEMA = {
             },
         },
     },
-    "required": ["premise", "title", "description", "hashtags", "character_sheet", "scenes", "localizations"],
+    "required": ["premise", "title", "description", "hashtags", "character_sheet",
+                 "thumbnail_text", "scenes", "localizations"],
 }
 
 PROMPT = """คุณเป็นนักเขียนนิทานสั้นสำหรับคลิป YouTube Shorts ภาษาไทย
@@ -78,6 +80,9 @@ character_sheet: บรรยาย "หน้าตาและเสื้อ�
 ถ้าใส่ "ถือตะกร้าไข่" ตัวละครจะถือตะกร้าไข่ทุกฉากแม้แต่ฉากที่ไม่ควรถือ
 
 title: ชื่อคลิปภาษาไทย ไม่เกิน 70 ตัวอักษร ชวนคลิกแต่ห้ามเกินจริง
+thumbnail_text: ข้อความบนปกคลิป **สั้นมาก ไม่เกิน 20 ตัวอักษร** เอาเฉพาะคำที่กระแทกที่สุด
+  ไม่ใช่ชื่อคลิปย่อ แต่เป็นวลีที่ทำให้คนอยากรู้ เช่น "ทำไมลุงซื้อก้อนหิน" หรือ "เขารู้มาตลอด"
+  ตัวหนังสือจะถูกวางบนภาพขนาดใหญ่ ยาวเกินจะอ่านไม่ทัน
 description: คำอธิบาย 2-3 บรรทัด
 hashtags: 5-8 อัน ไม่ต้องใส่ #
 localizations: แปลชื่อคลิปและคำอธิบายเป็นภาษา {locales} (ให้เป็นธรรมชาติในภาษานั้น ไม่ใช่แปลตรงตัว)
@@ -230,6 +235,9 @@ def _validate(story: dict, cfg: dict) -> None:
     story.setdefault("description", story["title"])
     story.setdefault("hashtags", [])
     story.setdefault("character_sheet", "")
+    # โมเดลสำรองอาจไม่ส่งมา ใช้ชื่อคลิปตัดสั้นแทนดีกว่าไม่มีปก
+    if not story.get("thumbnail_text", "").strip():
+        story["thumbnail_text"] = story["title"][:20]
     story.setdefault("localizations", [])
 
 

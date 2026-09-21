@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from . import config, state, status
-from .steps import animate, images, render, script, subtitles, voice
+from .steps import animate, images, render, script, subtitles, thumbnail, voice
 
 
 def _slug() -> str:
@@ -182,6 +182,16 @@ def make_video(cfg: dict, work: Path, story: dict | None = None) -> tuple[Path, 
     final = work / "final.mp4"
     render.finalize(silent, voice_track, subs_path, final, cfg)
     print(f"      ได้ไฟล์ {final.name} ({final.stat().st_size / 1_000_000:.1f} MB)")
+
+    if cfg["upload"].get("thumbnail"):
+        try:
+            # ใช้ภาพฉากแรกเพราะเป็นฉากฮุก ซึ่งเป็นภาพที่ตั้งใจให้สะดุดตาที่สุดอยู่แล้ว
+            cover = thumbnail.make(stills[0], story["thumbnail_text"],
+                                   work / "cover.jpg", work)
+            cfg["_thumbnail"] = str(cover)
+            print(f"      ทำปกคลิปแล้ว: \"{story['thumbnail_text']}\"")
+        except Exception as exc:  # noqa: BLE001 - ไม่มีปกก็ยังปล่อยคลิปได้
+            print(f"      ทำปกไม่สำเร็จ: {str(exc)[:130]}")
 
     anim_stats["voice"] = voice_backend
     return final, story, anim_stats
