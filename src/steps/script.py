@@ -4,6 +4,7 @@ import time
 
 import requests
 
+from .. import config
 from ..config import secret
 
 ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
@@ -83,6 +84,13 @@ localizations: แปลชื่อคลิปและคำอธิบา�
 
 ห้ามใช้พล็อตที่ซ้ำหรือใกล้เคียงกับรายการนี้:
 {avoid}
+{winners}"""
+
+
+WINNERS_BLOCK = """
+ชื่อคลิปที่ทำผลงานดีที่สุดของช่องนี้ ให้ศึกษาว่าทำไมคนถึงกดเข้ามาดู
+แล้วเขียนชื่อคลิปใหม่ให้มีพลังแบบเดียวกัน (ห้ามลอกเนื้อเรื่อง เอาแค่วิธีตั้งชื่อ):
+{lines}
 """
 
 
@@ -228,6 +236,39 @@ def _validate(story: dict, cfg: dict) -> None:
 BACKENDS = {"gemini": _gemini, "pollinations": _pollinations}
 
 
+def _top_titles(limit: int = 5) -> str:
+    """ดึงชื่อคลิปที่ทำผลงานดีที่สุดมาเป็นตัวอย่างให้ AI เรียนรู้
+
+    เทียบด้วยวิวต่อวัน ไม่ใช่วิวรวม เพราะคลิปเก่ามีเวลาสะสมมากกว่า
+    นี่คือจุดที่ระบบเรียนรู้จากผลลัพธ์ของตัวเอง แทนที่จะเขียนแบบเดิมไปเรื่อย ๆ
+    """
+    report = config.ROOT / "docs" / "channel.json"
+    try:
+        data = json.loads(report.read_text(encoding="utf-8"))
+    except Exception:  # noqa: BLE001 - ยังไม่เคยดึงสถิติ = ยังไม่มีตัวอย่าง
+        return ""
+
+    public = [v for v in data.get("videos", [])
+              if v.get("privacy") == "public" and v.get("views", 0) > 0]
+    if len(public) < 2:
+        return ""   # น้อยเกินกว่าจะเป็นตัวอย่างที่มีความหมาย
+
+    ranked = sorted(public, key=lambda v: -v.get("views_per_day", 0))
+
+    # เอาเฉพาะตัวที่ทำได้อย่างน้อยครึ่งหนึ่งของตัวที่ดีที่สุด
+    # ถ้าใส่คลิปที่ล้มเหลวไปด้วย AI จะเรียนรู้วิธีตั้งชื่อที่ไม่ได้ผลไปพร้อมกัน
+    best = ranked[0].get("views_per_day", 0)
+    ranked = [v for v in ranked if v.get("views_per_day", 0) >= best * 0.5][:limit]
+    if len(ranked) < 2:
+        ranked = sorted(public, key=lambda v: -v.get("views_per_day", 0))[:2]
+
+    lines = "\n".join(
+        f"- \"{v['title']}\" ({v['views']:,} วิว, {v['views_per_day']:.0f} วิว/วัน)"
+        for v in ranked
+    )
+    return WINNERS_BLOCK.format(lines=lines)
+
+
 def generate(cfg: dict, avoid: list[str]) -> dict:
     """เขียนบทด้วยผู้ให้บริการตัวแรกที่ใช้ได้ ตกไปตัวถัดไปเมื่อเจ๊ง
 
@@ -241,6 +282,7 @@ def generate(cfg: dict, avoid: list[str]) -> dict:
         scenes=cfg["images"]["scenes"],
         locales=", ".join(cfg["upload"]["localizations"]),
         avoid=avoid_text,
+        winners=_top_titles(),
     )
 
     errors = []

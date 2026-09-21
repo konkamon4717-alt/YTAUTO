@@ -157,6 +157,24 @@
   .clip-note{color:var(--ink-3); font-size:12.5px;
              font-family:"IBM Plex Mono",monospace}
 
+  /* อันดับคลิป — แถบยาวเทียบกันได้ทันที ไม่ต้องอ่านตัวเลข */
+  .lead{background:var(--panel); border:1px solid var(--line); border-radius:12px;
+        padding:6px 16px 14px}
+  .lead-row{padding:11px 0; border-top:1px solid var(--line-soft)}
+  .lead-row:first-child{border-top:0}
+  .lead-top{display:flex; gap:12px; justify-content:space-between; align-items:baseline}
+  .lead-title{font-size:14px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+  .lead-title.win{font-weight:600}
+  .lead-num{font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:var(--ink-3);
+            font-variant-numeric:tabular-nums; white-space:nowrap}
+  .lead-bar{height:6px; background:var(--sunk); border-radius:99px; overflow:hidden; margin:7px 0 5px}
+  .lead-bar i{display:block; height:100%; border-radius:99px; background:var(--ink-3)}
+  .lead-bar i.win{background:var(--gold)}
+  .lead-meta{font-size:11.5px; color:var(--ink-3); display:flex; flex-wrap:wrap;
+             gap:6px; align-items:center}
+  .chip{background:var(--sunk); border:1px solid var(--line); border-radius:99px;
+        padding:1px 8px; font-size:11px; color:var(--ink-2)}
+
   .empty{color:var(--ink-3); font-size:14px; background:var(--panel);
          border:1px dashed var(--line); border-radius:12px; padding:22px; text-align:center}
   footer{margin-top:44px; padding-top:18px; border-top:1px solid var(--line);
@@ -216,6 +234,9 @@
     </div>
     <div class="scenes" id="scenes"></div>
   </section>
+
+  <h2>อะไรที่ได้ผล</h2>
+  <div id="learn"><div class="empty">ยังไม่ได้ดึงข้อมูล</div></div>
 
   <h2>คลิปบนช่อง</h2>
   <div class="svc" id="videos"><div class="row"><span class="detail">ยังไม่ได้ดึงข้อมูล</span></div></div>
@@ -528,6 +549,53 @@ async function renderScenes() {
   } catch { /* ไม่ใช่โหมดในเครื่อง */ }
 }
 
+function renderLearn(ch) {
+  const pub = (ch?.videos ?? []).filter(v => v.privacy === "public" && v.views > 0);
+  if (pub.length < 2) {
+    $("learn").innerHTML =
+      `<div class="empty">ต้องมีคลิปสาธารณะอย่างน้อย 2 คลิปถึงจะเทียบได้</div>`;
+    return;
+  }
+
+  // เทียบด้วยวิวต่อวัน ไม่ใช่วิวรวม เพราะคลิปเก่ามีเวลาสะสมมากกว่า
+  const ranked = [...pub].sort((a, b) => b.views_per_day - a.views_per_day);
+  const best = ranked[0].views_per_day || 1;
+
+  // นับว่าลักษณะชื่อแบบไหนโผล่ในคลิปที่ทำได้ดีบ้าง
+  const tally = {};
+  for (const v of ranked) {
+    for (const t of v.traits ?? []) {
+      tally[t] ??= { good: 0, all: 0 };
+      tally[t].all++;
+      if (v.views_per_day >= best * 0.5) tally[t].good++;
+    }
+  }
+  const traits = Object.entries(tally).sort((a, b) => b[1].good - a[1].good);
+
+  $("learn").innerHTML = `
+    <div class="lead">
+      ${ranked.map(v => {
+        const share = Math.max(3, v.views_per_day / best * 100);
+        const winner = v.views_per_day >= best * 0.5;
+        return `<div class="lead-row">
+          <div class="lead-top">
+            <span class="lead-title${winner ? " win" : ""}">${esc(v.title)}</span>
+            <span class="lead-num">${Math.round(v.views_per_day).toLocaleString()} วิว/วัน</span>
+          </div>
+          <div class="lead-bar"><i class="${winner ? "win" : ""}" style="width:${share}%"></i></div>
+          <div class="lead-meta">
+            ${v.views.toLocaleString()} วิว · ${v.days} วัน · ไลก์ ${v.like_rate}%
+            ${(v.traits ?? []).map(t => `<span class="chip">${esc(t)}</span>`).join("")}
+          </div>
+        </div>`;
+      }).join("")}
+    </div>
+    ${traits.length ? `<div class="note">ลักษณะชื่อที่พบในคลิปที่ทำได้ดี:
+      ${traits.map(([name, n]) => `<span class="chip">${esc(name)} ${n.good}/${n.all}</span>`).join(" ")}
+      </div>` : ""}
+    <div class="note">ชื่อของคลิปที่ทำได้ดีจะถูกส่งให้ AI เป็นตัวอย่างในรอบถัดไปโดยอัตโนมัติ</div>`;
+}
+
 function mini(used, cap) {
   const pct = Math.min(100, cap ? used / cap * 100 : 0);
   return `<div class="track"><i style="width:${pct}%"></i></div>`;
@@ -617,6 +685,7 @@ async function load() {
   ]);
   const runs = status?.runs ?? [];
   renderChannel(channel);
+  renderLearn(channel);
 
   $("stamp").textContent = health?.checked_at
     ? "ตรวจบริการล่าสุด " + fmt(health.checked_at)

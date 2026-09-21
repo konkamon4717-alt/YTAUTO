@@ -25,6 +25,28 @@ REPORT = config.ROOT / "docs" / "channel.json"
 ANALYTICS_SCOPES = ("yt-analytics.readonly", "yt-analytics-monetary.readonly")
 
 
+# ลักษณะของชื่อคลิปที่พอจะจับเป็นรูปแบบได้ ใช้ดูว่าแบบไหนคนกดเข้ามามากกว่า
+# ไม่ใช่สถิติเชิงลึก แค่ติดป้ายให้คนมองเห็นรูปแบบเองได้เร็วขึ้น
+TITLE_TRAITS = {
+    "คำถาม": ("ไหม", "ทำไม", "อะไร", "หรือเปล่า", "?"),
+    "ความขัดแย้ง": ("แต่", "กลับ", "ทั้งที่", "ไม่คิดว่า"),
+    "ความถี่": ("ทุกวัน", "ทุกคืน", "ทุกเดือน", "ทุกเช้า", "ตลอด"),
+    "ความลับ": ("ความลับ", "เบื้องหลัง", "ซ่อน", "ไม่มีใครรู้"),
+    "อารมณ์แรง": ("!", "พูดไม่ออก", "น้ำตา", "ช็อก", "ตะลึง"),
+}
+
+
+def title_traits(title: str) -> list[str]:
+    return [name for name, words in TITLE_TRAITS.items()
+            if any(w in title for w in words)]
+
+
+def _days_since(iso: str) -> float:
+    from datetime import datetime, timezone
+    published = datetime.fromisoformat(iso.replace("Z", "+00:00"))
+    return max((datetime.now(timezone.utc) - published).total_seconds() / 86400, 0.25)
+
+
 def basic(youtube) -> dict:
     """ตัวเลขรวมของช่อง + สถิติรายคลิป"""
     channels = youtube.channels().list(
@@ -48,14 +70,23 @@ def basic(youtube) -> dict:
             part="snippet,statistics,status", id=",".join(video_ids)).execute()
         for v in detail.get("items", []):
             s = v.get("statistics", {})
+            views = int(s.get("viewCount", 0))
+            likes = int(s.get("likeCount", 0))
+            title = v["snippet"]["title"]
+            days = _days_since(v["snippet"]["publishedAt"])
             videos.append({
                 "id": v["id"],
-                "title": v["snippet"]["title"],
+                "title": title,
                 "published": v["snippet"]["publishedAt"],
                 "privacy": v.get("status", {}).get("privacyStatus"),
-                "views": int(s.get("viewCount", 0)),
-                "likes": int(s.get("likeCount", 0)),
+                "views": views,
+                "likes": likes,
                 "comments": int(s.get("commentCount", 0)),
+                # คลิปเก่ามีเวลาสะสมวิวมากกว่า ต้องหารด้วยอายุถึงจะเทียบกันได้
+                "views_per_day": round(views / days, 1),
+                "like_rate": round(likes / views * 100, 2) if views else 0.0,
+                "traits": title_traits(title),
+                "days": round(days, 1),
             })
 
     return {
