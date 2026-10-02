@@ -1,48 +1,48 @@
 {
-  "checked_at": "2026-10-02T09:55:08+00:00",
-  "healthy": false,
+  "checked_at": "2026-10-02T09:57:22+00:00",
+  "healthy": true,
   "checks": [
     {
       "name": "youtube",
       "ok": true,
       "essential": true,
       "detail": "nithan1min | ผู้ติดตาม 7 | คลิป 4",
-      "ms": 528
+      "ms": 1015
     },
     {
       "name": "pollinations",
-      "ok": false,
+      "ok": true,
       "essential": true,
-      "detail": "RuntimeError: โมเดลภาพหายไปจากรายการ: community/NamanSoni78/Z-Image-Turbo",
-      "ms": 127
+      "detail": "306 โมเดล | รุ่นภาพที่ตั้งไว้ยังอยู่ครบ",
+      "ms": 117
     },
     {
       "name": "edge-tts",
       "ok": true,
       "essential": false,
       "detail": "th-TH-PremwadeeNeural พร้อมใช้",
-      "ms": 611
+      "ms": 618
     },
     {
       "name": "gemini",
-      "ok": false,
+      "ok": true,
       "essential": false,
-      "detail": "KeyError: 'model'",
-      "ms": 119
+      "detail": "ใช้ได้ 4/4 รุ่น | ตัวแรก gemini-3.8-flash",
+      "ms": 118
     },
     {
       "name": "kaggle",
       "ok": true,
       "essential": false,
       "detail": "เชื่อมต่อได้",
-      "ms": 590
+      "ms": 827
     },
     {
       "name": "huggingface",
       "ok": true,
       "essential": false,
       "detail": "zerogpu-aoti/wan2-2-fp8da-aoti-faster กำลังทำงาน",
-      "ms": 113
+      "ms": 89
     }
   ]
 }
