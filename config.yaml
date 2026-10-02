@@ -27,7 +27,10 @@ tts:
 
 images:
   # ไล่ลองทีละรุ่นจนกว่าจะได้ภาพ กันกรณีรุ่นใดรุ่นหนึ่งล่มหรือถูกถอด
-  models: [community/NamanSoni78/Z-Image-Turbo, flux, turbo]
+  # Z-Image-Turbo ที่เคยเลือกไว้ถูกถอดออกจาก Pollinations แล้ว (ตรวจเจอ 2 ต.ค. 2569)
+  # โมเดลชุมชนหายได้ทุกเมื่อโดยไม่มีประกาศ จึงไม่ควรพึ่งตัวเดียว
+  # flux เป็นชื่อย่อของ black-forest-labs/flux.1-schnell ยังฟรีและเร็วที่สุด
+  models: [flux, openai/gpt-image-2, black-forest-labs/flux.1-schnell]
   # 6 ฉาก ไม่ใช่ 10 เพราะโควต้า Wan ได้ 7 ช็อต/วัน
   # 1 ฉาก = 1 ช็อต ที่ถูก boomerang ยืดเป็นสองเท่า จึงขยับได้ครบทุกฉากพอดี
   scenes: 6

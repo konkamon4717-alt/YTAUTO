@@ -40,10 +40,13 @@ def check_gemini(cfg: dict) -> str:
                      timeout=45)
     r.raise_for_status()
     names = {m["name"].replace("models/", "") for m in r.json().get("models", [])}
-    wanted = cfg["llm"]["model"]
-    if wanted not in names:
-        raise RuntimeError(f"ไม่พบโมเดล {wanted} ในรายการที่คีย์นี้ใช้ได้")
-    return f"{wanted} พร้อมใช้"
+    # config เปลี่ยนจาก model เดี่ยวเป็น models หลายรุ่นตอนแก้ปัญหา 503
+    # ตัวตรวจนี้ยังอ่านคีย์เก่าอยู่จนพัง — ต้องยอมรับทั้งสองแบบ
+    wanted = cfg["llm"].get("models") or [cfg["llm"].get("model")]
+    usable = [m for m in wanted if m in names]
+    if not usable:
+        raise RuntimeError(f"ไม่พบรุ่นที่ตั้งไว้เลย: {', '.join(filter(None, wanted))}")
+    return f"ใช้ได้ {len(usable)}/{len(wanted)} รุ่น | ตัวแรก {usable[0]}"
 
 
 def check_pollinations(cfg: dict) -> str:
