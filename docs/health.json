@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-02T09:50:55+00:00",
+  "checked_at": "2026-10-02T09:55:08+00:00",
   "healthy": false,
   "checks": [
     {
@@ -7,42 +7,42 @@
       "ok": true,
       "essential": true,
       "detail": "nithan1min | ผู้ติดตาม 7 | คลิป 4",
-      "ms": 1497
+      "ms": 528
     },
     {
       "name": "pollinations",
       "ok": false,
       "essential": true,
       "detail": "RuntimeError: โมเดลภาพหายไปจากรายการ: community/NamanSoni78/Z-Image-Turbo",
-      "ms": 467
+      "ms": 127
     },
     {
       "name": "edge-tts",
       "ok": true,
       "essential": false,
       "detail": "th-TH-PremwadeeNeural พร้อมใช้",
-      "ms": 677
+      "ms": 611
     },
     {
       "name": "gemini",
       "ok": false,
       "essential": false,
       "detail": "KeyError: 'model'",
-      "ms": 170
+      "ms": 119
     },
     {
       "name": "kaggle",
       "ok": true,
       "essential": false,
       "detail": "เชื่อมต่อได้",
-      "ms": 949
+      "ms": 590
     },
     {
       "name": "huggingface",
       "ok": true,
       "essential": false,
       "detail": "zerogpu-aoti/wan2-2-fp8da-aoti-faster กำลังทำงาน",
-      "ms": 187
+      "ms": 113
     }
   ]
 }
