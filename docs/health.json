@@ -1,48 +1,48 @@
 {
-  "checked_at": "2026-10-02T09:57:22+00:00",
+  "checked_at": "2026-10-07T23:35:39+00:00",
   "healthy": true,
   "checks": [
     {
       "name": "youtube",
       "ok": true,
       "essential": true,
-      "detail": "nithan1min | ผู้ติดตาม 7 | คลิป 4",
-      "ms": 1015
+      "detail": "nithan1min | ผู้ติดตาม 11 | คลิป 5",
+      "ms": 677
     },
     {
       "name": "pollinations",
       "ok": true,
       "essential": true,
-      "detail": "306 โมเดล | รุ่นภาพที่ตั้งไว้ยังอยู่ครบ",
-      "ms": 117
+      "detail": "311 โมเดล | รุ่นภาพที่ตั้งไว้ยังอยู่ครบ",
+      "ms": 131
     },
     {
       "name": "edge-tts",
       "ok": true,
       "essential": false,
       "detail": "th-TH-PremwadeeNeural พร้อมใช้",
-      "ms": 618
+      "ms": 274
     },
     {
       "name": "gemini",
       "ok": true,
       "essential": false,
       "detail": "ใช้ได้ 4/4 รุ่น | ตัวแรก gemini-3.8-flash",
-      "ms": 118
+      "ms": 162
     },
     {
       "name": "kaggle",
       "ok": true,
       "essential": false,
       "detail": "เชื่อมต่อได้",
-      "ms": 827
+      "ms": 599
     },
     {
       "name": "huggingface",
       "ok": true,
       "essential": false,
       "detail": "zerogpu-aoti/wan2-2-fp8da-aoti-faster กำลังทำงาน",
-      "ms": 89
+      "ms": 69
     }
   ]
 }
