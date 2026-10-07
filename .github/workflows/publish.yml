@@ -2,10 +2,14 @@ name: publish
 
 on:
   schedule:
-    # เวลาไทย 19:00 (GitHub ใช้ UTC) — วันละรอบเดียวให้ตรงกับ run.per_day
-    # เลือกช่วงเย็นเพราะเป็นเวลาที่คนดู Shorts มากที่สุด
-    # ถ้าเพิ่มเป็นวันละ 3 คลิป ให้เติม cron "0 0" กับ "0 5" กลับเข้ามา
+    # cron ของ GitHub บน repo ฟรีเป็นแบบ best-effort — บางรอบมาช้าเป็นชั่วโมง
+    # บางรอบถูกข้ามไปเลยตอนระบบโหลดหนัก จึงตั้งสามเวลาเป็นตาข่ายรองกัน
+    # ตัว --once-per-day กันไม่ให้ได้คลิปเกินวันละรอบอยู่แล้ว รอบที่เหลือจะข้ามเอง
+    #
+    # เวลาไทย 19:00 / 20:30 / 22:00 (GitHub ใช้ UTC)
     - cron: "0 12 * * *"
+    - cron: "30 13 * * *"
+    - cron: "0 15 * * *"
   workflow_dispatch:
     inputs:
       count:
@@ -70,7 +74,11 @@ jobs:
         run: |
           UPLOAD_FLAG=""
           if [ "${{ inputs.upload }}" = "false" ]; then UPLOAD_FLAG="--no-upload"; fi
-          python -m src.pipeline --count "${{ inputs.count || 1 }}" $UPLOAD_FLAG
+          # รอบที่มาจากตารางเวลาต้องกันโพสต์ซ้ำ เพราะตั้งไว้หลายเวลาเป็นตาข่ายรอง
+          # ส่วนรอบที่สั่งเองด้วยมือให้ทำทันทีโดยไม่ต้องเช็ค
+          GUARD=""
+          if [ "${{ github.event_name }}" = "schedule" ]; then GUARD="--once-per-day"; fi
+          python -m src.pipeline --count "${{ inputs.count || 1 }}" $UPLOAD_FLAG $GUARD
 
       - name: บันทึกสถานะกลับเข้า repo
         if: always() && steps.gate.outputs.paused == 'false'

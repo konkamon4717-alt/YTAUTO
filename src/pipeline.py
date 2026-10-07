@@ -237,6 +237,21 @@ def run_once(cfg: dict, upload_enabled: bool, story: dict | None = None) -> dict
             shutil.rmtree(work, ignore_errors=True)
 
 
+def _published_today() -> bool:
+    """วันนี้มีคลิปที่อัปขึ้นช่องสำเร็จแล้วหรือยัง (เทียบตามเวลาท้องถิ่น)"""
+    today = datetime.now().date()
+    for entry in state.load()["published"]:
+        if not entry.get("ok") or not entry.get("video_id"):
+            continue
+        try:
+            at = datetime.fromisoformat(entry["at"].replace("Z", "+00:00"))
+        except (ValueError, KeyError):
+            continue
+        if at.astimezone().date() == today:
+            return True
+    return False
+
+
 def _keep_work() -> bool:
     import os
     return os.environ.get("KEEP_WORK") == "1"
@@ -247,6 +262,8 @@ def main() -> int:
     parser.add_argument("--count", type=int, default=1, help="จำนวนคลิปในรอบนี้")
     parser.add_argument("--no-upload", action="store_true", help="สร้างอย่างเดียว ไม่อัปโหลด")
     parser.add_argument("--keep", action="store_true", help="ไม่ลบไฟล์ระหว่างทาง")
+    parser.add_argument("--once-per-day", action="store_true",
+                        help="ข้ามถ้าวันนี้อัปสำเร็จไปแล้ว ไว้ใช้กับตัวตั้งเวลา")
     parser.add_argument("--story", type=Path,
                         help="ใช้ไฟล์ JSON ที่มีอยู่แทนการเรียก Gemini (ไว้เทสต์หรือเรนเดอร์ซ้ำ)")
     args = parser.parse_args()
@@ -256,6 +273,13 @@ def main() -> int:
         os.environ["KEEP_WORK"] = "1"
 
     cfg = config.load()
+
+    # cron ของ GitHub เป็นแบบ best-effort บางรอบถูกข้าม บางรอบมาช้าเป็นชั่วโมง
+    # การมีตัวกระตุ้นหลายตัวจึงปลอดภัยกว่า แต่ต้องกันไม่ให้ได้คลิปเกินโควตาวันละรอบ
+    if args.once_per_day and _published_today():
+        print("วันนี้อัปคลิปไปแล้ว — ข้ามรอบนี้")
+        return 0
+
     canned = None
     if args.story:
         canned = json.loads(args.story.read_text(encoding="utf-8"))
