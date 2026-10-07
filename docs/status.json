@@ -1,6 +1,21 @@
 {
-  "updated_at": "2026-10-07T05:05:40+00:00",
+  "updated_at": "2026-10-07T05:14:15+00:00",
   "runs": [
+    {
+      "ok": true,
+      "title": "ป้าเอารองเท้าเด็กข้างเดียวมาซ่อมทุกเดือน ความจริงทำเอากลั้นน้ำตาไม่อยู่",
+      "premise": "หญิงชรานำรองเท้าเด็กข้างเดียวมาจ้างช่างซ่อมขัดเงาทุกเดือน จนวันหนึ่งช่างได้รู้เหตุผลแท้จริงที่ทำให้เขาต้องกลั้นน้ำตา",
+      "video_id": "hyfmbTfZqBg",
+      "seconds": 321,
+      "writer": "gemini",
+      "animated": 6,
+      "scenes": 6,
+      "backends": {
+        "huggingface": 6
+      },
+      "voice": "edge-tts",
+      "at": "2026-10-07T05:14:15+00:00"
+    },
     {
       "ok": false,
       "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: ไม่พบค่า POLLINATIONS_TOKEN — ใส่ใน .env (เครื่องตัวเอง) หรือ Repository secrets (GitHub Actions)\n  gpt-image-2: ไม่พบค่า POLLINATIONS_TOKEN — ใส่ใน .env (เครื่องตัวเอง) หรือ Repository secrets (GitHub Actions)\n  flux.1-schnell: ไม่พบค่า POLLINATIONS_TOKEN — ใส่ใน .env (เครื่องตัวเอง) หรือ Repository secrets (GitHub Actions)",
