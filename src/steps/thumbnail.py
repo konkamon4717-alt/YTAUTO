@@ -40,9 +40,14 @@ THAI_COMBINING = (
 )
 
 
+# สระหน้าที่เขียนก่อนพยัญชนะแต่ออกเสียงตามหลัง ตัดทิ้งท้ายบรรทัดไม่ได้
+# ไม่งั้นจะได้ "เ" ค้างท้ายบรรทัด แล้ว "ดียว" ขึ้นบรรทัดใหม่
+THAI_LEADING = "เแโใไ"
+
+
 def _safe_cut(word: str, at: int) -> int:
     """เลื่อนจุดตัดถอยหลังจนไม่ได้ตัดคั่นระหว่างพยัญชนะกับสระที่เกาะอยู่"""
-    while at > 1 and word[at] in THAI_COMBINING:
+    while at > 1 and (word[at] in THAI_COMBINING or word[at - 1] in THAI_LEADING):
         at -= 1
     return at
 
@@ -100,13 +105,13 @@ def make(image: Path, text: str, out_path: Path, work: Path) -> Path:
         f"scale={THUMB_W}:{THUMB_H}:force_original_aspect_ratio=increase,"
         f"crop={THUMB_W}:{THUMB_H},"
         # ไล่เฉดมืดจากล่างขึ้นบน ให้ตัวหนังสือขาวอ่านออกไม่ว่าพื้นหลังจะสว่างแค่ไหน
-        # ใช้แถบบาง ๆ ซ้อนกันหลายชั้นแทนไล่เฉดจริง เพราะ geq ช้ากว่ามาก
-        # แถบหนา ๆ ไม่กี่ชั้นจะเห็นขอบเป็นชั้น ๆ ชัดเจน ต้องซอยให้ถี่พอ
-        + "".join(
-            f"drawbox=x=0:y=ih*{0.50 + i * 0.05:.2f}:w=iw:h=ih*0.06:"
-            f"color=black@{0.06 + i * 0.065:.3f}:t=fill,"
-            for i in range(10)
-        ) +
+        # เคยทำด้วย drawbox แถบบาง ๆ ซ้อนกันเพราะคิดว่าเร็วกว่า แต่ของจริงเห็นเป็น
+        # ริ้วขวางจอชัดเจนตรงรอยต่อแต่ละแถบ — ปกใบเดียวเฟรมเดียว geq ช้ากว่าก็ไม่รู้สึก
+        "format=rgb24,"
+        "geq="
+        "r='r(X,Y)*(1-0.82*pow(clip((Y/H-0.42)/0.58,0,1),1.6))':"
+        "g='g(X,Y)*(1-0.82*pow(clip((Y/H-0.42)/0.58,0,1),1.6))':"
+        "b='b(X,Y)*(1-0.82*pow(clip((Y/H-0.42)/0.58,0,1),1.6))',"
         f"subtitles='{subs}':fontsdir='{fonts}'"
     )
 
