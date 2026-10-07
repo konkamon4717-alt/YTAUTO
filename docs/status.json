@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-09-21T01:33:55+00:00",
+  "updated_at": "2026-10-07T05:05:40+00:00",
   "runs": [
+    {
+      "ok": false,
+      "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: ไม่พบค่า POLLINATIONS_TOKEN — ใส่ใน .env (เครื่องตัวเอง) หรือ Repository secrets (GitHub Actions)\n  gpt-image-2: ไม่พบค่า POLLINATIONS_TOKEN — ใส่ใน .env (เครื่องตัวเอง) หรือ Repository secrets (GitHub Actions)\n  flux.1-schnell: ไม่พบค่า POLLINATIONS_TOKEN — ใส่ใน .env (เครื่องตัวเอง) หรือ Repository secrets (GitHub Actions)",
+      "seconds": 352,
+      "at": "2026-10-07T05:05:40+00:00"
+    },
     {
       "ok": true,
       "title": "ทำไมลุงคนนี้ถึงยอมซื้อก้อนหินไร้ค่าทุกวัน?",
