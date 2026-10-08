@@ -2,59 +2,91 @@
   "channel": {
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
-    "subscribers": 6,
-    "views": 1800,
-    "videos": 0
+    "subscribers": 10,
+    "views": 1844,
+    "videos": 5
   },
   "videos": [
+    {
+      "id": "hyfmbTfZqBg",
+      "title": "ป้าเอารองเท้าเด็กข้างเดียวมาซ่อมทุกเดือน ความจริงทำเอากลั้นน้ำตาไม่อยู่",
+      "published": "2026-10-07T05:14:43Z",
+      "privacy": "public",
+      "views": 1599,
+      "likes": 29,
+      "comments": 0,
+      "views_per_day": 1548.4,
+      "like_rate": 1.81,
+      "traits": [
+        "ความถี่",
+        "อารมณ์แรง"
+      ],
+      "days": 1.0
+    },
+    {
+      "id": "8-Zy5rZlH00",
+      "title": "ทำไมลุงคนนี้ถึงยอมซื้อก้อนหินไร้ค่าทุกวัน?",
+      "published": "2026-09-21T01:34:23Z",
+      "privacy": "public",
+      "views": 27,
+      "likes": 3,
+      "comments": 0,
+      "views_per_day": 1.6,
+      "like_rate": 11.11,
+      "traits": [
+        "คำถาม",
+        "ความถี่"
+      ],
+      "days": 17.2
+    },
     {
       "id": "klm0ozmRhsE",
       "title": "เรื่องแปลกตีสี่ ขนมปังหายแต่มีเงินวางไว้เสมอ!",
       "published": "2026-09-18T04:41:02Z",
       "privacy": "public",
-      "views": 17,
+      "views": 23,
       "likes": 4,
       "comments": 0,
-      "views_per_day": 5.9,
-      "like_rate": 23.53,
+      "views_per_day": 1.1,
+      "like_rate": 17.39,
       "traits": [
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 2.9
+      "days": 20.1
     },
     {
       "id": "uxeId4AUBLI",
       "title": "ชายแก่ซอมซ่อจ่ายแบงก์พันค่าก๋วยเตี๋ยวทุกวัน เบื้องหลังทำเอาพูดไม่ออก",
       "published": "2026-09-18T04:29:40Z",
       "privacy": "public",
-      "views": 1153,
-      "likes": 29,
+      "views": 1165,
+      "likes": 30,
       "comments": 1,
-      "views_per_day": 401.2,
-      "like_rate": 2.52,
+      "views_per_day": 58.1,
+      "like_rate": 2.58,
       "traits": [
         "ความถี่",
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 2.9
+      "days": 20.1
     },
     {
       "id": "L52UHMV1E0g",
       "title": "ความลับของนาฬิกาเรือนเก่าที่หยุดเดินทุกเดือน",
       "published": "2026-09-17T09:10:20Z",
       "privacy": "public",
-      "views": 631,
+      "views": 629,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 171.5,
+      "views_per_day": 30.1,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
         "ความลับ"
       ],
-      "days": 3.7
+      "days": 20.9
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -64,12 +96,12 @@
       "views": 4,
       "likes": 0,
       "comments": 0,
-      "views_per_day": 1.1,
+      "views_per_day": 0.2,
       "like_rate": 0.0,
       "traits": [],
-      "days": 3.8
+      "days": 21.0
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-09-21T01:28:09+00:00"
+  "fetched_at": "2026-10-08T06:01:45+00:00"
 }

@@ -49,15 +49,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: เช็คว่าถูกสั่ง pause ไว้หรือเปล่า
+      - name: เช็คว่าถูกสั่งหยุดไว้หรือเปล่า
         id: gate
         run: |
+          # หยุดได้สองแบบ: PAUSED คือหยุดจนกว่าจะสั่งเปิด
+          # ส่วน SKIP_UNTIL คือข้ามเฉพาะวันที่ระบุไว้ แล้วกลับมาเองโดยไม่ต้องสั่ง
+          # ทั้งคู่ไม่ถือว่าระบบพัง เพราะเป็นสิ่งที่เราสั่งเอง
+          STOP=false
           if [ -f data/PAUSED ]; then
-            echo "::notice::ระบบถูกสั่งหยุดไว้ — ข้ามรอบนี้ (ไม่นับว่าพัง)"
-            echo "paused=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "paused=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::ระบบถูกสั่งหยุดไว้ตั้งแต่ $(cat data/PAUSED) — ข้ามรอบนี้"
+            STOP=true
+          elif [ -f data/SKIP_UNTIL ] && [ "$(cat data/SKIP_UNTIL)" = "$(date -u +%F)" ]; then
+            echo "::notice::สั่งงดลงคลิปวันนี้ไว้ — ข้ามรอบนี้"
+            STOP=true
           fi
+          echo "paused=$STOP" >> "$GITHUB_OUTPUT"
 
       - uses: actions/setup-python@v5
         if: steps.gate.outputs.paused == 'false'
@@ -89,12 +95,18 @@ jobs:
           if [ "${{ github.event_name }}" = "schedule" ]; then GUARD="--once-per-day"; fi
           python -m src.pipeline --count "${{ inputs.count || 1 }}" $UPLOAD_FLAG $GUARD
 
+      - name: ดึงตัวเลขช่องมาอัปเดต
+        # ต้องทำหลังอัปคลิปเสมอ ไม่งั้นหน้าเว็บจะโชว์ยอดวิวของเมื่อวาน
+        if: always() && steps.gate.outputs.paused == 'false'
+        continue-on-error: true
+        run: python -m src.stats
+
       - name: บันทึกสถานะกลับเข้า repo
         if: always() && steps.gate.outputs.paused == 'false'
         run: |
           git config user.name  "yt-auto bot"
           git config user.email "actions@github.com"
-          git add data/history.json docs/status.json 2>/dev/null || true
+          git add data/history.json docs/status.json docs/channel.json 2>/dev/null || true
           if ! git diff --staged --quiet; then
             git commit -m "chore: อัปเดตสถานะ $(date -u +%F' '%T)"
             git pull --rebase --autostash origin ${{ github.ref_name }} || true

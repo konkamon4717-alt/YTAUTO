@@ -35,12 +35,22 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: python -m src.health
 
+      - name: ดึงตัวเลขช่อง
+        # วันที่ไม่มีคลิปลงก็ยังอยากเห็นยอดวิวเดินหน้า หน้าเว็บจึงต้องได้ของสดทุกเช้า
+        if: always()
+        continue-on-error: true
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python -m src.stats
+
       - name: บันทึกผลขึ้น dashboard
         if: always()
         run: |
           git config user.name  "yt-auto bot"
           git config user.email "actions@github.com"
-          git add docs/health.json
+          git add docs/health.json docs/channel.json
           if ! git diff --staged --quiet; then
             git commit -m "chore: ผลตรวจสุขภาพ $(date -u +%F)"
             git pull --rebase --autostash origin ${{ github.ref_name }} || true
