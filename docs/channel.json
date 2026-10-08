@@ -2,8 +2,8 @@
   "channel": {
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
-    "subscribers": 10,
-    "views": 1844,
+    "subscribers": 12,
+    "views": 3445,
     "videos": 6
   },
   "videos": [
@@ -12,11 +12,11 @@
       "title": "หนุ่มใหญ่ซื้อข้าวไหม้ก้นหม้อสองร้อยทุกวัน ความจริงทำแม่ค้าร้องไห้",
       "published": "2026-10-08T12:33:57Z",
       "privacy": "public",
-      "views": 0,
-      "likes": 0,
+      "views": 402,
+      "likes": 11,
       "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
+      "views_per_day": 1608.0,
+      "like_rate": 2.74,
       "traits": [
         "คำถาม",
         "ความถี่"
@@ -31,7 +31,7 @@
       "views": 1600,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 1180.1,
+      "views_per_day": 1131.4,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
@@ -53,7 +53,7 @@
         "คำถาม",
         "ความถี่"
       ],
-      "days": 17.5
+      "days": 17.6
     },
     {
       "id": "klm0ozmRhsE",
@@ -79,7 +79,7 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 57.1,
+      "views_per_day": 57.0,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
@@ -96,13 +96,13 @@
       "views": 630,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 29.7,
+      "views_per_day": 29.6,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
         "ความลับ"
       ],
-      "days": 21.2
+      "days": 21.3
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -115,9 +115,9 @@
       "views_per_day": 0.2,
       "like_rate": 0.0,
       "traits": [],
-      "days": 21.3
+      "days": 21.4
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-08T13:47:04+00:00"
+  "fetched_at": "2026-10-08T15:11:05+00:00"
 }
