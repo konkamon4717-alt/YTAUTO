@@ -2,7 +2,7 @@
   "channel": {
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
-    "subscribers": 12,
+    "subscribers": 13,
     "views": 3445,
     "videos": 6
   },
@@ -12,32 +12,32 @@
       "title": "หนุ่มใหญ่ซื้อข้าวไหม้ก้นหม้อสองร้อยทุกวัน ความจริงทำแม่ค้าร้องไห้",
       "published": "2026-10-08T12:33:57Z",
       "privacy": "public",
-      "views": 402,
-      "likes": 11,
+      "views": 1231,
+      "likes": 21,
       "comments": 0,
-      "views_per_day": 1608.0,
-      "like_rate": 2.74,
+      "views_per_day": 2670.6,
+      "like_rate": 1.71,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 0.2
+      "days": 0.5
     },
     {
       "id": "hyfmbTfZqBg",
       "title": "ป้าเอารองเท้าเด็กข้างเดียวมาซ่อมทุกเดือน ความจริงทำเอากลั้นน้ำตาไม่อยู่",
       "published": "2026-10-07T05:14:43Z",
       "privacy": "public",
-      "views": 1600,
+      "views": 1597,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 1131.4,
-      "like_rate": 1.81,
+      "views_per_day": 904.3,
+      "like_rate": 1.82,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 1.4
+      "days": 1.8
     },
     {
       "id": "8-Zy5rZlH00",
@@ -53,7 +53,7 @@
         "คำถาม",
         "ความถี่"
       ],
-      "days": 17.6
+      "days": 17.9
     },
     {
       "id": "klm0ozmRhsE",
@@ -69,7 +69,7 @@
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 20.4
+      "days": 20.8
     },
     {
       "id": "uxeId4AUBLI",
@@ -79,14 +79,14 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 57.0,
+      "views_per_day": 56.0,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 20.4
+      "days": 20.8
     },
     {
       "id": "L52UHMV1E0g",
@@ -96,13 +96,13 @@
       "views": 630,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 29.6,
+      "views_per_day": 29.2,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
         "ความลับ"
       ],
-      "days": 21.3
+      "days": 21.6
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -115,9 +115,9 @@
       "views_per_day": 0.2,
       "like_rate": 0.0,
       "traits": [],
-      "days": 21.4
+      "days": 21.7
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-08T15:11:05+00:00"
+  "fetched_at": "2026-10-08T23:37:43+00:00"
 }
