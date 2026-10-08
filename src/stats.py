@@ -22,6 +22,8 @@ from pathlib import Path
 from . import config
 
 REPORT = config.ROOT / "docs" / "channel.json"
+GROWTH = config.ROOT / "docs" / "growth.json"
+KEEP_DAYS = 180
 ANALYTICS_SCOPES = ("yt-analytics.readonly", "yt-analytics-monetary.readonly")
 
 
@@ -139,6 +141,39 @@ def analytics(creds, channel_id: str) -> dict | None:
             "daily": rows, "revenue": money}
 
 
+def snapshot(data: dict) -> list[dict]:
+    """จดตัวเลขของวันนี้ต่อท้ายไว้ เพื่อให้มีเส้นการเติบโตโดยไม่ต้องขอสิทธิ์เพิ่ม
+
+    Analytics API ให้วิวรายวันอยู่แล้ว แต่ต้องขอ scope เพิ่มแล้วออก token ใหม่
+    ระหว่างที่ยังไม่ได้ทำ แค่จดยอดรวมไว้วันละครั้งก็พอเห็นการเติบโตจริง
+    และต่อให้ขอสิทธิ์ได้ทีหลัง ตัวนี้ก็ยังมีค่าเพราะเก็บยอดรายคลิปไว้ด้วย
+
+    ที่ต้องเริ่มวันนี้เพราะย้อนกลับไปเก็บของเมื่อวานไม่ได้ — ไม่มีใครเก็บไว้ให้
+    """
+    rows = []
+    if GROWTH.exists():
+        try:
+            rows = json.loads(GROWTH.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            rows = []   # ไฟล์พังไม่ควรทำให้ทั้งคำสั่งล้ม ยอมเสียประวัติดีกว่าเสียคลิป
+
+    c = data["channel"]
+    today = date.today().isoformat()
+    row = {
+        "date": today,
+        "subscribers": c["subscribers"],
+        "views": c["views"],
+        "videos": c["videos"],
+        # เก็บรายคลิปไว้ด้วย จะได้ดูทีหลังได้ว่าคลิปไหนยังมีคนดูอยู่ ไม่ใช่ตายไปแล้ว
+        "per_video": {v["id"]: v["views"] for v in data["videos"]},
+    }
+
+    # วันเดียวกันให้ทับของเดิม รันซ้ำกี่ครั้งก็ได้วันละแถว
+    rows = [r for r in rows if r.get("date") != today] + [row]
+    rows.sort(key=lambda r: r["date"])
+    return rows[-KEEP_DAYS:]
+
+
 def main() -> int:
     from .steps import upload
 
@@ -165,12 +200,16 @@ def main() -> int:
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
+    rows = snapshot(data)
+    GROWTH.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
+
     c = data["channel"]
     print(f"  ช่อง        : {c['title']}")
     print(f"  ผู้ติดตาม    : {c['subscribers']:,}")
     print(f"  วิวรวม      : {c['views']:,}")
     print(f"  คลิปทั้งหมด : {c['videos']:,}")
     print(f"  ดึงรายคลิป  : {len(data['videos'])} คลิป")
+    print(f"  ประวัติสะสม : {len(rows)} วัน")
 
     if data["analytics"] is None:
         print("\n  ยังดู Analytics ไม่ได้ — token ไม่มีสิทธิ์ yt-analytics")

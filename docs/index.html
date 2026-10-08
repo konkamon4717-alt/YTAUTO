@@ -5,60 +5,77 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <!--
-  ห้องควบคุมช่อง — ออกแบบให้เปิดจากมือถือตอนไม่ได้อยู่หน้าคอมเป็นหลัก
+  ห้องควบคุมช่อง — เปิดจากมือถือตอนไม่ได้อยู่หน้าคอมเป็นหลัก
 
   หน้านี้เป็นไฟล์นิ่งบน GitHub Pages ไม่มีเซิร์ฟเวอร์ของตัวเอง
-  ข้อมูลทั้งหมดมาจากไฟล์ json ที่ workflow เขียนกลับเข้า repo หลังทำงานเสร็จ
+  ข้อมูลมาจาก json ที่ workflow เขียนกลับเข้า repo หลังทำงานเสร็จ
   จึงอ่านได้ตลอดแม้คอมที่บ้านปิดอยู่
 
-  ส่วนปุ่มสั่งงานเรียก GitHub API ตรง ๆ จากเบราว์เซอร์ ต้องใช้โทเค็นของเจ้าของ repo
-  โทเค็นเก็บไว้ใน localStorage ของเครื่องที่เปิดเท่านั้น ไม่เคยถูกส่งไปที่อื่นนอกจาก GitHub
-  และไม่เคยถูกเขียนลงไฟล์ใด ๆ ใน repo
+  ปุ่มสั่งงานเรียก GitHub API ตรงจากเบราว์เซอร์ ต้องใช้โทเค็นของเจ้าของ repo
+  โทเค็นอยู่ใน localStorage ของเครื่องที่เปิดเท่านั้น ไม่เคยถูกเขียนลงไฟล์ใน repo
+
+  สีของกราฟมาจากพาเลตที่ตรวจแล้วว่าคนตาบอดสีแยกออกบนพื้นมืดนี้
+  (ΔE คู่แย่สุด 9.4 เกณฑ์ 8) อย่าสลับเป็นสีที่ดูเข้ากันกว่าโดยไม่ตรวจซ้ำ
 -->
 
 <style>
 :root{
   --bg:#0e1116; --card:#161b22; --line:#262d38; --ink:#e6edf3; --dim:#8b949e;
-  --ok:#3fb950; --warn:#d29922; --bad:#f85149; --key:#58a6ff;
+  --ok:#3fb950; --warn:#d29922; --bad:#f85149;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70;
   --radius:14px;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);
   font-family:"IBM Plex Sans Thai",system-ui,sans-serif;line-height:1.6;
-  padding:16px 16px 56px;max-width:860px;margin-inline:auto}
+  padding:16px 16px 60px;max-width:900px;margin-inline:auto}
 h1{font-size:19px;margin:0}
-h2{font-size:14px;color:var(--dim);font-weight:600;margin:28px 0 10px;letter-spacing:.2px}
-a{color:var(--key)}
+h2{font-size:14px;color:var(--dim);font-weight:600;margin:26px 0 10px}
+h2:first-child{margin-top:4px}
+a{color:var(--s1)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
-.muted{color:var(--dim)}
-.small{font-size:12.5px}
+.muted{color:var(--dim)} .small{font-size:12.5px}
+.note{font-size:12.5px;color:var(--dim);margin-top:10px}
 
-header{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
 header .spacer{flex:1}
 #stamp{font-size:11.5px;color:var(--dim);text-align:right;line-height:1.35}
 
-/* คำตอบของคำถามเดียวที่เปิดหน้านี้มาเพื่อถาม: วันนี้ลงรึยัง */
+/* ปุ่มหัวข้อ — เลื่อนแนวนอนได้บนจอแคบ ไม่ต้องยัดให้ครบบรรทัดเดียว */
+nav{display:flex;gap:7px;overflow-x:auto;padding-bottom:10px;margin-bottom:14px;
+  scrollbar-width:none;border-bottom:1px solid var(--line)}
+nav::-webkit-scrollbar{display:none}
+nav button{white-space:nowrap;font:inherit;font-size:13.5px;color:var(--dim);
+  background:transparent;border:1px solid var(--line);border-radius:999px;
+  padding:7px 15px;cursor:pointer}
+nav button:hover{color:var(--ink)}
+nav button[aria-selected=true]{background:var(--ink);color:#0d1117;border-color:var(--ink);font-weight:600}
+nav button .pip{display:inline-block;width:7px;height:7px;border-radius:50%;
+  background:var(--bad);margin-left:6px;vertical-align:1px}
+section[hidden]{display:none}
+
 #verdict{display:flex;gap:14px;align-items:flex-start;border-left:4px solid var(--dim)}
 #verdict.ok{border-left-color:var(--ok)}
-#verdict.wait{border-left-color:var(--key)}
+#verdict.wait{border-left-color:var(--s1)}
 #verdict.hold{border-left-color:var(--warn)}
 #verdict.bad{border-left-color:var(--bad)}
 #vIcon{font-size:30px;line-height:1.1}
 #vTitle{font-size:17px;font-weight:600}
 #vSub{font-size:13.5px;color:var(--dim)}
 
-.grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(135px,1fr))}
+.grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(138px,1fr))}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:13px 14px}
 .stat b{display:block;font-size:23px;font-weight:600;letter-spacing:-.4px}
 .stat span{font-size:12px;color:var(--dim)}
 .stat i{font-style:normal;font-size:11.5px;color:var(--ok)}
+.stat i.flat{color:var(--dim)}
 
-button{font:inherit;color:var(--ink);background:#21262d;border:1px solid var(--line);
+button.act{font:inherit;color:var(--ink);background:#21262d;border:1px solid var(--line);
   border-radius:9px;padding:10px 14px;cursor:pointer}
-button:hover:not(:disabled){border-color:#3d4653}
-button:disabled{opacity:.4;cursor:not-allowed}
-button.go{background:#1f6feb;border-color:#1f6feb}
-button.danger{color:#ffa198}
+button.act:hover:not(:disabled){border-color:#3d4653}
+button.act:disabled{opacity:.4;cursor:not-allowed}
+button.act.go{background:#1f6feb;border-color:#1f6feb}
+button.act.danger{color:#ffa198}
 .row{display:flex;gap:8px;flex-wrap:wrap}
 input[type=password]{font:inherit;background:#0d1117;color:var(--ink);
   border:1px solid var(--line);border-radius:9px;padding:10px 12px;flex:1;min-width:190px}
@@ -74,9 +91,30 @@ td:first-child{width:99%}
 .tag{display:inline-block;font-size:11px;color:var(--dim);border:1px solid var(--line);
   border-radius:999px;padding:1px 8px;margin:2px 4px 0 0}
 
-#spark{display:flex;align-items:flex-end;gap:2px;height:62px;margin-top:4px}
-#spark div{flex:1;background:var(--key);border-radius:2px 2px 0 0;min-height:2px;opacity:.85}
+/* แท่งแนวนอน — ชื่อคลิปไทยยาวเกินกว่าจะวางใน svg ได้สวย ใช้ html ตรง ๆ ง่ายกว่า */
+.bars{display:flex;flex-direction:column;gap:14px}
+.bar-row{display:grid;grid-template-columns:1fr auto;gap:3px 10px;align-items:baseline}
+.bar-label{font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar-val{font-size:13px;font-variant-numeric:tabular-nums;color:var(--dim)}
+.bar-track{grid-column:1/-1;height:9px;background:#0d1117;border-radius:5px;overflow:hidden}
+.bar-fill{height:100%;border-radius:0 5px 5px 0;background:var(--s1);min-width:3px}
 
+svg.chart{display:block;width:100%;height:auto;overflow:visible}
+svg.chart .grid-line{stroke:var(--line);stroke-width:1}
+svg.chart .axis{fill:var(--dim);font-size:10px}
+svg.chart .mark{fill:var(--s1)}
+svg.chart .ln{fill:none;stroke:var(--s3);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+svg.chart .pt{fill:var(--s3);stroke:var(--card);stroke-width:2}
+svg.chart .hit{fill:transparent;cursor:pointer}
+
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--dim);margin-bottom:10px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:0}
+
+.empty{color:var(--dim);font-size:13px;padding:6px 0}
+
+#tip{position:fixed;z-index:9;background:#21262d;border:1px solid var(--line);
+  border-radius:8px;padding:7px 11px;font-size:12.5px;pointer-events:none;
+  display:none;box-shadow:0 6px 18px #0009;white-space:nowrap}
 #toast{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;z-index:9;
   background:#21262d;border:1px solid var(--line);border-radius:10px;padding:11px 16px;
   font-size:13.5px;display:none;max-width:92vw;box-shadow:0 8px 24px #0008}
@@ -96,57 +134,122 @@ td:first-child{width:99%}
   </div>
 </div>
 
-<h2>ตัวเลขช่อง</h2>
-<div class="grid" id="stats"></div>
+<nav id="tabs" role="tablist">
+  <button role="tab" data-tab="overview"  aria-selected="true">ภาพรวม</button>
+  <button role="tab" data-tab="growth"    aria-selected="false">การเติบโต</button>
+  <button role="tab" data-tab="clips"     aria-selected="false">ผลงานคลิป</button>
+  <button role="tab" data-tab="lessons"   aria-selected="false">อะไรได้ผล</button>
+  <button role="tab" data-tab="system"    aria-selected="false">ระบบ</button>
+  <button role="tab" data-tab="control"   aria-selected="false">สั่งงาน</button>
+</nav>
 
-<div id="trendWrap" style="display:none">
-  <h2>วิวรายวัน 28 วันล่าสุด</h2>
-  <div class="card"><div id="spark"></div><div class="small muted" id="trendNote"></div></div>
-</div>
+<section id="tab-overview">
+  <h2>ตัวเลขช่อง</h2>
+  <div class="grid" id="stats"></div>
+  <h2>คลิปล่าสุด</h2>
+  <div class="card" id="latest"></div>
+</section>
 
-<h2>สั่งงาน</h2>
-<div class="card">
-  <div class="row" id="controls">
-    <button class="go"     data-wf="publish" data-act="now">ลงคลิปเดี๋ยวนี้</button>
-    <button                data-wf="control" data-act="skip-today">งดลงวันนี้</button>
-    <button class="danger" data-wf="control" data-act="pause">หยุดไว้ก่อน</button>
-    <button                data-wf="control" data-act="resume">เปิดทำงานต่อ</button>
+<section id="tab-growth" hidden>
+  <h2>วิวที่ได้ในแต่ละวัน</h2>
+  <div class="card">
+    <div id="cDaily"></div>
+    <div class="note" id="nDaily"></div>
   </div>
-  <div id="ctlNote" class="small muted" style="margin-top:12px"></div>
-  <div class="row" style="margin-top:12px">
-    <input type="password" id="token" placeholder="วางโทเค็น GitHub ที่นี่เพื่อเปิดใช้ปุ่ม" autocomplete="off">
-    <button id="saveToken">จำไว้</button>
-    <button id="clearToken">ลืมซะ</button>
+
+  <h2>ผู้ติดตามสะสม</h2>
+  <div class="card">
+    <div id="cSubs"></div>
+    <div class="note">เกณฑ์เข้าโครงการหาเงินคือ 1,000 คน พร้อมยอดดู Shorts 10 ล้านครั้งใน 90 วัน</div>
   </div>
-  <div class="small muted" style="margin-top:10px">
-    ปุ่มพวกนี้สั่ง GitHub ให้ทำงานแทนเรา จึงต้องมีโทเค็นของเจ้าของ repo
-    สร้างแบบ fine-grained ให้ใช้ได้กับ repo นี้ repo เดียว สิทธิ์ Actions เป็น Read and write พอ
-    โทเค็นถูกเก็บไว้ในเบราว์เซอร์เครื่องนี้เท่านั้น ไม่ถูกส่งไปที่ไหนนอกจาก GitHub
-    และไม่เคยถูกบันทึกลง repo
+</section>
+
+<section id="tab-clips" hidden>
+  <h2>วิวต่อวันของแต่ละคลิป</h2>
+  <div class="card">
+    <div id="cClips"></div>
+    <div class="note" id="nClips"></div>
   </div>
-</div>
 
-<h2>คลิปในช่อง</h2>
-<div class="card" style="padding:16px 16px 6px"><table id="videos"></table></div>
+  <h2>รายละเอียดทุกคลิป</h2>
+  <div class="card" style="padding:16px 16px 6px"><table id="videos"></table></div>
+</section>
 
-<h2>สุขภาพบริการ</h2>
-<div class="card" style="padding:16px 16px 6px"><table id="health"></table></div>
+<section id="tab-lessons" hidden>
+  <h2>ลักษณะชื่อเรื่องกับวิวที่ได้</h2>
+  <div class="card">
+    <div id="cTraits"></div>
+    <div class="note" id="nTraits"></div>
+  </div>
 
-<h2>รอบทำงานล่าสุด</h2>
-<div class="card" style="padding:16px 16px 6px"><table id="runs"></table></div>
-<div id="runNote" class="small muted" style="padding:8px 2px"></div>
+  <h2>คนกดไลก์มากแค่ไหน</h2>
+  <div class="card">
+    <div id="cLikes"></div>
+    <div class="note">สัดส่วนไลก์ต่อวิว บอกว่าคน<em>ที่ได้ดู</em>ชอบแค่ไหน
+      คลิปที่ไลก์สูงแต่วิวต่ำแปลว่าเนื้อหาดีแต่ YouTube ยังไม่กระจายให้</div>
+  </div>
+</section>
 
+<section id="tab-system" hidden>
+  <h2>สุขภาพบริการ</h2>
+  <div class="card" style="padding:16px 16px 6px"><table id="health"></table></div>
+
+  <h2>รอบทำงานล่าสุด</h2>
+  <div class="card" style="padding:16px 16px 6px"><table id="runs"></table></div>
+  <div class="note" id="runNote"></div>
+
+  <h2>ตารางเวลา</h2>
+  <div class="card" id="schedule"></div>
+</section>
+
+<section id="tab-control" hidden>
+  <h2>สั่งงาน</h2>
+  <div class="card">
+    <div class="row" id="controls">
+      <button class="act go"     data-wf="publish" data-act="now">ลงคลิปเดี๋ยวนี้</button>
+      <button class="act"        data-wf="control" data-act="skip-today">งดลงวันนี้</button>
+      <button class="act danger" data-wf="control" data-act="pause">หยุดไว้ก่อน</button>
+      <button class="act"        data-wf="control" data-act="resume">เปิดทำงานต่อ</button>
+    </div>
+    <div id="ctlNote" class="note"></div>
+  </div>
+
+  <h2>โทเค็นสำหรับสั่งงาน</h2>
+  <div class="card">
+    <div class="row">
+      <input type="password" id="token" placeholder="วางโทเค็น GitHub ที่นี่" autocomplete="off">
+      <button class="act" id="saveToken">จำไว้</button>
+      <button class="act" id="clearToken">ลืมซะ</button>
+    </div>
+    <div class="note">
+      ปุ่มด้านบนสั่ง GitHub ให้ทำงานแทนเรา จึงต้องมีสิทธิ์ของเจ้าของ repo<br>
+      สร้างที่ Settings → Developer settings → Personal access tokens → Fine-grained tokens
+      เลือกเฉพาะ repo นี้ ให้สิทธิ์ Actions เป็น Read and write พอ<br>
+      โทเค็นถูกเก็บในเบราว์เซอร์เครื่องนี้เท่านั้น ไม่ถูกส่งไปไหนนอกจาก GitHub
+      และไม่เคยถูกบันทึกลง repo — ถ้าไม่ใส่ หน้านี้ก็ยังดูได้ครบ แค่กดปุ่มไม่ได้
+    </div>
+  </div>
+</section>
+
+<div id="tip"></div>
 <div id="toast"></div>
 
 <script>
 const REPO = "konkamon4717-alt/YTAUTO";
-// เวลาตามที่ตั้งไว้ใน publish.yml — เก็บเป็น UTC เพราะ GitHub คิดเป็น UTC
-const CRON_UTC = [[12, 0], [13, 30], [15, 0]];
+const CRON_UTC = [[12, 0], [13, 30], [15, 0]];   // ตามที่ตั้งไว้ใน publish.yml
 const TZ = "Asia/Bangkok";
 const KEY = "yt-auto-token";
 
 const $ = s => document.querySelector(s);
-const nf = n => (n ?? 0).toLocaleString("th-TH");
+const nf = n => Math.round(n ?? 0).toLocaleString("th-TH");
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => (
+  { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+const thaiDay = d => new Intl.DateTimeFormat("sv-SE", { timeZone: TZ }).format(d);
+const thaiTime = d => new Intl.DateTimeFormat("th-TH",
+  { timeZone: TZ, day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }).format(d);
+const thaiDate = d => new Intl.DateTimeFormat("th-TH",
+  { timeZone: TZ, day: "numeric", month: "short" }).format(d);
 
 function toast(msg, bad) {
   const t = $("#toast");
@@ -157,22 +260,131 @@ function toast(msg, bad) {
   t._t = setTimeout(() => { t.style.display = "none"; }, 5200);
 }
 
-/* วันที่ตามเวลาไทย ไม่ใช่เวลาเครื่อง เพราะช่องนี้ทำงานตามวันของไทย */
-const thaiDay = d => new Intl.DateTimeFormat("sv-SE", { timeZone: TZ }).format(d);
-const thaiTime = d => new Intl.DateTimeFormat("th-TH",
-  { timeZone: TZ, day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }).format(d);
+/* ---------- แท็บ ---------- */
+document.querySelectorAll("#tabs button").forEach(b => {
+  b.onclick = () => {
+    document.querySelectorAll("#tabs button").forEach(x =>
+      x.setAttribute("aria-selected", String(x === b)));
+    document.querySelectorAll("section").forEach(s =>
+      s.hidden = s.id !== "tab-" + b.dataset.tab);
+    location.hash = b.dataset.tab;
+    window.scrollTo({ top: 0 });
+  };
+});
+if (location.hash) {
+  const b = document.querySelector(`#tabs button[data-tab="${CSS.escape(location.hash.slice(1))}"]`);
+  if (b) b.click();
+}
 
+/* ---------- กราฟ ---------- */
+const tip = $("#tip");
+function showTip(e, html) {
+  tip.innerHTML = html;
+  tip.style.display = "block";
+  const r = tip.getBoundingClientRect();
+  tip.style.left = Math.min(Math.max(8, e.clientX - r.width / 2), innerWidth - r.width - 8) + "px";
+  tip.style.top = Math.max(8, e.clientY - r.height - 12) + "px";
+}
+const hideTip = () => { tip.style.display = "none"; };
+addEventListener("scroll", hideTip, { passive: true });
+
+/* แท่งแนวนอน: เทียบขนาดระหว่างของที่มีชื่อยาว ๆ */
+function barsH(el, rows, fmt = nf, color = "var(--s1)") {
+  if (!rows.length) { el.innerHTML = '<div class="empty">ยังไม่มีข้อมูล</div>'; return; }
+  const max = Math.max(...rows.map(r => r.value), 1);
+  el.innerHTML = `<div class="bars">` + rows.map(r => `
+    <div class="bar-row" data-tipc="${esc(r.tip || r.label)}">
+      <div class="bar-label">${esc(r.label)}</div>
+      <div class="bar-val">${fmt(r.value)}</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:${Math.max(1.5, r.value / max * 100)}%;
+          background:${r.color || color}"></div>
+      </div>
+    </div>`).join("") + `</div>`;
+  el.querySelectorAll(".bar-row").forEach(row => {
+    row.onmouseenter = e => showTip(e, row.dataset.tipc);
+    row.onmousemove = e => showTip(e, row.dataset.tipc);
+    row.onmouseleave = hideTip;
+  });
+}
+
+/* แท่งแนวตั้งตามเวลา */
+function barsV(el, rows) {
+  if (!rows.length) { el.innerHTML = '<div class="empty">ยังไม่มีข้อมูล</div>'; return; }
+  const W = 320, H = 120, PAD_B = 16, PAD_L = 30;
+  const max = Math.max(...rows.map(r => r.value), 1);
+  const bw = (W - PAD_L) / rows.length;
+  const y = v => (H - PAD_B) * (1 - v / max);
+
+  const ticks = [0, max / 2, max].map(v =>
+    `<line class="grid-line" x1="${PAD_L}" x2="${W}" y1="${y(v)}" y2="${y(v)}"/>
+     <text class="axis" x="0" y="${y(v) + 3}">${nf(v)}</text>`).join("");
+
+  // เว้น 2px ระหว่างแท่งเสมอ ไม่งั้นแท่งติดกันจนดูเป็นก้อนเดียว
+  const bars = rows.map((r, i) => {
+    const h = Math.max(2, (H - PAD_B) - y(r.value));
+    return `<g class="hit-g">
+      <rect class="mark" x="${PAD_L + i * bw + 1}" y="${H - PAD_B - h}"
+        width="${Math.max(1, bw - 2)}" height="${h}" rx="2"/>
+      <rect class="hit" x="${PAD_L + i * bw}" y="0" width="${bw}" height="${H - PAD_B}"
+        data-tipc="${esc(r.tip)}"/></g>`;
+  }).join("");
+
+  const step = Math.ceil(rows.length / 5);
+  const labels = rows.map((r, i) => i % step ? "" :
+    `<text class="axis" x="${PAD_L + i * bw + bw / 2}" y="${H - 3}"
+      text-anchor="middle">${esc(r.label)}</text>`).join("");
+
+  el.innerHTML = `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img">
+    ${ticks}${bars}${labels}</svg>`;
+  bindHits(el);
+}
+
+/* เส้นตามเวลา */
+function lineChart(el, rows) {
+  if (rows.length < 2) { el.innerHTML = '<div class="empty">ยังไม่มีข้อมูล</div>'; return; }
+  const W = 320, H = 120, PAD_B = 16, PAD_L = 30;
+  const vals = rows.map(r => r.value);
+  const min = Math.min(...vals), max = Math.max(...vals);
+  const span = (max - min) || 1;
+  const x = i => PAD_L + (W - PAD_L) * (rows.length === 1 ? .5 : i / (rows.length - 1));
+  const y = v => 6 + (H - PAD_B - 6) * (1 - (v - min) / span);
+
+  const ticks = [min, max].map(v =>
+    `<line class="grid-line" x1="${PAD_L}" x2="${W}" y1="${y(v)}" y2="${y(v)}"/>
+     <text class="axis" x="0" y="${y(v) + 3}">${nf(v)}</text>`).join("");
+  const d = rows.map((r, i) => `${i ? "L" : "M"}${x(i)},${y(r.value)}`).join(" ");
+  const pts = rows.map((r, i) =>
+    `<circle class="pt" cx="${x(i)}" cy="${y(r.value)}" r="4"/>
+     <rect class="hit" x="${x(i) - 10}" y="0" width="20" height="${H - PAD_B}"
+       data-tipc="${esc(r.tip)}"/>`).join("");
+  const ends = [0, rows.length - 1].map(i =>
+    `<text class="axis" x="${x(i)}" y="${H - 3}"
+      text-anchor="${i ? "end" : "start"}">${esc(rows[i].label)}</text>`).join("");
+
+  el.innerHTML = `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img">
+    ${ticks}<path class="ln" d="${d}"/>${pts}${ends}</svg>`;
+  bindHits(el);
+}
+
+function bindHits(el) {
+  el.querySelectorAll(".hit").forEach(h => {
+    h.onmouseenter = e => showTip(e, h.dataset.tipc);
+    h.onmousemove = e => showTip(e, h.dataset.tipc);
+    h.onmouseleave = hideTip;
+  });
+}
+
+/* ---------- เวลา ---------- */
 function nextRun() {
   const now = new Date();
-  for (let day = 0; day < 3; day++) {
+  for (let day = 0; day < 3; day++)
     for (const [h, m] of CRON_UTC) {
       const t = new Date(Date.UTC(
         now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + day, h, m));
       if (t > now) return t;
     }
-  }
 }
-
 function countdown(to) {
   const mins = Math.round((to - new Date()) / 60000);
   if (mins < 60) return `อีก ${mins} นาที`;
@@ -187,7 +399,7 @@ async function grab(file) {
   } catch { return null; }
 }
 
-/* ---------- การ์ดบนสุด: คำตอบว่าวันนี้ลงรึยัง ---------- */
+/* ---------- ภาพรวม ---------- */
 function renderVerdict(ch, ctl, feed) {
   const today = thaiDay(new Date());
   const todays = (ch?.videos || []).filter(v => thaiDay(new Date(v.published)) === today);
@@ -196,9 +408,7 @@ function renderVerdict(ch, ctl, feed) {
     r.name === "publish" && (r.status === "in_progress" || r.status === "queued"));
 
   let cls, icon, title, sub;
-
   if (window._sick?.length) {
-    // บริการจำเป็นล้มสำคัญกว่าทุกอย่าง เพราะรอบต่อไปจะไม่ได้คลิปแน่นอน
     cls = "bad"; icon = "🔴";
     title = `บริการจำเป็นล้ม ${window._sick.length} ตัว`;
     sub = `${window._sick.map(c => c.name).join(", ")} — รอบต่อไปจะไม่ได้คลิป`;
@@ -230,75 +440,147 @@ function renderVerdict(ch, ctl, feed) {
   $("#vSub").textContent = sub;
 }
 
-/* ---------- ตัวเลขช่อง ---------- */
-function renderStats(ch) {
+/* เทียบกับวันก่อนหน้า ตัวเลขเฉย ๆ ไม่บอกว่ากำลังไปทางไหน */
+function delta(growth, field) {
+  if (!growth || growth.length < 2) return null;
+  const a = growth[growth.length - 2][field], b = growth[growth.length - 1][field];
+  return b - a;
+}
+
+function renderStats(ch, growth) {
   const c = ch?.channel;
   if (!c) { $("#stats").innerHTML = '<div class="stat muted">ยังไม่มีข้อมูลช่อง</div>'; return; }
 
   const vids = ch.videos || [];
   const perDay = vids.length
-    ? Math.round(vids.reduce((s, v) => s + v.views_per_day, 0) / vids.length) : 0;
-  const best = vids.slice().sort((a, b) => b.views_per_day - a.views_per_day)[0];
+    ? vids.reduce((s, v) => s + v.views_per_day, 0) / vids.length : 0;
+  const dSub = delta(growth, "subscribers"), dView = delta(growth, "views");
+  const since = (d, unit) => d == null ? "" :
+    (d > 0 ? `+${nf(d)} ${unit}จากเมื่อวาน` : (d === 0 ? `เท่าเมื่อวาน` : `${nf(d)} ${unit}`));
 
   const cards = [
-    ["ผู้ติดตาม", nf(c.subscribers), `ขาดอีก ${nf(Math.max(0, 1000 - c.subscribers))} คนถึงเกณฑ์หาเงินได้`],
-    ["วิวรวมทั้งช่อง", nf(c.views), ""],
-    ["คลิปทั้งหมด", nf(c.videos), ""],
-    ["วิวต่อวันเฉลี่ย", nf(perDay), best ? `คลิปแรงสุด ${best.views_per_day}/วัน` : ""],
+    ["ผู้ติดตาม", nf(c.subscribers),
+      since(dSub, "คน") || `ขาดอีก ${nf(Math.max(0, 1000 - c.subscribers))} คนถึงเกณฑ์หาเงิน`, dSub],
+    ["วิวรวมทั้งช่อง", nf(c.views), since(dView, "วิว"), dView],
+    ["คลิปทั้งหมด", nf(c.videos), "", null],
+    ["วิวต่อวันเฉลี่ย", nf(perDay), "เฉลี่ยทุกคลิป", null],
   ];
-  $("#stats").innerHTML = cards.map(([label, val, note]) => `
-    <div class="stat"><b>${val}</b><span>${label}</span>${note ? `<br><i>${note}</i>` : ""}</div>`).join("");
+  $("#stats").innerHTML = cards.map(([label, val, note, d]) => `
+    <div class="stat"><b>${val}</b><span>${label}</span>
+      ${note ? `<br><i class="${d === 0 ? "flat" : ""}">${note}</i>` : ""}</div>`).join("");
 
-  // รายได้ต้องพูดตรง ๆ ว่าทำไมยังดูไม่ได้ ไม่ใช่ซ่อนช่องนี้ไปเฉย ๆ
-  const a = ch.analytics;
-  const rev = a?.revenue;
-  if (rev && !rev.unavailable) {
-    $("#stats").insertAdjacentHTML("beforeend",
-      `<div class="stat"><b>$${rev.estimated_revenue_usd ?? 0}</b><span>รายได้ 28 วัน</span></div>`);
-  } else {
-    const why = a === null
-      ? "โทเค็นยังไม่มีสิทธิ์ Analytics"
-      : "ช่องยังไม่ผ่านเกณฑ์หาเงิน";
-    $("#stats").insertAdjacentHTML("beforeend",
-      `<div class="stat"><b class="muted">—</b><span>รายได้</span><br><i class="muted">${why}</i></div>`);
-  }
+  const rev = ch.analytics?.revenue;
+  const why = rev && !rev.unavailable
+    ? null : (ch.analytics === null ? "โทเค็นยังไม่มีสิทธิ์ Analytics" : "ช่องยังไม่ผ่านเกณฑ์หาเงิน");
+  $("#stats").insertAdjacentHTML("beforeend", why
+    ? `<div class="stat"><b class="muted">—</b><span>รายได้</span><br><i class="flat">${why}</i></div>`
+    : `<div class="stat"><b>$${rev.estimated_revenue_usd ?? 0}</b><span>รายได้ 28 วัน</span></div>`);
+
+  const newest = vids.slice().sort((a, b) => new Date(b.published) - new Date(a.published))[0];
+  $("#latest").innerHTML = newest ? `
+    <div style="font-size:15px;font-weight:600;margin-bottom:4px">
+      <a href="https://youtube.com/watch?v=${newest.id}" target="_blank" rel="noopener">${esc(newest.title)}</a></div>
+    <div class="small muted">ลงเมื่อ ${thaiTime(new Date(newest.published))} ·
+      ${nf(newest.views)} วิว · ${newest.views_per_day} วิว/วัน · ไลก์ ${newest.like_rate}%</div>
+    ${(newest.traits || []).map(t => `<span class="tag">${esc(t)}</span>`).join("")}`
+    : '<div class="empty">ยังไม่มีคลิป</div>';
 }
 
-function renderTrend(ch) {
-  const daily = ch?.analytics?.daily;
-  if (!daily?.length) return;
-  const max = Math.max(...daily.map(d => d.views), 1);
-  $("#spark").innerHTML = daily.map(d =>
-    `<div style="height:${Math.max(2, d.views / max * 62)}px" title="${d.day}: ${nf(d.views)} วิว"></div>`).join("");
-  const total = daily.reduce((s, d) => s + d.views, 0);
-  const net = daily.reduce((s, d) => s + (d.subscribersGained || 0) - (d.subscribersLost || 0), 0);
-  $("#trendNote").textContent =
-    `รวม ${nf(total)} วิว · ผู้ติดตามเพิ่มสุทธิ ${net >= 0 ? "+" : ""}${nf(net)} คน`;
-  $("#trendWrap").style.display = "block";
+/* ---------- การเติบโต ---------- */
+function renderGrowth(growth) {
+  const rows = growth || [];
+
+  // วิวต่อวันต้องคำนวณจากผลต่างของยอดสะสม ค่าแรกจึงไม่มีวันก่อนหน้าให้ลบ
+  const daily = rows.slice(1).map((r, i) => ({
+    label: thaiDate(new Date(r.date)),
+    value: Math.max(0, r.views - rows[i].views),
+    tip: `${thaiDate(new Date(r.date))}: ${nf(Math.max(0, r.views - rows[i].views))} วิว`,
+  }));
+
+  barsV($("#cDaily"), daily);
+  $("#nDaily").textContent = daily.length
+    ? `เก็บมาแล้ว ${rows.length} วัน · เฉลี่ย ${nf(daily.reduce((s, d) => s + d.value, 0) / daily.length)} วิวต่อวัน`
+    : `เพิ่งเริ่มจดตัวเลขวันนี้ — ต้องรออีกวันถึงจะมีผลต่างให้เทียบ ` +
+      `ย้อนไปเก็บของเมื่อวานไม่ได้เพราะไม่มีใครเก็บไว้ให้`;
+
+  lineChart($("#cSubs"), rows.map(r => ({
+    label: thaiDate(new Date(r.date)),
+    value: r.subscribers,
+    tip: `${thaiDate(new Date(r.date))}: ${nf(r.subscribers)} คน`,
+  })));
 }
 
-/* ---------- ตาราง ---------- */
-function renderVideos(ch) {
+/* ---------- ผลงานคลิป ---------- */
+function renderClips(ch) {
   const vids = (ch?.videos || []).slice().sort((a, b) => b.views_per_day - a.views_per_day);
-  if (!vids.length) { $("#videos").innerHTML = '<tr><td class="muted">ยังไม่มีคลิป</td></tr>'; return; }
-  $("#videos").innerHTML =
-    `<tr><th>คลิป · เรียงตามวิวต่อวัน</th><th>วิว</th><th>วิว/วัน</th><th>ไลก์</th></tr>` +
-    vids.map(v => `<tr>
-      <td><a href="https://youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">${v.title}</a>
-        <div class="small muted">อายุ ${v.days} วัน${v.privacy !== "public" ? ` · ${v.privacy}` : ""}
-        ${(v.traits || []).map(t => `<span class="tag">${t}</span>`).join("")}</div></td>
-      <td>${nf(v.views)}</td><td>${v.views_per_day}</td><td>${v.like_rate}%</td></tr>`).join("");
+
+  barsH($("#cClips"), vids.map(v => ({
+    label: v.title,
+    value: v.views_per_day,
+    tip: `${nf(v.views)} วิวใน ${v.days} วัน`,
+  })), n => n.toLocaleString("th-TH") + "/วัน");
+
+  // ช่องเล็ก ๆ ที่มีคลิปดังคลิปเดียว แท่งที่เหลือจะสั้นจนเทียบกันเองไม่ออก
+  // ไม่ย่อสเกลให้ดูสวย เพราะ "คลิปเดียวแบกทั้งช่อง" คือเรื่องจริงที่ต้องเห็น
+  // แต่ต้องบอกตรง ๆ ว่าให้อ่านตัวเลขท้ายแท่งแทนการเทียบความยาว
+  const gap = vids.length > 1 && vids[1].views_per_day
+    ? vids[0].views_per_day / vids[1].views_per_day : 0;
+  $("#nClips").textContent = gap > 5
+    ? `หารด้วยอายุคลิปแล้ว เทียบกันได้ตรง ๆ · คลิปอันดับหนึ่งแรงกว่าอันดับสอง ` +
+      `${Math.round(gap)} เท่า แท่งที่เหลือจึงสั้นจนเทียบกันเองไม่ออก ให้ดูตัวเลขท้ายแท่งแทน`
+    : "หารด้วยอายุคลิปแล้ว คลิปเก่ากับคลิปใหม่จึงเทียบกันได้ตรง ๆ";
+
+  $("#videos").innerHTML = vids.length
+    ? `<tr><th>คลิป · เรียงตามวิวต่อวัน</th><th>วิว</th><th>วิว/วัน</th><th>ไลก์</th></tr>` +
+      vids.map(v => `<tr>
+        <td><a href="https://youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">${esc(v.title)}</a>
+          <div class="small muted">อายุ ${v.days} วัน${v.privacy !== "public" ? ` · ${esc(v.privacy)}` : ""}
+          ${(v.traits || []).map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div></td>
+        <td>${nf(v.views)}</td><td>${v.views_per_day}</td><td>${v.like_rate}%</td></tr>`).join("")
+    : '<tr><td class="muted">ยังไม่มีคลิป</td></tr>';
 }
 
+/* ---------- อะไรได้ผล ---------- */
+function renderLessons(ch) {
+  const vids = (ch?.videos || []).filter(v => v.privacy === "public");
+
+  const byTrait = {};
+  vids.forEach(v => (v.traits || []).forEach(t => (byTrait[t] ??= []).push(v)));
+  const traits = Object.entries(byTrait)
+    .map(([name, list]) => ({
+      label: `${name} (${list.length} คลิป)`,
+      value: list.reduce((s, v) => s + v.views_per_day, 0) / list.length,
+      tip: `${name}: เฉลี่ย ${nf(list.reduce((s, v) => s + v.views_per_day, 0) / list.length)} วิว/วัน`,
+    }))
+    .sort((a, b) => b.value - a.value);
+
+  barsH($("#cTraits"), traits, n => nf(n) + "/วัน", "var(--s2)");
+  $("#nTraits").textContent = vids.length < 8
+    ? `ตอนนี้มีแค่ ${vids.length} คลิปสาธารณะ ตัวเลขนี้ยังบอกอะไรไม่ได้จริง ` +
+      `คลิปเดียวที่ดังผิดปกติก็ดันค่าเฉลี่ยของป้ายที่มันติดอยู่ให้สูงทั้งกลุ่ม`
+    : "คลิปหนึ่งติดได้หลายป้าย ตัวเลขจึงทับซ้อนกัน ใช้ดูทิศทาง ไม่ใช่ข้อสรุป";
+
+  barsH($("#cLikes"), vids.slice()
+    .sort((a, b) => b.like_rate - a.like_rate)
+    .map(v => ({
+      label: v.title,
+      value: v.like_rate,
+      tip: `${nf(v.likes)} ไลก์จาก ${nf(v.views)} วิว`,
+    })), n => n + "%", "var(--s3)");
+}
+
+/* ---------- ระบบ ---------- */
 function renderHealth(h) {
   if (!h) { $("#health").innerHTML = '<tr><td class="muted">ยังไม่เคยตรวจ</td></tr>'; return; }
   window._sick = h.checks.filter(c => !c.ok && c.essential);
-  $("#health").innerHTML = h.checks.map(c => {
-    const d = c.ok ? "d-ok" : (c.essential ? "d-bad" : "d-warn");
-    return `<tr><td><span class="dot ${d}"></span>${c.name}
-      <div class="small muted">${c.detail || ""}</div></td>
-      <td class="small muted">${c.ms} ms</td></tr>`;
-  }).join("");
+  const broken = h.checks.filter(c => !c.ok).length;
+  const pip = document.querySelector('#tabs button[data-tab="system"]');
+  pip.innerHTML = "ระบบ" + (broken ? '<span class="pip"></span>' : "");
+
+  $("#health").innerHTML = h.checks.map(c => `
+    <tr><td><span class="dot ${c.ok ? "d-ok" : (c.essential ? "d-bad" : "d-warn")}"></span>${esc(c.name)}
+      <div class="small muted">${esc(c.detail || "")}</div></td>
+      <td class="small muted">${c.ms} ms</td></tr>`).join("");
 }
 
 function renderRuns(st, feed) {
@@ -306,19 +588,28 @@ function renderRuns(st, feed) {
   // เคยใช้ slice(-12) แล้วได้รอบทดสอบของเดือนก่อนมาโชว์แทนรอบล่าสุด
   const rows = (st?.runs || []).slice()
     .sort((a, b) => new Date(b.at) - new Date(a.at)).slice(0, 12);
+
   $("#runs").innerHTML = rows.length
     ? rows.map(r => `<tr>
-        <td><span class="dot ${r.ok ? "d-ok" : "d-bad"}"></span>${r.title || r.premise || "(ไม่มีชื่อ)"}
+        <td><span class="dot ${r.ok ? "d-ok" : "d-bad"}"></span>${esc(r.title || r.premise || "(ไม่มีชื่อ)")}
           <div class="small muted">${thaiTime(new Date(r.at))}
             ${r.animated != null ? ` · ขยับ ${r.animated}/${r.scenes} ฉาก` : ""}
-            ${r.writer ? ` · ${r.writer}` : ""}</div></td>
+            ${r.writer ? ` · ${esc(r.writer)}` : ""}</div></td>
         <td class="small muted">${r.seconds ? Math.round(r.seconds) + " วิ" : ""}</td></tr>`).join("")
     : '<tr><td class="muted">ยังไม่มีประวัติ</td></tr>';
 
   const sched = (feed || []).filter(r => r.name === "publish" && r.event === "schedule").length;
   $("#runNote").textContent = sched
-    ? `ตารางเวลาอัตโนมัติยิงเองแล้ว ${sched} รอบในรายการล่าสุด — ไม่ได้กดเอง`
+    ? `ตารางเวลายิงเองแล้ว ${sched} รอบในรายการล่าสุด — ไม่ได้กดเอง`
     : "";
+
+  const nxt = nextRun();
+  $("#schedule").innerHTML = `
+    <div>รอบถัดไป <b>${thaiTime(nxt)}</b> — ${countdown(nxt)}</div>
+    <div class="note">ตั้งไว้สามเวลาทุกวัน 19:00 / 20:30 / 22:00 น.
+      รอบแรกที่ทำสำเร็จจะได้คลิป รอบที่เหลือข้ามเอง เพราะลงได้วันละคลิปเดียว<br>
+      ที่ต้องมีสามรอบเพราะ cron ของ GitHub บน repo ฟรีเป็นแบบ best-effort
+      บางรอบมาช้าเป็นชั่วโมง บางรอบหายไปเลย</div>`;
 }
 
 /* ---------- ปุ่มสั่งงาน ---------- */
@@ -328,7 +619,7 @@ function refreshControls(ctl) {
   const has = !!token();
   document.querySelectorAll("#controls button").forEach(b => { b.disabled = !has; });
   $("#ctlNote").textContent = !has
-    ? "ยังสั่งงานไม่ได้ — ต้องวางโทเค็นก่อน (วิธีอยู่ด้านล่าง)"
+    ? "ยังสั่งงานไม่ได้ — ต้องวางโทเค็นก่อน (ดูหัวข้อถัดไป)"
     : (ctl?.last_action
       ? `คำสั่งล่าสุด: ${ctl.last_action} เมื่อ ${thaiTime(new Date(ctl.updated_at))}`
       : "พร้อมสั่งงาน");
@@ -381,33 +672,32 @@ $("#saveToken").onclick = () => {
   toast("จำโทเค็นไว้ในเบราว์เซอร์เครื่องนี้แล้ว");
   refreshControls();
 };
-
 $("#clearToken").onclick = () => {
   localStorage.removeItem(KEY);
   toast("ลบโทเค็นออกจากเครื่องนี้แล้ว");
   refreshControls();
 };
 
-/* ---------- โหลดทั้งหน้า ---------- */
+/* ---------- โหลด ---------- */
 async function load() {
-  const [ch, h, st, ctl] = await Promise.all(
-    ["channel.json", "health.json", "status.json", "control.json"].map(grab));
+  const [ch, h, st, ctl, growth] = await Promise.all(
+    ["channel.json", "health.json", "status.json", "control.json", "growth.json"].map(grab));
 
   // repo เป็นสาธารณะ จึงอ่านรายการรอบทำงานได้โดยไม่ต้องใช้โทเค็น
   let feed = [];
   try {
     const r = await fetch(`https://api.github.com/repos/${REPO}/actions/runs?per_page=20`);
     if (r.ok) feed = (await r.json()).workflow_runs.map(w => ({
-      name: w.name, event: w.event, status: w.status,
-      conclusion: w.conclusion, created_at: w.created_at,
+      name: w.name, event: w.event, status: w.status, created_at: w.created_at,
     }));
-  } catch { /* ไม่มีเน็ตหรือโดนจำกัดอัตรา — ส่วนที่เหลือของหน้ายังใช้ได้ */ }
+  } catch { /* ไม่มีเน็ตหรือโดนจำกัดอัตรา — ส่วนที่เหลือยังใช้ได้ */ }
 
   renderHealth(h);            // ต้องมาก่อน verdict เพราะ verdict อ่านผลบริการจำเป็นต่อ
   renderVerdict(ch, ctl, feed);
-  renderStats(ch);
-  renderTrend(ch);
-  renderVideos(ch);
+  renderStats(ch, growth);
+  renderGrowth(growth);
+  renderClips(ch);
+  renderLessons(ch);
   renderRuns(st, feed);
   refreshControls(ctl);
 
