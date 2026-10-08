@@ -92,6 +92,22 @@ td:first-child{width:99%}
   border-radius:999px;padding:1px 8px;margin:2px 4px 0 0}
 
 /* แท่งแนวนอน — ชื่อคลิปไทยยาวเกินกว่าจะวางใน svg ได้สวย ใช้ html ตรง ๆ ง่ายกว่า */
+/* ปกคลิป — YouTube เก็บเฟรมไว้เป็น 16:9 โดยวางคลิปแนวตั้งไว้กลางแล้วเบลอขยายสองข้าง
+   ให้ภาพสูงเต็มกรอบ ความกว้างจะเกินออกไปพอดีสองข้าง เหลือเฉพาะคลิปจริงตรงกลาง */
+.clipgrid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(132px,1fr))}
+.clipcard{min-width:0}
+.thumb{position:relative;aspect-ratio:9/16;overflow:hidden;border-radius:10px;
+  background:#0d1117;cursor:pointer;display:block;border:1px solid var(--line)}
+.thumb img{height:100%;width:auto;max-width:none;position:absolute;left:50%;
+  transform:translateX(-50%);display:block}
+.thumb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.thumb .play{position:absolute;inset:0;display:grid;place-items:center;font-size:30px;
+  color:#fff;text-shadow:0 2px 10px #000b;background:linear-gradient(#0000 55%,#0008)}
+.thumb:hover .play{background:linear-gradient(#0003,#000a)}
+.cliptitle{font-size:12.5px;margin-top:7px;display:-webkit-box;-webkit-line-clamp:2;
+  -webkit-box-orient:vertical;overflow:hidden}
+.clipmeta{font-size:11.5px;color:var(--dim)}
+
 .bars{display:flex;flex-direction:column;gap:14px}
 .bar-row{display:grid;grid-template-columns:1fr auto;gap:3px 10px;align-items:baseline}
 .bar-label{font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -165,6 +181,15 @@ svg.chart .hit{fill:transparent;cursor:pointer}
 </section>
 
 <section id="tab-clips" hidden>
+  <h2>ปกคลิป — กดเพื่อดู</h2>
+  <div class="clipgrid" id="covers"></div>
+
+  <h2>คลิปไหนยังมีคนดูอยู่</h2>
+  <div class="card">
+    <div id="cAlive"></div>
+    <div class="note" id="nAlive"></div>
+  </div>
+
   <h2>วิวต่อวันของแต่ละคลิป</h2>
   <div class="card">
     <div id="cClips"></div>
@@ -271,10 +296,14 @@ document.querySelectorAll("#tabs button").forEach(b => {
     window.scrollTo({ top: 0 });
   };
 });
-if (location.hash) {
+function openFromHash() {
+  if (!location.hash) return;
   const b = document.querySelector(`#tabs button[data-tab="${CSS.escape(location.hash.slice(1))}"]`);
-  if (b) b.click();
+  if (b && b.getAttribute("aria-selected") !== "true") b.click();
 }
+openFromHash();
+// เปลี่ยนแค่ # ไม่นับเป็นการโหลดหน้าใหม่ ต้องรับเองถึงจะย้อนกลับด้วยปุ่ม back ได้
+addEventListener("hashchange", openFromHash);
 
 /* ---------- กราฟ ---------- */
 const tip = $("#tip");
@@ -511,8 +540,65 @@ function renderGrowth(growth) {
 }
 
 /* ---------- ผลงานคลิป ---------- */
-function renderClips(ch) {
+function renderCovers(vids) {
+  $("#covers").innerHTML = vids.map(v => `
+    <div class="clipcard">
+      <div class="thumb" data-id="${v.id}">
+        <img loading="lazy" alt="" src="https://i.ytimg.com/vi/${v.id}/hq720.jpg">
+        <span class="play">▶</span>
+      </div>
+      <div class="cliptitle">${esc(v.title)}</div>
+      <div class="clipmeta">${nf(v.views)} วิว · ${v.views_per_day}/วัน</div>
+    </div>`).join("") || '<div class="empty">ยังไม่มีคลิป</div>';
+
+  $("#covers").querySelectorAll(".thumb").forEach(t => {
+    t.onclick = () => {
+      // ใส่ iframe ตอนกดเท่านั้น ไม่งั้นเปิดหน้ามาทีเดียวโหลดตัวเล่นหกตัวพร้อมกัน
+      t.innerHTML = `<iframe allow="autoplay; encrypted-media" allowfullscreen
+        src="https://www.youtube-nocookie.com/embed/${t.dataset.id}?autoplay=1"></iframe>`;
+      t.onclick = null;
+    };
+  });
+}
+
+/* ยอดสะสมบอกแค่ว่าเคยดังไหม ไม่ได้บอกว่าตอนนี้ยังมีคนดูอยู่หรือตายไปแล้ว
+   ซึ่งเป็นคนละเรื่องกันโดยสิ้นเชิงเวลาจะตัดสินใจว่าควรทำแนวไหนต่อ */
+function renderAlive(ch, growth) {
+  const rows = growth || [];
+  if (rows.length < 2) {
+    $("#cAlive").innerHTML = '<div class="empty">ยังไม่มีข้อมูล</div>';
+    $("#nAlive").textContent =
+      "ต้องมีตัวเลขอย่างน้อยสองวันถึงจะหาผลต่างได้ เริ่มจดวันนี้วันแรก พรุ่งนี้จะเห็น";
+    return;
+  }
+
+  const prev = rows[rows.length - 2].per_video || {};
+  const curr = rows[rows.length - 1].per_video || {};
+  const byId = Object.fromEntries((ch?.videos || []).map(v => [v.id, v]));
+
+  const gained = Object.keys(curr)
+    .filter(id => byId[id])
+    .map(id => ({
+      label: byId[id].title,
+      value: Math.max(0, curr[id] - (prev[id] ?? curr[id])),
+      tip: `${nf(curr[id] - (prev[id] ?? curr[id]))} วิวตั้งแต่เมื่อวาน · รวม ${nf(curr[id])}`,
+    }))
+    .sort((a, b) => b.value - a.value);
+
+  barsH($("#cAlive"), gained, n => nf(n) + " วิว", "var(--s2)");
+
+  const dead = gained.filter(g => g.value === 0).length;
+  $("#nAlive").textContent =
+    `วิวที่ได้เพิ่มตั้งแต่เมื่อวาน · ` + (dead
+      ? `มี ${dead} คลิปที่ไม่ได้วิวเพิ่มเลย — คลิปที่ตายแล้วบอกว่า YouTube เลิกกระจายให้`
+      : `ทุกคลิปยังมีคนดูอยู่`);
+}
+
+function renderClips(ch, growth) {
   const vids = (ch?.videos || []).slice().sort((a, b) => b.views_per_day - a.views_per_day);
+
+  renderCovers(vids);
+  renderAlive(ch, growth);
 
   barsH($("#cClips"), vids.map(v => ({
     label: v.title,
@@ -696,7 +782,7 @@ async function load() {
   renderVerdict(ch, ctl, feed);
   renderStats(ch, growth);
   renderGrowth(growth);
-  renderClips(ch);
+  renderClips(ch, growth);
   renderLessons(ch);
   renderRuns(st, feed);
   refreshControls(ctl);
