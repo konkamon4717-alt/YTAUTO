@@ -12,16 +12,16 @@
       "title": "ป้าเอารองเท้าเด็กข้างเดียวมาซ่อมทุกเดือน ความจริงทำเอากลั้นน้ำตาไม่อยู่",
       "published": "2026-10-07T05:14:43Z",
       "privacy": "public",
-      "views": 1599,
+      "views": 1600,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 1542.1,
+      "views_per_day": 1226.2,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 1.0
+      "days": 1.3
     },
     {
       "id": "8-Zy5rZlH00",
@@ -31,13 +31,13 @@
       "views": 27,
       "likes": 3,
       "comments": 0,
-      "views_per_day": 1.6,
+      "views_per_day": 1.5,
       "like_rate": 11.11,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 17.2
+      "days": 17.5
     },
     {
       "id": "klm0ozmRhsE",
@@ -53,7 +53,7 @@
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 20.1
+      "days": 20.3
     },
     {
       "id": "uxeId4AUBLI",
@@ -63,30 +63,30 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 58.1,
+      "views_per_day": 57.3,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 20.1
+      "days": 20.3
     },
     {
       "id": "L52UHMV1E0g",
       "title": "ความลับของนาฬิกาเรือนเก่าที่หยุดเดินทุกเดือน",
       "published": "2026-09-17T09:10:20Z",
       "privacy": "public",
-      "views": 629,
+      "views": 630,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 30.1,
+      "views_per_day": 29.8,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
         "ความลับ"
       ],
-      "days": 20.9
+      "days": 21.1
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -99,9 +99,9 @@
       "views_per_day": 0.2,
       "like_rate": 0.0,
       "traits": [],
-      "days": 21.0
+      "days": 21.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-08T06:07:52+00:00"
+  "fetched_at": "2026-10-08T12:33:41+00:00"
 }

@@ -1,6 +1,21 @@
 {
-  "updated_at": "2026-10-07T05:14:15+00:00",
+  "updated_at": "2026-10-08T12:33:40+00:00",
   "runs": [
+    {
+      "ok": true,
+      "title": "หนุ่มใหญ่ซื้อข้าวไหม้ก้นหม้อสองร้อยทุกวัน ความจริงทำแม่ค้าร้องไห้",
+      "premise": "A wealthy-looking man buys burnt porridge scrapings from a young stall owner every night. When she tries to give him high-quality food instead, she discovers the heart-breaking reason behind his strange request.",
+      "video_id": "ZQpvIsa0c8A",
+      "seconds": 527,
+      "writer": "gemini",
+      "animated": 6,
+      "scenes": 6,
+      "backends": {
+        "huggingface": 6
+      },
+      "voice": "edge-tts",
+      "at": "2026-10-08T12:33:40+00:00"
+    },
     {
       "ok": true,
       "title": "ป้าเอารองเท้าเด็กข้างเดียวมาซ่อมทุกเดือน ความจริงทำเอากลั้นน้ำตาไม่อยู่",

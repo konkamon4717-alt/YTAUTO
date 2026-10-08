@@ -142,6 +142,21 @@
       },
       "voice": "edge-tts",
       "at": "2026-10-07T05:14:15+00:00"
+    },
+    {
+      "ok": true,
+      "title": "หนุ่มใหญ่ซื้อข้าวไหม้ก้นหม้อสองร้อยทุกวัน ความจริงทำแม่ค้าร้องไห้",
+      "premise": "A wealthy-looking man buys burnt porridge scrapings from a young stall owner every night. When she tries to give him high-quality food instead, she discovers the heart-breaking reason behind his strange request.",
+      "video_id": "ZQpvIsa0c8A",
+      "seconds": 527,
+      "writer": "gemini",
+      "animated": 6,
+      "scenes": 6,
+      "backends": {
+        "huggingface": 6
+      },
+      "voice": "edge-tts",
+      "at": "2026-10-08T12:33:40+00:00"
     }
   ],
   "premises": [
@@ -158,6 +173,7 @@
     "พ่อค้าหนุ่มพบว่าชายแก่ซอมซ่อที่ยอมจ่ายเงินเกินราคาอาหารทุกวัน แท้จริงแล้วคือพ่อแท้ๆ ที่แอบผ่อนซื้อที่ดินร้านคืนให้เขาเป็นการไถ่โทษ",
     "เจ้าของร้านขนมปังแอบซุ่มจับขโมยที่แอบมาเอาขนมปังตอนตีสี่ แต่กลับพบว่าขโมยคือหมาจรจัดที่คาบเหรียญมาซื้อขนมปังไปป้อนชายร่อนเร่ตาบอดที่เคยช่วยมันไว้",
     "ชายแก่ซื้อก้อนหินจากเด็กๆ ในชุมชนทุกวันจนแม่ค้าคิดว่าเขาเลอะเลือน แต่แท้จริงแล้วเขาซื้อหินมาถมถนนทางไปโรงเรียนให้เด็กๆ",
-    "หญิงชรานำรองเท้าเด็กข้างเดียวมาจ้างช่างซ่อมขัดเงาทุกเดือน จนวันหนึ่งช่างได้รู้เหตุผลแท้จริงที่ทำให้เขาต้องกลั้นน้ำตา"
+    "หญิงชรานำรองเท้าเด็กข้างเดียวมาจ้างช่างซ่อมขัดเงาทุกเดือน จนวันหนึ่งช่างได้รู้เหตุผลแท้จริงที่ทำให้เขาต้องกลั้นน้ำตา",
+    "A wealthy-looking man buys burnt porridge scrapings from a young stall owner every night. When she tries to give him high-quality food instead, she discovers the heart-breaking reason behind his strange request."
   ]
 }
