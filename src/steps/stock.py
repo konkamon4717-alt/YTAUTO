@@ -41,6 +41,16 @@ def _looks_like_photo(title: str) -> bool:
     return not any(word in low for word in NOT_A_PHOTO)
 
 
+# ภาพถ่ายจริงแต่หลุดธีมสิ้นเชิง เพราะคำค้นไปตรงกับ "ชื่อบริษัท" แทนที่จะเป็นของจริง
+# เคสที่เจอ: ค้น arctic glacier ice แล้วได้ตึกออฟฟิศของบริษัทขายน้ำแข็งในวินนิเพก
+# ซึ่งได้คะแนนสูงสุดเพราะมีครบทั้งสามคำในชื่อ ตัวกรองภาพถ่ายจับไม่ได้เพราะมันเป็นภาพถ่ายจริง
+CORPORATE = (
+    "headquarters", "corporate", "office building", "warehouse", "storefront",
+    "inc.", "ltd", "llc", "company building", "factory outlet", "dealership",
+    "shopping", "mall", "supermarket", "billboard", "advertisement",
+)
+
+
 def _score(hit: dict, query: str) -> int:
     """ยิ่งคำในคำค้นโผล่ในชื่อไฟล์มาก ยิ่งน่าจะเป็นภาพที่ตรงเรื่องจริง
 
@@ -48,7 +58,9 @@ def _score(hit: dict, query: str) -> int:
     เกี่ยวข้องของข้อความทั้งหน้า ไม่ใช่ความเกี่ยวข้องของตัวภาพ
     """
     low = hit["title"].lower()
-    return sum(1 for word in query.lower().split() if len(word) > 2 and word in low)
+    hits = sum(1 for word in query.lower().split() if len(word) > 2 and word in low)
+    # หักแรงพอให้ตกไปอยู่ท้ายแถวเสมอ แต่ไม่ตัดทิ้ง เผื่อว่าไม่มีอย่างอื่นเลยจริง ๆ
+    return hits - (9 if any(w in low for w in CORPORATE) else 0)
 
 
 def _clean(text: str) -> str:
