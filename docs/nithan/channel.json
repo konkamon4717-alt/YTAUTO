@@ -8,20 +8,36 @@
   },
   "videos": [
     {
+      "id": "pZi7FJyHjEY",
+      "title": "ลุงแท็กซี่ซื้อดอกไม้เหี่ยวร้อยบาททุกวัน รู้เหตุผลแล้วกลั้นน้ำตาไม่อยู่",
+      "published": "2026-10-09T12:30:01Z",
+      "privacy": "public",
+      "views": 1,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 4.0,
+      "like_rate": 0.0,
+      "traits": [
+        "ความถี่",
+        "อารมณ์แรง"
+      ],
+      "days": 0.2
+    },
+    {
       "id": "ZQpvIsa0c8A",
       "title": "หนุ่มใหญ่ซื้อข้าวไหม้ก้นหม้อสองร้อยทุกวัน ความจริงทำแม่ค้าร้องไห้",
       "published": "2026-10-08T12:33:57Z",
       "privacy": "public",
-      "views": 1283,
+      "views": 1282,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 1286.9,
-      "like_rate": 1.71,
+      "views_per_day": 1219.7,
+      "like_rate": 1.72,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 1.0
+      "days": 1.1
     },
     {
       "id": "hyfmbTfZqBg",
@@ -31,13 +47,13 @@
       "views": 1597,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 693.7,
+      "views_per_day": 677.8,
       "like_rate": 1.82,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 2.3
+      "days": 2.4
     },
     {
       "id": "8-Zy5rZlH00",
@@ -69,7 +85,7 @@
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 21.3
+      "days": 21.4
     },
     {
       "id": "uxeId4AUBLI",
@@ -79,14 +95,14 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 54.6,
+      "views_per_day": 54.5,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 21.3
+      "days": 21.4
     },
     {
       "id": "L52UHMV1E0g",
@@ -96,13 +112,13 @@
       "views": 630,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 28.5,
+      "views_per_day": 28.4,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
         "ความลับ"
       ],
-      "days": 22.1
+      "days": 22.2
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -115,25 +131,9 @@
       "views_per_day": 0.2,
       "like_rate": 0.0,
       "traits": [],
-      "days": 22.2
-    },
-    {
-      "id": "pZi7FJyHjEY",
-      "title": "ลุงแท็กซี่ซื้อดอกไม้เหี่ยวร้อยบาททุกวัน รู้เหตุผลแล้วกลั้นน้ำตาไม่อยู่",
-      "published": "2026-10-09T12:29:26Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [
-        "ความถี่",
-        "อารมณ์แรง"
-      ],
-      "days": 0.2
+      "days": 22.3
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-09T12:29:35+00:00"
+  "fetched_at": "2026-10-09T13:47:28+00:00"
 }
