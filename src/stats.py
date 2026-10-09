@@ -64,6 +64,14 @@ def basic(youtube) -> dict:
         part="contentDetails", playlistId=uploads, maxResults=25).execute()
     video_ids = [i["contentDetails"]["videoId"] for i in playlist.get("items", [])]
 
+    # รายการของช่องตามหลังความจริงอยู่หลายนาที คลิปที่เพิ่งอัปเสร็จจะยังไม่อยู่ในนั้น
+    # และเราดึงสถิติทันทีหลังอัปเสมอ หน้าเว็บจึงเคยขึ้นว่าช่องใหม่มีศูนย์คลิป
+    # ทั้งที่เพิ่งลงไปหมาด ๆ — เอา id ที่เราจดไว้เองมาเติม เพราะถามด้วย id ตรง ๆ ได้เลย
+    from . import state
+    mine = [v["video_id"] for v in state.load()["published"] if v.get("video_id")]
+    video_ids += [vid for vid in reversed(mine) if vid not in video_ids]
+    video_ids = video_ids[:50]
+
     videos = []
     if video_ids:
         detail = youtube.videos().list(
@@ -89,13 +97,17 @@ def basic(youtube) -> dict:
                 "days": round(days, 1),
             })
 
+    # ตัวเลขรวมของช่องก็ตามหลังเหมือนกัน ถ้าเราเห็นคลิปมากกว่าหรือวิวมากกว่าที่มันบอก
+    # ให้เชื่อสิ่งที่นับได้จริง เพราะ "ศูนย์วิว" ทั้งที่คลิปมีคนดูแล้วคือการโกหกคนอ่าน
+    # พอ YouTube ตามทัน ตัวเลขทั้งสองฝั่งจะเท่ากันเอง ไม่ต้องมาแก้ทีหลัง
     return {
         "channel": {
             "title": channel["snippet"]["title"],
             "id": channel["id"],
             "subscribers": int(stats.get("subscriberCount", 0)),
-            "views": int(stats.get("viewCount", 0)),
-            "videos": int(stats.get("videoCount", 0)),
+            "views": max(int(stats.get("viewCount", 0)), sum(v["views"] for v in videos)),
+            "videos": max(int(stats.get("videoCount", 0)),
+                          len([v for v in videos if v["privacy"] == "public"])),
         },
         "videos": videos,
     }
