@@ -132,7 +132,7 @@ jobs:
           # ส่วนรอบที่สั่งเองด้วยมือให้ทำทันทีโดยไม่ต้องเช็ค
           GUARD=""
           if [ "${{ github.event_name }}" = "schedule" ]; then GUARD="--once-per-day"; fi
-          python -m src.pipeline --channel "${{ matrix.channel }}" \n            --count "${{ inputs.count || 1 }}" $UPLOAD_FLAG $GUARD
+          python -m src.pipeline --channel "${{ matrix.channel }}" --count "${{ inputs.count || 1 }}" $UPLOAD_FLAG $GUARD
 
       - name: ดึงตัวเลขช่องมาอัปเดต
         # ต้องทำหลังอัปคลิปเสมอ ไม่งั้นหน้าเว็บจะโชว์ยอดวิวของเมื่อวาน
