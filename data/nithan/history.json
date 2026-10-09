@@ -157,6 +157,21 @@
       },
       "voice": "edge-tts",
       "at": "2026-10-08T12:33:40+00:00"
+    },
+    {
+      "ok": true,
+      "title": "ลุงแท็กซี่ซื้อดอกไม้เหี่ยวร้อยบาททุกวัน รู้เหตุผลแล้วกลั้นน้ำตาไม่อยู่",
+      "premise": "ลุงแท็กซี่คนหนึ่งยอมจ่ายเงินแพง ๆ เพื่อซื้อดอกไม้เหี่ยวจากเด็กขายดอกไม้ริมทาง เพื่อช่วยให้เธอได้กลับบ้านนอนเร็ว ๆ เพราะนึกถึงลูกสาวที่เสียชีวิตไปแล้ว",
+      "video_id": "pZi7FJyHjEY",
+      "seconds": 412,
+      "writer": "gemini",
+      "animated": 2,
+      "scenes": 6,
+      "backends": {
+        "huggingface": 2
+      },
+      "voice": "edge-tts",
+      "at": "2026-10-09T12:29:34+00:00"
     }
   ],
   "premises": [
@@ -174,6 +189,7 @@
     "เจ้าของร้านขนมปังแอบซุ่มจับขโมยที่แอบมาเอาขนมปังตอนตีสี่ แต่กลับพบว่าขโมยคือหมาจรจัดที่คาบเหรียญมาซื้อขนมปังไปป้อนชายร่อนเร่ตาบอดที่เคยช่วยมันไว้",
     "ชายแก่ซื้อก้อนหินจากเด็กๆ ในชุมชนทุกวันจนแม่ค้าคิดว่าเขาเลอะเลือน แต่แท้จริงแล้วเขาซื้อหินมาถมถนนทางไปโรงเรียนให้เด็กๆ",
     "หญิงชรานำรองเท้าเด็กข้างเดียวมาจ้างช่างซ่อมขัดเงาทุกเดือน จนวันหนึ่งช่างได้รู้เหตุผลแท้จริงที่ทำให้เขาต้องกลั้นน้ำตา",
-    "A wealthy-looking man buys burnt porridge scrapings from a young stall owner every night. When she tries to give him high-quality food instead, she discovers the heart-breaking reason behind his strange request."
+    "A wealthy-looking man buys burnt porridge scrapings from a young stall owner every night. When she tries to give him high-quality food instead, she discovers the heart-breaking reason behind his strange request.",
+    "ลุงแท็กซี่คนหนึ่งยอมจ่ายเงินแพง ๆ เพื่อซื้อดอกไม้เหี่ยวจากเด็กขายดอกไม้ริมทาง เพื่อช่วยให้เธอได้กลับบ้านนอนเร็ว ๆ เพราะนึกถึงลูกสาวที่เสียชีวิตไปแล้ว"
   ]
 }
