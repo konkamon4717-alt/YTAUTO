@@ -1,7 +1,11 @@
 <!doctype html>
+<html lang="th">
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0e13" media="(prefers-color-scheme:dark)">
+<meta name="theme-color" content="#f5f6f8" media="(prefers-color-scheme:light)">
 <title>ห้องควบคุมช่อง</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <!--
@@ -14,149 +18,278 @@
   ปุ่มสั่งงานเรียก GitHub API ตรงจากเบราว์เซอร์ ต้องใช้โทเค็นของเจ้าของ repo
   โทเค็นอยู่ใน localStorage ของเครื่องที่เปิดเท่านั้น ไม่เคยถูกเขียนลงไฟล์ใน repo
 
-  สีของกราฟมาจากพาเลตที่ตรวจแล้วว่าคนตาบอดสีแยกออกบนพื้นมืดนี้
-  (ΔE คู่แย่สุด 9.4 เกณฑ์ 8) อย่าสลับเป็นสีที่ดูเข้ากันกว่าโดยไม่ตรวจซ้ำ
+  สีกราฟมาจากพาเลตที่ตรวจแล้วว่าคนตาบอดสีแยกออกทั้งสองโหมด
+  (ΔE คู่แย่สุด 9.2 สว่าง / 9.4 มืด เกณฑ์ 8) สีเขียวในโหมดสว่างคอนทราสต์
+  ต่ำกว่า 3:1 จึงต้องมีตัวเลขกำกับท้ายแท่งเสมอ ห้ามถอดออก
 -->
 
 <style>
+/* ---------- ระบบสี ----------
+   โหมดมืดเป็นค่าเริ่มต้นเพราะคนเปิดดูตอนกลางคืนบนมือถือเป็นหลัก
+   แต่รับค่าของเครื่องด้วย และให้ปุ่มสลับชนะทั้งสองทาง */
 :root{
-  --bg:#0e1116; --card:#161b22; --line:#262d38; --ink:#e6edf3; --dim:#8b949e;
-  --ok:#3fb950; --warn:#d29922; --bad:#f85149;
+  color-scheme: dark;
+  --bg:#0b0e13;
+  --bg-grad:radial-gradient(1200px 600px at 50% -10%, #16202e 0%, #0b0e13 60%);
+  --surface:#141921;
+  --surface-2:#1b212b;
+  --hairline:rgba(255,255,255,.08);
+  --hairline-2:rgba(255,255,255,.14);
+  --ink:#eef2f7;
+  --ink-2:#9aa6b4;
+  --ink-3:#6b7684;
+  --accent:#4a90f0;
+  --ok:#3fb950; --warn:#d8a333; --bad:#f16a62;
   --s1:#3987e5; --s2:#d95926; --s3:#199e70;
-  --radius:14px;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.7);
+  --inset:inset 0 1px 0 rgba(255,255,255,.05);
+  --r:16px; --r-sm:11px;
 }
+:root[data-theme=light]{
+  color-scheme: light;
+  --bg:#f5f6f8;
+  --bg-grad:radial-gradient(1200px 600px at 50% -10%, #e8edf5 0%, #f5f6f8 60%);
+  --surface:#fff;
+  --surface-2:#f2f4f7;
+  --hairline:rgba(14,20,30,.09);
+  --hairline-2:rgba(14,20,30,.16);
+  --ink:#121820;
+  --ink-2:#5b6673;
+  --ink-3:#8b95a3;
+  --accent:#1f6feb;
+  --ok:#1a7f37; --warn:#9a6700; --bad:#cf222e;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a;
+  --shadow:0 1px 2px rgba(14,20,30,.06), 0 10px 28px -14px rgba(14,20,30,.25);
+  --inset:none;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme=dark]){
+    color-scheme: light;
+    --bg:#f5f6f8;
+    --bg-grad:radial-gradient(1200px 600px at 50% -10%, #e8edf5 0%, #f5f6f8 60%);
+    --surface:#fff; --surface-2:#f2f4f7;
+    --hairline:rgba(14,20,30,.09); --hairline-2:rgba(14,20,30,.16);
+    --ink:#121820; --ink-2:#5b6673; --ink-3:#8b95a3;
+    --accent:#1f6feb;
+    --ok:#1a7f37; --warn:#9a6700; --bad:#cf222e;
+    --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a;
+    --shadow:0 1px 2px rgba(14,20,30,.06), 0 10px 28px -14px rgba(14,20,30,.25);
+    --inset:none;
+  }
+}
+
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);
-  font-family:"IBM Plex Sans Thai",system-ui,sans-serif;line-height:1.6;
-  padding:16px 16px 60px;max-width:900px;margin-inline:auto}
-h1{font-size:19px;margin:0}
-h2{font-size:14px;color:var(--dim);font-weight:600;margin:26px 0 10px}
-h2:first-child{margin-top:4px}
-a{color:var(--s1)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
-.muted{color:var(--dim)} .small{font-size:12.5px}
-.note{font-size:12.5px;color:var(--dim);margin-top:10px}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);background-image:var(--bg-grad);
+  background-attachment:fixed;color:var(--ink);
+  font-family:"IBM Plex Sans Thai",system-ui,-apple-system,sans-serif;
+  font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  padding:0 16px calc(72px + env(safe-area-inset-bottom));
+  max-width:940px;margin-inline:auto;
+}
+.num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
 
-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+h2{font-size:12px;font-weight:600;color:var(--ink-3);letter-spacing:.06em;
+  margin:30px 2px 11px;text-transform:uppercase}
+h2:first-child{margin-top:20px}
+
+.card{background:var(--surface);border:1px solid var(--hairline);
+  border-radius:var(--r);padding:18px;box-shadow:var(--shadow),var(--inset)}
+.muted{color:var(--ink-2)} .small{font-size:12.5px}
+.note{font-size:12.5px;color:var(--ink-2);margin-top:12px;line-height:1.65}
+
+/* ---------- หัวและแท็บติดบน ---------- */
+header{position:sticky;top:0;z-index:20;margin:0 -16px;padding:14px 16px 10px;
+  padding-top:calc(14px + env(safe-area-inset-top));
+  display:flex;align-items:center;gap:10px;
+  background:color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);
+  border-bottom:1px solid transparent;transition:border-color .2s}
+header.stuck{border-bottom-color:var(--hairline)}
+.brand{min-width:0}
+.brand b{display:block;font-size:16px;font-weight:600;letter-spacing:-.01em;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand span{display:block;font-size:11.5px;color:var(--ink-3);line-height:1.3}
 header .spacer{flex:1}
-#stamp{font-size:11.5px;color:var(--dim);text-align:right;line-height:1.35}
+.icon{width:36px;height:36px;display:grid;place-items:center;flex:none;
+  background:var(--surface);border:1px solid var(--hairline);border-radius:10px;
+  color:var(--ink-2);cursor:pointer;font-size:15px;box-shadow:var(--inset)}
+.icon:hover{color:var(--ink);border-color:var(--hairline-2)}
+.icon.spin svg,.icon.spin{animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
 
-/* ปุ่มหัวข้อ — เลื่อนแนวนอนได้บนจอแคบ ไม่ต้องยัดให้ครบบรรทัดเดียว */
-nav{display:flex;gap:7px;overflow-x:auto;padding-bottom:10px;margin-bottom:14px;
-  scrollbar-width:none;border-bottom:1px solid var(--line)}
+nav{position:sticky;top:0;z-index:19;margin:0 -16px 4px;padding:4px 16px 12px;
+  display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;
+  background:color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px)}
 nav::-webkit-scrollbar{display:none}
-nav button{white-space:nowrap;font:inherit;font-size:13.5px;color:var(--dim);
-  background:transparent;border:1px solid var(--line);border-radius:999px;
-  padding:7px 15px;cursor:pointer}
-nav button:hover{color:var(--ink)}
-nav button[aria-selected=true]{background:var(--ink);color:#0d1117;border-color:var(--ink);font-weight:600}
-nav button .pip{display:inline-block;width:7px;height:7px;border-radius:50%;
-  background:var(--bad);margin-left:6px;vertical-align:1px}
+nav button{white-space:nowrap;font:inherit;font-size:13.5px;font-weight:500;
+  color:var(--ink-2);background:var(--surface);border:1px solid var(--hairline);
+  border-radius:999px;padding:8px 16px;cursor:pointer;transition:.16s;flex:none}
+nav button:hover{color:var(--ink);border-color:var(--hairline-2)}
+nav button[aria-selected=true]{background:var(--ink);color:var(--bg);
+  border-color:var(--ink);font-weight:600}
+.pip{display:inline-block;width:6px;height:6px;border-radius:50%;
+  background:var(--bad);margin-left:7px;vertical-align:2px;
+  box-shadow:0 0 0 3px color-mix(in srgb, var(--bad) 25%, transparent)}
+
 section[hidden]{display:none}
+section{animation:rise .32s cubic-bezier(.2,.7,.3,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(7px)}}
 
-#verdict{display:flex;gap:14px;align-items:flex-start;border-left:4px solid var(--dim)}
-#verdict.ok{border-left-color:var(--ok)}
-#verdict.wait{border-left-color:var(--s1)}
-#verdict.hold{border-left-color:var(--warn)}
-#verdict.bad{border-left-color:var(--bad)}
-#vIcon{font-size:30px;line-height:1.1}
-#vTitle{font-size:17px;font-weight:600}
-#vSub{font-size:13.5px;color:var(--dim)}
+/* ---------- การ์ดคำตอบ ---------- */
+#verdict{position:relative;overflow:hidden;display:flex;gap:15px;
+  align-items:flex-start;padding:20px}
+#verdict::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;
+  background:var(--vc,var(--ink-3))}
+#verdict::after{content:"";position:absolute;left:-60px;top:-80px;width:260px;height:260px;
+  border-radius:50%;background:var(--vc,var(--ink-3));opacity:.07;filter:blur(30px);
+  pointer-events:none}
+#vIcon{font-size:28px;line-height:1.15;flex:none}
+#vTitle{font-size:18px;font-weight:600;letter-spacing:-.01em}
+#vSub{font-size:13.5px;color:var(--ink-2);margin-top:2px}
+#verdict.ok{--vc:var(--ok)} #verdict.wait{--vc:var(--accent)}
+#verdict.hold{--vc:var(--warn)} #verdict.bad{--vc:var(--bad)}
+#verdict.wait #vIcon{animation:breathe 2.6s ease-in-out infinite}
+@keyframes breathe{50%{opacity:.5}}
 
-.grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(138px,1fr))}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:13px 14px}
-.stat b{display:block;font-size:23px;font-weight:600;letter-spacing:-.4px}
-.stat span{font-size:12px;color:var(--dim)}
-.stat i{font-style:normal;font-size:11.5px;color:var(--ok)}
-.stat i.flat{color:var(--dim)}
+/* ---------- ตัวเลข ---------- */
+.grid{display:grid;gap:11px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.stat{background:var(--surface);border:1px solid var(--hairline);border-radius:var(--r);
+  padding:15px 16px;box-shadow:var(--shadow),var(--inset)}
+.stat .k{font-size:11.5px;color:var(--ink-3);font-weight:500;letter-spacing:.02em}
+.stat .v{font-size:28px;font-weight:600;letter-spacing:-.025em;line-height:1.25;margin-top:3px}
+.stat .v.none{color:var(--ink-3);font-weight:500}
+.chip{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:500;
+  border-radius:999px;padding:2px 9px;margin-top:7px;
+  background:color-mix(in srgb, var(--cc,var(--ink-3)) 14%, transparent);
+  color:var(--cc,var(--ink-2))}
+.chip.up{--cc:var(--ok)} .chip.flat{--cc:var(--ink-3)} .chip.info{--cc:var(--ink-3)}
 
-button.act{font:inherit;color:var(--ink);background:#21262d;border:1px solid var(--line);
-  border-radius:9px;padding:10px 14px;cursor:pointer}
-button.act:hover:not(:disabled){border-color:#3d4653}
-button.act:disabled{opacity:.4;cursor:not-allowed}
-button.act.go{background:#1f6feb;border-color:#1f6feb}
-button.act.danger{color:#ffa198}
-.row{display:flex;gap:8px;flex-wrap:wrap}
-input[type=password]{font:inherit;background:#0d1117;color:var(--ink);
-  border:1px solid var(--line);border-radius:9px;padding:10px 12px;flex:1;min-width:190px}
+/* ---------- ปุ่ม ---------- */
+.btn{font:inherit;font-size:14px;font-weight:500;color:var(--ink);background:var(--surface-2);
+  border:1px solid var(--hairline);border-radius:var(--r-sm);padding:11px 16px;
+  cursor:pointer;transition:.16s;box-shadow:var(--inset)}
+.btn:hover:not(:disabled){border-color:var(--hairline-2);transform:translateY(-1px)}
+.btn:active:not(:disabled){transform:none}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.go{background:var(--accent);border-color:transparent;color:#fff;font-weight:600}
+.btn.danger{color:var(--bad)}
+.row{display:flex;gap:9px;flex-wrap:wrap}
+input[type=password]{font:inherit;font-size:14px;background:var(--surface-2);color:var(--ink);
+  border:1px solid var(--hairline);border-radius:var(--r-sm);padding:11px 13px;
+  flex:1;min-width:200px}
+input[type=password]:focus{border-color:var(--accent);outline:none}
 
+/* ---------- ตาราง ---------- */
 table{width:100%;border-collapse:collapse;font-size:13.5px}
-th{text-align:left;color:var(--dim);font-weight:500;font-size:12px;padding:0 8px 7px 0}
-td{padding:9px 8px 9px 0;border-top:1px solid var(--line);vertical-align:top}
+th{text-align:left;color:var(--ink-3);font-weight:500;font-size:11.5px;padding:0 10px 9px 0}
+td{padding:11px 10px 11px 0;border-top:1px solid var(--hairline);vertical-align:top}
 th:not(:first-child),td:not(:first-child){text-align:right;white-space:nowrap}
 td:first-child{width:99%}
+tr:first-child td{border-top:none}
 
-.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;vertical-align:1px}
-.d-ok{background:var(--ok)} .d-warn{background:var(--warn)} .d-bad{background:var(--bad)}
-.tag{display:inline-block;font-size:11px;color:var(--dim);border:1px solid var(--line);
-  border-radius:999px;padding:1px 8px;margin:2px 4px 0 0}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:9px;
+  vertical-align:2px;flex:none}
+.d-ok{background:var(--ok);box-shadow:0 0 0 3px color-mix(in srgb,var(--ok) 20%,transparent)}
+.d-warn{background:var(--warn);box-shadow:0 0 0 3px color-mix(in srgb,var(--warn) 20%,transparent)}
+.d-bad{background:var(--bad);box-shadow:0 0 0 3px color-mix(in srgb,var(--bad) 20%,transparent)}
+.tag{display:inline-block;font-size:11px;color:var(--ink-2);background:var(--surface-2);
+  border-radius:999px;padding:2px 9px;margin:3px 5px 0 0}
 
-/* แท่งแนวนอน — ชื่อคลิปไทยยาวเกินกว่าจะวางใน svg ได้สวย ใช้ html ตรง ๆ ง่ายกว่า */
-/* ปกคลิป — YouTube เก็บเฟรมไว้เป็น 16:9 โดยวางคลิปแนวตั้งไว้กลางแล้วเบลอขยายสองข้าง
-   ให้ภาพสูงเต็มกรอบ ความกว้างจะเกินออกไปพอดีสองข้าง เหลือเฉพาะคลิปจริงตรงกลาง */
-.clipgrid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(132px,1fr))}
+/* ---------- ปกคลิป ----------
+   YouTube เก็บเฟรมเป็น 16:9 โดยวางคลิปแนวตั้งไว้กลางแล้วเบลอขยายสองข้าง
+   ให้ภาพสูงเต็มกรอบ ความกว้างจะล้นออกไปพอดี เหลือเฉพาะคลิปจริงตรงกลาง */
+.clipgrid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(136px,1fr))}
 .clipcard{min-width:0}
-.thumb{position:relative;aspect-ratio:9/16;overflow:hidden;border-radius:10px;
-  background:#0d1117;cursor:pointer;display:block;border:1px solid var(--line)}
+.thumb{position:relative;aspect-ratio:9/16;overflow:hidden;border-radius:13px;
+  background:var(--surface-2);cursor:pointer;display:block;
+  border:1px solid var(--hairline);box-shadow:var(--shadow);transition:.2s}
+.thumb:hover{transform:translateY(-2px);border-color:var(--hairline-2)}
 .thumb img{height:100%;width:auto;max-width:none;position:absolute;left:50%;
   transform:translateX(-50%);display:block}
 .thumb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.thumb .play{position:absolute;inset:0;display:grid;place-items:center;font-size:30px;
-  color:#fff;text-shadow:0 2px 10px #000b;background:linear-gradient(#0000 55%,#0008)}
-.thumb:hover .play{background:linear-gradient(#0003,#000a)}
-.cliptitle{font-size:12.5px;margin-top:7px;display:-webkit-box;-webkit-line-clamp:2;
-  -webkit-box-orient:vertical;overflow:hidden}
-.clipmeta{font-size:11.5px;color:var(--dim)}
+.thumb .play{position:absolute;inset:0;display:grid;place-items:center;
+  background:linear-gradient(transparent 50%, rgba(0,0,0,.45))}
+.thumb .play b{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(255,255,255,.92);color:#111;font-size:15px;padding-left:3px;
+  box-shadow:0 4px 14px rgba(0,0,0,.35);transition:.2s}
+.thumb:hover .play b{transform:scale(1.08)}
+.cliptitle{font-size:12.5px;font-weight:500;margin-top:9px;line-height:1.45;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.clipmeta{font-size:11.5px;color:var(--ink-3);margin-top:2px}
 
-.bars{display:flex;flex-direction:column;gap:14px}
-.bar-row{display:grid;grid-template-columns:1fr auto;gap:3px 10px;align-items:baseline}
+/* ---------- กราฟ ---------- */
+.bars{display:flex;flex-direction:column;gap:15px}
+.bar-row{display:grid;grid-template-columns:1fr auto;gap:5px 12px;align-items:baseline}
 .bar-label{font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.bar-val{font-size:13px;font-variant-numeric:tabular-nums;color:var(--dim)}
-.bar-track{grid-column:1/-1;height:9px;background:#0d1117;border-radius:5px;overflow:hidden}
-.bar-fill{height:100%;border-radius:0 5px 5px 0;background:var(--s1);min-width:3px}
+.bar-val{font-size:13px;font-weight:600;color:var(--ink-2)}
+.bar-track{grid-column:1/-1;height:8px;background:var(--surface-2);border-radius:5px;
+  overflow:hidden}
+.bar-fill{height:100%;border-radius:0 5px 5px 0;background:var(--s1);min-width:3px;
+  transform-origin:left;animation:grow .55s cubic-bezier(.2,.8,.3,1) both}
+@keyframes grow{from{transform:scaleX(0)}}
 
 svg.chart{display:block;width:100%;height:auto;overflow:visible}
-svg.chart .grid-line{stroke:var(--line);stroke-width:1}
-svg.chart .axis{fill:var(--dim);font-size:10px}
+svg.chart .grid-line{stroke:var(--hairline);stroke-width:1}
+svg.chart .axis{fill:var(--ink-3);font-size:9.5px}
 svg.chart .mark{fill:var(--s1)}
 svg.chart .ln{fill:none;stroke:var(--s3);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
-svg.chart .pt{fill:var(--s3);stroke:var(--card);stroke-width:2}
+svg.chart .area{fill:var(--s3);opacity:.1}
+svg.chart .pt{fill:var(--s3);stroke:var(--surface);stroke-width:2}
 svg.chart .hit{fill:transparent;cursor:pointer}
 
-.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--dim);margin-bottom:10px}
-.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:0}
+.empty{color:var(--ink-3);font-size:13px;padding:14px 0;text-align:center}
 
-.empty{color:var(--dim);font-size:13px;padding:6px 0}
+/* ---------- โครงร่างตอนโหลด ---------- */
+.skel{background:linear-gradient(90deg,var(--surface-2) 25%,
+  color-mix(in srgb,var(--surface-2) 60%, var(--ink-3)) 37%,var(--surface-2) 63%);
+  background-size:400% 100%;animation:shimmer 1.3s linear infinite;border-radius:8px;
+  color:transparent!important}
+@keyframes shimmer{to{background-position:-135% 0}}
 
-#tip{position:fixed;z-index:9;background:#21262d;border:1px solid var(--line);
-  border-radius:8px;padding:7px 11px;font-size:12.5px;pointer-events:none;
-  display:none;box-shadow:0 6px 18px #0009;white-space:nowrap}
-#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;z-index:9;
-  background:#21262d;border:1px solid var(--line);border-radius:10px;padding:11px 16px;
-  font-size:13.5px;display:none;max-width:92vw;box-shadow:0 8px 24px #0008}
+#tip{position:fixed;z-index:40;background:var(--surface-2);border:1px solid var(--hairline-2);
+  border-radius:9px;padding:8px 12px;font-size:12.5px;pointer-events:none;display:none;
+  box-shadow:var(--shadow);white-space:nowrap;font-weight:500}
+#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));z-index:50;
+  transform:translateX(-50%);background:var(--surface-2);border:1px solid var(--hairline-2);
+  border-radius:12px;padding:13px 18px;font-size:13.5px;display:none;max-width:92vw;
+  box-shadow:var(--shadow)}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
 </style>
 
-<header>
-  <h1>ห้องควบคุมช่อง</h1>
+<header id="hdr">
+  <div class="brand">
+    <b id="chName" class="skel">ห้องควบคุมช่อง</b>
+    <span id="stamp">กำลังโหลด…</span>
+  </div>
   <div class="spacer"></div>
-  <div id="stamp"></div>
+  <button class="icon" id="themeBtn" title="สลับโหมดสว่าง/มืด" aria-label="สลับโหมดสว่างมืด">◐</button>
+  <button class="icon" id="reloadBtn" title="ดึงข้อมูลใหม่" aria-label="ดึงข้อมูลใหม่">⟳</button>
 </header>
 
 <div class="card" id="verdict">
-  <div id="vIcon">⏳</div>
-  <div>
+  <div id="vIcon">◷</div>
+  <div style="min-width:0">
     <div id="vTitle">กำลังอ่านสถานะ…</div>
     <div id="vSub"></div>
   </div>
 </div>
 
 <nav id="tabs" role="tablist">
-  <button role="tab" data-tab="overview"  aria-selected="true">ภาพรวม</button>
-  <button role="tab" data-tab="growth"    aria-selected="false">การเติบโต</button>
-  <button role="tab" data-tab="clips"     aria-selected="false">ผลงานคลิป</button>
-  <button role="tab" data-tab="lessons"   aria-selected="false">อะไรได้ผล</button>
-  <button role="tab" data-tab="system"    aria-selected="false">ระบบ</button>
-  <button role="tab" data-tab="control"   aria-selected="false">สั่งงาน</button>
+  <button role="tab" data-tab="overview" aria-selected="true">ภาพรวม</button>
+  <button role="tab" data-tab="growth"   aria-selected="false">การเติบโต</button>
+  <button role="tab" data-tab="clips"    aria-selected="false">ผลงานคลิป</button>
+  <button role="tab" data-tab="lessons"  aria-selected="false">อะไรได้ผล</button>
+  <button role="tab" data-tab="system"   aria-selected="false">ระบบ</button>
+  <button role="tab" data-tab="control"  aria-selected="false">สั่งงาน</button>
 </nav>
 
 <section id="tab-overview">
@@ -172,7 +305,6 @@ svg.chart .hit{fill:transparent;cursor:pointer}
     <div id="cDaily"></div>
     <div class="note" id="nDaily"></div>
   </div>
-
   <h2>ผู้ติดตามสะสม</h2>
   <div class="card">
     <div id="cSubs"></div>
@@ -183,21 +315,18 @@ svg.chart .hit{fill:transparent;cursor:pointer}
 <section id="tab-clips" hidden>
   <h2>ปกคลิป — กดเพื่อดู</h2>
   <div class="clipgrid" id="covers"></div>
-
   <h2>คลิปไหนยังมีคนดูอยู่</h2>
   <div class="card">
     <div id="cAlive"></div>
     <div class="note" id="nAlive"></div>
   </div>
-
   <h2>วิวต่อวันของแต่ละคลิป</h2>
   <div class="card">
     <div id="cClips"></div>
     <div class="note" id="nClips"></div>
   </div>
-
   <h2>รายละเอียดทุกคลิป</h2>
-  <div class="card" style="padding:16px 16px 6px"><table id="videos"></table></div>
+  <div class="card" style="padding:18px 18px 8px"><table id="videos"></table></div>
 </section>
 
 <section id="tab-lessons" hidden>
@@ -206,7 +335,6 @@ svg.chart .hit{fill:transparent;cursor:pointer}
     <div id="cTraits"></div>
     <div class="note" id="nTraits"></div>
   </div>
-
   <h2>คนกดไลก์มากแค่ไหน</h2>
   <div class="card">
     <div id="cLikes"></div>
@@ -217,12 +345,10 @@ svg.chart .hit{fill:transparent;cursor:pointer}
 
 <section id="tab-system" hidden>
   <h2>สุขภาพบริการ</h2>
-  <div class="card" style="padding:16px 16px 6px"><table id="health"></table></div>
-
+  <div class="card" style="padding:18px 18px 8px"><table id="health"></table></div>
   <h2>รอบทำงานล่าสุด</h2>
-  <div class="card" style="padding:16px 16px 6px"><table id="runs"></table></div>
-  <div class="note" id="runNote"></div>
-
+  <div class="card" style="padding:18px 18px 8px"><table id="runs"></table></div>
+  <div class="note" id="runNote" style="padding:0 2px"></div>
   <h2>ตารางเวลา</h2>
   <div class="card" id="schedule"></div>
 </section>
@@ -231,10 +357,10 @@ svg.chart .hit{fill:transparent;cursor:pointer}
   <h2>สั่งงาน</h2>
   <div class="card">
     <div class="row" id="controls">
-      <button class="act go"     data-wf="publish" data-act="now">ลงคลิปเดี๋ยวนี้</button>
-      <button class="act"        data-wf="control" data-act="skip-today">งดลงวันนี้</button>
-      <button class="act danger" data-wf="control" data-act="pause">หยุดไว้ก่อน</button>
-      <button class="act"        data-wf="control" data-act="resume">เปิดทำงานต่อ</button>
+      <button class="btn go"     data-wf="publish" data-act="now">ลงคลิปเดี๋ยวนี้</button>
+      <button class="btn"        data-wf="control" data-act="skip-today">งดลงวันนี้</button>
+      <button class="btn danger" data-wf="control" data-act="pause">หยุดไว้ก่อน</button>
+      <button class="btn"        data-wf="control" data-act="resume">เปิดทำงานต่อ</button>
     </div>
     <div id="ctlNote" class="note"></div>
   </div>
@@ -243,8 +369,8 @@ svg.chart .hit{fill:transparent;cursor:pointer}
   <div class="card">
     <div class="row">
       <input type="password" id="token" placeholder="วางโทเค็น GitHub ที่นี่" autocomplete="off">
-      <button class="act" id="saveToken">จำไว้</button>
-      <button class="act" id="clearToken">ลืมซะ</button>
+      <button class="btn" id="saveToken">จำไว้</button>
+      <button class="btn" id="clearToken">ลืมซะ</button>
     </div>
     <div class="note">
       ปุ่มด้านบนสั่ง GitHub ให้ทำงานแทนเรา จึงต้องมีสิทธิ์ของเจ้าของ repo<br>
@@ -264,6 +390,7 @@ const REPO = "konkamon4717-alt/YTAUTO";
 const CRON_UTC = [[12, 0], [13, 30], [15, 0]];   // ตามที่ตั้งไว้ใน publish.yml
 const TZ = "Asia/Bangkok";
 const KEY = "yt-auto-token";
+const THEME = "yt-auto-theme";
 
 const $ = s => document.querySelector(s);
 const nf = n => Math.round(n ?? 0).toLocaleString("th-TH");
@@ -273,13 +400,30 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => (
 const thaiDay = d => new Intl.DateTimeFormat("sv-SE", { timeZone: TZ }).format(d);
 const thaiTime = d => new Intl.DateTimeFormat("th-TH",
   { timeZone: TZ, day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }).format(d);
+const thaiHM = d => new Intl.DateTimeFormat("th-TH",
+  { timeZone: TZ, hour: "2-digit", minute: "2-digit" }).format(d);
 const thaiDate = d => new Intl.DateTimeFormat("th-TH",
   { timeZone: TZ, day: "numeric", month: "short" }).format(d);
 
+/* ---------- ธีม ---------- */
+(function initTheme() {
+  const saved = localStorage.getItem(THEME);
+  if (saved) document.documentElement.dataset.theme = saved;
+})();
+$("#themeBtn").onclick = () => {
+  const dark = matchMedia("(prefers-color-scheme: dark)").matches;
+  const now = document.documentElement.dataset.theme || (dark ? "dark" : "light");
+  const next = now === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem(THEME, next);
+  load();   // กราฟฝัง stroke ของ surface ไว้ในรูป ต้องวาดใหม่ให้เข้าธีม
+};
+
+/* ---------- แจ้งเตือน ---------- */
 function toast(msg, bad) {
   const t = $("#toast");
   t.textContent = msg;
-  t.style.borderColor = bad ? "var(--bad)" : "var(--line)";
+  t.style.borderColor = bad ? "var(--bad)" : "var(--hairline-2)";
   t.style.display = "block";
   clearTimeout(t._t);
   t._t = setTimeout(() => { t.style.display = "none"; }, 5200);
@@ -290,10 +434,13 @@ document.querySelectorAll("#tabs button").forEach(b => {
   b.onclick = () => {
     document.querySelectorAll("#tabs button").forEach(x =>
       x.setAttribute("aria-selected", String(x === b)));
-    document.querySelectorAll("section").forEach(s =>
-      s.hidden = s.id !== "tab-" + b.dataset.tab);
-    location.hash = b.dataset.tab;
-    window.scrollTo({ top: 0 });
+    document.querySelectorAll("section").forEach(s => {
+      const on = s.id === "tab-" + b.dataset.tab;
+      if (on && s.hidden) { s.hidden = false; s.style.animation = "none"; s.offsetHeight; s.style.animation = ""; }
+      else s.hidden = !on;
+    });
+    history.replaceState(null, "", "#" + b.dataset.tab);
+    b.scrollIntoView({ inline: "nearest", block: "nearest", behavior: "smooth" });
   };
 });
 function openFromHash() {
@@ -302,8 +449,13 @@ function openFromHash() {
   if (b && b.getAttribute("aria-selected") !== "true") b.click();
 }
 openFromHash();
-// เปลี่ยนแค่ # ไม่นับเป็นการโหลดหน้าใหม่ ต้องรับเองถึงจะย้อนกลับด้วยปุ่ม back ได้
+// เปลี่ยนแค่ # ไม่นับเป็นการโหลดหน้าใหม่ ต้องรับเองถึงจะย้อนด้วยปุ่ม back ได้
 addEventListener("hashchange", openFromHash);
+
+addEventListener("scroll", () => {
+  $("#hdr").classList.toggle("stuck", scrollY > 6);
+  hideTip();
+}, { passive: true });
 
 /* ---------- กราฟ ---------- */
 const tip = $("#tip");
@@ -312,35 +464,37 @@ function showTip(e, html) {
   tip.style.display = "block";
   const r = tip.getBoundingClientRect();
   tip.style.left = Math.min(Math.max(8, e.clientX - r.width / 2), innerWidth - r.width - 8) + "px";
-  tip.style.top = Math.max(8, e.clientY - r.height - 12) + "px";
+  tip.style.top = Math.max(8, e.clientY - r.height - 14) + "px";
 }
 const hideTip = () => { tip.style.display = "none"; };
-addEventListener("scroll", hideTip, { passive: true });
 
-/* แท่งแนวนอน: เทียบขนาดระหว่างของที่มีชื่อยาว ๆ */
+function bindHits(el, sel = ".hit") {
+  el.querySelectorAll(sel).forEach(h => {
+    const show = e => showTip(e, h.dataset.tipc);
+    h.onmouseenter = show; h.onmousemove = show; h.onmouseleave = hideTip;
+  });
+}
+
+/* แท่งแนวนอน — ชื่อคลิปไทยยาวเกินกว่าจะวางใน svg ได้สวย ใช้ html ตรง ๆ ง่ายกว่า */
 function barsH(el, rows, fmt = nf, color = "var(--s1)") {
   if (!rows.length) { el.innerHTML = '<div class="empty">ยังไม่มีข้อมูล</div>'; return; }
   const max = Math.max(...rows.map(r => r.value), 1);
-  el.innerHTML = `<div class="bars">` + rows.map(r => `
-    <div class="bar-row" data-tipc="${esc(r.tip || r.label)}">
+  el.innerHTML = `<div class="bars">` + rows.map((r, i) => `
+    <div class="bar-row hit" data-tipc="${esc(r.tip || r.label)}">
       <div class="bar-label">${esc(r.label)}</div>
-      <div class="bar-val">${fmt(r.value)}</div>
+      <div class="bar-val num">${fmt(r.value)}</div>
       <div class="bar-track">
         <div class="bar-fill" style="width:${Math.max(1.5, r.value / max * 100)}%;
-          background:${r.color || color}"></div>
+          background:${color};animation-delay:${i * 45}ms"></div>
       </div>
     </div>`).join("") + `</div>`;
-  el.querySelectorAll(".bar-row").forEach(row => {
-    row.onmouseenter = e => showTip(e, row.dataset.tipc);
-    row.onmousemove = e => showTip(e, row.dataset.tipc);
-    row.onmouseleave = hideTip;
-  });
+  bindHits(el);
 }
 
 /* แท่งแนวตั้งตามเวลา */
 function barsV(el, rows) {
   if (!rows.length) { el.innerHTML = '<div class="empty">ยังไม่มีข้อมูล</div>'; return; }
-  const W = 320, H = 120, PAD_B = 16, PAD_L = 30;
+  const W = 320, H = 124, PAD_B = 17, PAD_L = 32;
   const max = Math.max(...rows.map(r => r.value), 1);
   const bw = (W - PAD_L) / rows.length;
   const y = v => (H - PAD_B) * (1 - v / max);
@@ -352,11 +506,10 @@ function barsV(el, rows) {
   // เว้น 2px ระหว่างแท่งเสมอ ไม่งั้นแท่งติดกันจนดูเป็นก้อนเดียว
   const bars = rows.map((r, i) => {
     const h = Math.max(2, (H - PAD_B) - y(r.value));
-    return `<g class="hit-g">
-      <rect class="mark" x="${PAD_L + i * bw + 1}" y="${H - PAD_B - h}"
-        width="${Math.max(1, bw - 2)}" height="${h}" rx="2"/>
+    return `<rect class="mark" x="${PAD_L + i * bw + 1}" y="${H - PAD_B - h}"
+        width="${Math.max(1, bw - 2)}" height="${h}" rx="2.5"/>
       <rect class="hit" x="${PAD_L + i * bw}" y="0" width="${bw}" height="${H - PAD_B}"
-        data-tipc="${esc(r.tip)}"/></g>`;
+        data-tipc="${esc(r.tip)}"/>`;
   }).join("");
 
   const step = Math.ceil(rows.length / 5);
@@ -372,19 +525,20 @@ function barsV(el, rows) {
 /* เส้นตามเวลา */
 function lineChart(el, rows) {
   if (rows.length < 2) { el.innerHTML = '<div class="empty">ยังไม่มีข้อมูล</div>'; return; }
-  const W = 320, H = 120, PAD_B = 16, PAD_L = 30;
+  const W = 320, H = 124, PAD_B = 17, PAD_L = 32, TOP = 7;
   const vals = rows.map(r => r.value);
   const min = Math.min(...vals), max = Math.max(...vals);
   const span = (max - min) || 1;
-  const x = i => PAD_L + (W - PAD_L) * (rows.length === 1 ? .5 : i / (rows.length - 1));
-  const y = v => 6 + (H - PAD_B - 6) * (1 - (v - min) / span);
+  const x = i => PAD_L + (W - PAD_L) * (i / (rows.length - 1));
+  const y = v => TOP + (H - PAD_B - TOP) * (1 - (v - min) / span);
 
   const ticks = [min, max].map(v =>
     `<line class="grid-line" x1="${PAD_L}" x2="${W}" y1="${y(v)}" y2="${y(v)}"/>
      <text class="axis" x="0" y="${y(v) + 3}">${nf(v)}</text>`).join("");
   const d = rows.map((r, i) => `${i ? "L" : "M"}${x(i)},${y(r.value)}`).join(" ");
+  const area = `${d} L${x(rows.length - 1)},${H - PAD_B} L${x(0)},${H - PAD_B} Z`;
   const pts = rows.map((r, i) =>
-    `<circle class="pt" cx="${x(i)}" cy="${y(r.value)}" r="4"/>
+    `<circle class="pt" cx="${x(i)}" cy="${y(r.value)}" r="3.5"/>
      <rect class="hit" x="${x(i) - 10}" y="0" width="20" height="${H - PAD_B}"
        data-tipc="${esc(r.tip)}"/>`).join("");
   const ends = [0, rows.length - 1].map(i =>
@@ -392,16 +546,8 @@ function lineChart(el, rows) {
       text-anchor="${i ? "end" : "start"}">${esc(rows[i].label)}</text>`).join("");
 
   el.innerHTML = `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img">
-    ${ticks}<path class="ln" d="${d}"/>${pts}${ends}</svg>`;
+    ${ticks}<path class="area" d="${area}"/><path class="ln" d="${d}"/>${pts}${ends}</svg>`;
   bindHits(el);
-}
-
-function bindHits(el) {
-  el.querySelectorAll(".hit").forEach(h => {
-    h.onmouseenter = e => showTip(e, h.dataset.tipc);
-    h.onmousemove = e => showTip(e, h.dataset.tipc);
-    h.onmouseleave = hideTip;
-  });
 }
 
 /* ---------- เวลา ---------- */
@@ -415,10 +561,18 @@ function nextRun() {
     }
 }
 function countdown(to) {
-  const mins = Math.round((to - new Date()) / 60000);
-  if (mins < 60) return `อีก ${mins} นาที`;
-  const h = Math.floor(mins / 60), m = mins % 60;
-  return m ? `อีก ${h} ชม. ${m} นาที` : `อีก ${h} ชม.`;
+  const secs = Math.max(0, Math.round((to - new Date()) / 1000));
+  const h = Math.floor(secs / 3600), m = Math.floor(secs % 3600 / 60), s = secs % 60;
+  if (h) return `อีก ${h} ชม. ${m} นาที`;
+  if (m) return `อีก ${m} นาที ${s} วินาที`;
+  return `อีก ${s} วินาที`;
+}
+function ago(d) {
+  const mins = Math.round((new Date() - d) / 60000);
+  if (mins < 1) return "เมื่อครู่";
+  if (mins < 60) return `${mins} นาทีที่แล้ว`;
+  const h = Math.floor(mins / 60);
+  return h < 24 ? `${h} ชม.ที่แล้ว` : `${Math.floor(h / 24)} วันที่แล้ว`;
 }
 
 async function grab(file) {
@@ -428,7 +582,8 @@ async function grab(file) {
   } catch { return null; }
 }
 
-/* ---------- ภาพรวม ---------- */
+/* ---------- การ์ดคำตอบ ---------- */
+let tick = null;
 function renderVerdict(ch, ctl, feed) {
   const today = thaiDay(new Date());
   const todays = (ch?.videos || []).filter(v => thaiDay(new Date(v.published)) === today);
@@ -436,89 +591,108 @@ function renderVerdict(ch, ctl, feed) {
   const running = (feed || []).find(r =>
     r.name === "publish" && (r.status === "in_progress" || r.status === "queued"));
 
+  clearInterval(tick);
   let cls, icon, title, sub;
+
   if (window._sick?.length) {
-    cls = "bad"; icon = "🔴";
+    cls = "bad"; icon = "⬤";
     title = `บริการจำเป็นล้ม ${window._sick.length} ตัว`;
     sub = `${window._sick.map(c => c.name).join(", ")} — รอบต่อไปจะไม่ได้คลิป`;
   } else if (running) {
-    cls = "wait"; icon = "⚙️";
+    cls = "wait"; icon = "⚙";
     title = "กำลังทำคลิปอยู่ตอนนี้";
-    sub = `เริ่มเมื่อ ${thaiTime(new Date(running.created_at))} — ใช้เวลาราว 10–20 นาที`;
+    sub = `เริ่ม ${thaiHM(new Date(running.created_at))} น. — ใช้เวลาราว 10–20 นาที`;
   } else if (todays.length) {
-    cls = "ok"; icon = "✅";
-    title = `วันนี้ลงแล้ว ${todays.length} คลิป`;
+    cls = "ok"; icon = "✓";
+    title = todays.length > 1 ? `วันนี้ลงแล้ว ${todays.length} คลิป` : "วันนี้ลงคลิปแล้ว";
     sub = `${todays[0].title} · ${nf(todays[0].views)} วิว · รอบถัดไป ${thaiTime(nxt)}`;
   } else if (ctl?.paused_at) {
-    cls = "hold"; icon = "⏸️";
+    cls = "hold"; icon = "❙❙";
     title = "หยุดไว้อยู่ ยังไม่ลงจนกว่าจะสั่งเปิด";
     sub = `สั่งหยุดไว้เมื่อ ${thaiTime(new Date(ctl.paused_at))}`;
   } else if (ctl?.skip_date === today) {
-    cls = "hold"; icon = "🚫";
+    cls = "hold"; icon = "⊘";
     title = "สั่งงดลงวันนี้ไว้";
     sub = "พรุ่งนี้กลับมาทำงานเองโดยไม่ต้องสั่งอะไรเพิ่ม";
   } else {
-    cls = "wait"; icon = "🕒";
+    cls = "wait"; icon = "◷";
     title = "วันนี้ยังไม่ลง";
-    sub = `รอบถัดไป ${thaiTime(nxt)} (${countdown(nxt)}) — รอบของ GitHub ฟรีมาช้าได้เป็นชั่วโมง`;
+    const live = () => {
+      $("#vSub").textContent =
+        `รอบถัดไป ${thaiHM(nxt)} น. · ${countdown(nxt)} — รอบของ GitHub ฟรีมาช้าได้เป็นชั่วโมง`;
+    };
+    // นับถอยหลังจริง ๆ ไม่ใช่เลขนิ่งที่เปลี่ยนทุกหนึ่งนาทีตอนโหลดใหม่
+    tick = setInterval(live, 1000);
+    sub = null; live();
   }
 
   $("#verdict").className = "card " + cls;
   $("#vIcon").textContent = icon;
   $("#vTitle").textContent = title;
-  $("#vSub").textContent = sub;
+  if (sub !== null) $("#vSub").textContent = sub;
 }
 
-/* เทียบกับวันก่อนหน้า ตัวเลขเฉย ๆ ไม่บอกว่ากำลังไปทางไหน */
+/* ---------- ตัวเลขช่อง ---------- */
 function delta(growth, field) {
   if (!growth || growth.length < 2) return null;
-  const a = growth[growth.length - 2][field], b = growth[growth.length - 1][field];
-  return b - a;
+  return growth[growth.length - 1][field] - growth[growth.length - 2][field];
+}
+
+function statCard(k, v, chip) {
+  return `<div class="stat"><div class="k">${k}</div>
+    <div class="v num${v === "—" ? " none" : ""}">${v}</div>
+    ${chip ? `<div class="chip ${chip[1]}">${chip[0]}</div>` : ""}</div>`;
 }
 
 function renderStats(ch, growth) {
   const c = ch?.channel;
-  if (!c) { $("#stats").innerHTML = '<div class="stat muted">ยังไม่มีข้อมูลช่อง</div>'; return; }
+  if (!c) { $("#stats").innerHTML = statCard("ช่อง", "—", ["ยังไม่มีข้อมูล", "info"]); return; }
+
+  $("#chName").textContent = c.title;
+  $("#chName").classList.remove("skel");
+  document.title = `${c.title} · ห้องควบคุม`;
 
   const vids = ch.videos || [];
-  const perDay = vids.length
-    ? vids.reduce((s, v) => s + v.views_per_day, 0) / vids.length : 0;
+  const perDay = vids.length ? vids.reduce((s, v) => s + v.views_per_day, 0) / vids.length : 0;
   const dSub = delta(growth, "subscribers"), dView = delta(growth, "views");
-  const since = (d, unit) => d == null ? "" :
-    (d > 0 ? `+${nf(d)} ${unit}จากเมื่อวาน` : (d === 0 ? `เท่าเมื่อวาน` : `${nf(d)} ${unit}`));
-
-  const cards = [
-    ["ผู้ติดตาม", nf(c.subscribers),
-      since(dSub, "คน") || `ขาดอีก ${nf(Math.max(0, 1000 - c.subscribers))} คนถึงเกณฑ์หาเงิน`, dSub],
-    ["วิวรวมทั้งช่อง", nf(c.views), since(dView, "วิว"), dView],
-    ["คลิปทั้งหมด", nf(c.videos), "", null],
-    ["วิวต่อวันเฉลี่ย", nf(perDay), "เฉลี่ยทุกคลิป", null],
-  ];
-  $("#stats").innerHTML = cards.map(([label, val, note, d]) => `
-    <div class="stat"><b>${val}</b><span>${label}</span>
-      ${note ? `<br><i class="${d === 0 ? "flat" : ""}">${note}</i>` : ""}</div>`).join("");
+  const chip = (d, unit) => d == null ? null
+    : d > 0 ? [`↑ ${nf(d)} ${unit}จากเมื่อวาน`, "up"]
+      : [`เท่าเมื่อวาน`, "flat"];
 
   const rev = ch.analytics?.revenue;
-  const why = rev && !rev.unavailable
-    ? null : (ch.analytics === null ? "โทเค็นยังไม่มีสิทธิ์ Analytics" : "ช่องยังไม่ผ่านเกณฑ์หาเงิน");
-  $("#stats").insertAdjacentHTML("beforeend", why
-    ? `<div class="stat"><b class="muted">—</b><span>รายได้</span><br><i class="flat">${why}</i></div>`
-    : `<div class="stat"><b>$${rev.estimated_revenue_usd ?? 0}</b><span>รายได้ 28 วัน</span></div>`);
+  const revOk = rev && !rev.unavailable;
+
+  $("#stats").innerHTML = [
+    statCard("ผู้ติดตาม", nf(c.subscribers),
+      chip(dSub, "คน") || [`ขาดอีก ${nf(Math.max(0, 1000 - c.subscribers))} คนถึงเกณฑ์หาเงิน`, "info"]),
+    statCard("วิวรวมทั้งช่อง", nf(c.views), chip(dView, "วิว")),
+    statCard("คลิปทั้งหมด", nf(c.videos), [`วันละ 1 คลิป`, "info"]),
+    statCard("วิวต่อวันเฉลี่ย", nf(perDay), ["เฉลี่ยทุกคลิป", "info"]),
+    revOk
+      ? statCard("รายได้ 28 วัน", "$" + (rev.estimated_revenue_usd ?? 0))
+      : statCard("รายได้", "—", [ch.analytics === null
+        ? "โทเค็นยังไม่มีสิทธิ์ Analytics" : "ช่องยังไม่ผ่านเกณฑ์หาเงิน", "info"]),
+  ].join("");
 
   const newest = vids.slice().sort((a, b) => new Date(b.published) - new Date(a.published))[0];
   $("#latest").innerHTML = newest ? `
-    <div style="font-size:15px;font-weight:600;margin-bottom:4px">
-      <a href="https://youtube.com/watch?v=${newest.id}" target="_blank" rel="noopener">${esc(newest.title)}</a></div>
-    <div class="small muted">ลงเมื่อ ${thaiTime(new Date(newest.published))} ·
-      ${nf(newest.views)} วิว · ${newest.views_per_day} วิว/วัน · ไลก์ ${newest.like_rate}%</div>
-    ${(newest.traits || []).map(t => `<span class="tag">${esc(t)}</span>`).join("")}`
-    : '<div class="empty">ยังไม่มีคลิป</div>';
+    <div style="display:flex;gap:14px;align-items:flex-start">
+      <div class="thumb" data-id="${newest.id}" style="width:84px;flex:none;border-radius:11px">
+        <img loading="lazy" alt="" src="https://i.ytimg.com/vi/${newest.id}/hq720.jpg">
+        <span class="play"><b>▶</b></span></div>
+      <div style="min-width:0">
+        <div style="font-size:15px;font-weight:600;line-height:1.45">
+          <a href="https://youtube.com/watch?v=${newest.id}" target="_blank" rel="noopener">${esc(newest.title)}</a></div>
+        <div class="small muted num" style="margin-top:4px">ลงเมื่อ ${thaiTime(new Date(newest.published))} ·
+          ${nf(newest.views)} วิว · ${newest.views_per_day}/วัน · ไลก์ ${newest.like_rate}%</div>
+        <div>${(newest.traits || []).map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div>
+      </div></div>` : '<div class="empty">ยังไม่มีคลิป</div>';
+  bindPlay($("#latest"));
 }
 
 /* ---------- การเติบโต ---------- */
 function renderGrowth(growth) {
   const rows = growth || [];
-
   // วิวต่อวันต้องคำนวณจากผลต่างของยอดสะสม ค่าแรกจึงไม่มีวันก่อนหน้าให้ลบ
   const daily = rows.slice(1).map((r, i) => ({
     label: thaiDate(new Date(r.date)),
@@ -540,25 +714,28 @@ function renderGrowth(growth) {
 }
 
 /* ---------- ผลงานคลิป ---------- */
-function renderCovers(vids) {
-  $("#covers").innerHTML = vids.map(v => `
-    <div class="clipcard">
-      <div class="thumb" data-id="${v.id}">
-        <img loading="lazy" alt="" src="https://i.ytimg.com/vi/${v.id}/hq720.jpg">
-        <span class="play">▶</span>
-      </div>
-      <div class="cliptitle">${esc(v.title)}</div>
-      <div class="clipmeta">${nf(v.views)} วิว · ${v.views_per_day}/วัน</div>
-    </div>`).join("") || '<div class="empty">ยังไม่มีคลิป</div>';
-
-  $("#covers").querySelectorAll(".thumb").forEach(t => {
+function bindPlay(scope) {
+  scope.querySelectorAll(".thumb").forEach(t => {
     t.onclick = () => {
-      // ใส่ iframe ตอนกดเท่านั้น ไม่งั้นเปิดหน้ามาทีเดียวโหลดตัวเล่นหกตัวพร้อมกัน
+      // ใส่ iframe ตอนกดเท่านั้น ไม่งั้นเปิดหน้ามาทีเดียวโหลดตัวเล่นหลายตัวพร้อมกัน
       t.innerHTML = `<iframe allow="autoplay; encrypted-media" allowfullscreen
         src="https://www.youtube-nocookie.com/embed/${t.dataset.id}?autoplay=1"></iframe>`;
       t.onclick = null;
     };
   });
+}
+
+function renderCovers(vids) {
+  $("#covers").innerHTML = vids.map(v => `
+    <div class="clipcard">
+      <div class="thumb" data-id="${v.id}">
+        <img loading="lazy" alt="" src="https://i.ytimg.com/vi/${v.id}/hq720.jpg">
+        <span class="play"><b>▶</b></span>
+      </div>
+      <div class="cliptitle">${esc(v.title)}</div>
+      <div class="clipmeta num">${nf(v.views)} วิว · ${v.views_per_day}/วัน</div>
+    </div>`).join("") || '<div class="empty">ยังไม่มีคลิป</div>';
+  bindPlay($("#covers"));
 }
 
 /* ยอดสะสมบอกแค่ว่าเคยดังไหม ไม่ได้บอกว่าตอนนี้ยังมีคนดูอยู่หรือตายไปแล้ว
@@ -568,35 +745,28 @@ function renderAlive(ch, growth) {
   if (rows.length < 2) {
     $("#cAlive").innerHTML = '<div class="empty">ยังไม่มีข้อมูล</div>';
     $("#nAlive").textContent =
-      "ต้องมีตัวเลขอย่างน้อยสองวันถึงจะหาผลต่างได้ เริ่มจดวันนี้วันแรก พรุ่งนี้จะเห็น";
+      "ต้องมีตัวเลขอย่างน้อยสองวันถึงจะหาผลต่างได้ เริ่มจดเมื่อวานวันแรก";
     return;
   }
-
   const prev = rows[rows.length - 2].per_video || {};
   const curr = rows[rows.length - 1].per_video || {};
   const byId = Object.fromEntries((ch?.videos || []).map(v => [v.id, v]));
 
-  const gained = Object.keys(curr)
-    .filter(id => byId[id])
-    .map(id => ({
-      label: byId[id].title,
-      value: Math.max(0, curr[id] - (prev[id] ?? curr[id])),
-      tip: `${nf(curr[id] - (prev[id] ?? curr[id]))} วิวตั้งแต่เมื่อวาน · รวม ${nf(curr[id])}`,
-    }))
-    .sort((a, b) => b.value - a.value);
+  const gained = Object.keys(curr).filter(id => byId[id]).map(id => ({
+    label: byId[id].title,
+    value: Math.max(0, curr[id] - (prev[id] ?? curr[id])),
+    tip: `${nf(curr[id] - (prev[id] ?? curr[id]))} วิวตั้งแต่เมื่อวาน · รวม ${nf(curr[id])}`,
+  })).sort((a, b) => b.value - a.value);
 
   barsH($("#cAlive"), gained, n => nf(n) + " วิว", "var(--s2)");
-
   const dead = gained.filter(g => g.value === 0).length;
-  $("#nAlive").textContent =
-    `วิวที่ได้เพิ่มตั้งแต่เมื่อวาน · ` + (dead
-      ? `มี ${dead} คลิปที่ไม่ได้วิวเพิ่มเลย — คลิปที่ตายแล้วบอกว่า YouTube เลิกกระจายให้`
-      : `ทุกคลิปยังมีคนดูอยู่`);
+  $("#nAlive").textContent = `วิวที่ได้เพิ่มตั้งแต่เมื่อวาน · ` + (dead
+    ? `มี ${dead} คลิปที่ไม่ได้วิวเพิ่มเลย — คลิปที่ตายแล้วบอกว่า YouTube เลิกกระจายให้`
+    : `ทุกคลิปยังมีคนดูอยู่`);
 }
 
 function renderClips(ch, growth) {
   const vids = (ch?.videos || []).slice().sort((a, b) => b.views_per_day - a.views_per_day);
-
   renderCovers(vids);
   renderAlive(ch, growth);
 
@@ -608,7 +778,6 @@ function renderClips(ch, growth) {
 
   // ช่องเล็ก ๆ ที่มีคลิปดังคลิปเดียว แท่งที่เหลือจะสั้นจนเทียบกันเองไม่ออก
   // ไม่ย่อสเกลให้ดูสวย เพราะ "คลิปเดียวแบกทั้งช่อง" คือเรื่องจริงที่ต้องเห็น
-  // แต่ต้องบอกตรง ๆ ว่าให้อ่านตัวเลขท้ายแท่งแทนการเทียบความยาว
   const gap = vids.length > 1 && vids[1].views_per_day
     ? vids[0].views_per_day / vids[1].views_per_day : 0;
   $("#nClips").textContent = gap > 5
@@ -622,7 +791,8 @@ function renderClips(ch, growth) {
         <td><a href="https://youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">${esc(v.title)}</a>
           <div class="small muted">อายุ ${v.days} วัน${v.privacy !== "public" ? ` · ${esc(v.privacy)}` : ""}
           ${(v.traits || []).map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div></td>
-        <td>${nf(v.views)}</td><td>${v.views_per_day}</td><td>${v.like_rate}%</td></tr>`).join("")
+        <td class="num">${nf(v.views)}</td><td class="num">${v.views_per_day}</td>
+        <td class="num">${v.like_rate}%</td></tr>`).join("")
     : '<tr><td class="muted">ยังไม่มีคลิป</td></tr>';
 }
 
@@ -632,13 +802,11 @@ function renderLessons(ch) {
 
   const byTrait = {};
   vids.forEach(v => (v.traits || []).forEach(t => (byTrait[t] ??= []).push(v)));
-  const traits = Object.entries(byTrait)
-    .map(([name, list]) => ({
-      label: `${name} (${list.length} คลิป)`,
-      value: list.reduce((s, v) => s + v.views_per_day, 0) / list.length,
-      tip: `${name}: เฉลี่ย ${nf(list.reduce((s, v) => s + v.views_per_day, 0) / list.length)} วิว/วัน`,
-    }))
-    .sort((a, b) => b.value - a.value);
+  const traits = Object.entries(byTrait).map(([name, list]) => {
+    const avg = list.reduce((s, v) => s + v.views_per_day, 0) / list.length;
+    return { label: `${name} (${list.length} คลิป)`, value: avg,
+      tip: `${name}: เฉลี่ย ${nf(avg)} วิว/วัน` };
+  }).sort((a, b) => b.value - a.value);
 
   barsH($("#cTraits"), traits, n => nf(n) + "/วัน", "var(--s2)");
   $("#nTraits").textContent = vids.length < 8
@@ -646,13 +814,10 @@ function renderLessons(ch) {
       `คลิปเดียวที่ดังผิดปกติก็ดันค่าเฉลี่ยของป้ายที่มันติดอยู่ให้สูงทั้งกลุ่ม`
     : "คลิปหนึ่งติดได้หลายป้าย ตัวเลขจึงทับซ้อนกัน ใช้ดูทิศทาง ไม่ใช่ข้อสรุป";
 
-  barsH($("#cLikes"), vids.slice()
-    .sort((a, b) => b.like_rate - a.like_rate)
-    .map(v => ({
-      label: v.title,
-      value: v.like_rate,
-      tip: `${nf(v.likes)} ไลก์จาก ${nf(v.views)} วิว`,
-    })), n => n + "%", "var(--s3)");
+  barsH($("#cLikes"), vids.slice().sort((a, b) => b.like_rate - a.like_rate).map(v => ({
+    label: v.title, value: v.like_rate,
+    tip: `${nf(v.likes)} ไลก์จาก ${nf(v.views)} วิว`,
+  })), n => n + "%", "var(--s3)");
 }
 
 /* ---------- ระบบ ---------- */
@@ -660,13 +825,13 @@ function renderHealth(h) {
   if (!h) { $("#health").innerHTML = '<tr><td class="muted">ยังไม่เคยตรวจ</td></tr>'; return; }
   window._sick = h.checks.filter(c => !c.ok && c.essential);
   const broken = h.checks.filter(c => !c.ok).length;
-  const pip = document.querySelector('#tabs button[data-tab="system"]');
-  pip.innerHTML = "ระบบ" + (broken ? '<span class="pip"></span>' : "");
+  document.querySelector('#tabs button[data-tab="system"]').innerHTML =
+    "ระบบ" + (broken ? '<span class="pip"></span>' : "");
 
   $("#health").innerHTML = h.checks.map(c => `
     <tr><td><span class="dot ${c.ok ? "d-ok" : (c.essential ? "d-bad" : "d-warn")}"></span>${esc(c.name)}
       <div class="small muted">${esc(c.detail || "")}</div></td>
-      <td class="small muted">${c.ms} ms</td></tr>`).join("");
+      <td class="small muted num">${c.ms} ms</td></tr>`).join("");
 }
 
 function renderRuns(st, feed) {
@@ -681,17 +846,16 @@ function renderRuns(st, feed) {
           <div class="small muted">${thaiTime(new Date(r.at))}
             ${r.animated != null ? ` · ขยับ ${r.animated}/${r.scenes} ฉาก` : ""}
             ${r.writer ? ` · ${esc(r.writer)}` : ""}</div></td>
-        <td class="small muted">${r.seconds ? Math.round(r.seconds) + " วิ" : ""}</td></tr>`).join("")
+        <td class="small muted num">${r.seconds ? Math.round(r.seconds) + " วิ" : ""}</td></tr>`).join("")
     : '<tr><td class="muted">ยังไม่มีประวัติ</td></tr>';
 
   const sched = (feed || []).filter(r => r.name === "publish" && r.event === "schedule").length;
   $("#runNote").textContent = sched
-    ? `ตารางเวลายิงเองแล้ว ${sched} รอบในรายการล่าสุด — ไม่ได้กดเอง`
-    : "";
+    ? `ตารางเวลายิงเองแล้ว ${sched} รอบในรายการล่าสุด — ไม่ได้กดเอง` : "";
 
   const nxt = nextRun();
   $("#schedule").innerHTML = `
-    <div>รอบถัดไป <b>${thaiTime(nxt)}</b> — ${countdown(nxt)}</div>
+    <div style="font-size:15px">รอบถัดไป <b class="num">${thaiTime(nxt)}</b></div>
     <div class="note">ตั้งไว้สามเวลาทุกวัน 19:00 / 20:30 / 22:00 น.
       รอบแรกที่ทำสำเร็จจะได้คลิป รอบที่เหลือข้ามเอง เพราะลงได้วันละคลิปเดียว<br>
       ที่ต้องมีสามรอบเพราะ cron ของ GitHub บน repo ฟรีเป็นแบบ best-effort
@@ -742,11 +906,8 @@ document.querySelectorAll("#controls button").forEach(btn => {
       await dispatch(wf, act);
       toast("ส่งคำสั่งให้ GitHub แล้ว — สถานะจะอัปเดตในอีกสักครู่");
       setTimeout(load, 12000);
-    } catch (e) {
-      toast(e.message, true);
-    } finally {
-      btn.disabled = false;
-    }
+    } catch (e) { toast(e.message, true); }
+    finally { btn.disabled = false; }
   };
 });
 
@@ -765,7 +926,12 @@ $("#clearToken").onclick = () => {
 };
 
 /* ---------- โหลด ---------- */
-async function load() {
+$("#reloadBtn").onclick = () => load(true);
+
+async function load(manual) {
+  const btn = $("#reloadBtn");
+  if (manual) btn.classList.add("spin");
+
   const [ch, h, st, ctl, growth] = await Promise.all(
     ["channel.json", "health.json", "status.json", "control.json", "growth.json"].map(grab));
 
@@ -787,10 +953,13 @@ async function load() {
   renderRuns(st, feed);
   refreshControls(ctl);
 
-  $("#stamp").innerHTML = [
-    ch?.fetched_at && `ตัวเลขช่อง ${thaiTime(new Date(ch.fetched_at))}`,
-    h?.checked_at && `ตรวจบริการ ${thaiTime(new Date(h.checked_at))}`,
-  ].filter(Boolean).join("<br>");
+  const when = ch?.fetched_at ? new Date(ch.fetched_at) : null;
+  $("#stamp").textContent = when ? `ตัวเลขช่องอัปเดต ${ago(when)}` : "ยังไม่มีข้อมูล";
+
+  if (manual) {
+    setTimeout(() => btn.classList.remove("spin"), 500);
+    toast("ดึงข้อมูลใหม่แล้ว");
+  }
 }
 
 load();
