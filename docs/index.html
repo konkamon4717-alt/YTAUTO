@@ -703,6 +703,9 @@ function renderStats(ch, growth) {
         <div class="small muted num" style="margin-top:4px">ลงเมื่อ ${thaiTime(new Date(newest.published))} ·
           ${nf(newest.views)} วิว · ${newest.views_per_day}/วัน · ไลก์ ${newest.like_rate}%</div>
         <div>${(newest.traits || []).map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div>
+        ${newest.days < 1 ? `<div class="note" style="margin-top:8px">
+          ยอดของคลิปที่เพิ่งลงยังไม่นิ่ง YouTube กำลังกรองวิวที่ไม่นับในช่วงวันแรก
+          ตัวเลขจะขึ้นลงได้ บางจังหวะเป็นศูนย์ ไม่ใช่ความผิดพลาดของระบบ</div>` : ""}
       </div></div>` : '<div class="empty">ยังไม่มีคลิป</div>';
   bindPlay($("#latest"));
 }
