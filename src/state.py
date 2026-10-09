@@ -1,10 +1,13 @@
-"""เก็บประวัติเรื่องที่เคยทำ เพื่อไม่ให้ AI คิดพล็อตซ้ำ"""
+"""เก็บประวัติเรื่องที่เคยทำ เพื่อไม่ให้ AI คิดพล็อตซ้ำ (แยกไฟล์ต่อช่อง)"""
 import json
+import pathlib
 from datetime import datetime, timezone
 
-from .config import DATA
+from . import config
 
-HISTORY = DATA / "history.json"
+
+def _history() -> "pathlib.Path":
+    return config.data_dir() / "history.json"
 
 
 def _empty() -> dict:
@@ -12,10 +15,11 @@ def _empty() -> dict:
 
 
 def load() -> dict:
-    if not HISTORY.exists():
+    history = _history()
+    if not history.exists():
         return _empty()
     try:
-        data = json.loads(HISTORY.read_text(encoding="utf-8"))
+        data = json.loads(history.read_text(encoding="utf-8"))
     except json.JSONDecodeError:
         # ไฟล์พังไม่ควรทำให้ทั้งระบบหยุด — เริ่มใหม่ดีกว่าค้าง
         return _empty()
@@ -25,8 +29,9 @@ def load() -> dict:
 
 
 def save(data: dict) -> None:
-    DATA.mkdir(parents=True, exist_ok=True)
-    HISTORY.write_text(
+    history = _history()
+    history.parent.mkdir(parents=True, exist_ok=True)
+    history.write_text(
         json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 

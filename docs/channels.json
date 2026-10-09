@@ -1,0 +1,21 @@
+{
+  "updated_at": "2026-10-09T07:44:45+00:00",
+  "channels": [
+    {
+      "key": "nithan",
+      "title": "นิทานหนึ่งนาที",
+      "enabled": true,
+      "per_day": 1,
+      "animated": true,
+      "images": "generate"
+    },
+    {
+      "key": "world",
+      "title": "รอบโลกน่ารู้",
+      "enabled": false,
+      "per_day": 1,
+      "animated": false,
+      "images": "stock"
+    }
+  ]
+}

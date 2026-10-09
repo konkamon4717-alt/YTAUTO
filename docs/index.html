@@ -113,8 +113,13 @@ header.stuck{border-bottom-color:var(--hairline)}
 .brand{min-width:0}
 .brand b{display:block;font-size:16px;font-weight:600;letter-spacing:-.01em;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.brand span{display:block;font-size:11.5px;color:var(--ink-3);line-height:1.3}
+.brand span{display:block;font-size:11.5px;color:var(--ink-3);line-height:1.3;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 header .spacer{flex:1}
+#chSel{font:inherit;font-size:13px;font-weight:500;color:var(--ink);
+  background:var(--surface);border:1px solid var(--hairline);border-radius:10px;
+  padding:8px 10px;cursor:pointer;max-width:150px;box-shadow:var(--inset)}
+#chSel:hover{border-color:var(--hairline-2)}
 .icon{width:36px;height:36px;display:grid;place-items:center;flex:none;
   background:var(--surface);border:1px solid var(--hairline);border-radius:10px;
   color:var(--ink-2);cursor:pointer;font-size:15px;box-shadow:var(--inset)}
@@ -271,6 +276,7 @@ svg.chart .hit{fill:transparent;cursor:pointer}
     <span id="stamp">กำลังโหลด…</span>
   </div>
   <div class="spacer"></div>
+  <select id="chSel" aria-label="เลือกช่อง"></select>
   <button class="icon" id="themeBtn" title="สลับโหมดสว่าง/มืด" aria-label="สลับโหมดสว่างมืด">◐</button>
   <button class="icon" id="reloadBtn" title="ดึงข้อมูลใหม่" aria-label="ดึงข้อมูลใหม่">⟳</button>
 </header>
@@ -390,6 +396,11 @@ const REPO = "konkamon4717-alt/YTAUTO";
 const CRON_UTC = [[12, 0], [13, 30], [15, 0]];   // ตามที่ตั้งไว้ใน publish.yml
 const TZ = "Asia/Bangkok";
 const KEY = "yt-auto-token";
+const CHKEY = "yt-auto-channel";
+
+// ไฟล์ข้อมูลแยกตามช่อง หน้าเดียวจึงดูได้ทุกช่องโดยไม่ต้องทำหน้าใหม่
+let CH = localStorage.getItem(CHKEY) || "nithan";
+let CHMETA = null;
 const THEME = "yt-auto-theme";
 
 const $ = s => document.querySelector(s);
@@ -577,7 +588,7 @@ function ago(d) {
 
 async function grab(file) {
   try {
-    const r = await fetch(`${file}?t=${Date.now()}`);
+    const r = await fetch(`${CH}/${file}?t=${Date.now()}`);
     return r.ok ? await r.json() : null;
   } catch { return null; }
 }
@@ -594,7 +605,13 @@ function renderVerdict(ch, ctl, feed) {
   clearInterval(tick);
   let cls, icon, title, sub;
 
-  if (window._sick?.length) {
+  if (CHMETA && CHMETA.enabled === false) {
+    // ช่องที่ยังตั้ง secret ไม่ครบถูกปิดไว้ ไม่ใช่ความผิดพลาด แต่ต้องบอกให้ชัด
+    // ไม่งั้นจะอ่านว่า "วันนี้ยังไม่ลง" แล้วรอทั้งวันโดยที่มันไม่มีวันลง
+    cls = "hold"; icon = "◇";
+    title = "ช่องนี้ยังปิดอยู่";
+    sub = "ยังไม่ได้ตั้งโทเค็น YouTube ของช่องนี้ — ตั้งแล้วเปลี่ยน run.enabled เป็น true";
+  } else if (window._sick?.length) {
     cls = "bad"; icon = "⬤";
     title = `บริการจำเป็นล้ม ${window._sick.length} ตัว`;
     sub = `${window._sick.map(c => c.name).join(", ")} — รอบต่อไปจะไม่ได้คลิป`;
@@ -877,7 +894,9 @@ function refreshControls(ctl) {
 
 async function dispatch(wf, act) {
   const file = wf === "publish" ? "publish.yml" : "control.yml";
-  const inputs = wf === "publish" ? { count: "1", upload: "true" } : { action: act };
+  const inputs = wf === "publish"
+    ? { channel: CH, count: "1", upload: "true" }
+    : { action: act, channel: CH };
   const r = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/${file}/dispatches`, {
     method: "POST",
     headers: { Authorization: `Bearer ${token()}`, Accept: "application/vnd.github+json" },
@@ -928,6 +947,34 @@ $("#clearToken").onclick = () => {
 /* ---------- โหลด ---------- */
 $("#reloadBtn").onclick = () => load(true);
 
+async function loadChannels() {
+  let list;
+  try {
+    const r = await fetch(`channels.json?t=${Date.now()}`);
+    list = r.ok ? (await r.json()).channels : null;
+  } catch { list = null; }
+  // ไฟล์รายชื่อหายไม่ควรทำให้หน้าว่างเปล่า อย่างน้อยต้องดูช่องที่เลือกไว้ได้
+  list = list?.length ? list : [{ key: CH, title: CH, enabled: true }];
+
+  if (!list.some(c => c.key === CH)) CH = list[0].key;
+  window._list = list;
+  CHMETA = list.find(c => c.key === CH);
+  const sel = $("#chSel");
+  sel.innerHTML = list.map(c =>
+    `<option value="${c.key}" ${c.key === CH ? "selected" : ""}>${esc(c.title)}${c.enabled ? "" : " (ปิดอยู่)"}</option>`).join("");
+  sel.onchange = () => {
+    CH = sel.value;
+    CHMETA = (window._list || []).find(c => c.key === CH);
+    localStorage.setItem(CHKEY, CH);
+    load(true);
+  };
+  // ช่องเดียวก็ไม่ต้องมีตัวเลือกให้รก และเมื่อมีตัวเลือกแล้วก็ไม่ต้องโชว์ชื่อช่อง
+  // ซ้ำอีกที่บนหัว เพราะจอมือถือแคบจนเบียดกันจนอ่านไม่ออกทั้งคู่
+  const many = list.length > 1;
+  sel.style.display = many ? "" : "none";
+  $("#chName").style.display = many ? "none" : "";
+}
+
 async function load(manual) {
   const btn = $("#reloadBtn");
   if (manual) btn.classList.add("spin");
@@ -962,6 +1009,6 @@ async function load(manual) {
   }
 }
 
-load();
+loadChannels().then(() => load());
 setInterval(load, 60000);
 </script>

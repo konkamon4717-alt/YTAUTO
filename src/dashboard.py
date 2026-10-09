@@ -148,7 +148,10 @@ COMMANDS = {
 
 def latest_clip() -> Path | None:
     """คลิปล่าสุดที่ยังเหลืออยู่ในโฟลเดอร์ผลลัพธ์"""
-    clips = sorted(OUT.glob("*/final.mp4"), key=lambda p: p.stat().st_mtime, reverse=True)
+    # คลิปย้ายไปอยู่ใน out/<ช่อง>/<รอบ>/ แล้ว แต่ของเก่ายังอยู่ชั้นเดียว
+    # เลยค้นทั้งสองชั้นแล้วเอาตัวที่ใหม่สุด ไม่งั้นหลังย้ายจะหาคลิปไม่เจอเลย
+    clips = sorted([*OUT.glob("*/final.mp4"), *OUT.glob("*/*/final.mp4")],
+                   key=lambda p: p.stat().st_mtime, reverse=True)
     return clips[0] if clips else None
 
 

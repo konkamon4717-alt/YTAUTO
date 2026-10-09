@@ -16,7 +16,7 @@ from pathlib import Path
 
 from . import config
 
-REPORT = config.ROOT / "docs" / "health.json"
+
 
 
 def _check(name: str, essential: bool, fn) -> dict:
@@ -117,15 +117,22 @@ CHECKS = [
 ]
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    import argparse
+    args = argparse.ArgumentParser(description=__doc__)
+    args.add_argument("--channel", help="ช่องที่จะตรวจ")
+    config.use(args.parse_args(argv).channel)
+
     cfg = config.load()
+    report = config.docs_dir() / "health.json"
     results = [_check(name, essential, lambda f=fn: f(cfg)) for name, essential, fn in CHECKS]
 
     broken_essential = [r for r in results if not r["ok"] and r["essential"]]
     degraded = [r for r in results if not r["ok"] and not r["essential"]]
 
-    REPORT.parent.mkdir(parents=True, exist_ok=True)
-    REPORT.write_text(json.dumps({
+    report.parent.mkdir(parents=True, exist_ok=True)
+    report.write_text(json.dumps({
+        "channel": config.channel(),
         "checked_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "healthy": not broken_essential,
         "checks": results,

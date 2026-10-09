@@ -1,10 +1,14 @@
-"""เขียนสถานะลง docs/status.json ให้หน้า dashboard อ่าน"""
+"""เขียนสถานะลง docs/<ช่อง>/status.json ให้ห้องควบคุมอ่าน"""
 import json
 from datetime import datetime, timezone
 
-from .config import ROOT
+from . import config
 
-STATUS = ROOT / "docs" / "status.json"
+
+def _status():
+    return config.docs_dir() / "status.json"
+
+
 MAX_RUNS = 30
 
 
@@ -13,10 +17,11 @@ def _now() -> str:
 
 
 def load() -> dict:
-    if not STATUS.exists():
+    status = _status()
+    if not status.exists():
         return {"updated_at": None, "runs": []}
     try:
-        return json.loads(STATUS.read_text(encoding="utf-8"))
+        return json.loads(status.read_text(encoding="utf-8"))
     except json.JSONDecodeError:
         return {"updated_at": None, "runs": []}
 
@@ -25,5 +30,6 @@ def record_run(entry: dict) -> None:
     data = load()
     data["updated_at"] = _now()
     data["runs"] = ([{**entry, "at": _now()}] + data.get("runs", []))[:MAX_RUNS]
-    STATUS.parent.mkdir(parents=True, exist_ok=True)
-    STATUS.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    status = _status()
+    status.parent.mkdir(parents=True, exist_ok=True)
+    status.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")

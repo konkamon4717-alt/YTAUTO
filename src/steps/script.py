@@ -225,7 +225,7 @@ def _validate(story: dict, cfg: dict) -> None:
         if not scene.get("narration", "").strip():
             raise RuntimeError(f"ฉาก {index + 1} ไม่มีบทพากย์")
         if not scene.get("image_prompt", "").strip():
-            raise RuntimeError(f"ฉาก {index + 1} ไม่มีคำสั่งสร้างภาพ")
+            raise RuntimeError(f"ฉาก {index + 1} ไม่มีคำสั่งภาพ")
         scene.setdefault("motion", "")
         scene.setdefault("importance", 3)
         scene.setdefault("has_main_character", True)
@@ -250,7 +250,7 @@ def _top_titles(limit: int = 5) -> str:
     เทียบด้วยวิวต่อวัน ไม่ใช่วิวรวม เพราะคลิปเก่ามีเวลาสะสมมากกว่า
     นี่คือจุดที่ระบบเรียนรู้จากผลลัพธ์ของตัวเอง แทนที่จะเขียนแบบเดิมไปเรื่อย ๆ
     """
-    report = config.ROOT / "docs" / "channel.json"
+    report = config.docs_dir() / "channel.json"
     try:
         data = json.loads(report.read_text(encoding="utf-8"))
     except Exception:  # noqa: BLE001 - ยังไม่เคยดึงสถิติ = ยังไม่มีตัวอย่าง
@@ -277,6 +277,17 @@ def _top_titles(limit: int = 5) -> str:
     return WINNERS_BLOCK.format(lines=lines)
 
 
+def _brief(cfg: dict) -> str:
+    """โจทย์ของช่องนี้ — แต่ละช่องเขียนคนละแบบจึงเก็บไว้ในโฟลเดอร์ของช่อง
+
+    เก็บเป็นไฟล์ข้อความแทนที่จะฝังในโค้ด เพราะมันคือ "บรรณาธิการ" ของช่อง
+    เป็นสิ่งที่จะถูกแก้บ่อยที่สุดเมื่อเห็นว่าคลิปแบบไหนได้ผล และไม่ควรต้องแตะโค้ด
+    ช่องที่ยังไม่มีไฟล์ของตัวเองจะใช้โจทย์นิทานเดิมไปก่อน
+    """
+    own = config.channel_dir() / "prompt.txt"
+    return own.read_text(encoding="utf-8") if own.exists() else PROMPT
+
+
 def generate(cfg: dict, avoid: list[str]) -> dict:
     """เขียนบทด้วยผู้ให้บริการตัวแรกที่ใช้ได้ ตกไปตัวถัดไปเมื่อเจ๊ง
 
@@ -284,7 +295,7 @@ def generate(cfg: dict, avoid: list[str]) -> dict:
     การมีตัวสำรองทำให้ระบบไม่หยุดเดินเพราะผู้ให้บริการรายเดียว
     """
     avoid_text = "\n".join(f"- {p}" for p in avoid) if avoid else "- (ยังไม่มี เป็นเรื่องแรก)"
-    prompt = PROMPT.format(
+    prompt = _brief(cfg).format(
         target=cfg["video"]["target_seconds"],
         hard_max=cfg["video"]["hard_max_seconds"],
         scenes=cfg["images"]["scenes"],

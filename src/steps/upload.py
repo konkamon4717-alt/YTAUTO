@@ -34,6 +34,11 @@ def upload(video_path: Path, story: dict, cfg: dict) -> str:
     hashtag_line = " ".join(f"#{t}" for t in tags[:5])
     description = f"{story['description']}\n\n{hashtag_line}\n#shorts"
 
+    # เครดิตภาพไม่ใช่ของแถม สัญญาอนุญาต CC บังคับให้บอกที่มา
+    # ถ้าไม่ใส่ก็คือละเมิดลิขสิทธิ์พอ ๆ กับหยิบภาพเขามาเฉย ๆ
+    if story.get("image_credits"):
+        description += f"\n\n{story['image_credits']}"
+
     body = {
         "snippet": {
             "title": story["title"][:100],

@@ -133,18 +133,33 @@ def make_video(cfg: dict, work: Path, story: dict | None = None) -> tuple[Path, 
 
     scenes = story["scenes"]
 
-    print("[3/6] สร้างภาพประกอบ...")
+    # ช่องที่เล่าเรื่องจริงใช้ภาพที่ AI วาดไม่ได้ เพราะเป็นการสร้างภาพปลอม
+    # ของสิ่งที่มีอยู่จริง จึงไปหาภาพจากคลังเสรีแทนแล้วเก็บเครดิตไว้ใส่คำอธิบาย
+    from_stock = cfg["images"].get("source") == "stock"
+    print("[3/6] " + ("หาภาพประกอบจากคลังเสรี..." if from_stock else "สร้างภาพประกอบ..."))
+
     stills: list[Path] = []
+    credits: list[dict] = []
+    used_urls: set[str] = set()
     seed = int(time.time())
+
     for index, scene in enumerate(scenes):
         image_path = work / f"scene_{index:02d}.jpg"
-        prompt = images.build_prompt(
-            scene["image_prompt"], story["character_sheet"], cfg["images"]["style"],
-            has_main_character=scene.get("has_main_character", True),
-        )
-        images.fetch(prompt, image_path, cfg, seed=seed + index)
+        if from_stock:
+            from .steps import stock
+            credits.append(stock.fetch(scene["image_prompt"], image_path, cfg, used_urls))
+        else:
+            prompt = images.build_prompt(
+                scene["image_prompt"], story["character_sheet"], cfg["images"]["style"],
+                has_main_character=scene.get("has_main_character", True),
+            )
+            images.fetch(prompt, image_path, cfg, seed=seed + index)
         stills.append(image_path)
         print(f"      ภาพ {index + 1}/{len(scenes)}")
+
+    if credits:
+        from .steps import stock
+        story["image_credits"] = stock.credit_lines(credits)
 
     print("[4/6] ทำให้ภาพขยับ...")
     clips, anim_stats = _build_clips(scenes, stills, scene_durations, cfg, work)
@@ -198,7 +213,7 @@ def make_video(cfg: dict, work: Path, story: dict | None = None) -> tuple[Path, 
 
 
 def run_once(cfg: dict, upload_enabled: bool, story: dict | None = None) -> dict:
-    work = config.OUT / _slug()
+    work = config.work_dir() / _slug()
     started = time.time()
 
     try:
@@ -258,7 +273,8 @@ def _keep_work() -> bool:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="สร้างและอัปโหลดนิทานสั้นอัตโนมัติ")
+    parser = argparse.ArgumentParser(description="สร้างและอัปโหลดคลิปสั้นอัตโนมัติ")
+    parser.add_argument("--channel", help="ช่องที่จะทำคลิปให้ (ดูรายชื่อในโฟลเดอร์ channels/)")
     parser.add_argument("--count", type=int, default=1, help="จำนวนคลิปในรอบนี้")
     parser.add_argument("--no-upload", action="store_true", help="สร้างอย่างเดียว ไม่อัปโหลด")
     parser.add_argument("--keep", action="store_true", help="ไม่ลบไฟล์ระหว่างทาง")
@@ -267,6 +283,8 @@ def main() -> int:
     parser.add_argument("--story", type=Path,
                         help="ใช้ไฟล์ JSON ที่มีอยู่แทนการเรียก Gemini (ไว้เทสต์หรือเรนเดอร์ซ้ำ)")
     args = parser.parse_args()
+    config.use(args.channel)
+    print(f"ช่อง: {config.channel()}")
 
     if args.keep:
         import os

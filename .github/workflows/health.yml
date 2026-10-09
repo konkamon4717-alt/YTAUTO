@@ -11,9 +11,29 @@ permissions:
   contents: write
 
 jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      channels: ${{ steps.pick.outputs.channels }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - id: pick
+        run: echo "channels=$(python -m src.channels)" >> "$GITHUB_OUTPUT"
+
   check:
+    needs: plan
+    if: needs.plan.outputs.channels != '[]'
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        channel: ${{ fromJSON(needs.plan.outputs.channels) }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -33,7 +53,10 @@ jobs:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
-        run: python -m src.health
+          YT_CLIENT_ID_WORLD: ${{ secrets.YT_CLIENT_ID_WORLD }}
+          YT_CLIENT_SECRET_WORLD: ${{ secrets.YT_CLIENT_SECRET_WORLD }}
+          YT_REFRESH_TOKEN_WORLD: ${{ secrets.YT_REFRESH_TOKEN_WORLD }}
+        run: python -m src.health --channel "${{ matrix.channel }}"
 
       - name: ดึงตัวเลขช่อง
         # วันที่ไม่มีคลิปลงก็ยังอยากเห็นยอดวิวเดินหน้า หน้าเว็บจึงต้องได้ของสดทุกเช้า
@@ -43,16 +66,20 @@ jobs:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
-        run: python -m src.stats
+          YT_CLIENT_ID_WORLD: ${{ secrets.YT_CLIENT_ID_WORLD }}
+          YT_CLIENT_SECRET_WORLD: ${{ secrets.YT_CLIENT_SECRET_WORLD }}
+          YT_REFRESH_TOKEN_WORLD: ${{ secrets.YT_REFRESH_TOKEN_WORLD }}
+        run: python -m src.stats --channel "${{ matrix.channel }}"
 
       - name: บันทึกผลขึ้น dashboard
         if: always()
         run: |
           git config user.name  "yt-auto bot"
           git config user.email "actions@github.com"
-          git add docs/health.json docs/channel.json docs/growth.json
+          python -m src.channels --manifest
+          git add docs
           if ! git diff --staged --quiet; then
-            git commit -m "chore: ผลตรวจสุขภาพ $(date -u +%F)"
+            git commit -m "chore: ${{ matrix.channel }} ผลตรวจสุขภาพ $(date -u +%F)"
             git pull --rebase --autostash origin ${{ github.ref_name }} || true
             git push
           fi

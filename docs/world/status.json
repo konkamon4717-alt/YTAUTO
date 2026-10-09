@@ -1,0 +1,30 @@
+{
+  "updated_at": "2026-10-09T07:36:16+00:00",
+  "runs": [
+    {
+      "ok": true,
+      "title": "ทะเลแห่งเดียวในโลก ที่ไม่มีชายหาดเลยแม้แต่นิ้วเดียว!",
+      "premise": "ทะเลซาร์กัสโซ ทะเลแห่งเดียวในโลกที่ไม่มีชายฝั่งและมีขอบเขตเกิดจากกระแสน้ำหมุนวน",
+      "video_id": null,
+      "seconds": 175,
+      "writer": "gemini",
+      "animated": 0,
+      "scenes": 6,
+      "backends": {},
+      "voice": "edge-tts",
+      "at": "2026-10-09T07:36:16+00:00"
+    },
+    {
+      "ok": false,
+      "error": "KeyError: 'font'",
+      "seconds": 204,
+      "at": "2026-10-09T07:32:57+00:00"
+    },
+    {
+      "ok": false,
+      "error": "RuntimeError: หาภาพสำหรับ 'European eel underwater' ไม่ได้ — ",
+      "seconds": 158,
+      "at": "2026-10-09T07:28:28+00:00"
+    }
+  ]
+}

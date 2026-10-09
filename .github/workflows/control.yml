@@ -12,6 +12,11 @@ on:
         required: true
         type: choice
         options: [skip-today, pause, resume]
+      channel:
+        description: "ช่องที่จะสั่ง"
+        required: true
+        default: nithan
+        type: string
 
 permissions:
   contents: write
@@ -24,25 +29,26 @@ jobs:
 
       - name: ปรับสถานะ
         run: |
-          mkdir -p data docs
+          DIR="data/${{ inputs.channel }}"
+          mkdir -p "$DIR" "docs/${{ inputs.channel }}"
           case "${{ inputs.action }}" in
             skip-today)
               # เก็บเป็นวันที่ ไม่ใช่ธงเปิดปิด รอบของพรุ่งนี้จะกลับมาทำงานเองโดยไม่ต้องสั่งเปิด
               # รอบผลิตอยู่ช่วง 12:00-15:00 UTC ซึ่งตรงกับเย็นวันเดียวกันตามเวลาไทย
               # วันที่ UTC กับวันที่ไทยจึงเป็นวันเดียวกันเสมอสำหรับรอบพวกนี้
-              date -u +%F > data/SKIP_UNTIL
+              date -u +%F > "$DIR/SKIP_UNTIL"
               ;;
             pause)
-              date -u +%FT%TZ > data/PAUSED
+              date -u +%FT%TZ > "$DIR/PAUSED"
               ;;
             resume)
-              rm -f data/PAUSED data/SKIP_UNTIL
+              rm -f "$DIR/PAUSED" "$DIR/SKIP_UNTIL"
               ;;
           esac
 
-          PAUSED=$( [ -f data/PAUSED ] && cat data/PAUSED || echo "" )
-          SKIP=$( [ -f data/SKIP_UNTIL ] && cat data/SKIP_UNTIL || echo "" )
-          cat > docs/control.json <<JSON
+          PAUSED=$( [ -f "$DIR/PAUSED" ] && cat "$DIR/PAUSED" || echo "" )
+          SKIP=$( [ -f "$DIR/SKIP_UNTIL" ] && cat "$DIR/SKIP_UNTIL" || echo "" )
+          cat > "docs/${{ inputs.channel }}/control.json" <<JSON
           {
             "updated_at": "$(date -u +%FT%TZ)",
             "last_action": "${{ inputs.action }}",
@@ -55,9 +61,9 @@ jobs:
         run: |
           git config user.name  "yt-auto bot"
           git config user.email "actions@github.com"
-          git add data docs/control.json
+          git add data docs
           if ! git diff --staged --quiet; then
-            git commit -m "chore: สั่ง ${{ inputs.action }} จากหน้าควบคุม"
+            git commit -m "chore: ${{ inputs.channel }} สั่ง ${{ inputs.action }} จากหน้าควบคุม"
             git pull --rebase --autostash origin ${{ github.ref_name }} || true
             git push
           fi

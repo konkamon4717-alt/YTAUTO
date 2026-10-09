@@ -21,8 +21,6 @@ from pathlib import Path
 
 from . import config
 
-REPORT = config.ROOT / "docs" / "channel.json"
-GROWTH = config.ROOT / "docs" / "growth.json"
 KEEP_DAYS = 180
 ANALYTICS_SCOPES = ("yt-analytics.readonly", "yt-analytics-monetary.readonly")
 
@@ -150,10 +148,11 @@ def snapshot(data: dict) -> list[dict]:
 
     ที่ต้องเริ่มวันนี้เพราะย้อนกลับไปเก็บของเมื่อวานไม่ได้ — ไม่มีใครเก็บไว้ให้
     """
+    growth = config.docs_dir() / "growth.json"
     rows = []
-    if GROWTH.exists():
+    if growth.exists():
         try:
-            rows = json.loads(GROWTH.read_text(encoding="utf-8"))
+            rows = json.loads(growth.read_text(encoding="utf-8"))
         except json.JSONDecodeError:
             rows = []   # ไฟล์พังไม่ควรทำให้ทั้งคำสั่งล้ม ยอมเสียประวัติดีกว่าเสียคลิป
 
@@ -174,7 +173,12 @@ def snapshot(data: dict) -> list[dict]:
     return rows[-KEEP_DAYS:]
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    import argparse
+    args = argparse.ArgumentParser(description=__doc__)
+    args.add_argument("--channel", help="ช่องที่จะดึงตัวเลข")
+    config.use(args.parse_args(argv).channel)
+
     from .steps import upload
 
     cfg = config.load()
@@ -197,11 +201,14 @@ def main() -> int:
     data["fetched_at"] = __import__("datetime").datetime.now(
         __import__("datetime").timezone.utc).isoformat(timespec="seconds")
 
-    REPORT.parent.mkdir(parents=True, exist_ok=True)
-    REPORT.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    docs = config.docs_dir()
+    docs.mkdir(parents=True, exist_ok=True)
+    (docs / "channel.json").write_text(
+        json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
     rows = snapshot(data)
-    GROWTH.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
+    (docs / "growth.json").write_text(
+        json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
 
     c = data["channel"]
     print(f"  ช่อง        : {c['title']}")

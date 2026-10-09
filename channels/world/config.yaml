@@ -1,0 +1,93 @@
+channel:
+  name: "รอบโลกน่ารู้"
+  language: th
+  locale: th-TH
+
+brand:
+  closing_line: "รู้แล้วอย่าเก็บไว้คนเดียว กดไลก์แล้วส่งให้เพื่อนดู กดติดตามไว้ พรุ่งนี้มีเรื่องใหม่"
+
+video:
+  width: 1080
+  height: 1920
+  fps: 30
+  target_seconds: 45
+  hard_max_seconds: 58
+
+tts:
+  backends: [edge-tts, pollinations, gtts]
+  # เสียงผู้ชายเพื่อให้แยกจากช่องนิทานที่ใช้เสียงผู้หญิง คนเลื่อนเจอจะได้รู้ทันทีว่าคนละช่อง
+  # ช่องนิทานเคยเจอปัญหาเสียงผู้ชายเพี้ยนตอนสลับไปมา แต่นั่นเกิดจากการสลับตัวพากย์กลางคลิป
+  # ไม่ใช่ตัวเสียงเอง ตอนนี้เลือกตัวพากย์ครั้งเดียวต่อคลิปแล้วจึงไม่เจออีก
+  voice: th-TH-NiwatNeural
+  rate: "+6%"
+  pitch: "+0Hz"
+  pollinations_model: community/NamanSoni78/FISH-AUDIO-S2.1-PRO
+
+images:
+  # ต่างจากช่องนิทานตรงนี้ที่เดียว แต่เปลี่ยนทั้งลักษณะของช่อง
+  # เรื่องจริงต้องใช้ภาพจริง ภาพที่ AI วาดขึ้นมาคือภาพปลอมของสิ่งที่มีอยู่จริง
+  # คนดูเข้าใจผิดว่าเห็นของจริง และถ้าเป็นเหตุการณ์หรือบุคคลจริงก็ผิดนโยบาย
+  # ข้อมูลบิดเบือนของ YouTube ตรง ๆ
+  source: stock
+
+  # เรียงตามโอกาสเจอภาพที่ตรง Commons ใหญ่สุดและบอกเจ้าของภาพครบ
+  # NASA อยู่ท้ายสุดเพราะเก่งเฉพาะเรื่องอวกาศกับภาพถ่ายดาวเทียม
+  stock_sources: [openverse, wikimedia, nasa]
+
+  scenes: 6
+
+  # สองค่านี้ไม่ได้ใช้เมื่อ source เป็น stock แต่เก็บไว้ให้โครงสร้างเหมือนกันทุกช่อง
+  # และเผื่อวันหนึ่งอยากสลับช่องนี้กลับไปวาดภาพเอง
+  style: ""
+  models: [flux, openai/gpt-image-2, black-forest-labs/flux.1-schnell]
+
+animation:
+  # ปิดไว้ด้วยเหตุผลสองชั้น
+  #
+  # ชั้นแรกคือโควตา Hugging Face ให้ราว 544 วินาที GPU ต่อวันต่อบัญชี ไม่ใช่ต่อช่อง
+  # ช่องนิทานใช้ไปแล้วราว 330 วินาที เหลือไม่พอให้ช่องนี้ขยับครบทุกฉาก
+  #
+  # ชั้นที่สองสำคัญกว่า — ต่อให้โควตาพอก็ไม่ควรเปิด เพราะการทำให้ภาพถ่ายจริง
+  # ขยับด้วย AI คือการสร้างภาพเคลื่อนไหวของเหตุการณ์ที่ไม่เคยเกิดขึ้น
+  # การแพนกล้องช้า ๆ บนภาพนิ่งจริงดูน่าเชื่อถือกว่าและเป็นภาษาของสารคดีอยู่แล้ว
+  enabled: false
+  backends: []
+  max_shots_per_run: 0
+  request_seconds: 0
+
+llm:
+  backends: [gemini, pollinations]
+  models: [gemini-3.8-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3.1-flash-lite]
+  fallback_models:
+    - community/zai-org/GLM-4.6
+    - community/moonshotai/Kimi-K2-Instruct-0905
+    - community/deepseek-ai/DeepSeek-V3.2
+
+subtitles:
+  enabled: true
+  max_chars_per_line: 22
+  font: "Noto Sans Thai"
+  font_size: 92
+  primary_color: "&H00FFFFFF"
+  outline_color: "&H00000000"
+  outline: 6
+  # วางซับสูงกว่าช่องนิทานนิดหน่อย เพราะภาพถ่ายจริงมีพื้นเบลออยู่ด้านล่าง
+  # ถ้าวางต่ำเกินซับจะไปทับขอบล่างของภาพคมชัดพอดี
+  margin_v: 520
+
+upload:
+  privacy: public
+  category_id: 27        # Education — ตรงกับเนื้อหามากกว่า 24 Entertainment ของช่องนิทาน
+  made_for_kids: false
+  self_declared_ai: true
+  thumbnail: true
+  localizations: [en, hi, id, pt, es]
+
+run:
+  per_day: 1
+
+  # ปิดไว้จนกว่าจะตั้ง secret ของช่องนี้ครบ (YT_CLIENT_ID_WORLD,
+  # YT_CLIENT_SECRET_WORLD, YT_REFRESH_TOKEN_WORLD)
+  # ถ้าเปิดทั้งที่ยังไม่มีโทเค็น รอบประจำวันจะล้มทุกวัน แล้วความล้มเหลวจริง ๆ
+  # จะจมหายไปในกองแจ้งเตือนที่เรารู้อยู่แล้วว่าจะล้ม
+  enabled: false
