@@ -3,7 +3,7 @@
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
     "subscribers": 13,
-    "views": 3445,
+    "views": 4705,
     "videos": 6
   },
   "videos": [
@@ -15,13 +15,13 @@
       "views": 1259,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 1573.3,
+      "views_per_day": 1463.4,
       "like_rate": 1.67,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 0.8
+      "days": 0.9
     },
     {
       "id": "hyfmbTfZqBg",
@@ -31,13 +31,13 @@
       "views": 1597,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 758.6,
+      "views_per_day": 737.5,
       "like_rate": 1.82,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 2.1
+      "days": 2.2
     },
     {
       "id": "8-Zy5rZlH00",
@@ -69,7 +69,7 @@
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 21.1
+      "days": 21.2
     },
     {
       "id": "uxeId4AUBLI",
@@ -79,14 +79,14 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 55.1,
+      "views_per_day": 55.0,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 21.1
+      "days": 21.2
     },
     {
       "id": "L52UHMV1E0g",
@@ -96,13 +96,13 @@
       "views": 630,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 28.7,
+      "views_per_day": 28.6,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
         "ความลับ"
       ],
-      "days": 21.9
+      "days": 22.0
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -115,9 +115,9 @@
       "views_per_day": 0.2,
       "like_rate": 0.0,
       "traits": [],
-      "days": 22.0
+      "days": 22.1
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-09T07:46:18+00:00"
+  "fetched_at": "2026-10-09T09:12:47+00:00"
 }
