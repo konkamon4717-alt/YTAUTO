@@ -2,8 +2,8 @@
   "channel": {
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
-    "subscribers": 13,
-    "views": 4729,
+    "subscribers": 14,
+    "views": 5133,
     "videos": 7
   },
   "videos": [
@@ -12,11 +12,11 @@
       "title": "ลุงแท็กซี่ซื้อดอกไม้เหี่ยวร้อยบาททุกวัน รู้เหตุผลแล้วกลั้นน้ำตาไม่อยู่",
       "published": "2026-10-09T12:30:01Z",
       "privacy": "public",
-      "views": 1,
-      "likes": 0,
+      "views": 394,
+      "likes": 6,
       "comments": 0,
-      "views_per_day": 4.0,
-      "like_rate": 0.0,
+      "views_per_day": 1576.0,
+      "like_rate": 1.52,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
@@ -28,11 +28,11 @@
       "title": "หนุ่มใหญ่ซื้อข้าวไหม้ก้นหม้อสองร้อยทุกวัน ความจริงทำแม่ค้าร้องไห้",
       "published": "2026-10-08T12:33:57Z",
       "privacy": "public",
-      "views": 1282,
-      "likes": 22,
+      "views": 1292,
+      "likes": 23,
       "comments": 0,
-      "views_per_day": 1219.7,
-      "like_rate": 1.72,
+      "views_per_day": 1164.3,
+      "like_rate": 1.78,
       "traits": [
         "คำถาม",
         "ความถี่"
@@ -44,11 +44,11 @@
       "title": "ป้าเอารองเท้าเด็กข้างเดียวมาซ่อมทุกเดือน ความจริงทำเอากลั้นน้ำตาไม่อยู่",
       "published": "2026-10-07T05:14:43Z",
       "privacy": "public",
-      "views": 1597,
+      "views": 1598,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 677.8,
-      "like_rate": 1.82,
+      "views_per_day": 661.8,
+      "like_rate": 1.81,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
@@ -69,7 +69,7 @@
         "คำถาม",
         "ความถี่"
       ],
-      "days": 18.5
+      "days": 18.6
     },
     {
       "id": "klm0ozmRhsE",
@@ -95,7 +95,7 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 54.5,
+      "views_per_day": 54.3,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
@@ -112,13 +112,13 @@
       "views": 630,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 28.4,
+      "views_per_day": 28.3,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
         "ความลับ"
       ],
-      "days": 22.2
+      "days": 22.3
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -131,9 +131,9 @@
       "views_per_day": 0.2,
       "like_rate": 0.0,
       "traits": [],
-      "days": 22.3
+      "days": 22.4
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-09T13:47:28+00:00"
+  "fetched_at": "2026-10-09T15:11:55+00:00"
 }
