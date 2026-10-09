@@ -1,0 +1,80 @@
+name: stats
+
+# ดึงตัวเลขช่องสด ๆ จาก YouTube ตามสั่ง
+#
+# ปกติตัวเลขจะถูกดึงหลังลงคลิปและทุกเช้าตอนตรวจสุขภาพ ซึ่งพอสำหรับการติดตาม
+# แต่ไม่พอเวลาอยากรู้เดี๋ยวนั้นว่าผู้ติดตามขึ้นหรือยัง
+# ปุ่มดึงข้อมูลในห้องควบคุมจึงเรียก workflow นี้ แทนที่จะแค่อ่านไฟล์เดิมซ้ำ
+on:
+  workflow_dispatch:
+    inputs:
+      channel:
+        description: "ช่องที่จะดึงตัวเลข (เว้นว่าง = ทุกช่องที่เปิดอยู่)"
+        required: false
+        type: string
+
+# ปุ่มกดรัว ๆ ได้ ไม่ต้องให้ไปต่อคิวกันเอง รอบใหม่แทนรอบเก่าไปเลย
+concurrency:
+  group: stats-${{ inputs.channel }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      channels: ${{ steps.pick.outputs.channels }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - id: pick
+        run: |
+          PICK='${{ inputs.channel }}'
+          if [ -n "$PICK" ]; then LIST="[\"$PICK\"]"; else LIST="$(python -m src.channels)"; fi
+          echo "channels=$LIST" >> "$GITHUB_OUTPUT"
+
+  fetch:
+    needs: plan
+    if: needs.plan.outputs.channels != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        channel: ${{ fromJSON(needs.plan.outputs.channels) }}
+
+    env:
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+      YT_CLIENT_ID_WORLD: ${{ secrets.YT_CLIENT_ID_WORLD }}
+      YT_CLIENT_SECRET_WORLD: ${{ secrets.YT_CLIENT_SECRET_WORLD }}
+      YT_REFRESH_TOKEN_WORLD: ${{ secrets.YT_REFRESH_TOKEN_WORLD }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - run: python -m src.stats --channel "${{ matrix.channel }}"
+
+      - name: บันทึกกลับเข้า repo
+        run: |
+          git config user.name  "yt-auto bot"
+          git config user.email "actions@github.com"
+          python -m src.channels --manifest
+          git add docs
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: ${{ matrix.channel }} ดึงตัวเลขช่องตามสั่ง"
+            git pull --rebase --autostash origin ${{ github.ref_name }} || true
+            git push
+          fi

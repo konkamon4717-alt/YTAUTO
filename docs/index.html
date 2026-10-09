@@ -945,7 +945,49 @@ $("#clearToken").onclick = () => {
 };
 
 /* ---------- โหลด ---------- */
-$("#reloadBtn").onclick = () => load(true);
+/* ปุ่มนี้เคยแค่อ่านไฟล์เดิมซ้ำ ซึ่งไม่เคยทำให้เลขเปลี่ยน เพราะไฟล์จะใหม่
+   ก็ต่อเมื่อมี workflow รัน คนกดแล้วเห็นเลขเดิมย่อมคิดว่าปุ่มเสีย
+   ตอนนี้ถ้ามีโทเค็นจะสั่ง GitHub ไปถาม YouTube สด ๆ แล้วรอจนไฟล์เปลี่ยนจริง */
+async function hardRefresh() {
+  const btn = $("#reloadBtn");
+  if (!token()) {
+    await load(true);
+    toast("อ่านไฟล์ล่าสุดแล้ว — ถ้าจะให้ไปถาม YouTube สด ๆ ต้องใส่โทเค็นก่อน");
+    return;
+  }
+
+  const before = (await grab("channel.json"))?.fetched_at || "";
+  btn.classList.add("spin");
+  try {
+    const r = await fetch(
+      `https://api.github.com/repos/${REPO}/actions/workflows/stats.yml/dispatches`, {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token()}`, Accept: "application/vnd.github+json" },
+        body: JSON.stringify({ ref: "main", inputs: { channel: CH } }),
+      });
+    if (r.status !== 204) throw new Error(`GitHub ตอบ ${r.status}`);
+  } catch (e) {
+    btn.classList.remove("spin");
+    return toast("สั่งดึงไม่สำเร็จ: " + e.message, true);
+  }
+
+  toast("กำลังไปถาม YouTube — ใช้เวลาราวหนึ่งนาที");
+
+  // รอจนกว่า fetched_at จะเปลี่ยน ไม่ใช่เดาเวลาแล้วโหลดทิ้ง ๆ ขว้าง ๆ
+  for (let i = 0; i < 24; i++) {
+    await new Promise(r => setTimeout(r, 6000));
+    const now = (await grab("channel.json"))?.fetched_at || "";
+    if (now && now !== before) {
+      await load();
+      btn.classList.remove("spin");
+      return toast("ได้ตัวเลขใหม่แล้ว");
+    }
+  }
+  btn.classList.remove("spin");
+  toast("รอนานผิดปกติ — ดูที่แท็บระบบว่ารอบล่าสุดล้มหรือเปล่า", true);
+}
+
+$("#reloadBtn").onclick = hardRefresh;
 
 async function loadChannels() {
   let list;
@@ -1003,10 +1045,9 @@ async function load(manual) {
   const when = ch?.fetched_at ? new Date(ch.fetched_at) : null;
   $("#stamp").textContent = when ? `ตัวเลขช่องอัปเดต ${ago(when)}` : "ยังไม่มีข้อมูล";
 
-  if (manual) {
-    setTimeout(() => btn.classList.remove("spin"), 500);
-    toast("ดึงข้อมูลใหม่แล้ว");
-  }
+  // ข้อความบอกผลเป็นหน้าที่ของคนเรียก เพราะ load() ถูกเรียกทั้งตอนสลับช่อง
+  // ตอนกดดึงข้อมูล และตอนรีเฟรชอัตโนมัติ ซึ่งควรพูดคนละแบบ
+  if (manual) setTimeout(() => btn.classList.remove("spin"), 500);
 }
 
 loadChannels().then(() => load());
