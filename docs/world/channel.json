@@ -2,8 +2,8 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 1,
-    "views": 2,
+    "subscribers": 2,
+    "views": 0,
     "videos": 1
   },
   "videos": [
@@ -12,11 +12,11 @@
       "title": "เมืองลึกลับที่ห้ามคนตายเด็ดขาด เพราะดินแดนนี้ไม่ยอมให้ศพเน่าเปื่อย",
       "published": "2026-10-09T08:27:41Z",
       "privacy": "public",
-      "views": 2,
-      "likes": 3,
+      "views": 0,
+      "likes": 0,
       "comments": 0,
-      "views_per_day": 8.0,
-      "like_rate": 150.0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
       "traits": [
         "ความขัดแย้ง"
       ],
@@ -24,5 +24,5 @@
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-09T08:40:17+00:00"
+  "fetched_at": "2026-10-09T09:48:08+00:00"
 }
