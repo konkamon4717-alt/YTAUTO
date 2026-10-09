@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T07:46:18+00:00",
+  "updated_at": "2026-10-09T08:07:18+00:00",
   "channels": [
     {
       "key": "nithan",
@@ -11,7 +11,7 @@
     },
     {
       "key": "world",
-      "title": "รอบโลกน่ารู้",
+      "title": "รอบรู้ 1นาที",
       "enabled": false,
       "per_day": 1,
       "animated": false,
