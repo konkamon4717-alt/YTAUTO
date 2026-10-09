@@ -34,6 +34,7 @@ SCOPES = [
 
 ROOT = Path(__file__).resolve().parent.parent
 ENV = ROOT / ".env"
+sys.path.insert(0, str(ROOT))
 
 
 def write_env(values: dict[str, str]) -> None:
@@ -53,6 +54,40 @@ def write_env(values: dict[str, str]) -> None:
     ENV.write_text("\n".join(out) + "\n", encoding="utf-8")
 
 
+def _client_source():
+    """หาตัวระบุแอปจากไฟล์ก่อน ไม่มีค่อยใช้ค่าที่เคยเก็บไว้ใน .env
+
+    Google ปิดการดาวน์โหลด client secret ไปแล้ว เข้าหน้า Credentials ตอนนี้
+    เห็นแค่สี่ตัวท้าย โหลดไฟล์เดิมกลับมาไม่ได้อีก
+
+    แต่ไม่ต้องสร้างใหม่ เพราะ client id กับ secret เป็นตัวระบุ "แอป" ไม่ใช่ช่อง
+    ค่าเดียวกันใช้ขอโทเค็นของกี่ช่องก็ได้ และเราเก็บไว้ใน .env ตั้งแต่ตั้งช่องแรกแล้ว
+    สร้าง client ใหม่มีแต่เสีย เพราะต้องไปตั้งหน้ายินยอมใหม่ทั้งชุด
+    """
+    matches = glob.glob(str(ROOT / "client_secret*.json"))
+    if matches:
+        return ("file", matches[0])
+
+    from src import config
+    try:
+        client_id = config.secret("YT_CLIENT_ID")
+        client_secret = config.secret("YT_CLIENT_SECRET")
+    except RuntimeError:
+        print("ไม่พบทั้งไฟล์ client_secret*.json และค่า YT_CLIENT_ID / YT_CLIENT_SECRET ใน .env")
+        print("ถ้าเพิ่งตั้งเครื่องใหม่ ให้เอาค่าสองตัวนี้จาก GitHub Secrets มาใส่ .env ก่อน")
+        return None
+
+    print("ใช้ client id/secret เดิมจาก .env (Google ไม่ให้โหลดไฟล์ซ้ำแล้ว)")
+    print()
+    return ("config", {"installed": {
+        "client_id": client_id,
+        "client_secret": client_secret,
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "redirect_uris": ["http://localhost"],
+    }})
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="ขอ refresh token ของ YouTube")
     parser.add_argument("--channel", default="",
@@ -60,9 +95,8 @@ def main() -> int:
     args = parser.parse_args()
     suffix = f"_{args.channel.upper()}" if args.channel else ""
 
-    matches = glob.glob(str(ROOT / "client_secret*.json"))
-    if not matches:
-        print("ไม่พบไฟล์ client_secret*.json — ดาวน์โหลดจาก Google Cloud Console มาวางที่", ROOT)
+    flow_args = _client_source()
+    if flow_args is None:
         return 1
 
     if args.channel:
@@ -76,7 +110,9 @@ def main() -> int:
     print("ถ้าเจอหน้า 'Google hasn't verified this app' ให้กด Advanced แล้ว Go to ... (unsafe)")
     print("ซึ่งปลอดภัย เพราะแอปนี้คือแอปของคุณเอง\n")
 
-    flow = InstalledAppFlow.from_client_secrets_file(matches[0], SCOPES)
+    kind, payload = flow_args
+    flow = (InstalledAppFlow.from_client_secrets_file(payload, SCOPES) if kind == "file"
+            else InstalledAppFlow.from_client_config(payload, SCOPES))
     creds = flow.run_local_server(port=8080, prompt="consent", access_type="offline")
 
     if not creds.refresh_token:
