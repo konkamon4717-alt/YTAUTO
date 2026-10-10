@@ -2,9 +2,9 @@
   "channel": {
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
-    "subscribers": 15,
-    "views": 5980,
-    "videos": 7
+    "subscribers": 14,
+    "views": 6084,
+    "videos": 8
   },
   "videos": [
     {
@@ -12,32 +12,32 @@
       "title": "ลุงแท็กซี่ซื้อดอกไม้เหี่ยวร้อยบาททุกวัน รู้เหตุผลแล้วกลั้นน้ำตาไม่อยู่",
       "published": "2026-10-09T12:30:01Z",
       "privacy": "public",
-      "views": 1210,
+      "views": 1227,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 2613.2,
-      "like_rate": 1.4,
+      "views_per_day": 1229.5,
+      "like_rate": 1.39,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 0.5
+      "days": 1.0
     },
     {
       "id": "ZQpvIsa0c8A",
       "title": "หนุ่มใหญ่ซื้อข้าวไหม้ก้นหม้อสองร้อยทุกวัน ความจริงทำแม่ค้าร้องไห้",
       "published": "2026-10-08T12:33:57Z",
       "privacy": "public",
-      "views": 1323,
-      "likes": 23,
+      "views": 1410,
+      "likes": 25,
       "comments": 0,
-      "views_per_day": 906.0,
-      "like_rate": 1.74,
+      "views_per_day": 706.7,
+      "like_rate": 1.77,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 1.5
+      "days": 2.0
     },
     {
       "id": "hyfmbTfZqBg",
@@ -47,13 +47,13 @@
       "views": 1598,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 577.9,
+      "views_per_day": 484.2,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 2.8
+      "days": 3.3
     },
     {
       "id": "8-Zy5rZlH00",
@@ -69,7 +69,7 @@
         "คำถาม",
         "ความถี่"
       ],
-      "days": 18.9
+      "days": 19.5
     },
     {
       "id": "klm0ozmRhsE",
@@ -79,13 +79,13 @@
       "views": 23,
       "likes": 4,
       "comments": 0,
-      "views_per_day": 1.1,
+      "views_per_day": 1.0,
       "like_rate": 17.39,
       "traits": [
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 21.8
+      "days": 22.3
     },
     {
       "id": "uxeId4AUBLI",
@@ -95,14 +95,14 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 53.4,
+      "views_per_day": 52.2,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 21.8
+      "days": 22.3
     },
     {
       "id": "L52UHMV1E0g",
@@ -112,13 +112,13 @@
       "views": 630,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 27.9,
+      "views_per_day": 27.2,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
         "ความลับ"
       ],
-      "days": 22.6
+      "days": 23.1
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -131,9 +131,24 @@
       "views_per_day": 0.2,
       "like_rate": 0.0,
       "traits": [],
-      "days": 22.7
+      "days": 23.2
+    },
+    {
+      "id": "SsMdCbnHpvM",
+      "title": "สาวสวยจ้างช่างตัดเสื้อให้ขาดทุกอาทิตย์ รู้เหตุผลแล้วพูดไม่ออก",
+      "published": "2026-10-10T12:26:59Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [
+        "อารมณ์แรง"
+      ],
+      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-09T23:36:47+00:00"
+  "fetched_at": "2026-10-10T12:27:06+00:00"
 }
