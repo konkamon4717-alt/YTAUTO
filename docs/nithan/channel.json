@@ -3,7 +3,7 @@
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
     "subscribers": 14,
-    "views": 6089,
+    "views": 6470,
     "videos": 8
   },
   "videos": [
@@ -12,11 +12,11 @@
       "title": "สาวสวยจ้างช่างตัดเสื้อให้ขาดทุกอาทิตย์ รู้เหตุผลแล้วพูดไม่ออก",
       "published": "2026-10-10T12:27:20Z",
       "privacy": "public",
-      "views": 0,
-      "likes": 0,
+      "views": 381,
+      "likes": 15,
       "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
+      "views_per_day": 1524.0,
+      "like_rate": 3.94,
       "traits": [
         "อารมณ์แรง"
       ],
@@ -30,7 +30,7 @@
       "views": 1227,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 1166.8,
+      "views_per_day": 1105.3,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
@@ -46,13 +46,13 @@
       "views": 1415,
       "likes": 25,
       "comments": 0,
-      "views_per_day": 690.6,
+      "views_per_day": 671.5,
       "like_rate": 1.77,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 2.0
+      "days": 2.1
     },
     {
       "id": "hyfmbTfZqBg",
@@ -62,7 +62,7 @@
       "views": 1598,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 476.5,
+      "views_per_day": 468.3,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
@@ -84,7 +84,7 @@
         "คำถาม",
         "ความถี่"
       ],
-      "days": 19.5
+      "days": 19.6
     },
     {
       "id": "klm0ozmRhsE",
@@ -110,7 +110,7 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 52.0,
+      "views_per_day": 51.9,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
@@ -127,7 +127,7 @@
       "views": 630,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 27.2,
+      "views_per_day": 27.1,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
@@ -150,5 +150,5 @@
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-10T13:44:19+00:00"
+  "fetched_at": "2026-10-10T15:08:31+00:00"
 }
