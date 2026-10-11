@@ -3,7 +3,7 @@
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
     "subscribers": 15,
-    "views": 7630,
+    "views": 7661,
     "videos": 8
   },
   "videos": [
@@ -12,15 +12,15 @@
       "title": "สาวสวยจ้างช่างตัดเสื้อให้ขาดทุกอาทิตย์ รู้เหตุผลแล้วพูดไม่ออก",
       "published": "2026-10-10T12:27:20Z",
       "privacy": "public",
-      "views": 1324,
+      "views": 1326,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 1327.3,
+      "views_per_day": 1256.7,
       "like_rate": 1.81,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 1.0
+      "days": 1.1
     },
     {
       "id": "pZi7FJyHjEY",
@@ -30,29 +30,29 @@
       "views": 1221,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 611.8,
+      "views_per_day": 594.7,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 2.0
+      "days": 2.1
     },
     {
       "id": "ZQpvIsa0c8A",
       "title": "หนุ่มใหญ่ซื้อข้าวไหม้ก้นหม้อสองร้อยทุกวัน ความจริงทำแม่ค้าร้องไห้",
       "published": "2026-10-08T12:33:57Z",
       "privacy": "public",
-      "views": 1638,
+      "views": 1667,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 547.3,
-      "like_rate": 1.71,
+      "views_per_day": 546.5,
+      "like_rate": 1.68,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 3.0
+      "days": 3.1
     },
     {
       "id": "hyfmbTfZqBg",
@@ -62,13 +62,13 @@
       "views": 1598,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 371.8,
+      "views_per_day": 366.9,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 4.3
+      "days": 4.4
     },
     {
       "id": "8-Zy5rZlH00",
@@ -100,7 +100,7 @@
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 23.3
+      "days": 23.4
     },
     {
       "id": "uxeId4AUBLI",
@@ -110,14 +110,14 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 49.9,
+      "views_per_day": 49.8,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 23.3
+      "days": 23.4
     },
     {
       "id": "L52UHMV1E0g",
@@ -127,13 +127,13 @@
       "views": 630,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 26.1,
+      "views_per_day": 26.0,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
         "ความลับ"
       ],
-      "days": 24.1
+      "days": 24.2
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -146,9 +146,9 @@
       "views_per_day": 0.2,
       "like_rate": 0.0,
       "traits": [],
-      "days": 24.2
+      "days": 24.3
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-11T12:23:44+00:00"
+  "fetched_at": "2026-10-11T13:46:41+00:00"
 }

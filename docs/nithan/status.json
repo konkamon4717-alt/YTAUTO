@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-10-11T12:23:43+00:00",
+  "updated_at": "2026-10-11T13:46:40+00:00",
   "runs": [
+    {
+      "ok": false,
+      "error": "RuntimeError: พากย์เสียงไม่สำเร็จทุกตัว:\n  edge-tts: RuntimeError: ลอง 3 ครั้งแล้วยังไม่ได้: No audio was received. Please verify that your parameters are correct.\n  pollinations: HTTPError: 400 Client Error: Bad Request for url: https://gen.pollinations.ai/v1/audio/speech\n  gtts: ModuleNotFoundError: No module named 'gtts'",
+      "seconds": 123,
+      "at": "2026-10-11T13:46:40+00:00"
+    },
     {
       "ok": false,
       "error": "RuntimeError: พากย์เสียงไม่สำเร็จทุกตัว:\n  edge-tts: RuntimeError: ลอง 3 ครั้งแล้วยังไม่ได้: No audio was received. Please verify that your parameters are correct.\n  pollinations: HTTPError: 400 Client Error: Bad Request for url: https://gen.pollinations.ai/v1/audio/speech\n  gtts: ModuleNotFoundError: No module named 'gtts'",
