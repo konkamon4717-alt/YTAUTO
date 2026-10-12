@@ -2,8 +2,8 @@
   "channel": {
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
-    "subscribers": 15,
-    "views": 7727,
+    "subscribers": 19,
+    "views": 8707,
     "videos": 9
   },
   "videos": [
@@ -12,11 +12,11 @@
       "title": "ลุงจ้างช่างปล่อยลมยางจักรยานทุกวัน รู้เหตุผลแล้วน้ำตาซึม",
       "published": "2026-10-12T08:42:26Z",
       "privacy": "public",
-      "views": 0,
-      "likes": 0,
+      "views": 958,
+      "likes": 29,
       "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
+      "views_per_day": 3832.0,
+      "like_rate": 3.03,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
@@ -28,47 +28,47 @@
       "title": "สาวสวยจ้างช่างตัดเสื้อให้ขาดทุกอาทิตย์ รู้เหตุผลแล้วพูดไม่ออก",
       "published": "2026-10-10T12:27:20Z",
       "privacy": "public",
-      "views": 1312,
+      "views": 1327,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 710.1,
-      "like_rate": 1.83,
+      "views_per_day": 661.5,
+      "like_rate": 1.81,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 1.8
+      "days": 2.0
     },
     {
       "id": "pZi7FJyHjEY",
       "title": "ลุงแท็กซี่ซื้อดอกไม้เหี่ยวร้อยบาททุกวัน รู้เหตุผลแล้วกลั้นน้ำตาไม่อยู่",
       "published": "2026-10-09T12:30:01Z",
       "privacy": "public",
-      "views": 1221,
+      "views": 1222,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 429.1,
+      "views_per_day": 406.8,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 2.8
+      "days": 3.0
     },
     {
       "id": "ZQpvIsa0c8A",
       "title": "หนุ่มใหญ่ซื้อข้าวไหม้ก้นหม้อสองร้อยทุกวัน ความจริงทำแม่ค้าร้องไห้",
       "published": "2026-10-08T12:33:57Z",
       "privacy": "public",
-      "views": 1747,
+      "views": 1753,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 454.6,
+      "views_per_day": 438.1,
       "like_rate": 1.6,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 3.8
+      "days": 4.0
     },
     {
       "id": "hyfmbTfZqBg",
@@ -78,13 +78,13 @@
       "views": 1598,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 310.4,
+      "views_per_day": 301.1,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 5.1
+      "days": 5.3
     },
     {
       "id": "8-Zy5rZlH00",
@@ -100,7 +100,7 @@
         "คำถาม",
         "ความถี่"
       ],
-      "days": 21.3
+      "days": 21.5
     },
     {
       "id": "klm0ozmRhsE",
@@ -110,13 +110,13 @@
       "views": 23,
       "likes": 4,
       "comments": 0,
-      "views_per_day": 1.0,
+      "views_per_day": 0.9,
       "like_rate": 17.39,
       "traits": [
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 24.2
+      "days": 24.3
     },
     {
       "id": "uxeId4AUBLI",
@@ -126,14 +126,14 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 48.2,
+      "views_per_day": 47.9,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 24.2
+      "days": 24.3
     },
     {
       "id": "L52UHMV1E0g",
@@ -143,13 +143,13 @@
       "views": 630,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 25.2,
+      "views_per_day": 25.1,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
         "ความลับ"
       ],
-      "days": 25.0
+      "days": 25.1
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -162,9 +162,9 @@
       "views_per_day": 0.2,
       "like_rate": 0.0,
       "traits": [],
-      "days": 25.1
+      "days": 25.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-12T08:47:54+00:00"
+  "fetched_at": "2026-10-12T12:35:52+00:00"
 }
