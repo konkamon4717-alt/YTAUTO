@@ -253,8 +253,19 @@ def run_once(cfg: dict, upload_enabled: bool, story: dict | None = None) -> dict
 
 
 def _published_today() -> bool:
-    """วันนี้มีคลิปที่อัปขึ้นช่องสำเร็จแล้วหรือยัง (เทียบตามเวลาท้องถิ่น)"""
+    """วันนี้มีคลิปที่อัปขึ้นช่องสำเร็จแล้วหรือยัง (เทียบตามเวลาท้องถิ่น)
+
+    ถามสองทางแล้วถือว่า "ลงแล้ว" ถ้าทางใดทางหนึ่งตอบว่าใช่
+
+    ไฟล์ประวัติในเครื่องเร็วแต่ไม่แน่นอน เพราะมันจะมีผลก็ต่อเมื่อ commit
+    กลับขึ้น repo สำเร็จ ซึ่งเคยล้มเงียบ ๆ แล้วรอบถัดมาในวันเดียวกันมองไม่เห็น
+    ว่าเพิ่งลงไป จึงลงซ้ำ วันละสามคลิปเรื่องเดียวกัน
+
+    ส่วนรายการบนยูทูปแน่นอนกว่าแต่ตามหลังหลายนาที จึงตอบ "ยังไม่ลง" ได้
+    ทั้งที่เพิ่งลงไปเมื่อครู่ ใช้ตัวเดียวก็พลาดคนละแบบ ใช้คู่กันถึงจะครอบคลุม
+    """
     today = datetime.now().date()
+
     for entry in state.load()["published"]:
         if not entry.get("ok") or not entry.get("video_id"):
             continue
@@ -264,6 +275,22 @@ def _published_today() -> bool:
             continue
         if at.astimezone().date() == today:
             return True
+
+    try:
+        from .steps import upload as uploader
+        yt = uploader.client()
+        channel = yt.channels().list(part="contentDetails", mine=True).execute()
+        uploads = channel["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
+        recent = yt.playlistItems().list(
+            part="snippet", playlistId=uploads, maxResults=5).execute()
+        for item in recent.get("items", []):
+            at = datetime.fromisoformat(
+                item["snippet"]["publishedAt"].replace("Z", "+00:00"))
+            if at.astimezone().date() == today:
+                return True
+    except Exception as exc:  # noqa: BLE001 - ถามไม่ได้ก็ใช้คำตอบจากไฟล์ไปก่อน
+        print(f"      เช็ครายการบนช่องไม่ได้ ({type(exc).__name__}) ใช้ประวัติในไฟล์แทน")
+
     return False
 
 

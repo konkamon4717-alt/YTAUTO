@@ -74,12 +74,5 @@ jobs:
       - name: บันทึกผลขึ้น dashboard
         if: always()
         run: |
-          git config user.name  "yt-auto bot"
-          git config user.email "actions@github.com"
           python -m src.channels --manifest
-          git add docs
-          if ! git diff --staged --quiet; then
-            git commit -m "chore: ${{ matrix.channel }} ผลตรวจสุขภาพ $(date -u +%F)"
-            git pull --rebase --autostash origin ${{ github.ref_name }} || true
-            git push
-          fi
+          bash tools/commit_back.sh             "chore: ${{ matrix.channel }} ผลตรวจสุขภาพ $(date -u +%F)" docs

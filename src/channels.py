@@ -10,7 +10,6 @@
 import argparse
 import json
 import sys
-from datetime import datetime, timezone
 
 from . import config
 
@@ -40,10 +39,11 @@ def main(argv: list[str] | None = None) -> int:
     if args.manifest:
         out = config.ROOT / "docs" / "channels.json"
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(json.dumps({
-            "updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-            "channels": rows,
-        }, ensure_ascii=False, indent=2), encoding="utf-8")
+        # ห้ามมีเวลาอยู่ในไฟล์นี้ — ทุก job ของทุกช่องเขียนไฟล์เดียวกัน
+        # ถ้าเนื้อหาต่างกันแค่วินาทีที่เขียน job ที่ push ทีหลังจะ rebase ชนทันที
+        # ซึ่งเคยทำให้สถานะของช่องที่สองไม่เคยถูกบันทึก แล้วลงคลิปซ้ำวันละสามรอบ
+        out.write_text(json.dumps({"channels": rows}, ensure_ascii=False, indent=2),
+                       encoding="utf-8")
         print(f"เขียน {out} แล้ว ({len(rows)} ช่อง)")
         return 0
 

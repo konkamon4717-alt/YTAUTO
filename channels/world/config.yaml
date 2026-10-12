@@ -21,7 +21,9 @@ tts:
   voice: th-TH-NiwatNeural
   rate: "+6%"
   pitch: "+0Hz"
-  pollinations_model: community/NamanSoni78/FISH-AUDIO-S2.1-PRO
+  # รุ่นเดิม community/NamanSoni78/FISH-AUDIO-S2.1-PRO ถูกถอดออกแล้ว (ตรวจเจอ 12 ต.ค. 2569)
+  # ตัวที่มาแทนชื่อ fish-audio/s2.1-pro แต่กลายเป็นรุ่นเสียเงิน ยิงไปได้ 402
+  pollinations_model: microsoft/mai-voice-2.1
 
 images:
   # ต่างจากช่องนิทานตรงนี้ที่เดียว แต่เปลี่ยนทั้งลักษณะของช่อง
