@@ -62,18 +62,28 @@ def check_pollinations(cfg: dict) -> str:
 
 
 def check_edge_tts(cfg: dict) -> str:
+    """ต้องลองพากย์จริง ไม่ใช่แค่ถามว่ามีเสียงนี้อยู่ในรายการไหม
+
+    ตัวตรวจเดิมเรียกแค่ list_voices ซึ่งเป็นคนละปลายทางกับการสังเคราะห์เสียง
+    วันที่ Microsoft เริ่มปฏิเสธคำขอสังเคราะห์ ตัวตรวจจึงยังขึ้นเขียวอยู่สามวัน
+    ขณะที่รอบผลิตล้มทุกรอบ — ตรวจสิ่งที่ไม่ได้ใช้จริงก็เท่ากับไม่ได้ตรวจ
+    """
     import asyncio
 
     import edge_tts
 
     async def probe():
-        voices = await edge_tts.list_voices()
-        return [v["ShortName"] for v in voices]
+        got = 0
+        tts = edge_tts.Communicate("ทดสอบ", cfg["tts"]["voice"])
+        async for chunk in tts.stream():
+            if chunk["type"] == "audio":
+                got += len(chunk["data"])
+        return got
 
-    names = asyncio.run(probe())
-    if cfg["tts"]["voice"] not in names:
-        raise RuntimeError(f"ไม่พบเสียง {cfg['tts']['voice']}")
-    return f"{cfg['tts']['voice']} พร้อมใช้"
+    size = asyncio.run(probe())
+    if size < 1000:
+        raise RuntimeError(f"ได้เสียงกลับมาแค่ {size} ไบต์")
+    return f"{cfg['tts']['voice']} พากย์ได้จริง ({size:,} ไบต์)"
 
 
 def check_huggingface(cfg: dict) -> str:

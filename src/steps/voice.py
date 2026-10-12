@@ -53,8 +53,11 @@ async def _edge_stream(text: str, out_path: Path, cfg: dict) -> list[dict]:
     return words
 
 
-EDGE_RETRIES = 3
-EDGE_WAIT = 4
+# ฝั่ง Microsoft ตอบสำเร็จราวหนึ่งในสี่ครั้งในช่วงนี้ ไม่ได้ตายแต่ติด ๆ ดับ ๆ
+# ลองสามครั้งแล้วยอมแพ้คือโอกาสได้เสียงดีแค่ครึ่งเดียว ทั้งที่แต่ละครั้งใช้เวลาไม่กี่วินาที
+# และมันเป็นตัวเดียวที่ให้จังหวะรายคำ ซึ่งทำให้ซับตรงกับเสียงจริง ๆ ไม่ใช่เกลี่ยเอา
+EDGE_RETRIES = 6
+EDGE_WAIT = 3
 
 
 def _edge(text: str, out_path: Path, cfg: dict) -> VoiceResult:
@@ -141,6 +144,24 @@ def _duration(path: Path) -> float:
     return float(json.loads(result.stdout)["format"]["duration"])
 
 
+def _speed_up(path: Path, factor: float) -> None:
+    """เร่งเสียงให้เร็วขึ้นโดยไม่เปลี่ยนระดับเสียง
+
+    edge-tts ปรับความเร็วได้ในตัวผ่าน rate แต่ตัวสำรองทำไม่ได้ และพูดช้ากว่ามาก
+    บทที่เขียนมาให้พอดี 45 วินาทีจึงกลายเป็น 59 แล้วถูกทิ้งเพราะเกินเพดาน
+    คือเสียคลิปทั้งคลิปด้วยเหตุผลที่แก้ได้ด้วยการเร่งเสียงนิดเดียว
+    """
+    tmp = path.with_suffix(".fast.mp3")
+    result = subprocess.run(
+        ["ffmpeg", "-y", "-i", str(path), "-filter:a", f"atempo={factor:.3f}",
+         "-c:a", "libmp3lame", "-q:a", "4", str(tmp)],
+        capture_output=True, text=True,
+    )
+    if result.returncode != 0:
+        return   # เร่งไม่ได้ก็ใช้ของเดิม ยาวไปหน่อยดีกว่าไม่มีเสียง
+    tmp.replace(path)
+
+
 def _speak_by_phrase(name: str, text: str, out_path: Path, cfg: dict) -> VoiceResult:
     synth = PHRASE_BACKENDS[name]
     work = out_path.parent / f"_ph_{out_path.stem}"
@@ -151,9 +172,13 @@ def _speak_by_phrase(name: str, text: str, out_path: Path, cfg: dict) -> VoiceRe
     segments: list[dict] = []
     offset = 0.0
 
+    speed = float(cfg["tts"].get("phrase_speed", 1.0))
+
     for index, phrase in enumerate(phrases):
         part = work / f"{index:02d}.mp3"
         synth(phrase, part, cfg)
+        if speed != 1.0:
+            _speed_up(part, speed)
         seconds = _duration(part)
         segments.append({"text": phrase, "start": offset, "end": offset + seconds})
         parts.append(part)
