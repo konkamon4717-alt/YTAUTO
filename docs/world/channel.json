@@ -2,27 +2,105 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 2,
-    "views": 8,
-    "videos": 1
+    "subscribers": 28,
+    "views": 9450,
+    "videos": 2
   },
   "videos": [
+    {
+      "id": "plEJBPKtWvs",
+      "title": "จุดนีโม ที่ซึ่งมนุษย์ที่อยู่ใกล้คุณที่สุด... อยู่บนอวกาศ",
+      "published": "2026-10-11T15:18:01Z",
+      "privacy": "private",
+      "views": 1281,
+      "likes": 35,
+      "comments": 0,
+      "views_per_day": 1757.1,
+      "like_rate": 2.73,
+      "traits": [],
+      "days": 0.7
+    },
+    {
+      "id": "cSsiwc7jZo0",
+      "title": "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
+      "published": "2026-10-11T13:49:31Z",
+      "privacy": "private",
+      "views": 887,
+      "likes": 22,
+      "comments": 0,
+      "views_per_day": 1122.1,
+      "like_rate": 2.48,
+      "traits": [],
+      "days": 0.8
+    },
+    {
+      "id": "964pejBlN0E",
+      "title": "จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
+      "published": "2026-10-11T12:26:24Z",
+      "privacy": "private",
+      "views": 1360,
+      "likes": 35,
+      "comments": 0,
+      "views_per_day": 1603.4,
+      "like_rate": 2.57,
+      "traits": [],
+      "days": 0.8
+    },
+    {
+      "id": "0iK9FQvX5Qg",
+      "title": "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
+      "published": "2026-10-10T15:12:30Z",
+      "privacy": "public",
+      "views": 1900,
+      "likes": 53,
+      "comments": 0,
+      "views_per_day": 1096.4,
+      "like_rate": 2.79,
+      "traits": [],
+      "days": 1.7
+    },
+    {
+      "id": "urz_NtM6hEA",
+      "title": "จุดที่ห่างไกลที่สุดบนโลก มนุษย์อวกาศยังอยู่ใกล้กว่าคนบนพื้นดิน",
+      "published": "2026-10-10T13:53:57Z",
+      "privacy": "private",
+      "views": 1452,
+      "likes": 26,
+      "comments": 0,
+      "views_per_day": 812.3,
+      "like_rate": 1.79,
+      "traits": [],
+      "days": 1.8
+    },
+    {
+      "id": "DbLMjGhbHxk",
+      "title": "จุดบนโลกที่มนุษย์ที่ใกล้ที่สุด อยู่บนสถานีอวกาศ",
+      "published": "2026-10-10T12:29:57Z",
+      "privacy": "private",
+      "views": 1286,
+      "likes": 29,
+      "comments": 0,
+      "views_per_day": 696.7,
+      "like_rate": 2.26,
+      "traits": [],
+      "days": 1.8
+    },
     {
       "id": "23eSKkHi5XY",
       "title": "เมืองลึกลับที่ห้ามคนตายเด็ดขาด เพราะดินแดนนี้ไม่ยอมให้ศพเน่าเปื่อย",
       "published": "2026-10-09T08:27:41Z",
       "privacy": "public",
-      "views": 8,
-      "likes": 4,
+      "views": 1284,
+      "likes": 33,
       "comments": 0,
-      "views_per_day": 32.0,
-      "like_rate": 50.0,
+      "views_per_day": 426.0,
+      "like_rate": 2.57,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 0.2
+      "days": 3.0
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-09T09:51:13+00:00"
+  "fetched_at": "2026-10-12T08:47:49+00:00"
 }

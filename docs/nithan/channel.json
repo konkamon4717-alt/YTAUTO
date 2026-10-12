@@ -3,20 +3,36 @@
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
     "subscribers": 15,
-    "views": 7733,
+    "views": 7727,
     "videos": 9
   },
   "videos": [
+    {
+      "id": "Lip4vEyuFa8",
+      "title": "ลุงจ้างช่างปล่อยลมยางจักรยานทุกวัน รู้เหตุผลแล้วน้ำตาซึม",
+      "published": "2026-10-12T08:42:26Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [
+        "ความถี่",
+        "อารมณ์แรง"
+      ],
+      "days": 0.2
+    },
     {
       "id": "SsMdCbnHpvM",
       "title": "สาวสวยจ้างช่างตัดเสื้อให้ขาดทุกอาทิตย์ รู้เหตุผลแล้วพูดไม่ออก",
       "published": "2026-10-10T12:27:20Z",
       "privacy": "public",
-      "views": 1316,
+      "views": 1312,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 713.8,
-      "like_rate": 1.82,
+      "views_per_day": 710.1,
+      "like_rate": 1.83,
       "traits": [
         "อารมณ์แรง"
       ],
@@ -30,7 +46,7 @@
       "views": 1221,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 429.7,
+      "views_per_day": 429.1,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
@@ -43,10 +59,10 @@
       "title": "หนุ่มใหญ่ซื้อข้าวไหม้ก้นหม้อสองร้อยทุกวัน ความจริงทำแม่ค้าร้องไห้",
       "published": "2026-10-08T12:33:57Z",
       "privacy": "public",
-      "views": 1749,
+      "views": 1747,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 455.6,
+      "views_per_day": 454.6,
       "like_rate": 1.6,
       "traits": [
         "คำถาม",
@@ -62,7 +78,7 @@
       "views": 1598,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 310.6,
+      "views_per_day": 310.4,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
@@ -147,24 +163,8 @@
       "like_rate": 0.0,
       "traits": [],
       "days": 25.1
-    },
-    {
-      "id": "Lip4vEyuFa8",
-      "title": "ลุงจ้างช่างปล่อยลมยางจักรยานทุกวัน รู้เหตุผลแล้วน้ำตาซึม",
-      "published": "2026-10-12T08:42:04Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [
-        "ความถี่",
-        "อารมณ์แรง"
-      ],
-      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-12T08:42:14+00:00"
+  "fetched_at": "2026-10-12T08:47:54+00:00"
 }
