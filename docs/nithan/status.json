@@ -1,6 +1,21 @@
 {
-  "updated_at": "2026-10-11T15:15:24+00:00",
+  "updated_at": "2026-10-12T08:42:13+00:00",
   "runs": [
+    {
+      "ok": true,
+      "title": "ลุงจ้างช่างปล่อยลมยางจักรยานทุกวัน รู้เหตุผลแล้วน้ำตาซึม",
+      "premise": "ช่างซ่อมจักรยานหนุ่มสงสัยว่าทำไมชายชราถึงยอมจ่ายเงินให้เขาปล่อยลมยางจักรยานทุกวัน จนกระทั่งแอบตามไปจึงพบความจริงสุดอบอุ่นหัวใจ",
+      "video_id": "Lip4vEyuFa8",
+      "seconds": 491,
+      "writer": "gemini",
+      "animated": 6,
+      "scenes": 6,
+      "backends": {
+        "huggingface": 6
+      },
+      "voice": "pollinations",
+      "at": "2026-10-12T08:42:13+00:00"
+    },
     {
       "ok": false,
       "error": "RuntimeError: พากย์เสียงไม่สำเร็จทุกตัว:\n  edge-tts: RuntimeError: ลอง 3 ครั้งแล้วยังไม่ได้: No audio was received. Please verify that your parameters are correct.\n  pollinations: HTTPError: 400 Client Error: Bad Request for url: https://gen.pollinations.ai/v1/audio/speech\n  gtts: ModuleNotFoundError: No module named 'gtts'",

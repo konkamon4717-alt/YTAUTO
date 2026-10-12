@@ -4,7 +4,7 @@
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
     "subscribers": 15,
     "views": 7733,
-    "videos": 8
+    "videos": 9
   },
   "videos": [
     {
@@ -12,15 +12,15 @@
       "title": "สาวสวยจ้างช่างตัดเสื้อให้ขาดทุกอาทิตย์ รู้เหตุผลแล้วพูดไม่ออก",
       "published": "2026-10-10T12:27:20Z",
       "privacy": "public",
-      "views": 1327,
+      "views": 1316,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 905.6,
-      "like_rate": 1.81,
+      "views_per_day": 713.8,
+      "like_rate": 1.82,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 1.5
+      "days": 1.8
     },
     {
       "id": "pZi7FJyHjEY",
@@ -30,29 +30,29 @@
       "views": 1221,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 495.6,
+      "views_per_day": 429.7,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 2.5
+      "days": 2.8
     },
     {
       "id": "ZQpvIsa0c8A",
       "title": "หนุ่มใหญ่ซื้อข้าวไหม้ก้นหม้อสองร้อยทุกวัน ความจริงทำแม่ค้าร้องไห้",
       "published": "2026-10-08T12:33:57Z",
       "privacy": "public",
-      "views": 1738,
+      "views": 1749,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 502.2,
-      "like_rate": 1.61,
+      "views_per_day": 455.6,
+      "like_rate": 1.6,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 3.5
+      "days": 3.8
     },
     {
       "id": "hyfmbTfZqBg",
@@ -62,13 +62,13 @@
       "views": 1598,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 335.3,
+      "views_per_day": 310.6,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 4.8
+      "days": 5.1
     },
     {
       "id": "8-Zy5rZlH00",
@@ -84,7 +84,7 @@
         "คำถาม",
         "ความถี่"
       ],
-      "days": 20.9
+      "days": 21.3
     },
     {
       "id": "klm0ozmRhsE",
@@ -100,7 +100,7 @@
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 23.8
+      "days": 24.2
     },
     {
       "id": "uxeId4AUBLI",
@@ -110,14 +110,14 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 49.0,
+      "views_per_day": 48.2,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 23.8
+      "days": 24.2
     },
     {
       "id": "L52UHMV1E0g",
@@ -127,13 +127,13 @@
       "views": 630,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 25.6,
+      "views_per_day": 25.2,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
         "ความลับ"
       ],
-      "days": 24.6
+      "days": 25.0
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -146,9 +146,25 @@
       "views_per_day": 0.2,
       "like_rate": 0.0,
       "traits": [],
-      "days": 24.7
+      "days": 25.1
+    },
+    {
+      "id": "Lip4vEyuFa8",
+      "title": "ลุงจ้างช่างปล่อยลมยางจักรยานทุกวัน รู้เหตุผลแล้วน้ำตาซึม",
+      "published": "2026-10-12T08:42:04Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [
+        "ความถี่",
+        "อารมณ์แรง"
+      ],
+      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-11T23:37:28+00:00"
+  "fetched_at": "2026-10-12T08:42:14+00:00"
 }
