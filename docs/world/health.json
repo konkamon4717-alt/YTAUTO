@@ -1,0 +1,49 @@
+{
+  "channel": "world",
+  "checked_at": "2026-10-12T23:38:59+00:00",
+  "healthy": true,
+  "checks": [
+    {
+      "name": "youtube",
+      "ok": true,
+      "essential": true,
+      "detail": "รอบรู้ 1นาที | ผู้ติดตาม 32 | คลิป 3",
+      "ms": 767
+    },
+    {
+      "name": "pollinations",
+      "ok": true,
+      "essential": true,
+      "detail": "341 โมเดล | รุ่นภาพที่ตั้งไว้ยังอยู่ครบ",
+      "ms": 111
+    },
+    {
+      "name": "edge-tts",
+      "ok": false,
+      "essential": false,
+      "detail": "WSServerHandshakeError: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&Con",
+      "ms": 441
+    },
+    {
+      "name": "gemini",
+      "ok": true,
+      "essential": false,
+      "detail": "ใช้ได้ 4/4 รุ่น | ตัวแรก gemini-3.8-flash",
+      "ms": 113
+    },
+    {
+      "name": "kaggle",
+      "ok": true,
+      "essential": false,
+      "detail": "เชื่อมต่อได้",
+      "ms": 859
+    },
+    {
+      "name": "huggingface",
+      "ok": true,
+      "essential": false,
+      "detail": "zerogpu-aoti/wan2-2-fp8da-aoti-faster กำลังทำงาน",
+      "ms": 60
+    }
+  ]
+}
