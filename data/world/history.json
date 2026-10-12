@@ -86,6 +86,19 @@
       "backends": {},
       "voice": "pollinations",
       "at": "2026-10-12T08:57:32+00:00"
+    },
+    {
+      "ok": true,
+      "title": "ดินแดนที่ฟ้าผ่าไม่เคยหยุดพักมานานนับร้อยปี",
+      "premise": "Explaining the fact that lightning strikes in Catatumbo, Venezuela happen so frequently they serve as a natural lighthouse for ships.",
+      "video_id": null,
+      "seconds": 1077,
+      "writer": "gemini",
+      "animated": 0,
+      "scenes": 6,
+      "backends": {},
+      "voice": "gtts",
+      "at": "2026-10-12T09:58:24+00:00"
     }
   ],
   "premises": [
@@ -97,6 +110,7 @@
     "จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
     "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
     "จุดนีโม ที่ซึ่งมนุษย์ที่อยู่ใกล้คุณที่สุด... อยู่บนอวกาศ",
-    "สารคดีสั้นเกี่ยวกับปรากฏการณ์สายฟ้าคาตาทุมโบ บริเวณทะเลสาบมาราไกโบ ประเทศเวเนซุเอลา ดินแดนที่มีฟ้าผ่าผ่าลงมาต่อเนื่องยาวนานหลายสิบชั่วโมงทุกคืนจนกลายเป็นประภาคารธรรมชาติ"
+    "สารคดีสั้นเกี่ยวกับปรากฏการณ์สายฟ้าคาตาทุมโบ บริเวณทะเลสาบมาราไกโบ ประเทศเวเนซุเอลา ดินแดนที่มีฟ้าผ่าผ่าลงมาต่อเนื่องยาวนานหลายสิบชั่วโมงทุกคืนจนกลายเป็นประภาคารธรรมชาติ",
+    "Explaining the fact that lightning strikes in Catatumbo, Venezuela happen so frequently they serve as a natural lighthouse for ships."
   ]
 }
