@@ -3,10 +3,25 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 28,
-    "views": 9464,
+    "views": 9463,
     "videos": 3
   },
   "videos": [
+    {
+      "id": "GFIe9yZhPYg",
+      "title": "สถานที่ที่มีฟ้าผ่ามากที่สุดในโลก นานสิบชั่วโมงติดต่อกันทุกคืน",
+      "published": "2026-10-12T08:57:55Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [
+        "ความถี่"
+      ],
+      "days": 0.2
+    },
     {
       "id": "plEJBPKtWvs",
       "title": "จุดนีโม ที่ซึ่งมนุษย์ที่อยู่ใกล้คุณที่สุด... อยู่บนอวกาศ",
@@ -15,7 +30,7 @@
       "views": 1281,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 1741.0,
+      "views_per_day": 1723.3,
       "like_rate": 2.73,
       "traits": [],
       "days": 0.7
@@ -28,7 +43,7 @@
       "views": 887,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 1112.6,
+      "views_per_day": 1102.1,
       "like_rate": 2.48,
       "traits": [],
       "days": 0.8
@@ -41,7 +56,7 @@
       "views": 1360,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 1590.7,
+      "views_per_day": 1576.8,
       "like_rate": 2.57,
       "traits": [],
       "days": 0.9
@@ -51,10 +66,10 @@
       "title": "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
       "published": "2026-10-10T15:12:30Z",
       "privacy": "public",
-      "views": 1912,
+      "views": 1911,
       "likes": 53,
       "comments": 0,
-      "views_per_day": 1099.1,
+      "views_per_day": 1093.8,
       "like_rate": 2.77,
       "traits": [],
       "days": 1.7
@@ -67,7 +82,7 @@
       "views": 1452,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 809.3,
+      "views_per_day": 805.9,
       "like_rate": 1.79,
       "traits": [],
       "days": 1.8
@@ -80,7 +95,7 @@
       "views": 1286,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 694.2,
+      "views_per_day": 691.4,
       "like_rate": 2.26,
       "traits": [],
       "days": 1.9
@@ -93,29 +108,14 @@
       "views": 1286,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 425.7,
+      "views_per_day": 424.7,
       "like_rate": 2.57,
       "traits": [
         "ความขัดแย้ง"
       ],
       "days": 3.0
-    },
-    {
-      "id": "GFIe9yZhPYg",
-      "title": "สถานที่ที่มีฟ้าผ่ามากที่สุดในโลก นานสิบชั่วโมงติดต่อกันทุกคืน",
-      "published": "2026-10-12T08:57:25Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [
-        "ความถี่"
-      ],
-      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-12T08:57:33+00:00"
+  "fetched_at": "2026-10-12T09:08:26+00:00"
 }
