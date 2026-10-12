@@ -2,8 +2,8 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 28,
-    "views": 9465,
+    "subscribers": 30,
+    "views": 9855,
     "videos": 3
   },
   "videos": [
@@ -12,11 +12,11 @@
       "title": "สถานที่ที่มีฟ้าผ่ามากที่สุดในโลก นานสิบชั่วโมงติดต่อกันทุกคืน",
       "published": "2026-10-12T08:57:55Z",
       "privacy": "public",
-      "views": 1,
-      "likes": 0,
+      "views": 360,
+      "likes": 16,
       "comments": 0,
-      "views_per_day": 4.0,
-      "like_rate": 0.0,
+      "views_per_day": 1440.0,
+      "like_rate": 4.44,
       "traits": [
         "ความถี่"
       ],
@@ -30,10 +30,10 @@
       "views": 1281,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 1646.4,
+      "views_per_day": 1442.8,
       "like_rate": 2.73,
       "traits": [],
-      "days": 0.8
+      "days": 0.9
     },
     {
       "id": "cSsiwc7jZo0",
@@ -43,62 +43,62 @@
       "views": 887,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 1056.6,
+      "views_per_day": 934.4,
       "like_rate": 2.48,
       "traits": [],
-      "days": 0.8
+      "days": 0.9
     },
     {
       "id": "964pejBlN0E",
       "title": "จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
       "published": "2026-10-11T12:26:24Z",
       "privacy": "private",
-      "views": 1360,
+      "views": 1368,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 1515.8,
-      "like_rate": 2.57,
+      "views_per_day": 1358.4,
+      "like_rate": 2.56,
       "traits": [],
-      "days": 0.9
+      "days": 1.0
     },
     {
       "id": "0iK9FQvX5Qg",
       "title": "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
       "published": "2026-10-10T15:12:30Z",
       "privacy": "public",
-      "views": 1912,
+      "views": 1927,
       "likes": 53,
       "comments": 0,
-      "views_per_day": 1073.0,
-      "like_rate": 2.77,
+      "views_per_day": 1018.7,
+      "like_rate": 2.75,
       "traits": [],
-      "days": 1.8
+      "days": 1.9
     },
     {
       "id": "urz_NtM6hEA",
       "title": "จุดที่ห่างไกลที่สุดบนโลก มนุษย์อวกาศยังอยู่ใกล้กว่าคนบนพื้นดิน",
       "published": "2026-10-10T13:53:57Z",
       "privacy": "private",
-      "views": 1452,
+      "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 790.7,
+      "views_per_day": 747.6,
       "like_rate": 1.79,
       "traits": [],
-      "days": 1.8
+      "days": 1.9
     },
     {
       "id": "DbLMjGhbHxk",
       "title": "จุดบนโลกที่มนุษย์ที่ใกล้ที่สุด อยู่บนสถานีอวกาศ",
       "published": "2026-10-10T12:29:57Z",
       "privacy": "private",
-      "views": 1286,
+      "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 678.7,
-      "like_rate": 2.26,
+      "views_per_day": 644.0,
+      "like_rate": 2.25,
       "traits": [],
-      "days": 1.9
+      "days": 2.0
     },
     {
       "id": "23eSKkHi5XY",
@@ -108,14 +108,14 @@
       "views": 1286,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 419.8,
+      "views_per_day": 405.3,
       "like_rate": 2.57,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 3.1
+      "days": 3.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-12T09:58:25+00:00"
+  "fetched_at": "2026-10-12T12:36:32+00:00"
 }
