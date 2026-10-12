@@ -3,7 +3,7 @@
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
     "subscribers": 19,
-    "views": 9016,
+    "views": 9057,
     "videos": 9
   },
   "videos": [
@@ -12,16 +12,16 @@
       "title": "ลุงจ้างช่างปล่อยลมยางจักรยานทุกวัน รู้เหตุผลแล้วน้ำตาซึม",
       "published": "2026-10-12T08:42:26Z",
       "privacy": "public",
-      "views": 1267,
-      "likes": 30,
+      "views": 1308,
+      "likes": 29,
       "comments": 0,
-      "views_per_day": 5068.0,
-      "like_rate": 2.37,
+      "views_per_day": 4794.2,
+      "like_rate": 2.22,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 0.2
+      "days": 0.3
     },
     {
       "id": "SsMdCbnHpvM",
@@ -31,7 +31,7 @@
       "views": 1327,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 642.7,
+      "views_per_day": 626.9,
       "like_rate": 1.81,
       "traits": [
         "อารมณ์แรง"
@@ -46,7 +46,7 @@
       "views": 1222,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 399.0,
+      "views_per_day": 392.3,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
@@ -62,7 +62,7 @@
       "views": 1753,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 431.8,
+      "views_per_day": 426.3,
       "like_rate": 1.6,
       "traits": [
         "คำถาม",
@@ -78,7 +78,7 @@
       "views": 1598,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 297.9,
+      "views_per_day": 295.0,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
@@ -100,7 +100,7 @@
         "คำถาม",
         "ความถี่"
       ],
-      "days": 21.5
+      "days": 21.6
     },
     {
       "id": "klm0ozmRhsE",
@@ -126,7 +126,7 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 47.8,
+      "views_per_day": 47.7,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
@@ -143,13 +143,13 @@
       "views": 630,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 25.0,
+      "views_per_day": 24.9,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
         "ความลับ"
       ],
-      "days": 25.2
+      "days": 25.3
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -162,9 +162,9 @@
       "views_per_day": 0.2,
       "like_rate": 0.0,
       "traits": [],
-      "days": 25.3
+      "days": 25.4
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-12T14:00:18+00:00"
+  "fetched_at": "2026-10-12T15:15:18+00:00"
 }
