@@ -1,49 +1,49 @@
 {
   "channel": "nithan",
-  "checked_at": "2026-10-12T09:10:37+00:00",
+  "checked_at": "2026-10-12T23:38:33+00:00",
   "healthy": true,
   "checks": [
     {
       "name": "youtube",
       "ok": true,
       "essential": true,
-      "detail": "nithan1min | ผู้ติดตาม 15 | คลิป 9",
-      "ms": 2901
+      "detail": "nithan1min | ผู้ติดตาม 20 | คลิป 9",
+      "ms": 714
     },
     {
       "name": "pollinations",
       "ok": true,
       "essential": true,
-      "detail": "338 โมเดล | รุ่นภาพที่ตั้งไว้ยังอยู่ครบ",
-      "ms": 782
+      "detail": "341 โมเดล | รุ่นภาพที่ตั้งไว้ยังอยู่ครบ",
+      "ms": 124
     },
     {
       "name": "edge-tts",
-      "ok": true,
+      "ok": false,
       "essential": false,
-      "detail": "th-TH-PremwadeeNeural พากย์ได้จริง (11,232 ไบต์)",
-      "ms": 2645
+      "detail": "WSServerHandshakeError: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&Con",
+      "ms": 348
     },
     {
       "name": "gemini",
       "ok": true,
       "essential": false,
       "detail": "ใช้ได้ 4/4 รุ่น | ตัวแรก gemini-3.8-flash",
-      "ms": 278
+      "ms": 112
     },
     {
       "name": "kaggle",
       "ok": true,
       "essential": false,
       "detail": "เชื่อมต่อได้",
-      "ms": 5517
+      "ms": 701
     },
     {
       "name": "huggingface",
       "ok": true,
       "essential": false,
       "detail": "zerogpu-aoti/wan2-2-fp8da-aoti-faster กำลังทำงาน",
-      "ms": 360
+      "ms": 60
     }
   ]
 }
