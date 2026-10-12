@@ -107,8 +107,9 @@ def make_video(cfg: dict, work: Path, story: dict | None = None) -> tuple[Path, 
                 source=scene["narration"],
             )
         else:
-            # ตัวสำรองพากย์ทีละวรรคอยู่แล้ว แต่ละวรรคจึงเป็นบรรทัดซับได้เลย
-            lines = spoken["segments"]
+            # ตัวสำรองบอกแค่เวลาเริ่มจบของแต่ละวรรค ต้องซอยเป็นบรรทัดเองไม่งั้นล้นจอ
+            lines = subtitles.from_phrases(
+                spoken["segments"], cfg["subtitles"]["max_chars_per_line"])
 
         for line in lines:
             scene_lines.append({**line,
@@ -172,7 +173,8 @@ def make_video(cfg: dict, work: Path, story: dict | None = None) -> tuple[Path, 
                      outro_spoken["segments"], cfg["subtitles"]["max_chars_per_line"],
                      source=closing)
                  if outro_spoken["granularity"] == "word"
-                 else outro_spoken["segments"])
+                 else subtitles.from_phrases(
+                     outro_spoken["segments"], cfg["subtitles"]["max_chars_per_line"]))
         for line in lines:
             scene_lines.append({**line,
                                 "start": line["start"] + offset,

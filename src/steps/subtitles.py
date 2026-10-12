@@ -114,6 +114,83 @@ def group_words(words: list[dict], max_chars: int, source: str | None = None) ->
     return [line for line in lines if line["text"]]
 
 
+# ---------- โหมดสำรอง: มีแค่เวลาเริ่มจบของทั้งวรรค ----------
+
+def _words(text: str) -> list[str]:
+    """แบ่งข้อความไทยเป็นคำ
+
+    ภาษาไทยไม่มีช่องว่างระหว่างคำ การเดาจุดตัดจากจำนวนตัวอักษรจึงตัดกลางคำ
+    ได้ง่ายมาก เคยได้ "ไม่อ" ท้ายบรรทัดแล้ว "ยู่" ขึ้นบรรทัดใหม่ ซึ่งอ่านสะดุด
+
+    pythainlp รู้ขอบเขตคำจริง ถ้าไม่มีก็ถอยไปซอยตามตัวอักษรแทน
+    เพราะซับที่ตัดคำไม่สวยยังดีกว่าคลิปที่ไม่มีซับ
+    """
+    try:
+        from pythainlp.tokenize import word_tokenize
+    except ImportError:
+        return [text[i:i + 6] for i in range(0, len(text), 6)]
+
+    # ช่องว่างในบทคือจังหวะหยุดที่คนเขียนตั้งใจไว้ ทิ้งไปแล้วประโยคจะติดกันหมด
+    # เอาไปต่อท้ายคำก่อนหน้าแทน จะได้ยังเป็นจุดตัดบรรทัดที่ดีอยู่
+    out: list[str] = []
+    for token in word_tokenize(text, engine="newmm"):
+        if token.strip():
+            out.append(token)
+        elif out:
+            out[-1] += " "
+    return out
+
+
+def _chunks(text: str, max_chars: int) -> list[str]:
+    """ซอยข้อความให้พอดีจอ โดยเกลี่ยให้ทุกบรรทัดยาวใกล้เคียงกัน
+
+    คำนวณจำนวนบรรทัดก่อนแล้วค่อยเกลี่ย ไม่ใช่เติมจนเต็มแล้วขึ้นบรรทัดใหม่
+    เพราะวิธีหลังทำให้บรรทัดสุดท้ายเหลือคำเดียวโดด ๆ อยู่ไม่ถึงครึ่งวินาที
+    """
+    text = text.strip()
+    if len(text) <= max_chars * OVERFLOW_SLACK:
+        return [text]
+
+    words = _words(text)
+    count = max(1, min(-(-len(text) // max_chars), len(words)))
+
+    lines, rest = [], list(words)
+    for remaining in range(count, 0, -1):
+        if remaining == 1:
+            lines.append("".join(rest))
+            break
+        target = sum(len(w) for w in rest) / remaining
+        taken, length = [], 0
+        while rest and (not taken or length + len(rest[0]) / 2 <= target):
+            taken.append(rest.pop(0))
+            length += len(taken[-1])
+        lines.append("".join(taken))
+    return [line.strip() for line in lines if line.strip()]
+
+
+def from_phrases(segments: list[dict], max_chars: int) -> list[dict]:
+    """ทำบรรทัดซับจากวรรคที่รู้แค่เวลาเริ่มกับจบ
+
+    ตัวพากย์สำรองไม่บอกจังหวะรายคำ ให้มาแค่ว่าแต่ละวรรคเริ่มและจบเมื่อไหร่
+    ถ้าเอาทั้งวรรคเป็นบรรทัดเดียวจะยาวล้นจอเวลาวรรคนั้นยาว
+
+    จึงซอยเป็นบรรทัดแล้วเกลี่ยเวลาตามจำนวนตัวอักษร ซึ่งเป็นการประมาณ
+    แต่แม่นพอ เพราะวรรคหนึ่งยาวแค่ไม่กี่วินาทีและคนพูดด้วยจังหวะใกล้เคียงกัน
+    ภายในวรรคเดียว คลาดเคลื่อนระดับเศษส่วนวินาทีซึ่งตาไม่ทันอยู่แล้ว
+    """
+    lines: list[dict] = []
+    for seg in segments:
+        pieces = _chunks(seg["text"], max_chars)
+        total = sum(len(p) for p in pieces) or 1
+        span = seg["end"] - seg["start"]
+        at = seg["start"]
+        for piece in pieces:
+            width = span * len(piece) / total
+            lines.append({"text": piece, "start": at, "end": at + width})
+            at += width
+    return [line for line in lines if line["text"]]
+
+
 def write_ass(lines: list[dict], out_path, cfg: dict) -> None:
     sub = cfg["subtitles"]
     body = HEADER.format(
