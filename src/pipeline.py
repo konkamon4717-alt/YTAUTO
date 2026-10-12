@@ -67,6 +67,14 @@ def _build_clips(scenes: list[dict], stills: list[Path], durations: list[float],
                                      "backends": dict(animator.used)}
 
 
+class TooLong(RuntimeError):
+    """บทยาวเกินเพดาน — แก้ได้ด้วยการเขียนใหม่ให้สั้นลง ไม่ใช่ความผิดพลาดถาวร"""
+
+    def __init__(self, message: str, seconds: float):
+        super().__init__(message)
+        self.seconds = seconds
+
+
 def make_video(cfg: dict, work: Path, story: dict | None = None) -> tuple[Path, dict, dict]:
     work.mkdir(parents=True, exist_ok=True)
 
@@ -128,9 +136,8 @@ def make_video(cfg: dict, work: Path, story: dict | None = None) -> tuple[Path, 
           + (f" (เรื่อง {total - outro_seconds:.1f} + ปิดท้าย {outro_seconds:.1f})"
              if closing else ""))
     if total > cfg["video"]["hard_max_seconds"]:
-        raise RuntimeError(
-            f"ยาวเกิน ({total:.1f}s > {cfg['video']['hard_max_seconds']}s) — ทิ้งรอบนี้แล้วให้ไปคิดใหม่"
-        )
+        raise TooLong(
+            f"ยาวเกิน ({total:.1f}s > {cfg['video']['hard_max_seconds']}s)", total)
 
     scenes = story["scenes"]
 
@@ -219,7 +226,25 @@ def run_once(cfg: dict, upload_enabled: bool, story: dict | None = None) -> dict
     started = time.time()
 
     try:
-        final, story, anim_stats = make_video(cfg, work, story)
+        # บทยาวเกินไม่ใช่ความผิดพลาดถาวร แค่ขอใหม่ให้สั้นลงก็จบ
+        # ของเดิมทิ้งทั้งรอบทันที วันนั้นจึงไม่มีคลิปเลยทั้งที่เนื้อหาไม่มีอะไรผิด
+        # ยิ่งตัวพากย์สำรองพูดช้ากว่าตัวหลัก โอกาสชนเพดานยิ่งสูง
+        attempt_cfg = cfg
+        for attempt in range(LENGTH_RETRIES):
+            try:
+                final, story, anim_stats = make_video(attempt_cfg, work, story)
+                break
+            except TooLong as exc:
+                if attempt == LENGTH_RETRIES - 1 or story is not None:
+                    raise
+                shrink = cfg["video"]["hard_max_seconds"] / exc.seconds * 0.85
+                attempt_cfg = {**cfg, "video": {
+                    **cfg["video"],
+                    "target_seconds": max(20, round(
+                        attempt_cfg["video"]["target_seconds"] * shrink)),
+                }}
+                print(f"      {exc} — ขอใหม่ให้สั้นลงเหลือเป้า "
+                      f"{attempt_cfg['video']['target_seconds']} วินาที")
 
         video_id = None
         if upload_enabled:
@@ -294,6 +319,11 @@ def _published_today() -> bool:
         print(f"      เช็ครายการบนช่องไม่ได้ ({type(exc).__name__}) ใช้ประวัติในไฟล์แทน")
 
     return False
+
+
+# ขอบทใหม่ได้สามครั้งก่อนยอมแพ้ แต่ละครั้งใช้เวลาไม่กี่สิบวินาที
+# ถูกกว่าการเสียคลิปทั้งวันไปมาก
+LENGTH_RETRIES = 3
 
 
 def _keep_work() -> bool:
