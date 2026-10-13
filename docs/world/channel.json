@@ -3,10 +3,23 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 32,
-    "views": 10722,
+    "views": 10731,
     "videos": 4
   },
   "videos": [
+    {
+      "id": "qCzjRnxtojM",
+      "title": "น้ำตกสีแดงสดปานเลือด ที่ไหลออกมาจากใต้ธารน้ำแข็งแอนตาร์กติกา",
+      "published": "2026-10-13T12:43:28Z",
+      "privacy": "public",
+      "views": 9,
+      "likes": 3,
+      "comments": 0,
+      "views_per_day": 36.0,
+      "like_rate": 33.33,
+      "traits": [],
+      "days": 0.2
+    },
     {
       "id": "GFIe9yZhPYg",
       "title": "สถานที่ที่มีฟ้าผ่ามากที่สุดในโลก นานสิบชั่วโมงติดต่อกันทุกคืน",
@@ -15,7 +28,7 @@
       "views": 1182,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 1022.2,
+      "views_per_day": 980.1,
       "like_rate": 2.88,
       "traits": [
         "ความถี่"
@@ -30,7 +43,7 @@
       "views": 1277,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 674.8,
+      "views_per_day": 657.6,
       "like_rate": 2.74,
       "traits": [],
       "days": 1.9
@@ -43,7 +56,7 @@
       "views": 876,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 448.3,
+      "views_per_day": 437.2,
       "like_rate": 2.51,
       "traits": [],
       "days": 2.0
@@ -56,10 +69,10 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 677.1,
+      "views_per_day": 660.8,
       "like_rate": 2.57,
       "traits": [],
-      "days": 2.0
+      "days": 2.1
     },
     {
       "id": "0iK9FQvX5Qg",
@@ -69,7 +82,7 @@
       "views": 1994,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 688.5,
+      "views_per_day": 676.9,
       "like_rate": 2.71,
       "traits": [],
       "days": 2.9
@@ -82,7 +95,7 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 493.1,
+      "views_per_day": 484.9,
       "like_rate": 1.79,
       "traits": [],
       "days": 3.0
@@ -95,10 +108,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 429.0,
+      "views_per_day": 422.1,
       "like_rate": 2.25,
       "traits": [],
-      "days": 3.0
+      "days": 3.1
     },
     {
       "id": "23eSKkHi5XY",
@@ -108,27 +121,14 @@
       "views": 1285,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 307.6,
+      "views_per_day": 304.0,
       "like_rate": 2.57,
       "traits": [
         "ความขัดแย้ง"
       ],
       "days": 4.2
-    },
-    {
-      "id": "qCzjRnxtojM",
-      "title": "น้ำตกสีแดงสดปานเลือด ที่ไหลออกมาจากใต้ธารน้ำแข็งแอนตาร์กติกา",
-      "published": "2026-10-13T12:42:56Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [],
-      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-13T12:43:06+00:00"
+  "fetched_at": "2026-10-13T13:54:31+00:00"
 }
