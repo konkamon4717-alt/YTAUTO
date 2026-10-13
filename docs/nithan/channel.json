@@ -3,14 +3,14 @@
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
     "subscribers": 21,
-    "views": 9318,
+    "views": 9358,
     "videos": 10
   },
   "videos": [
     {
       "id": "5-h7FboaP0c",
       "title": "ตาจ้างช่างติดเหล็กใต้รองเท้าทุกอาทิตย์ รู้เหตุผลแล้วจุกอก",
-      "published": "2026-10-13T12:36:03Z",
+      "published": "2026-10-13T12:36:23Z",
       "privacy": "public",
       "views": 0,
       "likes": 0,
@@ -25,11 +25,11 @@
       "title": "ลุงจ้างช่างปล่อยลมยางจักรยานทุกวัน รู้เหตุผลแล้วน้ำตาซึม",
       "published": "2026-10-12T08:42:26Z",
       "privacy": "public",
-      "views": 1564,
-      "likes": 38,
+      "views": 1600,
+      "likes": 41,
       "comments": 0,
-      "views_per_day": 1345.5,
-      "like_rate": 2.43,
+      "views_per_day": 1315.6,
+      "like_rate": 2.56,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
@@ -41,15 +41,15 @@
       "title": "สาวสวยจ้างช่างตัดเสื้อให้ขาดทุกอาทิตย์ รู้เหตุผลแล้วพูดไม่ออก",
       "published": "2026-10-10T12:27:20Z",
       "privacy": "public",
-      "views": 1333,
+      "views": 1337,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 443.4,
+      "views_per_day": 436.9,
       "like_rate": 1.8,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 3.0
+      "days": 3.1
     },
     {
       "id": "pZi7FJyHjEY",
@@ -59,13 +59,13 @@
       "views": 1222,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 305.2,
+      "views_per_day": 301.1,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 4.0
+      "days": 4.1
     },
     {
       "id": "ZQpvIsa0c8A",
@@ -75,13 +75,13 @@
       "views": 1751,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 350.1,
+      "views_per_day": 346.4,
       "like_rate": 1.6,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 5.0
+      "days": 5.1
     },
     {
       "id": "hyfmbTfZqBg",
@@ -91,13 +91,13 @@
       "views": 1599,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 253.5,
+      "views_per_day": 251.4,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 6.3
+      "days": 6.4
     },
     {
       "id": "8-Zy5rZlH00",
@@ -129,7 +129,7 @@
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 25.3
+      "days": 25.4
     },
     {
       "id": "uxeId4AUBLI",
@@ -139,14 +139,14 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 46.0,
+      "views_per_day": 45.9,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 25.3
+      "days": 25.4
     },
     {
       "id": "L52UHMV1E0g",
@@ -156,13 +156,13 @@
       "views": 630,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 24.1,
+      "views_per_day": 24.0,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
         "ความลับ"
       ],
-      "days": 26.1
+      "days": 26.2
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -175,9 +175,9 @@
       "views_per_day": 0.2,
       "like_rate": 0.0,
       "traits": [],
-      "days": 26.2
+      "days": 26.3
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-13T12:36:13+00:00"
+  "fetched_at": "2026-10-13T13:53:46+00:00"
 }
