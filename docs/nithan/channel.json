@@ -2,41 +2,54 @@
   "channel": {
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
-    "subscribers": 20,
-    "views": 9129,
-    "videos": 9
+    "subscribers": 21,
+    "views": 9318,
+    "videos": 10
   },
   "videos": [
+    {
+      "id": "5-h7FboaP0c",
+      "title": "ตาจ้างช่างติดเหล็กใต้รองเท้าทุกอาทิตย์ รู้เหตุผลแล้วจุกอก",
+      "published": "2026-10-13T12:36:03Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
+    },
     {
       "id": "Lip4vEyuFa8",
       "title": "ลุงจ้างช่างปล่อยลมยางจักรยานทุกวัน รู้เหตุผลแล้วน้ำตาซึม",
       "published": "2026-10-12T08:42:26Z",
       "privacy": "public",
-      "views": 1380,
-      "likes": 31,
+      "views": 1564,
+      "likes": 38,
       "comments": 0,
-      "views_per_day": 2217.5,
-      "like_rate": 2.25,
+      "views_per_day": 1345.5,
+      "like_rate": 2.43,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 0.6
+      "days": 1.2
     },
     {
       "id": "SsMdCbnHpvM",
       "title": "สาวสวยจ้างช่างตัดเสื้อให้ขาดทุกอาทิตย์ รู้เหตุผลแล้วพูดไม่ออก",
       "published": "2026-10-10T12:27:20Z",
       "privacy": "public",
-      "views": 1327,
+      "views": 1333,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 538.1,
-      "like_rate": 1.81,
+      "views_per_day": 443.4,
+      "like_rate": 1.8,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 2.5
+      "days": 3.0
     },
     {
       "id": "pZi7FJyHjEY",
@@ -46,45 +59,45 @@
       "views": 1222,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 352.7,
+      "views_per_day": 305.2,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 3.5
+      "days": 4.0
     },
     {
       "id": "ZQpvIsa0c8A",
       "title": "หนุ่มใหญ่ซื้อข้าวไหม้ก้นหม้อสองร้อยทุกวัน ความจริงทำแม่ค้าร้องไห้",
       "published": "2026-10-08T12:33:57Z",
       "privacy": "public",
-      "views": 1753,
+      "views": 1751,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 392.9,
+      "views_per_day": 350.1,
       "like_rate": 1.6,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 4.5
+      "days": 5.0
     },
     {
       "id": "hyfmbTfZqBg",
       "title": "ป้าเอารองเท้าเด็กข้างเดียวมาซ่อมทุกเดือน ความจริงทำเอากลั้นน้ำตาไม่อยู่",
       "published": "2026-10-07T05:14:43Z",
       "privacy": "public",
-      "views": 1598,
+      "views": 1599,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 277.1,
+      "views_per_day": 253.5,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 5.8
+      "days": 6.3
     },
     {
       "id": "8-Zy5rZlH00",
@@ -100,7 +113,7 @@
         "คำถาม",
         "ความถี่"
       ],
-      "days": 21.9
+      "days": 22.5
     },
     {
       "id": "klm0ozmRhsE",
@@ -116,7 +129,7 @@
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 24.8
+      "days": 25.3
     },
     {
       "id": "uxeId4AUBLI",
@@ -126,14 +139,14 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 47.0,
+      "views_per_day": 46.0,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 24.8
+      "days": 25.3
     },
     {
       "id": "L52UHMV1E0g",
@@ -143,13 +156,13 @@
       "views": 630,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 24.6,
+      "views_per_day": 24.1,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
         "ความลับ"
       ],
-      "days": 25.6
+      "days": 26.1
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -162,9 +175,9 @@
       "views_per_day": 0.2,
       "like_rate": 0.0,
       "traits": [],
-      "days": 25.7
+      "days": 26.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-12T23:38:34+00:00"
+  "fetched_at": "2026-10-13T12:36:13+00:00"
 }

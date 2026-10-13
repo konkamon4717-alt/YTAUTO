@@ -1,6 +1,21 @@
 {
-  "updated_at": "2026-10-12T08:42:13+00:00",
+  "updated_at": "2026-10-13T12:36:12+00:00",
   "runs": [
+    {
+      "ok": true,
+      "title": "ตาจ้างช่างติดเหล็กใต้รองเท้าทุกอาทิตย์ รู้เหตุผลแล้วจุกอก",
+      "premise": "A young cobbler wonders why an elderly man pays him every week to attach heavy iron plates to his old shoes, only to discover a heartwarming secret behind the loud footsteps.",
+      "video_id": "5-h7FboaP0c",
+      "seconds": 562,
+      "writer": "gemini",
+      "animated": 6,
+      "scenes": 6,
+      "backends": {
+        "huggingface": 6
+      },
+      "voice": "gtts",
+      "at": "2026-10-13T12:36:12+00:00"
+    },
     {
       "ok": true,
       "title": "ลุงจ้างช่างปล่อยลมยางจักรยานทุกวัน รู้เหตุผลแล้วน้ำตาซึม",
