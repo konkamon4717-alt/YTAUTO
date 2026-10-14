@@ -2,8 +2,8 @@
   "channel": {
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
-    "subscribers": 29,
-    "views": 10803,
+    "subscribers": 31,
+    "views": 11099,
     "videos": 11
   },
   "videos": [
@@ -12,15 +12,15 @@
       "title": "ยายซื้อไอศกรีมทิ้งขยะทุกเที่ยงคืน รู้เหตุผลแล้วน้ำตาซึม",
       "published": "2026-10-14T12:47:10Z",
       "privacy": "public",
-      "views": 182,
-      "likes": 1,
+      "views": 469,
+      "likes": 9,
       "comments": 0,
-      "views_per_day": 728.0,
-      "like_rate": 0.55,
+      "views_per_day": 1025.6,
+      "like_rate": 1.92,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 0.2
+      "days": 0.5
     },
     {
       "id": "5-h7FboaP0c",
@@ -30,41 +30,41 @@
       "views": 1087,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 972.4,
+      "views_per_day": 742.1,
       "like_rate": 1.56,
       "traits": [],
-      "days": 1.1
+      "days": 1.5
     },
     {
       "id": "Lip4vEyuFa8",
       "title": "ลุงจ้างช่างปล่อยลมยางจักรยานทุกวัน รู้เหตุผลแล้วน้ำตาซึม",
       "published": "2026-10-12T08:42:26Z",
       "privacy": "public",
-      "views": 1761,
+      "views": 1769,
       "likes": 44,
       "comments": 0,
-      "views_per_day": 772.3,
-      "like_rate": 2.5,
+      "views_per_day": 673.3,
+      "like_rate": 2.49,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 2.3
+      "days": 2.6
     },
     {
       "id": "SsMdCbnHpvM",
       "title": "สาวสวยจ้างช่างตัดเสื้อให้ขาดทุกอาทิตย์ รู้เหตุผลแล้วพูดไม่ออก",
       "published": "2026-10-10T12:27:20Z",
       "privacy": "public",
-      "views": 1352,
+      "views": 1354,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 327.8,
-      "like_rate": 1.78,
+      "views_per_day": 302.8,
+      "like_rate": 1.77,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 4.1
+      "days": 4.5
     },
     {
       "id": "pZi7FJyHjEY",
@@ -74,29 +74,29 @@
       "views": 1222,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 238.6,
+      "views_per_day": 223.4,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 5.1
+      "days": 5.5
     },
     {
       "id": "ZQpvIsa0c8A",
       "title": "หนุ่มใหญ่ซื้อข้าวไหม้ก้นหม้อสองร้อยทุกวัน ความจริงทำแม่ค้าร้องไห้",
       "published": "2026-10-08T12:33:57Z",
       "privacy": "public",
-      "views": 1750,
+      "views": 1749,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 286.0,
+      "views_per_day": 270.5,
       "like_rate": 1.6,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 6.1
+      "days": 6.5
     },
     {
       "id": "hyfmbTfZqBg",
@@ -106,13 +106,13 @@
       "views": 1600,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 215.5,
+      "views_per_day": 205.9,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 7.4
+      "days": 7.8
     },
     {
       "id": "8-Zy5rZlH00",
@@ -128,7 +128,7 @@
         "คำถาม",
         "ความถี่"
       ],
-      "days": 23.6
+      "days": 23.9
     },
     {
       "id": "klm0ozmRhsE",
@@ -144,7 +144,7 @@
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 26.4
+      "days": 26.8
     },
     {
       "id": "uxeId4AUBLI",
@@ -154,14 +154,14 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 44.0,
+      "views_per_day": 43.5,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 26.5
+      "days": 26.8
     },
     {
       "id": "L52UHMV1E0g",
@@ -171,13 +171,13 @@
       "views": 630,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 23.1,
+      "views_per_day": 22.8,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
         "ความลับ"
       ],
-      "days": 27.3
+      "days": 27.6
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -190,9 +190,9 @@
       "views_per_day": 0.1,
       "like_rate": 0.0,
       "traits": [],
-      "days": 27.4
+      "days": 27.7
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-14T15:26:05+00:00"
+  "fetched_at": "2026-10-14T23:45:38+00:00"
 }
