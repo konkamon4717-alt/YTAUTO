@@ -8,6 +8,21 @@
   },
   "videos": [
     {
+      "id": "-3eSGZBXNu8",
+      "title": "ยายซื้อไอศกรีมทิ้งขยะทุกเที่ยงคืน รู้เหตุผลแล้วน้ำตาซึม",
+      "published": "2026-10-14T12:47:10Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [
+        "อารมณ์แรง"
+      ],
+      "days": 0.2
+    },
+    {
       "id": "5-h7FboaP0c",
       "title": "ตาจ้างช่างติดเหล็กใต้รองเท้าทุกอาทิตย์ รู้เหตุผลแล้วจุกอก",
       "published": "2026-10-13T12:36:23Z",
@@ -15,10 +30,10 @@
       "views": 1087,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 1079.0,
+      "views_per_day": 1024.6,
       "like_rate": 1.56,
       "traits": [],
-      "days": 1.0
+      "days": 1.1
     },
     {
       "id": "Lip4vEyuFa8",
@@ -28,7 +43,7 @@
       "views": 1761,
       "likes": 44,
       "comments": 0,
-      "views_per_day": 811.6,
+      "views_per_day": 792.1,
       "like_rate": 2.5,
       "traits": [
         "ความถี่",
@@ -44,12 +59,12 @@
       "views": 1352,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 336.8,
+      "views_per_day": 332.4,
       "like_rate": 1.78,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 4.0
+      "days": 4.1
     },
     {
       "id": "pZi7FJyHjEY",
@@ -59,13 +74,13 @@
       "views": 1222,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 243.8,
+      "views_per_day": 241.2,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 5.0
+      "days": 5.1
     },
     {
       "id": "ZQpvIsa0c8A",
@@ -75,13 +90,13 @@
       "views": 1750,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 291.2,
+      "views_per_day": 288.7,
       "like_rate": 1.6,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 6.0
+      "days": 6.1
     },
     {
       "id": "hyfmbTfZqBg",
@@ -91,13 +106,13 @@
       "views": 1600,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 218.8,
+      "views_per_day": 217.2,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 7.3
+      "days": 7.4
     },
     {
       "id": "8-Zy5rZlH00",
@@ -107,7 +122,7 @@
       "views": 27,
       "likes": 3,
       "comments": 0,
-      "views_per_day": 1.2,
+      "views_per_day": 1.1,
       "like_rate": 11.11,
       "traits": [
         "คำถาม",
@@ -129,7 +144,7 @@
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 26.3
+      "days": 26.4
     },
     {
       "id": "uxeId4AUBLI",
@@ -139,14 +154,14 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 44.2,
+      "views_per_day": 44.1,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 26.3
+      "days": 26.4
     },
     {
       "id": "L52UHMV1E0g",
@@ -176,23 +191,8 @@
       "like_rate": 0.0,
       "traits": [],
       "days": 27.3
-    },
-    {
-      "id": "-3eSGZBXNu8",
-      "title": "ยายซื้อไอศกรีมทิ้งขยะทุกเที่ยงคืน รู้เหตุผลแล้วน้ำตาซึม",
-      "published": "2026-10-14T12:46:51Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [
-        "อารมณ์แรง"
-      ],
-      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-14T12:47:00+00:00"
+  "fetched_at": "2026-10-14T14:04:02+00:00"
 }
