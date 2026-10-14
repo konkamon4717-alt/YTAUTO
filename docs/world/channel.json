@@ -2,8 +2,8 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 35,
-    "views": 12531,
+    "subscribers": 36,
+    "views": 13449,
     "videos": 5
   },
   "videos": [
@@ -12,41 +12,41 @@
       "title": "ภูเขาไฟที่พ่นเปลวไฟสีน้ำเงิน สว่างวาบออกมาท่ามกลางความมืด",
       "published": "2026-10-14T12:53:05Z",
       "privacy": "public",
-      "views": 393,
-      "likes": 10,
+      "views": 1282,
+      "likes": 22,
       "comments": 0,
-      "views_per_day": 1572.0,
-      "like_rate": 2.54,
+      "views_per_day": 2827.2,
+      "like_rate": 1.72,
       "traits": [],
-      "days": 0.2
+      "days": 0.5
     },
     {
       "id": "qCzjRnxtojM",
       "title": "น้ำตกสีแดงสดปานเลือด ที่ไหลออกมาจากใต้ธารน้ำแข็งแอนตาร์กติกา",
       "published": "2026-10-13T12:43:28Z",
       "privacy": "public",
-      "views": 1316,
+      "views": 1334,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 1181.8,
-      "like_rate": 3.27,
+      "views_per_day": 913.6,
+      "like_rate": 3.22,
       "traits": [],
-      "days": 1.1
+      "days": 1.5
     },
     {
       "id": "GFIe9yZhPYg",
       "title": "สถานที่ที่มีฟ้าผ่ามากที่สุดในโลก นานสิบชั่วโมงติดต่อกันทุกคืน",
       "published": "2026-10-12T08:57:55Z",
       "privacy": "public",
-      "views": 1264,
+      "views": 1266,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 556.8,
-      "like_rate": 2.77,
+      "views_per_day": 483.8,
+      "like_rate": 2.76,
       "traits": [
         "ความถี่"
       ],
-      "days": 2.3
+      "days": 2.6
     },
     {
       "id": "plEJBPKtWvs",
@@ -56,10 +56,10 @@
       "views": 1277,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 424.8,
+      "views_per_day": 380.9,
       "like_rate": 2.74,
       "traits": [],
-      "days": 3.0
+      "days": 3.4
     },
     {
       "id": "cSsiwc7jZo0",
@@ -69,10 +69,10 @@
       "views": 876,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 285.6,
+      "views_per_day": 256.6,
       "like_rate": 2.51,
       "traits": [],
-      "days": 3.1
+      "days": 3.4
     },
     {
       "id": "964pejBlN0E",
@@ -82,23 +82,23 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 435.8,
+      "views_per_day": 392.3,
       "like_rate": 2.57,
       "traits": [],
-      "days": 3.1
+      "days": 3.5
     },
     {
       "id": "0iK9FQvX5Qg",
       "title": "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
       "published": "2026-10-10T15:12:30Z",
       "privacy": "public",
-      "views": 2011,
+      "views": 2019,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 501.5,
-      "like_rate": 2.69,
+      "views_per_day": 463.4,
+      "like_rate": 2.67,
       "traits": [],
-      "days": 4.0
+      "days": 4.4
     },
     {
       "id": "urz_NtM6hEA",
@@ -108,10 +108,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 358.0,
+      "views_per_day": 329.8,
       "like_rate": 1.79,
       "traits": [],
-      "days": 4.1
+      "days": 4.4
     },
     {
       "id": "DbLMjGhbHxk",
@@ -121,27 +121,27 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 313.1,
+      "views_per_day": 288.8,
       "like_rate": 2.25,
       "traits": [],
-      "days": 4.1
+      "days": 4.5
     },
     {
       "id": "23eSKkHi5XY",
       "title": "เมืองลึกลับที่ห้ามคนตายเด็ดขาด เพราะดินแดนนี้ไม่ยอมให้ศพเน่าเปื่อย",
       "published": "2026-10-09T08:27:41Z",
       "privacy": "public",
-      "views": 1286,
+      "views": 1287,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 243.0,
-      "like_rate": 2.57,
+      "views_per_day": 228.3,
+      "like_rate": 2.56,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 5.3
+      "days": 5.6
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-14T15:26:59+00:00"
+  "fetched_at": "2026-10-14T23:46:03+00:00"
 }
