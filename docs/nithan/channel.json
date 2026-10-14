@@ -2,8 +2,8 @@
   "channel": {
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
-    "subscribers": 27,
-    "views": 10621,
+    "subscribers": 29,
+    "views": 10803,
     "videos": 11
   },
   "videos": [
@@ -12,11 +12,11 @@
       "title": "ยายซื้อไอศกรีมทิ้งขยะทุกเที่ยงคืน รู้เหตุผลแล้วน้ำตาซึม",
       "published": "2026-10-14T12:47:10Z",
       "privacy": "public",
-      "views": 0,
-      "likes": 0,
+      "views": 182,
+      "likes": 1,
       "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
+      "views_per_day": 728.0,
+      "like_rate": 0.55,
       "traits": [
         "อารมณ์แรง"
       ],
@@ -30,7 +30,7 @@
       "views": 1087,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 1024.6,
+      "views_per_day": 972.4,
       "like_rate": 1.56,
       "traits": [],
       "days": 1.1
@@ -43,13 +43,13 @@
       "views": 1761,
       "likes": 44,
       "comments": 0,
-      "views_per_day": 792.1,
+      "views_per_day": 772.3,
       "like_rate": 2.5,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 2.2
+      "days": 2.3
     },
     {
       "id": "SsMdCbnHpvM",
@@ -59,7 +59,7 @@
       "views": 1352,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 332.4,
+      "views_per_day": 327.8,
       "like_rate": 1.78,
       "traits": [
         "อารมณ์แรง"
@@ -74,7 +74,7 @@
       "views": 1222,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 241.2,
+      "views_per_day": 238.6,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
@@ -90,7 +90,7 @@
       "views": 1750,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 288.7,
+      "views_per_day": 286.0,
       "like_rate": 1.6,
       "traits": [
         "คำถาม",
@@ -106,7 +106,7 @@
       "views": 1600,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 217.2,
+      "views_per_day": 215.5,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
@@ -128,7 +128,7 @@
         "คำถาม",
         "ความถี่"
       ],
-      "days": 23.5
+      "days": 23.6
     },
     {
       "id": "klm0ozmRhsE",
@@ -154,14 +154,14 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 44.1,
+      "views_per_day": 44.0,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 26.4
+      "days": 26.5
     },
     {
       "id": "L52UHMV1E0g",
@@ -171,13 +171,13 @@
       "views": 630,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 23.2,
+      "views_per_day": 23.1,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
         "ความลับ"
       ],
-      "days": 27.2
+      "days": 27.3
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -190,9 +190,9 @@
       "views_per_day": 0.1,
       "like_rate": 0.0,
       "traits": [],
-      "days": 27.3
+      "days": 27.4
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-14T14:04:02+00:00"
+  "fetched_at": "2026-10-14T15:26:05+00:00"
 }
