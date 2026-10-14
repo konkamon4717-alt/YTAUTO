@@ -3,8 +3,8 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 34,
-    "views": 12025,
-    "videos": 4
+    "views": 12136,
+    "videos": 5
   },
   "videos": [
     {
@@ -12,28 +12,28 @@
       "title": "น้ำตกสีแดงสดปานเลือด ที่ไหลออกมาจากใต้ธารน้ำแข็งแอนตาร์กติกา",
       "published": "2026-10-13T12:43:28Z",
       "privacy": "public",
-      "views": 1289,
+      "views": 1316,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 2794.8,
-      "like_rate": 3.34,
+      "views_per_day": 1307.6,
+      "like_rate": 3.27,
       "traits": [],
-      "days": 0.5
+      "days": 1.0
     },
     {
       "id": "GFIe9yZhPYg",
       "title": "สถานที่ที่มีฟ้าผ่ามากที่สุดในโลก นานสิบชั่วโมงติดต่อกันทุกคืน",
       "published": "2026-10-12T08:57:55Z",
       "privacy": "public",
-      "views": 1186,
-      "likes": 34,
+      "views": 1264,
+      "likes": 35,
       "comments": 0,
-      "views_per_day": 733.1,
-      "like_rate": 2.87,
+      "views_per_day": 584.4,
+      "like_rate": 2.77,
       "traits": [
         "ความถี่"
       ],
-      "days": 1.6
+      "days": 2.2
     },
     {
       "id": "plEJBPKtWvs",
@@ -43,10 +43,10 @@
       "views": 1277,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 542.5,
+      "views_per_day": 440.5,
       "like_rate": 2.74,
       "traits": [],
-      "days": 2.4
+      "days": 2.9
     },
     {
       "id": "cSsiwc7jZo0",
@@ -56,10 +56,10 @@
       "views": 876,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 362.7,
+      "views_per_day": 295.9,
       "like_rate": 2.51,
       "traits": [],
-      "days": 2.4
+      "days": 3.0
     },
     {
       "id": "964pejBlN0E",
@@ -69,23 +69,23 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 550.7,
+      "views_per_day": 451.2,
       "like_rate": 2.57,
       "traits": [],
-      "days": 2.5
+      "days": 3.0
     },
     {
       "id": "0iK9FQvX5Qg",
       "title": "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
       "published": "2026-10-10T15:12:30Z",
       "privacy": "public",
-      "views": 2003,
+      "views": 2009,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 596.5,
-      "like_rate": 2.7,
+      "views_per_day": 514.7,
+      "like_rate": 2.69,
       "traits": [],
-      "days": 3.4
+      "days": 3.9
     },
     {
       "id": "urz_NtM6hEA",
@@ -95,10 +95,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 426.4,
+      "views_per_day": 367.7,
       "like_rate": 1.79,
       "traits": [],
-      "days": 3.4
+      "days": 4.0
     },
     {
       "id": "DbLMjGhbHxk",
@@ -108,10 +108,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 372.0,
+      "views_per_day": 321.5,
       "like_rate": 2.25,
       "traits": [],
-      "days": 3.5
+      "days": 4.0
     },
     {
       "id": "23eSKkHi5XY",
@@ -121,14 +121,27 @@
       "views": 1286,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 277.2,
+      "views_per_day": 248.1,
       "like_rate": 2.57,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 4.6
+      "days": 5.2
+    },
+    {
+      "id": "5yltO_ljXfQ",
+      "title": "ภูเขาไฟที่พ่นเปลวไฟสีน้ำเงิน สว่างวาบออกมาท่ามกลางความมืด",
+      "published": "2026-10-14T12:52:35Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-13T23:47:36+00:00"
+  "fetched_at": "2026-10-14T12:52:45+00:00"
 }
