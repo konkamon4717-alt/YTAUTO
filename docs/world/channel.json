@@ -2,8 +2,8 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 34,
-    "views": 12147,
+    "subscribers": 35,
+    "views": 12531,
     "videos": 5
   },
   "videos": [
@@ -12,11 +12,11 @@
       "title": "ภูเขาไฟที่พ่นเปลวไฟสีน้ำเงิน สว่างวาบออกมาท่ามกลางความมืด",
       "published": "2026-10-14T12:53:05Z",
       "privacy": "public",
-      "views": 7,
-      "likes": 0,
+      "views": 393,
+      "likes": 10,
       "comments": 0,
-      "views_per_day": 28.0,
-      "like_rate": 0.0,
+      "views_per_day": 1572.0,
+      "like_rate": 2.54,
       "traits": [],
       "days": 0.2
     },
@@ -25,11 +25,11 @@
       "title": "น้ำตกสีแดงสดปานเลือด ที่ไหลออกมาจากใต้ธารน้ำแข็งแอนตาร์กติกา",
       "published": "2026-10-13T12:43:28Z",
       "privacy": "public",
-      "views": 1317,
+      "views": 1316,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 1246.6,
-      "like_rate": 3.26,
+      "views_per_day": 1181.8,
+      "like_rate": 3.27,
       "traits": [],
       "days": 1.1
     },
@@ -41,12 +41,12 @@
       "views": 1264,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 571.1,
+      "views_per_day": 556.8,
       "like_rate": 2.77,
       "traits": [
         "ความถี่"
       ],
-      "days": 2.2
+      "days": 2.3
     },
     {
       "id": "plEJBPKtWvs",
@@ -56,10 +56,10 @@
       "views": 1277,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 433.0,
+      "views_per_day": 424.8,
       "like_rate": 2.74,
       "traits": [],
-      "days": 2.9
+      "days": 3.0
     },
     {
       "id": "cSsiwc7jZo0",
@@ -69,10 +69,10 @@
       "views": 876,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 291.0,
+      "views_per_day": 285.6,
       "like_rate": 2.51,
       "traits": [],
-      "days": 3.0
+      "days": 3.1
     },
     {
       "id": "964pejBlN0E",
@@ -82,7 +82,7 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 443.9,
+      "views_per_day": 435.8,
       "like_rate": 2.57,
       "traits": [],
       "days": 3.1
@@ -92,11 +92,11 @@
       "title": "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
       "published": "2026-10-10T15:12:30Z",
       "privacy": "public",
-      "views": 2012,
+      "views": 2011,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 509.0,
-      "like_rate": 2.68,
+      "views_per_day": 501.5,
+      "like_rate": 2.69,
       "traits": [],
       "days": 4.0
     },
@@ -108,10 +108,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 363.1,
+      "views_per_day": 358.0,
       "like_rate": 1.79,
       "traits": [],
-      "days": 4.0
+      "days": 4.1
     },
     {
       "id": "DbLMjGhbHxk",
@@ -121,7 +121,7 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 317.5,
+      "views_per_day": 313.1,
       "like_rate": 2.25,
       "traits": [],
       "days": 4.1
@@ -134,14 +134,14 @@
       "views": 1286,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 245.7,
+      "views_per_day": 243.0,
       "like_rate": 2.57,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 5.2
+      "days": 5.3
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-14T14:04:48+00:00"
+  "fetched_at": "2026-10-14T15:26:59+00:00"
 }
