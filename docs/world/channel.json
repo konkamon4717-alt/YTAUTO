@@ -3,22 +3,35 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 34,
-    "views": 12136,
+    "views": 12147,
     "videos": 5
   },
   "videos": [
+    {
+      "id": "5yltO_ljXfQ",
+      "title": "ภูเขาไฟที่พ่นเปลวไฟสีน้ำเงิน สว่างวาบออกมาท่ามกลางความมืด",
+      "published": "2026-10-14T12:53:05Z",
+      "privacy": "public",
+      "views": 7,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 28.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
+    },
     {
       "id": "qCzjRnxtojM",
       "title": "น้ำตกสีแดงสดปานเลือด ที่ไหลออกมาจากใต้ธารน้ำแข็งแอนตาร์กติกา",
       "published": "2026-10-13T12:43:28Z",
       "privacy": "public",
-      "views": 1316,
+      "views": 1317,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 1307.6,
-      "like_rate": 3.27,
+      "views_per_day": 1246.6,
+      "like_rate": 3.26,
       "traits": [],
-      "days": 1.0
+      "days": 1.1
     },
     {
       "id": "GFIe9yZhPYg",
@@ -28,7 +41,7 @@
       "views": 1264,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 584.4,
+      "views_per_day": 571.1,
       "like_rate": 2.77,
       "traits": [
         "ความถี่"
@@ -43,7 +56,7 @@
       "views": 1277,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 440.5,
+      "views_per_day": 433.0,
       "like_rate": 2.74,
       "traits": [],
       "days": 2.9
@@ -56,7 +69,7 @@
       "views": 876,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 295.9,
+      "views_per_day": 291.0,
       "like_rate": 2.51,
       "traits": [],
       "days": 3.0
@@ -69,23 +82,23 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 451.2,
+      "views_per_day": 443.9,
       "like_rate": 2.57,
       "traits": [],
-      "days": 3.0
+      "days": 3.1
     },
     {
       "id": "0iK9FQvX5Qg",
       "title": "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
       "published": "2026-10-10T15:12:30Z",
       "privacy": "public",
-      "views": 2009,
+      "views": 2012,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 514.7,
-      "like_rate": 2.69,
+      "views_per_day": 509.0,
+      "like_rate": 2.68,
       "traits": [],
-      "days": 3.9
+      "days": 4.0
     },
     {
       "id": "urz_NtM6hEA",
@@ -95,7 +108,7 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 367.7,
+      "views_per_day": 363.1,
       "like_rate": 1.79,
       "traits": [],
       "days": 4.0
@@ -108,10 +121,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 321.5,
+      "views_per_day": 317.5,
       "like_rate": 2.25,
       "traits": [],
-      "days": 4.0
+      "days": 4.1
     },
     {
       "id": "23eSKkHi5XY",
@@ -121,27 +134,14 @@
       "views": 1286,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 248.1,
+      "views_per_day": 245.7,
       "like_rate": 2.57,
       "traits": [
         "ความขัดแย้ง"
       ],
       "days": 5.2
-    },
-    {
-      "id": "5yltO_ljXfQ",
-      "title": "ภูเขาไฟที่พ่นเปลวไฟสีน้ำเงิน สว่างวาบออกมาท่ามกลางความมืด",
-      "published": "2026-10-14T12:52:35Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [],
-      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-14T12:52:45+00:00"
+  "fetched_at": "2026-10-14T14:04:48+00:00"
 }
