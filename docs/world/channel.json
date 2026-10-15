@@ -3,7 +3,7 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 36,
-    "views": 13708,
+    "views": 14685,
     "videos": 6
   },
   "videos": [
@@ -12,13 +12,13 @@
       "title": "ทะเลสาบสีแดงในแอฟริกา ที่เปลี่ยนร่างสัตว์ให้กลายเป็นหิน",
       "published": "2026-10-15T12:54:18Z",
       "privacy": "public",
-      "views": 235,
-      "likes": 8,
+      "views": 1210,
+      "likes": 24,
       "comments": 0,
-      "views_per_day": 940.0,
-      "like_rate": 3.4,
+      "views_per_day": 2672.9,
+      "like_rate": 1.98,
       "traits": [],
-      "days": 0.2
+      "days": 0.5
     },
     {
       "id": "5yltO_ljXfQ",
@@ -28,10 +28,10 @@
       "views": 1300,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 1174.0,
+      "views_per_day": 894.4,
       "like_rate": 1.69,
       "traits": [],
-      "days": 1.1
+      "days": 1.5
     },
     {
       "id": "qCzjRnxtojM",
@@ -41,25 +41,25 @@
       "views": 1340,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 633.9,
+      "views_per_day": 544.7,
       "like_rate": 3.21,
       "traits": [],
-      "days": 2.1
+      "days": 2.5
     },
     {
       "id": "GFIe9yZhPYg",
       "title": "สถานที่ที่มีฟ้าผ่ามากที่สุดในโลก นานสิบชั่วโมงติดต่อกันทุกคืน",
       "published": "2026-10-12T08:57:55Z",
       "privacy": "public",
-      "views": 1267,
+      "views": 1268,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 387.4,
+      "views_per_day": 350.6,
       "like_rate": 2.76,
       "traits": [
         "ความถี่"
       ],
-      "days": 3.3
+      "days": 3.6
     },
     {
       "id": "plEJBPKtWvs",
@@ -69,10 +69,10 @@
       "views": 1277,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 318.7,
+      "views_per_day": 293.4,
       "like_rate": 2.74,
       "traits": [],
-      "days": 4.0
+      "days": 4.4
     },
     {
       "id": "cSsiwc7jZo0",
@@ -82,10 +82,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 215.1,
+      "views_per_day": 198.2,
       "like_rate": 2.51,
       "traits": [],
-      "days": 4.1
+      "days": 4.4
     },
     {
       "id": "964pejBlN0E",
@@ -95,23 +95,23 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 330.1,
+      "views_per_day": 304.6,
       "like_rate": 2.57,
       "traits": [],
-      "days": 4.1
+      "days": 4.5
     },
     {
       "id": "0iK9FQvX5Qg",
       "title": "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
       "published": "2026-10-10T15:12:30Z",
       "privacy": "public",
-      "views": 2019,
+      "views": 2020,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 403.0,
+      "views_per_day": 377.1,
       "like_rate": 2.67,
       "traits": [],
-      "days": 5.0
+      "days": 5.4
     },
     {
       "id": "urz_NtM6hEA",
@@ -121,10 +121,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 287.3,
+      "views_per_day": 268.9,
       "like_rate": 1.79,
       "traits": [],
-      "days": 5.1
+      "days": 5.4
     },
     {
       "id": "DbLMjGhbHxk",
@@ -134,10 +134,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 252.0,
+      "views_per_day": 236.0,
       "like_rate": 2.25,
       "traits": [],
-      "days": 5.1
+      "days": 5.5
     },
     {
       "id": "23eSKkHi5XY",
@@ -147,14 +147,14 @@
       "views": 1287,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 204.6,
+      "views_per_day": 193.9,
       "like_rate": 2.56,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 6.3
+      "days": 6.6
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-15T15:27:40+00:00"
+  "fetched_at": "2026-10-15T23:46:10+00:00"
 }
