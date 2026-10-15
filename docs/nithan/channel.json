@@ -3,10 +3,25 @@
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
     "subscribers": 30,
-    "views": 11992,
+    "views": 11993,
     "videos": 12
   },
   "videos": [
+    {
+      "id": "Wm93n7mXdgA",
+      "title": "ชายสั่งกาแฟวางทิ้งไว้ทุกเย็น รู้เหตุผลจริงแล้วน้ำตาซึม",
+      "published": "2026-10-15T12:49:30Z",
+      "privacy": "public",
+      "views": 3,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 12.0,
+      "like_rate": 0.0,
+      "traits": [
+        "อารมณ์แรง"
+      ],
+      "days": 0.2
+    },
     {
       "id": "-3eSGZBXNu8",
       "title": "ยายซื้อไอศกรีมทิ้งขยะทุกเที่ยงคืน รู้เหตุผลแล้วน้ำตาซึม",
@@ -15,12 +30,12 @@
       "views": 1346,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 1344.2,
+      "views_per_day": 1273.4,
       "like_rate": 1.19,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 1.0
+      "days": 1.1
     },
     {
       "id": "5-h7FboaP0c",
@@ -30,20 +45,20 @@
       "views": 1085,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 540.1,
+      "views_per_day": 525.5,
       "like_rate": 1.57,
       "traits": [],
-      "days": 2.0
+      "days": 2.1
     },
     {
       "id": "Lip4vEyuFa8",
       "title": "ลุงจ้างช่างปล่อยลมยางจักรยานทุกวัน รู้เหตุผลแล้วน้ำตาซึม",
       "published": "2026-10-12T08:42:26Z",
       "privacy": "public",
-      "views": 1787,
+      "views": 1785,
       "likes": 44,
       "comments": 0,
-      "views_per_day": 563.5,
+      "views_per_day": 553.1,
       "like_rate": 2.46,
       "traits": [
         "ความถี่",
@@ -59,12 +74,12 @@
       "views": 1354,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 270.0,
+      "views_per_day": 267.0,
       "like_rate": 1.77,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 5.0
+      "days": 5.1
     },
     {
       "id": "pZi7FJyHjEY",
@@ -74,13 +89,13 @@
       "views": 1222,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 203.2,
+      "views_per_day": 201.4,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 6.0
+      "days": 6.1
     },
     {
       "id": "ZQpvIsa0c8A",
@@ -90,13 +105,13 @@
       "views": 1749,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 249.5,
+      "views_per_day": 247.5,
       "like_rate": 1.6,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 7.0
+      "days": 7.1
     },
     {
       "id": "hyfmbTfZqBg",
@@ -106,13 +121,13 @@
       "views": 1600,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 192.4,
+      "views_per_day": 191.1,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 8.3
+      "days": 8.4
     },
     {
       "id": "8-Zy5rZlH00",
@@ -144,7 +159,7 @@
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 27.3
+      "days": 27.4
     },
     {
       "id": "uxeId4AUBLI",
@@ -154,14 +169,14 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 42.6,
+      "views_per_day": 42.5,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 27.3
+      "days": 27.4
     },
     {
       "id": "L52UHMV1E0g",
@@ -171,7 +186,7 @@
       "views": 630,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 22.4,
+      "views_per_day": 22.3,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
@@ -191,23 +206,8 @@
       "like_rate": 0.0,
       "traits": [],
       "days": 28.3
-    },
-    {
-      "id": "Wm93n7mXdgA",
-      "title": "ชายสั่งกาแฟวางทิ้งไว้ทุกเย็น รู้เหตุผลจริงแล้วน้ำตาซึม",
-      "published": "2026-10-15T12:48:58Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [
-        "อารมณ์แรง"
-      ],
-      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-15T12:49:05+00:00"
+  "fetched_at": "2026-10-15T14:09:19+00:00"
 }
