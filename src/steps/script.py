@@ -295,7 +295,14 @@ def generate(cfg: dict, avoid: list[str]) -> dict:
     การมีตัวสำรองทำให้ระบบไม่หยุดเดินเพราะผู้ให้บริการรายเดียว
     """
     avoid_text = "\n".join(f"- {p}" for p in avoid) if avoid else "- (ยังไม่มี เป็นเรื่องแรก)"
+    # งบตัวอักษรต่อฉาก คำนวณจากความเร็วอ่านจริงราวสิบตัวอักษรต่อวินาที
+    # บอกเป็นวินาทีแล้ว AI ไม่ทำตาม เพราะมันไม่รู้ว่าเสียงพากย์เร็วแค่ไหน
+    # แต่นับตัวอักษรทำได้ ซึ่งวัดแล้วว่าคุมความยาวได้จริงกว่ามาก
+    scenes = cfg["images"]["scenes"]
+    chars = max(40, round(cfg["video"]["target_seconds"] * 10 / scenes))
+
     prompt = _brief(cfg).format(
+        chars=chars,
         target=cfg["video"]["target_seconds"],
         hard_max=cfg["video"]["hard_max_seconds"],
         scenes=cfg["images"]["scenes"],

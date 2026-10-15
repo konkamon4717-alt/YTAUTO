@@ -73,6 +73,11 @@ def _edge(text: str, out_path: Path, cfg: dict) -> VoiceResult:
             return VoiceResult(backend="edge-tts", granularity="word", segments=words)
         except Exception as exc:  # noqa: BLE001 - ล้มชั่วคราว ลองใหม่
             last = exc
+            # 403 คือถูกปฏิเสธที่ IP ไม่ใช่สะดุด บนเครื่องเดิมลองอีกกี่ครั้งก็ได้คำตอบเดิม
+            # เครื่องของ GitHub บางตัวโดนบล็อกบางตัวไม่โดน ตัวที่โดนแล้วลองซ้ำหกรอบ
+            # คือเสียเวลาเปล่าเกือบนาที ตกไปตัวสำรองทันทีดีกว่า
+            if "403" in str(exc):
+                raise RuntimeError(f"ถูกปฏิเสธจากต้นทาง ไม่ลองซ้ำ: {exc}") from exc
             if attempt < EDGE_RETRIES - 1:
                 time.sleep(EDGE_WAIT * (attempt + 1))
     raise RuntimeError(f"ลอง {EDGE_RETRIES} ครั้งแล้วยังไม่ได้: {last}")
