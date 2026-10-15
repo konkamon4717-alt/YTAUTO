@@ -232,6 +232,21 @@
       },
       "voice": "edge-tts",
       "at": "2026-10-14T12:46:59+00:00"
+    },
+    {
+      "ok": true,
+      "title": "ชายสั่งกาแฟวางทิ้งไว้ทุกเย็น รู้เหตุผลจริงแล้วน้ำตาซึม",
+      "premise": "A mysterious man comes to a cafe every day to order a drink but leaves it untouched on the table, only to reveal the reason is a silent vigil for a lost love who never arrived.",
+      "video_id": "Wm93n7mXdgA",
+      "seconds": 696,
+      "writer": "gemini",
+      "animated": 6,
+      "scenes": 6,
+      "backends": {
+        "huggingface": 6
+      },
+      "voice": "edge-tts",
+      "at": "2026-10-15T12:49:04+00:00"
     }
   ],
   "premises": [
@@ -254,6 +269,7 @@
     "เจ้าของร้านเย็บผ้าสงสัยว่าทำไมหญิงสาวคนหนึ่งยอมจ่ายเงินแพงๆ เพื่อให้เธอตัดเสื้อผ้าตัวใหม่ให้เป็นรูขาดทุกสัปดาห์ จนกระทั่งได้รู้ความจริงเบื้องหลังรอยขาดเหล่านั้น",
     "ช่างซ่อมจักรยานหนุ่มสงสัยว่าทำไมชายชราถึงยอมจ่ายเงินให้เขาปล่อยลมยางจักรยานทุกวัน จนกระทั่งแอบตามไปจึงพบความจริงสุดอบอุ่นหัวใจ",
     "A young cobbler wonders why an elderly man pays him every week to attach heavy iron plates to his old shoes, only to discover a heartwarming secret behind the loud footsteps.",
-    "พนักงานร้านสะดวกซื้อสงสัยว่าทำไมยายถึงยอมซื้อไอศกรีมมาทิ้งขยะหน้าร้านทุกเที่ยงคืน จนคืนหนึ่งแอบดูถึงได้รู้ว่ายายวางไอศกรีมพร้อมโน้ตไว้ให้ลูกชายที่เป็นคนเก็บขยะ"
+    "พนักงานร้านสะดวกซื้อสงสัยว่าทำไมยายถึงยอมซื้อไอศกรีมมาทิ้งขยะหน้าร้านทุกเที่ยงคืน จนคืนหนึ่งแอบดูถึงได้รู้ว่ายายวางไอศกรีมพร้อมโน้ตไว้ให้ลูกชายที่เป็นคนเก็บขยะ",
+    "A mysterious man comes to a cafe every day to order a drink but leaves it untouched on the table, only to reveal the reason is a silent vigil for a lost love who never arrived."
   ]
 }

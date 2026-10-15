@@ -2,9 +2,9 @@
   "channel": {
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
-    "subscribers": 31,
-    "views": 11099,
-    "videos": 11
+    "subscribers": 30,
+    "views": 11992,
+    "videos": 12
   },
   "videos": [
     {
@@ -12,44 +12,44 @@
       "title": "ยายซื้อไอศกรีมทิ้งขยะทุกเที่ยงคืน รู้เหตุผลแล้วน้ำตาซึม",
       "published": "2026-10-14T12:47:10Z",
       "privacy": "public",
-      "views": 469,
-      "likes": 9,
+      "views": 1346,
+      "likes": 16,
       "comments": 0,
-      "views_per_day": 1025.6,
-      "like_rate": 1.92,
+      "views_per_day": 1344.2,
+      "like_rate": 1.19,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 0.5
+      "days": 1.0
     },
     {
       "id": "5-h7FboaP0c",
       "title": "ตาจ้างช่างติดเหล็กใต้รองเท้าทุกอาทิตย์ รู้เหตุผลแล้วจุกอก",
       "published": "2026-10-13T12:36:23Z",
       "privacy": "public",
-      "views": 1087,
+      "views": 1085,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 742.1,
-      "like_rate": 1.56,
+      "views_per_day": 540.1,
+      "like_rate": 1.57,
       "traits": [],
-      "days": 1.5
+      "days": 2.0
     },
     {
       "id": "Lip4vEyuFa8",
       "title": "ลุงจ้างช่างปล่อยลมยางจักรยานทุกวัน รู้เหตุผลแล้วน้ำตาซึม",
       "published": "2026-10-12T08:42:26Z",
       "privacy": "public",
-      "views": 1769,
+      "views": 1787,
       "likes": 44,
       "comments": 0,
-      "views_per_day": 673.3,
-      "like_rate": 2.49,
+      "views_per_day": 563.5,
+      "like_rate": 2.46,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 2.6
+      "days": 3.2
     },
     {
       "id": "SsMdCbnHpvM",
@@ -59,12 +59,12 @@
       "views": 1354,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 302.8,
+      "views_per_day": 270.0,
       "like_rate": 1.77,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 4.5
+      "days": 5.0
     },
     {
       "id": "pZi7FJyHjEY",
@@ -74,13 +74,13 @@
       "views": 1222,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 223.4,
+      "views_per_day": 203.2,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 5.5
+      "days": 6.0
     },
     {
       "id": "ZQpvIsa0c8A",
@@ -90,13 +90,13 @@
       "views": 1749,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 270.5,
+      "views_per_day": 249.5,
       "like_rate": 1.6,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 6.5
+      "days": 7.0
     },
     {
       "id": "hyfmbTfZqBg",
@@ -106,13 +106,13 @@
       "views": 1600,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 205.9,
+      "views_per_day": 192.4,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 7.8
+      "days": 8.3
     },
     {
       "id": "8-Zy5rZlH00",
@@ -128,7 +128,7 @@
         "คำถาม",
         "ความถี่"
       ],
-      "days": 23.9
+      "days": 24.5
     },
     {
       "id": "klm0ozmRhsE",
@@ -138,13 +138,13 @@
       "views": 23,
       "likes": 4,
       "comments": 0,
-      "views_per_day": 0.9,
+      "views_per_day": 0.8,
       "like_rate": 17.39,
       "traits": [
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 26.8
+      "days": 27.3
     },
     {
       "id": "uxeId4AUBLI",
@@ -154,14 +154,14 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 43.5,
+      "views_per_day": 42.6,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 26.8
+      "days": 27.3
     },
     {
       "id": "L52UHMV1E0g",
@@ -171,13 +171,13 @@
       "views": 630,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 22.8,
+      "views_per_day": 22.4,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
         "ความลับ"
       ],
-      "days": 27.6
+      "days": 28.2
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -190,9 +190,24 @@
       "views_per_day": 0.1,
       "like_rate": 0.0,
       "traits": [],
-      "days": 27.7
+      "days": 28.3
+    },
+    {
+      "id": "Wm93n7mXdgA",
+      "title": "ชายสั่งกาแฟวางทิ้งไว้ทุกเย็น รู้เหตุผลจริงแล้วน้ำตาซึม",
+      "published": "2026-10-15T12:48:58Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [
+        "อารมณ์แรง"
+      ],
+      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-14T23:45:38+00:00"
+  "fetched_at": "2026-10-15T12:49:05+00:00"
 }

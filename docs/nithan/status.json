@@ -1,6 +1,21 @@
 {
-  "updated_at": "2026-10-14T12:46:59+00:00",
+  "updated_at": "2026-10-15T12:49:04+00:00",
   "runs": [
+    {
+      "ok": true,
+      "title": "ชายสั่งกาแฟวางทิ้งไว้ทุกเย็น รู้เหตุผลจริงแล้วน้ำตาซึม",
+      "premise": "A mysterious man comes to a cafe every day to order a drink but leaves it untouched on the table, only to reveal the reason is a silent vigil for a lost love who never arrived.",
+      "video_id": "Wm93n7mXdgA",
+      "seconds": 696,
+      "writer": "gemini",
+      "animated": 6,
+      "scenes": 6,
+      "backends": {
+        "huggingface": 6
+      },
+      "voice": "edge-tts",
+      "at": "2026-10-15T12:49:04+00:00"
+    },
     {
       "ok": true,
       "title": "ยายซื้อไอศกรีมทิ้งขยะทุกเที่ยงคืน รู้เหตุผลแล้วน้ำตาซึม",
