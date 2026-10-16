@@ -3,10 +3,25 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 37,
-    "views": 14778,
+    "views": 14783,
     "videos": 7
   },
   "videos": [
+    {
+      "id": "jMz_OLrFsWg",
+      "title": "ทะเลทรายซาฮาราที่ซ่อนแหล่งน้ำมหาศาลไว้ใต้ผืนทราย",
+      "published": "2026-10-16T12:48:25Z",
+      "privacy": "public",
+      "views": 4,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 16.0,
+      "like_rate": 0.0,
+      "traits": [
+        "ความลับ"
+      ],
+      "days": 0.2
+    },
     {
       "id": "6GYs0eHvlAM",
       "title": "ทะเลสาบสีแดงในแอฟริกา ที่เปลี่ยนร่างสัตว์ให้กลายเป็นหิน",
@@ -15,10 +30,10 @@
       "views": 1298,
       "likes": 25,
       "comments": 0,
-      "views_per_day": 1303.5,
+      "views_per_day": 1234.8,
       "like_rate": 1.93,
       "traits": [],
-      "days": 1.0
+      "days": 1.1
     },
     {
       "id": "5yltO_ljXfQ",
@@ -28,10 +43,10 @@
       "views": 1300,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 651.1,
+      "views_per_day": 633.5,
       "like_rate": 1.69,
       "traits": [],
-      "days": 2.0
+      "days": 2.1
     },
     {
       "id": "qCzjRnxtojM",
@@ -41,10 +56,10 @@
       "views": 1345,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 447.8,
+      "views_per_day": 439.7,
       "like_rate": 3.2,
       "traits": [],
-      "days": 3.0
+      "days": 3.1
     },
     {
       "id": "GFIe9yZhPYg",
@@ -54,7 +69,7 @@
       "views": 1269,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 305.1,
+      "views_per_day": 301.0,
       "like_rate": 2.76,
       "traits": [
         "ความถี่"
@@ -69,10 +84,10 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 260.6,
+      "views_per_day": 257.7,
       "like_rate": 2.74,
       "traits": [],
-      "days": 4.9
+      "days": 5.0
     },
     {
       "id": "cSsiwc7jZo0",
@@ -82,7 +97,7 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 176.5,
+      "views_per_day": 174.6,
       "like_rate": 2.51,
       "traits": [],
       "days": 5.0
@@ -95,23 +110,23 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 271.6,
+      "views_per_day": 268.6,
       "like_rate": 2.57,
       "traits": [],
-      "days": 5.0
+      "days": 5.1
     },
     {
       "id": "0iK9FQvX5Qg",
       "title": "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
       "published": "2026-10-10T15:12:30Z",
       "privacy": "public",
-      "views": 2020,
+      "views": 2021,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 342.4,
+      "views_per_day": 339.4,
       "like_rate": 2.67,
       "traits": [],
-      "days": 5.9
+      "days": 6.0
     },
     {
       "id": "urz_NtM6hEA",
@@ -121,7 +136,7 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 244.4,
+      "views_per_day": 242.1,
       "like_rate": 1.79,
       "traits": [],
       "days": 6.0
@@ -134,10 +149,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 214.7,
+      "views_per_day": 212.8,
       "like_rate": 2.25,
       "traits": [],
-      "days": 6.0
+      "days": 6.1
     },
     {
       "id": "23eSKkHi5XY",
@@ -147,29 +162,14 @@
       "views": 1287,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 179.2,
+      "views_per_day": 177.9,
       "like_rate": 2.56,
       "traits": [
         "ความขัดแย้ง"
       ],
       "days": 7.2
-    },
-    {
-      "id": "jMz_OLrFsWg",
-      "title": "ทะเลทรายซาฮาราที่ซ่อนแหล่งน้ำมหาศาลไว้ใต้ผืนทราย",
-      "published": "2026-10-16T12:48:02Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [
-        "ความลับ"
-      ],
-      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-16T12:48:10+00:00"
+  "fetched_at": "2026-10-16T14:08:00+00:00"
 }
