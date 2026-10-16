@@ -2,8 +2,8 @@
   "channel": {
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
-    "subscribers": 33,
-    "views": 13296,
+    "subscribers": 35,
+    "views": 13374,
     "videos": 13
   },
   "videos": [
@@ -12,11 +12,11 @@
       "title": "ลุงซื้อน้ำเต้าหู้แขวนทิ้งไว้ทุกเช้าตรู่ รู้เหตุผลแล้วน้ำตาซึม",
       "published": "2026-10-16T12:40:46Z",
       "privacy": "public",
-      "views": 0,
-      "likes": 0,
+      "views": 78,
+      "likes": 6,
       "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
+      "views_per_day": 312.0,
+      "like_rate": 7.69,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
@@ -31,7 +31,7 @@
       "views": 1167,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 1107.3,
+      "views_per_day": 1055.7,
       "like_rate": 1.89,
       "traits": [
         "อารมณ์แรง"
@@ -46,7 +46,7 @@
       "views": 1429,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 695.2,
+      "views_per_day": 678.2,
       "like_rate": 1.12,
       "traits": [
         "อารมณ์แรง"
@@ -61,7 +61,7 @@
       "views": 1086,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 354.5,
+      "views_per_day": 348.7,
       "like_rate": 1.57,
       "traits": [],
       "days": 3.1
@@ -74,13 +74,13 @@
       "views": 1833,
       "likes": 44,
       "comments": 0,
-      "views_per_day": 433.8,
+      "views_per_day": 428.6,
       "like_rate": 2.4,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 4.2
+      "days": 4.3
     },
     {
       "id": "SsMdCbnHpvM",
@@ -90,7 +90,7 @@
       "views": 1356,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 223.4,
+      "views_per_day": 221.5,
       "like_rate": 1.77,
       "traits": [
         "อารมณ์แรง"
@@ -105,7 +105,7 @@
       "views": 1222,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 172.9,
+      "views_per_day": 171.7,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
@@ -121,7 +121,7 @@
       "views": 1749,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 216.9,
+      "views_per_day": 215.5,
       "like_rate": 1.6,
       "traits": [
         "คำถาม",
@@ -137,7 +137,7 @@
       "views": 1605,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 171.3,
+      "views_per_day": 170.4,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
@@ -159,7 +159,7 @@
         "คำถาม",
         "ความถี่"
       ],
-      "days": 25.5
+      "days": 25.6
     },
     {
       "id": "klm0ozmRhsE",
@@ -185,14 +185,14 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 41.0,
+      "views_per_day": 40.9,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 28.4
+      "days": 28.5
     },
     {
       "id": "L52UHMV1E0g",
@@ -202,13 +202,13 @@
       "views": 630,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 21.6,
+      "views_per_day": 21.5,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
         "ความลับ"
       ],
-      "days": 29.2
+      "days": 29.3
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -221,9 +221,9 @@
       "views_per_day": 0.1,
       "like_rate": 0.0,
       "traits": [],
-      "days": 29.3
+      "days": 29.4
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-16T14:07:10+00:00"
+  "fetched_at": "2026-10-16T15:21:21+00:00"
 }
