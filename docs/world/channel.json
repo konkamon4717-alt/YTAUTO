@@ -3,7 +3,7 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 37,
-    "views": 14783,
+    "views": 15162,
     "videos": 7
   },
   "videos": [
@@ -12,11 +12,11 @@
       "title": "ทะเลทรายซาฮาราที่ซ่อนแหล่งน้ำมหาศาลไว้ใต้ผืนทราย",
       "published": "2026-10-16T12:48:25Z",
       "privacy": "public",
-      "views": 4,
-      "likes": 0,
+      "views": 379,
+      "likes": 5,
       "comments": 0,
-      "views_per_day": 16.0,
-      "like_rate": 0.0,
+      "views_per_day": 1516.0,
+      "like_rate": 1.32,
       "traits": [
         "ความลับ"
       ],
@@ -27,11 +27,11 @@
       "title": "ทะเลสาบสีแดงในแอฟริกา ที่เปลี่ยนร่างสัตว์ให้กลายเป็นหิน",
       "published": "2026-10-15T12:54:18Z",
       "privacy": "public",
-      "views": 1298,
-      "likes": 25,
+      "views": 1300,
+      "likes": 26,
       "comments": 0,
-      "views_per_day": 1234.8,
-      "like_rate": 1.93,
+      "views_per_day": 1179.0,
+      "like_rate": 2.0,
       "traits": [],
       "days": 1.1
     },
@@ -43,7 +43,7 @@
       "views": 1300,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 633.5,
+      "views_per_day": 618.0,
       "like_rate": 1.69,
       "traits": [],
       "days": 2.1
@@ -53,11 +53,11 @@
       "title": "น้ำตกสีแดงสดปานเลือด ที่ไหลออกมาจากใต้ธารน้ำแข็งแอนตาร์กติกา",
       "published": "2026-10-13T12:43:28Z",
       "privacy": "public",
-      "views": 1345,
+      "views": 1346,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 439.7,
-      "like_rate": 3.2,
+      "views_per_day": 432.8,
+      "like_rate": 3.19,
       "traits": [],
       "days": 3.1
     },
@@ -66,15 +66,15 @@
       "title": "สถานที่ที่มีฟ้าผ่ามากที่สุดในโลก นานสิบชั่วโมงติดต่อกันทุกคืน",
       "published": "2026-10-12T08:57:55Z",
       "privacy": "public",
-      "views": 1269,
+      "views": 1270,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 301.0,
+      "views_per_day": 297.7,
       "like_rate": 2.76,
       "traits": [
         "ความถี่"
       ],
-      "days": 4.2
+      "days": 4.3
     },
     {
       "id": "plEJBPKtWvs",
@@ -84,7 +84,7 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 257.7,
+      "views_per_day": 255.1,
       "like_rate": 2.74,
       "traits": [],
       "days": 5.0
@@ -97,10 +97,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 174.6,
+      "views_per_day": 172.8,
       "like_rate": 2.51,
       "traits": [],
-      "days": 5.0
+      "days": 5.1
     },
     {
       "id": "964pejBlN0E",
@@ -110,7 +110,7 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 268.6,
+      "views_per_day": 265.9,
       "like_rate": 2.57,
       "traits": [],
       "days": 5.1
@@ -123,7 +123,7 @@
       "views": 2021,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 339.4,
+      "views_per_day": 336.5,
       "like_rate": 2.67,
       "traits": [],
       "days": 6.0
@@ -136,10 +136,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 242.1,
+      "views_per_day": 240.1,
       "like_rate": 1.79,
       "traits": [],
-      "days": 6.0
+      "days": 6.1
     },
     {
       "id": "DbLMjGhbHxk",
@@ -149,7 +149,7 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 212.8,
+      "views_per_day": 211.0,
       "like_rate": 2.25,
       "traits": [],
       "days": 6.1
@@ -162,14 +162,14 @@
       "views": 1287,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 177.9,
+      "views_per_day": 176.6,
       "like_rate": 2.56,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 7.2
+      "days": 7.3
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-16T14:08:00+00:00"
+  "fetched_at": "2026-10-16T15:22:02+00:00"
 }
