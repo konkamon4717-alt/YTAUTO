@@ -3,10 +3,26 @@
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
     "subscribers": 33,
-    "views": 13292,
+    "views": 13296,
     "videos": 13
   },
   "videos": [
+    {
+      "id": "K7eDye3r_ys",
+      "title": "ลุงซื้อน้ำเต้าหู้แขวนทิ้งไว้ทุกเช้าตรู่ รู้เหตุผลแล้วน้ำตาซึม",
+      "published": "2026-10-16T12:40:46Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [
+        "ความถี่",
+        "อารมณ์แรง"
+      ],
+      "days": 0.2
+    },
     {
       "id": "Wm93n7mXdgA",
       "title": "ชายสั่งกาแฟวางทิ้งไว้ทุกเย็น รู้เหตุผลจริงแล้วน้ำตาซึม",
@@ -15,27 +31,27 @@
       "views": 1167,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 1174.3,
+      "views_per_day": 1107.3,
       "like_rate": 1.89,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 1.0
+      "days": 1.1
     },
     {
       "id": "-3eSGZBXNu8",
       "title": "ยายซื้อไอศกรีมทิ้งขยะทุกเที่ยงคืน รู้เหตุผลแล้วน้ำตาซึม",
       "published": "2026-10-14T12:47:10Z",
       "privacy": "public",
-      "views": 1425,
+      "views": 1429,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 714.1,
+      "views_per_day": 695.2,
       "like_rate": 1.12,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 2.0
+      "days": 2.1
     },
     {
       "id": "5-h7FboaP0c",
@@ -45,10 +61,10 @@
       "views": 1086,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 361.7,
+      "views_per_day": 354.5,
       "like_rate": 1.57,
       "traits": [],
-      "days": 3.0
+      "days": 3.1
     },
     {
       "id": "Lip4vEyuFa8",
@@ -58,7 +74,7 @@
       "views": 1833,
       "likes": 44,
       "comments": 0,
-      "views_per_day": 440.1,
+      "views_per_day": 433.8,
       "like_rate": 2.4,
       "traits": [
         "ความถี่",
@@ -74,12 +90,12 @@
       "views": 1356,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 225.7,
+      "views_per_day": 223.4,
       "like_rate": 1.77,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 6.0
+      "days": 6.1
     },
     {
       "id": "pZi7FJyHjEY",
@@ -89,13 +105,13 @@
       "views": 1222,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 174.4,
+      "views_per_day": 172.9,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 7.0
+      "days": 7.1
     },
     {
       "id": "ZQpvIsa0c8A",
@@ -105,13 +121,13 @@
       "views": 1749,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 218.5,
+      "views_per_day": 216.9,
       "like_rate": 1.6,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 8.0
+      "days": 8.1
     },
     {
       "id": "hyfmbTfZqBg",
@@ -121,13 +137,13 @@
       "views": 1605,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 172.4,
+      "views_per_day": 171.3,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 9.3
+      "days": 9.4
     },
     {
       "id": "8-Zy5rZlH00",
@@ -159,7 +175,7 @@
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 28.3
+      "days": 28.4
     },
     {
       "id": "uxeId4AUBLI",
@@ -169,14 +185,14 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 41.1,
+      "views_per_day": 41.0,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 28.3
+      "days": 28.4
     },
     {
       "id": "L52UHMV1E0g",
@@ -192,7 +208,7 @@
         "ความถี่",
         "ความลับ"
       ],
-      "days": 29.1
+      "days": 29.2
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -205,25 +221,9 @@
       "views_per_day": 0.1,
       "like_rate": 0.0,
       "traits": [],
-      "days": 29.2
-    },
-    {
-      "id": "K7eDye3r_ys",
-      "title": "ลุงซื้อน้ำเต้าหู้แขวนทิ้งไว้ทุกเช้าตรู่ รู้เหตุผลแล้วน้ำตาซึม",
-      "published": "2026-10-16T12:40:22Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [
-        "ความถี่",
-        "อารมณ์แรง"
-      ],
-      "days": 0.2
+      "days": 29.3
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-16T12:40:32+00:00"
+  "fetched_at": "2026-10-16T14:07:10+00:00"
 }
