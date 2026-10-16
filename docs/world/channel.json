@@ -2,8 +2,8 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 37,
-    "views": 15162,
+    "subscribers": 39,
+    "views": 16019,
     "videos": 7
   },
   "videos": [
@@ -12,69 +12,69 @@
       "title": "ทะเลทรายซาฮาราที่ซ่อนแหล่งน้ำมหาศาลไว้ใต้ผืนทราย",
       "published": "2026-10-16T12:48:25Z",
       "privacy": "public",
-      "views": 379,
-      "likes": 5,
+      "views": 1222,
+      "likes": 20,
       "comments": 0,
-      "views_per_day": 1516.0,
-      "like_rate": 1.32,
+      "views_per_day": 2679.0,
+      "like_rate": 1.64,
       "traits": [
         "ความลับ"
       ],
-      "days": 0.2
+      "days": 0.5
     },
     {
       "id": "6GYs0eHvlAM",
       "title": "ทะเลสาบสีแดงในแอฟริกา ที่เปลี่ยนร่างสัตว์ให้กลายเป็นหิน",
       "published": "2026-10-15T12:54:18Z",
       "privacy": "public",
-      "views": 1300,
+      "views": 1313,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 1179.0,
-      "like_rate": 2.0,
+      "views_per_day": 904.2,
+      "like_rate": 1.98,
       "traits": [],
-      "days": 1.1
+      "days": 1.5
     },
     {
       "id": "5yltO_ljXfQ",
       "title": "ภูเขาไฟที่พ่นเปลวไฟสีน้ำเงิน สว่างวาบออกมาท่ามกลางความมืด",
       "published": "2026-10-14T12:53:05Z",
       "privacy": "public",
-      "views": 1300,
+      "views": 1296,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 618.0,
-      "like_rate": 1.69,
+      "views_per_day": 528.4,
+      "like_rate": 1.7,
       "traits": [],
-      "days": 2.1
+      "days": 2.5
     },
     {
       "id": "qCzjRnxtojM",
       "title": "น้ำตกสีแดงสดปานเลือด ที่ไหลออกมาจากใต้ธารน้ำแข็งแอนตาร์กติกา",
       "published": "2026-10-13T12:43:28Z",
       "privacy": "public",
-      "views": 1346,
+      "views": 1349,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 432.8,
+      "views_per_day": 389.9,
       "like_rate": 3.19,
       "traits": [],
-      "days": 3.1
+      "days": 3.5
     },
     {
       "id": "GFIe9yZhPYg",
       "title": "สถานที่ที่มีฟ้าผ่ามากที่สุดในโลก นานสิบชั่วโมงติดต่อกันทุกคืน",
       "published": "2026-10-12T08:57:55Z",
       "privacy": "public",
-      "views": 1270,
+      "views": 1271,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 297.7,
-      "like_rate": 2.76,
+      "views_per_day": 275.3,
+      "like_rate": 2.75,
       "traits": [
         "ความถี่"
       ],
-      "days": 4.3
+      "days": 4.6
     },
     {
       "id": "plEJBPKtWvs",
@@ -84,10 +84,10 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 255.1,
+      "views_per_day": 238.4,
       "like_rate": 2.74,
       "traits": [],
-      "days": 5.0
+      "days": 5.4
     },
     {
       "id": "cSsiwc7jZo0",
@@ -97,10 +97,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 172.8,
+      "views_per_day": 161.6,
       "like_rate": 2.51,
       "traits": [],
-      "days": 5.1
+      "days": 5.4
     },
     {
       "id": "964pejBlN0E",
@@ -110,23 +110,23 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 265.9,
+      "views_per_day": 248.9,
       "like_rate": 2.57,
       "traits": [],
-      "days": 5.1
+      "days": 5.5
     },
     {
       "id": "0iK9FQvX5Qg",
       "title": "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
       "published": "2026-10-10T15:12:30Z",
       "privacy": "public",
-      "views": 2021,
+      "views": 2022,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 336.5,
+      "views_per_day": 318.1,
       "like_rate": 2.67,
       "traits": [],
-      "days": 6.0
+      "days": 6.4
     },
     {
       "id": "urz_NtM6hEA",
@@ -136,10 +136,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 240.1,
+      "views_per_day": 227.0,
       "like_rate": 1.79,
       "traits": [],
-      "days": 6.1
+      "days": 6.4
     },
     {
       "id": "DbLMjGhbHxk",
@@ -149,10 +149,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 211.0,
+      "views_per_day": 199.6,
       "like_rate": 2.25,
       "traits": [],
-      "days": 6.1
+      "days": 6.5
     },
     {
       "id": "23eSKkHi5XY",
@@ -162,14 +162,14 @@
       "views": 1287,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 176.6,
+      "views_per_day": 168.5,
       "like_rate": 2.56,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 7.3
+      "days": 7.6
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-16T15:22:02+00:00"
+  "fetched_at": "2026-10-16T23:45:14+00:00"
 }
