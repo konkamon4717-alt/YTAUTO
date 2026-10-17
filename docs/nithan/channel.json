@@ -10,7 +10,7 @@
     {
       "id": "o54REzRRy8Y",
       "title": "สาวซื้อร่มใหม่ทิ้งตากฝนทุกวัน รู้เหตุผลจริงแล้วน้ำตาซึม",
-      "published": "2026-10-17T12:35:05Z",
+      "published": "2026-10-17T12:35:30Z",
       "privacy": "public",
       "views": 0,
       "likes": 0,
@@ -31,13 +31,13 @@
       "views": 1269,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 1273.8,
+      "views_per_day": 1206.9,
       "like_rate": 1.89,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 1.0
+      "days": 1.1
     },
     {
       "id": "Wm93n7mXdgA",
@@ -47,7 +47,7 @@
       "views": 1232,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 619.1,
+      "views_per_day": 602.3,
       "like_rate": 2.11,
       "traits": [
         "อารมณ์แรง"
@@ -62,7 +62,7 @@
       "views": 1450,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 484.7,
+      "views_per_day": 475.9,
       "like_rate": 1.17,
       "traits": [
         "อารมณ์แรง"
@@ -77,10 +77,10 @@
       "views": 1086,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 271.6,
+      "views_per_day": 267.9,
       "like_rate": 1.57,
       "traits": [],
-      "days": 4.0
+      "days": 4.1
     },
     {
       "id": "Lip4vEyuFa8",
@@ -90,7 +90,7 @@
       "views": 1832,
       "likes": 44,
       "comments": 0,
-      "views_per_day": 354.9,
+      "views_per_day": 351.2,
       "like_rate": 2.4,
       "traits": [
         "ความถี่",
@@ -106,12 +106,12 @@
       "views": 1356,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 193.6,
+      "views_per_day": 192.0,
       "like_rate": 1.77,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 7.0
+      "days": 7.1
     },
     {
       "id": "pZi7FJyHjEY",
@@ -121,13 +121,13 @@
       "views": 1222,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 152.7,
+      "views_per_day": 151.6,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 8.0
+      "days": 8.1
     },
     {
       "id": "ZQpvIsa0c8A",
@@ -137,13 +137,13 @@
       "views": 1749,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 194.3,
+      "views_per_day": 193.1,
       "like_rate": 1.6,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 9.0
+      "days": 9.1
     },
     {
       "id": "hyfmbTfZqBg",
@@ -153,13 +153,13 @@
       "views": 1606,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 155.8,
+      "views_per_day": 155.0,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 10.3
+      "days": 10.4
     },
     {
       "id": "8-Zy5rZlH00",
@@ -191,7 +191,7 @@
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 29.3
+      "days": 29.4
     },
     {
       "id": "uxeId4AUBLI",
@@ -201,14 +201,14 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 39.7,
+      "views_per_day": 39.6,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 29.3
+      "days": 29.4
     },
     {
       "id": "L52UHMV1E0g",
@@ -224,7 +224,7 @@
         "ความถี่",
         "ความลับ"
       ],
-      "days": 30.1
+      "days": 30.2
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -237,9 +237,9 @@
       "views_per_day": 0.1,
       "like_rate": 0.0,
       "traits": [],
-      "days": 30.2
+      "days": 30.3
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-17T12:35:17+00:00"
+  "fetched_at": "2026-10-17T13:54:49+00:00"
 }
