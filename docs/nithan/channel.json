@@ -2,56 +2,72 @@
   "channel": {
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
-    "subscribers": 36,
-    "views": 13670,
-    "videos": 13
+    "subscribers": 37,
+    "views": 14651,
+    "videos": 14
   },
   "videos": [
+    {
+      "id": "o54REzRRy8Y",
+      "title": "สาวซื้อร่มใหม่ทิ้งตากฝนทุกวัน รู้เหตุผลจริงแล้วน้ำตาซึม",
+      "published": "2026-10-17T12:35:05Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [
+        "ความถี่",
+        "อารมณ์แรง"
+      ],
+      "days": 0.2
+    },
     {
       "id": "K7eDye3r_ys",
       "title": "ลุงซื้อน้ำเต้าหู้แขวนทิ้งไว้ทุกเช้าตรู่ รู้เหตุผลแล้วน้ำตาซึม",
       "published": "2026-10-16T12:40:46Z",
       "privacy": "public",
-      "views": 365,
-      "likes": 16,
+      "views": 1269,
+      "likes": 24,
       "comments": 0,
-      "views_per_day": 791.4,
-      "like_rate": 4.38,
+      "views_per_day": 1273.8,
+      "like_rate": 1.89,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 0.5
+      "days": 1.0
     },
     {
       "id": "Wm93n7mXdgA",
       "title": "ชายสั่งกาแฟวางทิ้งไว้ทุกเย็น รู้เหตุผลจริงแล้วน้ำตาซึม",
       "published": "2026-10-15T12:49:30Z",
       "privacy": "public",
-      "views": 1164,
-      "likes": 22,
+      "views": 1232,
+      "likes": 26,
       "comments": 0,
-      "views_per_day": 799.9,
-      "like_rate": 1.89,
+      "views_per_day": 619.1,
+      "like_rate": 2.11,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 1.5
+      "days": 2.0
     },
     {
       "id": "-3eSGZBXNu8",
       "title": "ยายซื้อไอศกรีมทิ้งขยะทุกเที่ยงคืน รู้เหตุผลแล้วน้ำตาซึม",
       "published": "2026-10-14T12:47:10Z",
       "privacy": "public",
-      "views": 1441,
+      "views": 1450,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 586.5,
-      "like_rate": 1.18,
+      "views_per_day": 484.7,
+      "like_rate": 1.17,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 2.5
+      "days": 3.0
     },
     {
       "id": "5-h7FboaP0c",
@@ -61,10 +77,10 @@
       "views": 1086,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 313.5,
+      "views_per_day": 271.6,
       "like_rate": 1.57,
       "traits": [],
-      "days": 3.5
+      "days": 4.0
     },
     {
       "id": "Lip4vEyuFa8",
@@ -74,13 +90,13 @@
       "views": 1832,
       "likes": 44,
       "comments": 0,
-      "views_per_day": 396.0,
+      "views_per_day": 354.9,
       "like_rate": 2.4,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 4.6
+      "days": 5.2
     },
     {
       "id": "SsMdCbnHpvM",
@@ -90,12 +106,12 @@
       "views": 1356,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 209.6,
+      "views_per_day": 193.6,
       "like_rate": 1.77,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 6.5
+      "days": 7.0
     },
     {
       "id": "pZi7FJyHjEY",
@@ -105,13 +121,13 @@
       "views": 1222,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 163.6,
+      "views_per_day": 152.7,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 7.5
+      "days": 8.0
     },
     {
       "id": "ZQpvIsa0c8A",
@@ -121,13 +137,13 @@
       "views": 1749,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 206.6,
+      "views_per_day": 194.3,
       "like_rate": 1.6,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 8.5
+      "days": 9.0
     },
     {
       "id": "hyfmbTfZqBg",
@@ -137,13 +153,13 @@
       "views": 1606,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 164.4,
+      "views_per_day": 155.8,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 9.8
+      "days": 10.3
     },
     {
       "id": "8-Zy5rZlH00",
@@ -159,7 +175,7 @@
         "คำถาม",
         "ความถี่"
       ],
-      "days": 25.9
+      "days": 26.5
     },
     {
       "id": "klm0ozmRhsE",
@@ -175,7 +191,7 @@
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 28.8
+      "days": 29.3
     },
     {
       "id": "uxeId4AUBLI",
@@ -185,14 +201,14 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 40.4,
+      "views_per_day": 39.7,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 28.8
+      "days": 29.3
     },
     {
       "id": "L52UHMV1E0g",
@@ -202,13 +218,13 @@
       "views": 630,
       "likes": 6,
       "comments": 0,
-      "views_per_day": 21.3,
+      "views_per_day": 20.9,
       "like_rate": 0.95,
       "traits": [
         "ความถี่",
         "ความลับ"
       ],
-      "days": 29.6
+      "days": 30.1
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -221,9 +237,9 @@
       "views_per_day": 0.1,
       "like_rate": 0.0,
       "traits": [],
-      "days": 29.7
+      "days": 30.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-16T23:44:52+00:00"
+  "fetched_at": "2026-10-17T12:35:17+00:00"
 }
