@@ -3,10 +3,25 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 39,
-    "views": 17982,
+    "views": 18001,
     "videos": 9
   },
   "videos": [
+    {
+      "id": "Wf6aOOah7rU",
+      "title": "เมืองใต้ดินลึกแปดสิบเมตร ที่เคยซ่อนคนได้ถึงสองหมื่นคน",
+      "published": "2026-10-18T15:55:30Z",
+      "privacy": "public",
+      "views": 19,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 76.0,
+      "like_rate": 0.0,
+      "traits": [
+        "ความลับ"
+      ],
+      "days": 0.2
+    },
     {
       "id": "8IXB5qL8GzE",
       "title": "หลุมยักษ์กลางทะเลทราย ที่ไฟลุกไหม้ไม่เคยดับมากว่าห้าสิบปี",
@@ -15,12 +30,12 @@
       "views": 1675,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 1474.7,
+      "views_per_day": 1431.5,
       "like_rate": 1.67,
       "traits": [
         "คำถาม"
       ],
-      "days": 1.1
+      "days": 1.2
     },
     {
       "id": "jMz_OLrFsWg",
@@ -30,12 +45,12 @@
       "views": 1261,
       "likes": 23,
       "comments": 0,
-      "views_per_day": 592.1,
+      "views_per_day": 582.7,
       "like_rate": 1.82,
       "traits": [
         "ความลับ"
       ],
-      "days": 2.1
+      "days": 2.2
     },
     {
       "id": "6GYs0eHvlAM",
@@ -45,10 +60,10 @@
       "views": 1506,
       "likes": 27,
       "comments": 2,
-      "views_per_day": 481.8,
+      "views_per_day": 476.6,
       "like_rate": 1.79,
       "traits": [],
-      "days": 3.1
+      "days": 3.2
     },
     {
       "id": "5yltO_ljXfQ",
@@ -58,10 +73,10 @@
       "views": 1324,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 320.8,
+      "views_per_day": 318.2,
       "like_rate": 1.66,
       "traits": [],
-      "days": 4.1
+      "days": 4.2
     },
     {
       "id": "qCzjRnxtojM",
@@ -71,10 +86,10 @@
       "views": 1362,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 265.3,
+      "views_per_day": 263.6,
       "like_rate": 3.16,
       "traits": [],
-      "days": 5.1
+      "days": 5.2
     },
     {
       "id": "GFIe9yZhPYg",
@@ -84,7 +99,7 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 202.9,
+      "views_per_day": 201.8,
       "like_rate": 2.74,
       "traits": [
         "ความถี่"
@@ -99,10 +114,10 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 181.6,
+      "views_per_day": 180.7,
       "like_rate": 2.74,
       "traits": [],
-      "days": 7.0
+      "days": 7.1
     },
     {
       "id": "cSsiwc7jZo0",
@@ -112,7 +127,7 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 123.5,
+      "views_per_day": 122.9,
       "like_rate": 2.51,
       "traits": [],
       "days": 7.1
@@ -125,10 +140,10 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 190.6,
+      "views_per_day": 189.7,
       "like_rate": 2.57,
       "traits": [],
-      "days": 7.1
+      "days": 7.2
     },
     {
       "id": "0iK9FQvX5Qg",
@@ -138,10 +153,10 @@
       "views": 2029,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 252.7,
+      "views_per_day": 251.6,
       "like_rate": 2.66,
       "traits": [],
-      "days": 8.0
+      "days": 8.1
     },
     {
       "id": "urz_NtM6hEA",
@@ -151,7 +166,7 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 180.0,
+      "views_per_day": 179.2,
       "like_rate": 1.79,
       "traits": [],
       "days": 8.1
@@ -164,10 +179,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 158.5,
+      "views_per_day": 157.9,
       "like_rate": 2.25,
       "traits": [],
-      "days": 8.1
+      "days": 8.2
     },
     {
       "id": "23eSKkHi5XY",
@@ -177,29 +192,14 @@
       "views": 1290,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 138.5,
+      "views_per_day": 138.0,
       "like_rate": 2.56,
       "traits": [
         "ความขัดแย้ง"
       ],
       "days": 9.3
-    },
-    {
-      "id": "Wf6aOOah7rU",
-      "title": "เมืองใต้ดินลึกแปดสิบเมตร ที่เคยซ่อนคนได้ถึงสองหมื่นคน",
-      "published": "2026-10-18T15:55:11Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [
-        "ความลับ"
-      ],
-      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-18T15:55:18+00:00"
+  "fetched_at": "2026-10-18T16:44:36+00:00"
 }
