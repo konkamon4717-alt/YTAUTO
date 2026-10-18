@@ -1,6 +1,21 @@
 {
-  "updated_at": "2026-10-17T12:35:16+00:00",
+  "updated_at": "2026-10-18T15:50:54+00:00",
   "runs": [
+    {
+      "ok": true,
+      "title": "ยายปั๊มกุญแจเปล่าทุกอาทิตย์ รู้เหตุผลจริงแล้วน้ำตาซึม",
+      "premise": "ช่างปั๊มกุญแจหนุ่มสงสัยว่าทำไมคุณยายถึงยอมจ่ายเงินปั๊มกุญแจเปล่าที่ไม่มีร่องทุกสัปดาห์ จนกระทั่งได้รู้ความจริงสุดซึ้งเกี่ยวกับสามีที่เป็นอัลไซเมอร์",
+      "video_id": "ADOIIE0Ug_4",
+      "seconds": 351,
+      "writer": "gemini",
+      "animated": 6,
+      "scenes": 6,
+      "backends": {
+        "huggingface": 6
+      },
+      "voice": "edge-tts",
+      "at": "2026-10-18T15:50:54+00:00"
+    },
     {
       "ok": true,
       "title": "สาวซื้อร่มใหม่ทิ้งตากฝนทุกวัน รู้เหตุผลจริงแล้วน้ำตาซึม",
@@ -314,12 +329,6 @@
       "error": "RuntimeError: FFmpeg ล้มเหลว:\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf63.1.101\n  Duration: 00:00:30.67, start: 0.000000, bitrate: 933 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuvj420p(pc, bt470bg/unknown/unknown, progressive), 1080x1920 [SAR 1:1 DAR 9:16], 930 kb/s, 30 fps, 30 tb",
       "seconds": 245,
       "at": "2026-09-17T01:56:37+00:00"
-    },
-    {
-      "ok": false,
-      "error": "WSServerHandshakeError: 403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=c9d844790b1c4685974bbe6439d04415'",
-      "seconds": 1,
-      "at": "2026-09-17T01:51:58+00:00"
     }
   ]
 }
