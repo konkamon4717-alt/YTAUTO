@@ -3,7 +3,7 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 39,
-    "views": 18001,
+    "views": 18011,
     "videos": 9
   },
   "videos": [
@@ -30,7 +30,7 @@
       "views": 1675,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 1431.5,
+      "views_per_day": 1378.9,
       "like_rate": 1.67,
       "traits": [
         "คำถาม"
@@ -42,10 +42,10 @@
       "title": "ทะเลทรายซาฮาราที่ซ่อนแหล่งน้ำมหาศาลไว้ใต้ผืนทราย",
       "published": "2026-10-16T12:48:25Z",
       "privacy": "public",
-      "views": 1261,
+      "views": 1263,
       "likes": 23,
       "comments": 0,
-      "views_per_day": 582.7,
+      "views_per_day": 571.8,
       "like_rate": 1.82,
       "traits": [
         "ความลับ"
@@ -57,11 +57,11 @@
       "title": "ทะเลสาบสีแดงในแอฟริกา ที่เปลี่ยนร่างสัตว์ให้กลายเป็นหิน",
       "published": "2026-10-15T12:54:18Z",
       "privacy": "public",
-      "views": 1506,
+      "views": 1514,
       "likes": 27,
       "comments": 2,
-      "views_per_day": 476.6,
-      "like_rate": 1.79,
+      "views_per_day": 472.4,
+      "like_rate": 1.78,
       "traits": [],
       "days": 3.2
     },
@@ -73,7 +73,7 @@
       "views": 1324,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 318.2,
+      "views_per_day": 314.8,
       "like_rate": 1.66,
       "traits": [],
       "days": 4.2
@@ -86,7 +86,7 @@
       "views": 1362,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 263.6,
+      "views_per_day": 261.3,
       "like_rate": 3.16,
       "traits": [],
       "days": 5.2
@@ -99,12 +99,12 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 201.8,
+      "views_per_day": 200.4,
       "like_rate": 2.74,
       "traits": [
         "ความถี่"
       ],
-      "days": 6.3
+      "days": 6.4
     },
     {
       "id": "plEJBPKtWvs",
@@ -114,7 +114,7 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 180.7,
+      "views_per_day": 179.6,
       "like_rate": 2.74,
       "traits": [],
       "days": 7.1
@@ -127,10 +127,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 122.9,
+      "views_per_day": 122.1,
       "like_rate": 2.51,
       "traits": [],
-      "days": 7.1
+      "days": 7.2
     },
     {
       "id": "964pejBlN0E",
@@ -140,7 +140,7 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 189.7,
+      "views_per_day": 188.5,
       "like_rate": 2.57,
       "traits": [],
       "days": 7.2
@@ -153,7 +153,7 @@
       "views": 2029,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 251.6,
+      "views_per_day": 250.2,
       "like_rate": 2.66,
       "traits": [],
       "days": 8.1
@@ -166,10 +166,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 179.2,
+      "views_per_day": 178.2,
       "like_rate": 1.79,
       "traits": [],
-      "days": 8.1
+      "days": 8.2
     },
     {
       "id": "DbLMjGhbHxk",
@@ -179,7 +179,7 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 157.9,
+      "views_per_day": 157.0,
       "like_rate": 2.25,
       "traits": [],
       "days": 8.2
@@ -192,14 +192,14 @@
       "views": 1290,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 138.0,
+      "views_per_day": 137.4,
       "like_rate": 2.56,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 9.3
+      "days": 9.4
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-18T16:44:36+00:00"
+  "fetched_at": "2026-10-18T17:48:53+00:00"
 }
