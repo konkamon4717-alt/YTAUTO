@@ -3,7 +3,7 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 43,
-    "views": 19417,
+    "views": 19431,
     "videos": 10
   },
   "videos": [
@@ -12,10 +12,10 @@
       "title": "ปลาทะเลลึกที่รูปร่างบิดเบี้ยวเพราะแรงกดทับของมหาสมุทร",
       "published": "2026-10-19T19:07:48Z",
       "privacy": "public",
-      "views": 6,
+      "views": 9,
       "likes": 0,
       "comments": 0,
-      "views_per_day": 24.0,
+      "views_per_day": 36.0,
       "like_rate": 0.0,
       "traits": [],
       "days": 0.2
@@ -25,26 +25,26 @@
       "title": "เมืองใต้ดินลึกแปดสิบเมตร ที่เคยซ่อนคนได้ถึงสองหมื่นคน",
       "published": "2026-10-18T15:55:30Z",
       "privacy": "public",
-      "views": 1326,
+      "views": 1333,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 1156.2,
-      "like_rate": 2.19,
+      "views_per_day": 1125.0,
+      "like_rate": 2.18,
       "traits": [
         "ความลับ"
       ],
-      "days": 1.1
+      "days": 1.2
     },
     {
       "id": "8IXB5qL8GzE",
       "title": "หลุมยักษ์กลางทะเลทราย ที่ไฟลุกไหม้ไม่เคยดับมากว่าห้าสิบปี",
       "published": "2026-10-17T12:39:42Z",
       "privacy": "public",
-      "views": 1679,
+      "views": 1682,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 735.5,
-      "like_rate": 1.67,
+      "views_per_day": 724.7,
+      "like_rate": 1.66,
       "traits": [
         "คำถาม"
       ],
@@ -55,10 +55,10 @@
       "title": "ทะเลทรายซาฮาราที่ซ่อนแหล่งน้ำมหาศาลไว้ใต้ผืนทราย",
       "published": "2026-10-16T12:48:25Z",
       "privacy": "public",
-      "views": 1282,
+      "views": 1283,
       "likes": 23,
       "comments": 0,
-      "views_per_day": 391.2,
+      "views_per_day": 387.1,
       "like_rate": 1.79,
       "traits": [
         "ความลับ"
@@ -73,7 +73,7 @@
       "views": 1578,
       "likes": 28,
       "comments": 2,
-      "views_per_day": 369.3,
+      "views_per_day": 366.1,
       "like_rate": 1.77,
       "traits": [],
       "days": 4.3
@@ -86,7 +86,7 @@
       "views": 1324,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 251.1,
+      "views_per_day": 249.3,
       "like_rate": 1.66,
       "traits": [],
       "days": 5.3
@@ -99,7 +99,7 @@
       "views": 1363,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 217.0,
+      "views_per_day": 215.7,
       "like_rate": 3.15,
       "traits": [],
       "days": 6.3
@@ -112,12 +112,12 @@
       "views": 1279,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 172.0,
+      "views_per_day": 171.1,
       "like_rate": 2.74,
       "traits": [
         "ความถี่"
       ],
-      "days": 7.4
+      "days": 7.5
     },
     {
       "id": "plEJBPKtWvs",
@@ -127,7 +127,7 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 156.1,
+      "views_per_day": 155.4,
       "like_rate": 2.74,
       "traits": [],
       "days": 8.2
@@ -140,10 +140,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 106.3,
+      "views_per_day": 105.8,
       "like_rate": 2.51,
       "traits": [],
-      "days": 8.2
+      "days": 8.3
     },
     {
       "id": "964pejBlN0E",
@@ -153,7 +153,7 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 164.3,
+      "views_per_day": 163.5,
       "like_rate": 2.57,
       "traits": [],
       "days": 8.3
@@ -166,7 +166,7 @@
       "views": 2031,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 221.3,
+      "views_per_day": 220.4,
       "like_rate": 2.66,
       "traits": [],
       "days": 9.2
@@ -179,10 +179,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 157.6,
+      "views_per_day": 157.0,
       "like_rate": 1.79,
       "traits": [],
-      "days": 9.2
+      "days": 9.3
     },
     {
       "id": "DbLMjGhbHxk",
@@ -192,7 +192,7 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 139.0,
+      "views_per_day": 138.4,
       "like_rate": 2.25,
       "traits": [],
       "days": 9.3
@@ -205,7 +205,7 @@
       "views": 1290,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 123.4,
+      "views_per_day": 122.9,
       "like_rate": 2.56,
       "traits": [
         "ความขัดแย้ง"
@@ -214,5 +214,5 @@
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-19T19:27:01+00:00"
+  "fetched_at": "2026-10-19T20:21:42+00:00"
 }
