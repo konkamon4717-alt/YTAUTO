@@ -2,21 +2,37 @@
   "channel": {
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
-    "subscribers": 42,
-    "views": 17274,
+    "subscribers": 43,
+    "views": 17286,
     "videos": 16
   },
   "videos": [
+    {
+      "id": "TCf48wGdG2A",
+      "title": "ชายหนุ่มยืมหนังสือเล่มเดิมทุกวัน รู้เหตุผลจริงแล้วน้ำตาซึม",
+      "published": "2026-10-19T18:54:28Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [
+        "ความถี่",
+        "อารมณ์แรง"
+      ],
+      "days": 0.2
+    },
     {
       "id": "ADOIIE0Ug_4",
       "title": "ยายปั๊มกุญแจเปล่าทุกอาทิตย์ รู้เหตุผลจริงแล้วน้ำตาซึม",
       "published": "2026-10-18T15:51:19Z",
       "privacy": "public",
-      "views": 1069,
+      "views": 1081,
       "likes": 20,
       "comments": 0,
-      "views_per_day": 948.6,
-      "like_rate": 1.87,
+      "views_per_day": 940.6,
+      "like_rate": 1.85,
       "traits": [
         "อารมณ์แรง"
       ],
@@ -30,7 +46,7 @@
       "views": 1162,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 513.5,
+      "views_per_day": 508.5,
       "like_rate": 1.89,
       "traits": [
         "ความถี่",
@@ -46,7 +62,7 @@
       "views": 1444,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 443.0,
+      "views_per_day": 440.0,
       "like_rate": 1.94,
       "traits": [
         "ความถี่",
@@ -62,7 +78,7 @@
       "views": 1264,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 297.2,
+      "views_per_day": 295.6,
       "like_rate": 2.14,
       "traits": [
         "อารมณ์แรง"
@@ -77,7 +93,7 @@
       "views": 1634,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 311.0,
+      "views_per_day": 309.6,
       "like_rate": 1.47,
       "traits": [
         "อารมณ์แรง"
@@ -92,7 +108,7 @@
       "views": 1086,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 173.4,
+      "views_per_day": 172.8,
       "like_rate": 1.57,
       "traits": [],
       "days": 6.3
@@ -105,7 +121,7 @@
       "views": 1832,
       "likes": 44,
       "comments": 0,
-      "views_per_day": 246.7,
+      "views_per_day": 246.0,
       "like_rate": 2.4,
       "traits": [
         "ความถี่",
@@ -121,7 +137,7 @@
       "views": 1357,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 146.4,
+      "views_per_day": 146.1,
       "like_rate": 1.77,
       "traits": [
         "อารมณ์แรง"
@@ -136,7 +152,7 @@
       "views": 1222,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 119.0,
+      "views_per_day": 118.8,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
@@ -152,7 +168,7 @@
       "views": 1749,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 155.3,
+      "views_per_day": 155.0,
       "like_rate": 1.6,
       "traits": [
         "คำถาม",
@@ -168,7 +184,7 @@
       "views": 1606,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 127.8,
+      "views_per_day": 127.5,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
@@ -216,7 +232,7 @@
       "views": 1165,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 36.9,
+      "views_per_day": 36.8,
       "like_rate": 2.58,
       "traits": [
         "ความถี่",
@@ -253,24 +269,8 @@
       "like_rate": 0.0,
       "traits": [],
       "days": 32.5
-    },
-    {
-      "id": "TCf48wGdG2A",
-      "title": "ชายหนุ่มยืมหนังสือเล่มเดิมทุกวัน รู้เหตุผลจริงแล้วน้ำตาซึม",
-      "published": "2026-10-19T18:53:54Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [
-        "ความถี่",
-        "อารมณ์แรง"
-      ],
-      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-19T18:54:04+00:00"
+  "fetched_at": "2026-10-19T19:26:18+00:00"
 }

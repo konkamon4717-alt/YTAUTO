@@ -213,11 +213,12 @@
   },
   {
     "date": "2026-10-19",
-    "subscribers": 42,
-    "views": 17274,
+    "subscribers": 43,
+    "views": 17286,
     "videos": 16,
     "per_video": {
-      "ADOIIE0Ug_4": 1069,
+      "TCf48wGdG2A": 0,
+      "ADOIIE0Ug_4": 1081,
       "o54REzRRy8Y": 1162,
       "K7eDye3r_ys": 1444,
       "Wm93n7mXdgA": 1264,
@@ -232,8 +233,7 @@
       "klm0ozmRhsE": 23,
       "uxeId4AUBLI": 1165,
       "L52UHMV1E0g": 630,
-      "Xrtc_T0Z4To": 4,
-      "TCf48wGdG2A": 0
+      "Xrtc_T0Z4To": 4
     }
   }
 ]
