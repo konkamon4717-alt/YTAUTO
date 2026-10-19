@@ -1,6 +1,21 @@
 {
-  "updated_at": "2026-10-18T15:50:54+00:00",
+  "updated_at": "2026-10-19T18:54:02+00:00",
   "runs": [
+    {
+      "ok": true,
+      "title": "ชายหนุ่มยืมหนังสือเล่มเดิมทุกวัน รู้เหตุผลจริงแล้วน้ำตาซึม",
+      "premise": "A young librarian notices a man checking out the same torn book every day and carefully sewing it back together, only to find he is secretly archiving letters hidden in the binding for people to find later.",
+      "video_id": "TCf48wGdG2A",
+      "seconds": 866,
+      "writer": "gemini",
+      "animated": 6,
+      "scenes": 6,
+      "backends": {
+        "huggingface": 6
+      },
+      "voice": "edge-tts",
+      "at": "2026-10-19T18:54:02+00:00"
+    },
     {
       "ok": true,
       "title": "ยายปั๊มกุญแจเปล่าทุกอาทิตย์ รู้เหตุผลจริงแล้วน้ำตาซึม",
@@ -323,12 +338,6 @@
       "video_id": null,
       "seconds": 257,
       "at": "2026-09-17T02:03:59+00:00"
-    },
-    {
-      "ok": false,
-      "error": "RuntimeError: FFmpeg ล้มเหลว:\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf63.1.101\n  Duration: 00:00:30.67, start: 0.000000, bitrate: 933 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuvj420p(pc, bt470bg/unknown/unknown, progressive), 1080x1920 [SAR 1:1 DAR 9:16], 930 kb/s, 30 fps, 30 tb",
-      "seconds": 245,
-      "at": "2026-09-17T01:56:37+00:00"
     }
   ]
 }
