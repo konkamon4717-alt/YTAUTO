@@ -2,9 +2,9 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 42,
-    "views": 19327,
-    "videos": 9
+    "subscribers": 43,
+    "views": 19412,
+    "videos": 10
   },
   "videos": [
     {
@@ -12,58 +12,58 @@
       "title": "เมืองใต้ดินลึกแปดสิบเมตร ที่เคยซ่อนคนได้ถึงสองหมื่นคน",
       "published": "2026-10-18T15:55:30Z",
       "privacy": "public",
-      "views": 1288,
+      "views": 1326,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 3247.0,
-      "like_rate": 2.25,
+      "views_per_day": 1170.1,
+      "like_rate": 2.19,
       "traits": [
         "ความลับ"
       ],
-      "days": 0.4
+      "days": 1.1
     },
     {
       "id": "8IXB5qL8GzE",
       "title": "หลุมยักษ์กลางทะเลทราย ที่ไฟลุกไหม้ไม่เคยดับมากว่าห้าสิบปี",
       "published": "2026-10-17T12:39:42Z",
       "privacy": "public",
-      "views": 1675,
+      "views": 1680,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 1092.9,
+      "views_per_day": 740.3,
       "like_rate": 1.67,
       "traits": [
         "คำถาม"
       ],
-      "days": 1.5
+      "days": 2.3
     },
     {
       "id": "jMz_OLrFsWg",
       "title": "ทะเลทรายซาฮาราที่ซ่อนแหล่งน้ำมหาศาลไว้ใต้ผืนทราย",
       "published": "2026-10-16T12:48:25Z",
       "privacy": "public",
-      "views": 1276,
+      "views": 1282,
       "likes": 23,
       "comments": 0,
-      "views_per_day": 505.0,
-      "like_rate": 1.8,
+      "views_per_day": 392.9,
+      "like_rate": 1.79,
       "traits": [
         "ความลับ"
       ],
-      "days": 2.5
+      "days": 3.3
     },
     {
       "id": "6GYs0eHvlAM",
       "title": "ทะเลสาบสีแดงในแอฟริกา ที่เปลี่ยนร่างสัตว์ให้กลายเป็นหิน",
       "published": "2026-10-15T12:54:18Z",
       "privacy": "public",
-      "views": 1548,
-      "likes": 27,
+      "views": 1578,
+      "likes": 28,
       "comments": 2,
-      "views_per_day": 439.5,
-      "like_rate": 1.74,
+      "views_per_day": 370.5,
+      "like_rate": 1.77,
       "traits": [],
-      "days": 3.5
+      "days": 4.3
     },
     {
       "id": "5yltO_ljXfQ",
@@ -73,38 +73,38 @@
       "views": 1324,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 292.7,
+      "views_per_day": 251.7,
       "like_rate": 1.66,
       "traits": [],
-      "days": 4.5
+      "days": 5.3
     },
     {
       "id": "qCzjRnxtojM",
       "title": "น้ำตกสีแดงสดปานเลือด ที่ไหลออกมาจากใต้ธารน้ำแข็งแอนตาร์กติกา",
       "published": "2026-10-13T12:43:28Z",
       "privacy": "public",
-      "views": 1362,
+      "views": 1363,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 246.3,
-      "like_rate": 3.16,
+      "views_per_day": 217.5,
+      "like_rate": 3.15,
       "traits": [],
-      "days": 5.5
+      "days": 6.3
     },
     {
       "id": "GFIe9yZhPYg",
       "title": "สถานที่ที่มีฟ้าผ่ามากที่สุดในโลก นานสิบชั่วโมงติดต่อกันทุกคืน",
       "published": "2026-10-12T08:57:55Z",
       "privacy": "public",
-      "views": 1276,
+      "views": 1279,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 190.8,
+      "views_per_day": 172.3,
       "like_rate": 2.74,
       "traits": [
         "ความถี่"
       ],
-      "days": 6.7
+      "days": 7.4
     },
     {
       "id": "plEJBPKtWvs",
@@ -114,10 +114,10 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 171.9,
+      "views_per_day": 156.4,
       "like_rate": 2.74,
       "traits": [],
-      "days": 7.4
+      "days": 8.2
     },
     {
       "id": "cSsiwc7jZo0",
@@ -127,10 +127,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 116.9,
+      "views_per_day": 106.4,
       "like_rate": 2.51,
       "traits": [],
-      "days": 7.5
+      "days": 8.2
     },
     {
       "id": "964pejBlN0E",
@@ -140,23 +140,23 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 180.6,
+      "views_per_day": 164.5,
       "like_rate": 2.57,
       "traits": [],
-      "days": 7.5
+      "days": 8.3
     },
     {
       "id": "0iK9FQvX5Qg",
       "title": "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
       "published": "2026-10-10T15:12:30Z",
       "privacy": "public",
-      "views": 2029,
+      "views": 2031,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 240.8,
+      "views_per_day": 221.6,
       "like_rate": 2.66,
       "traits": [],
-      "days": 8.4
+      "days": 9.2
     },
     {
       "id": "urz_NtM6hEA",
@@ -166,10 +166,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 171.6,
+      "views_per_day": 157.8,
       "like_rate": 1.79,
       "traits": [],
-      "days": 8.5
+      "days": 9.2
     },
     {
       "id": "DbLMjGhbHxk",
@@ -179,10 +179,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 151.2,
+      "views_per_day": 139.2,
       "like_rate": 2.25,
       "traits": [],
-      "days": 8.5
+      "days": 9.3
     },
     {
       "id": "23eSKkHi5XY",
@@ -192,14 +192,27 @@
       "views": 1290,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 132.9,
+      "views_per_day": 123.5,
       "like_rate": 2.56,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 9.7
+      "days": 10.4
+    },
+    {
+      "id": "UbKKSxk3AXo",
+      "title": "ปลาทะเลลึกที่รูปร่างบิดเบี้ยวเพราะแรงกดทับของมหาสมุทร",
+      "published": "2026-10-19T19:07:16Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-19T01:26:42+00:00"
+  "fetched_at": "2026-10-19T19:07:22+00:00"
 }
