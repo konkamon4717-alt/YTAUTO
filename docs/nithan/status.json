@@ -1,6 +1,21 @@
 {
-  "updated_at": "2026-10-19T18:54:02+00:00",
+  "updated_at": "2026-10-20T16:55:01+00:00",
   "runs": [
+    {
+      "ok": true,
+      "title": "ลุงซื้อน้ำเปล่าแก้วละร้อยทุกวัน รู้เหตุผลจริงแล้วน้ำตาซึม",
+      "premise": "A young barista notices an elderly man buying expensive plain water every morning just to pour it into a crack in the pavement outside, only to discover a heartbreaking secret.",
+      "video_id": "suPbKtBVsyg",
+      "seconds": 563,
+      "writer": "gemini",
+      "animated": 2,
+      "scenes": 6,
+      "backends": {
+        "huggingface": 2
+      },
+      "voice": "edge-tts",
+      "at": "2026-10-20T16:55:01+00:00"
+    },
     {
       "ok": true,
       "title": "ชายหนุ่มยืมหนังสือเล่มเดิมทุกวัน รู้เหตุผลจริงแล้วน้ำตาซึม",
@@ -330,14 +345,6 @@
       "video_id": null,
       "seconds": 247,
       "at": "2026-09-17T02:10:18+00:00"
-    },
-    {
-      "ok": true,
-      "title": "ไข่ฟองที่หายไป",
-      "premise": "เด็กชายขายไข่ที่ชอบโกงลูกค้าทีละฟอง จนวันหนึ่งได้รู้ว่าคนที่เขาโกงมาตลอดคือคนที่ช่วยชีวิตแม่เขาไว้",
-      "video_id": null,
-      "seconds": 257,
-      "at": "2026-09-17T02:03:59+00:00"
     }
   ]
 }
