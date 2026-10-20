@@ -3,25 +3,41 @@
     "title": "nithan1min",
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
     "subscribers": 43,
-    "views": 17365,
+    "views": 17368,
     "videos": 17
   },
   "videos": [
+    {
+      "id": "suPbKtBVsyg",
+      "title": "ลุงซื้อน้ำเปล่าแก้วละร้อยทุกวัน รู้เหตุผลจริงแล้วน้ำตาซึม",
+      "published": "2026-10-20T16:55:21Z",
+      "privacy": "public",
+      "views": 1,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 4.0,
+      "like_rate": 0.0,
+      "traits": [
+        "ความถี่",
+        "อารมณ์แรง"
+      ],
+      "days": 0.2
+    },
     {
       "id": "TCf48wGdG2A",
       "title": "ชายหนุ่มยืมหนังสือเล่มเดิมทุกวัน รู้เหตุผลจริงแล้วน้ำตาซึม",
       "published": "2026-10-19T18:54:28Z",
       "privacy": "public",
-      "views": 48,
-      "likes": 1,
+      "views": 50,
+      "likes": 2,
       "comments": 0,
-      "views_per_day": 52.3,
-      "like_rate": 2.08,
+      "views_per_day": 51.8,
+      "like_rate": 4.0,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 0.9
+      "days": 1.0
     },
     {
       "id": "ADOIIE0Ug_4",
@@ -31,12 +47,12 @@
       "views": 1112,
       "likes": 20,
       "comments": 0,
-      "views_per_day": 544.0,
+      "views_per_day": 531.3,
       "like_rate": 1.8,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 2.0
+      "days": 2.1
     },
     {
       "id": "o54REzRRy8Y",
@@ -46,7 +62,7 @@
       "views": 1163,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 365.7,
+      "views_per_day": 360.2,
       "like_rate": 1.89,
       "traits": [
         "ความถี่",
@@ -62,7 +78,7 @@
       "views": 1444,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 345.7,
+      "views_per_day": 341.8,
       "like_rate": 1.94,
       "traits": [
         "ความถี่",
@@ -78,7 +94,7 @@
       "views": 1264,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 244.5,
+      "views_per_day": 242.2,
       "like_rate": 2.14,
       "traits": [
         "อารมณ์แรง"
@@ -93,7 +109,7 @@
       "views": 1633,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 264.6,
+      "views_per_day": 262.5,
       "like_rate": 1.47,
       "traits": [
         "อารมณ์แรง"
@@ -108,7 +124,7 @@
       "views": 1086,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 151.3,
+      "views_per_day": 150.2,
       "like_rate": 1.57,
       "traits": [],
       "days": 7.2
@@ -121,13 +137,13 @@
       "views": 1832,
       "likes": 44,
       "comments": 0,
-      "views_per_day": 219.6,
+      "views_per_day": 218.3,
       "like_rate": 2.4,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 8.3
+      "days": 8.4
     },
     {
       "id": "SsMdCbnHpvM",
@@ -137,7 +153,7 @@
       "views": 1357,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 133.2,
+      "views_per_day": 132.6,
       "like_rate": 1.77,
       "traits": [
         "อารมณ์แรง"
@@ -152,7 +168,7 @@
       "views": 1222,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 109.3,
+      "views_per_day": 108.8,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
@@ -168,7 +184,7 @@
       "views": 1749,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 143.6,
+      "views_per_day": 143.0,
       "like_rate": 1.6,
       "traits": [
         "คำถาม",
@@ -184,7 +200,7 @@
       "views": 1606,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 119.1,
+      "views_per_day": 118.7,
       "like_rate": 1.81,
       "traits": [
         "ความถี่",
@@ -206,7 +222,7 @@
         "คำถาม",
         "ความถี่"
       ],
-      "days": 29.6
+      "days": 29.7
     },
     {
       "id": "klm0ozmRhsE",
@@ -222,7 +238,7 @@
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 32.5
+      "days": 32.6
     },
     {
       "id": "uxeId4AUBLI",
@@ -239,7 +255,7 @@
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 32.5
+      "days": 32.6
     },
     {
       "id": "L52UHMV1E0g",
@@ -255,7 +271,7 @@
         "ความถี่",
         "ความลับ"
       ],
-      "days": 33.3
+      "days": 33.4
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -268,25 +284,9 @@
       "views_per_day": 0.1,
       "like_rate": 0.0,
       "traits": [],
-      "days": 33.4
-    },
-    {
-      "id": "suPbKtBVsyg",
-      "title": "ลุงซื้อน้ำเปล่าแก้วละร้อยทุกวัน รู้เหตุผลจริงแล้วน้ำตาซึม",
-      "published": "2026-10-20T16:54:54Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [
-        "ความถี่",
-        "อารมณ์แรง"
-      ],
-      "days": 0.2
+      "days": 33.5
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-20T16:55:03+00:00"
+  "fetched_at": "2026-10-20T18:05:09+00:00"
 }
