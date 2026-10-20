@@ -2,9 +2,9 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 44,
-    "views": 20606,
-    "videos": 10
+    "subscribers": 46,
+    "views": 20903,
+    "videos": 11
   },
   "videos": [
     {
@@ -12,28 +12,28 @@
       "title": "ปลาทะเลลึกที่รูปร่างบิดเบี้ยวเพราะแรงกดทับของมหาสมุทร",
       "published": "2026-10-19T19:07:48Z",
       "privacy": "public",
-      "views": 1155,
-      "likes": 18,
+      "views": 1348,
+      "likes": 21,
       "comments": 0,
-      "views_per_day": 4060.4,
+      "views_per_day": 1464.1,
       "like_rate": 1.56,
       "traits": [],
-      "days": 0.3
+      "days": 0.9
     },
     {
       "id": "Wf6aOOah7rU",
       "title": "เมืองใต้ดินลึกแปดสิบเมตร ที่เคยซ่อนคนได้ถึงสองหมื่นคน",
       "published": "2026-10-18T15:55:30Z",
       "privacy": "public",
-      "views": 1346,
-      "likes": 29,
+      "views": 1449,
+      "likes": 33,
       "comments": 0,
-      "views_per_day": 949.2,
-      "like_rate": 2.15,
+      "views_per_day": 705.4,
+      "like_rate": 2.28,
       "traits": [
         "ความลับ"
       ],
-      "days": 1.4
+      "days": 2.1
     },
     {
       "id": "8IXB5qL8GzE",
@@ -43,40 +43,40 @@
       "views": 1685,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 659.8,
+      "views_per_day": 528.2,
       "like_rate": 1.66,
       "traits": [
         "คำถาม"
       ],
-      "days": 2.6
+      "days": 3.2
     },
     {
       "id": "jMz_OLrFsWg",
       "title": "ทะเลทรายซาฮาราที่ซ่อนแหล่งน้ำมหาศาลไว้ใต้ผืนทราย",
       "published": "2026-10-16T12:48:25Z",
       "privacy": "public",
-      "views": 1287,
-      "likes": 23,
+      "views": 1288,
+      "likes": 24,
       "comments": 0,
-      "views_per_day": 362.7,
-      "like_rate": 1.79,
+      "views_per_day": 307.8,
+      "like_rate": 1.86,
       "traits": [
         "ความลับ"
       ],
-      "days": 3.5
+      "days": 4.2
     },
     {
       "id": "6GYs0eHvlAM",
       "title": "ทะเลสาบสีแดงในแอฟริกา ที่เปลี่ยนร่างสัตว์ให้กลายเป็นหิน",
       "published": "2026-10-15T12:54:18Z",
       "privacy": "public",
-      "views": 1580,
-      "likes": 28,
+      "views": 1579,
+      "likes": 29,
       "comments": 2,
-      "views_per_day": 347.7,
-      "like_rate": 1.77,
+      "views_per_day": 304.8,
+      "like_rate": 1.84,
       "traits": [],
-      "days": 4.5
+      "days": 5.2
     },
     {
       "id": "5yltO_ljXfQ",
@@ -86,10 +86,10 @@
       "views": 1325,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 239.0,
+      "views_per_day": 214.4,
       "like_rate": 1.66,
       "traits": [],
-      "days": 5.5
+      "days": 6.2
     },
     {
       "id": "qCzjRnxtojM",
@@ -99,25 +99,25 @@
       "views": 1366,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 208.5,
+      "views_per_day": 190.1,
       "like_rate": 3.15,
       "traits": [],
-      "days": 6.6
+      "days": 7.2
     },
     {
       "id": "GFIe9yZhPYg",
       "title": "สถานที่ที่มีฟ้าผ่ามากที่สุดในโลก นานสิบชั่วโมงติดต่อกันทุกคืน",
       "published": "2026-10-12T08:57:55Z",
       "privacy": "public",
-      "views": 1280,
+      "views": 1281,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 166.1,
+      "views_per_day": 153.5,
       "like_rate": 2.73,
       "traits": [
         "ความถี่"
       ],
-      "days": 7.7
+      "days": 8.3
     },
     {
       "id": "plEJBPKtWvs",
@@ -127,10 +127,10 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 151.1,
+      "views_per_day": 140.5,
       "like_rate": 2.74,
       "traits": [],
-      "days": 8.4
+      "days": 9.1
     },
     {
       "id": "cSsiwc7jZo0",
@@ -140,10 +140,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 102.9,
+      "views_per_day": 95.7,
       "like_rate": 2.51,
       "traits": [],
-      "days": 8.5
+      "days": 9.1
     },
     {
       "id": "964pejBlN0E",
@@ -153,10 +153,10 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 159.1,
+      "views_per_day": 148.1,
       "like_rate": 2.57,
       "traits": [],
-      "days": 8.6
+      "days": 9.2
     },
     {
       "id": "0iK9FQvX5Qg",
@@ -166,10 +166,10 @@
       "views": 2032,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 215.1,
+      "views_per_day": 201.5,
       "like_rate": 2.66,
       "traits": [],
-      "days": 9.4
+      "days": 10.1
     },
     {
       "id": "urz_NtM6hEA",
@@ -179,10 +179,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 153.1,
+      "views_per_day": 143.5,
       "like_rate": 1.79,
       "traits": [],
-      "days": 9.5
+      "days": 10.1
     },
     {
       "id": "DbLMjGhbHxk",
@@ -192,10 +192,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 135.0,
+      "views_per_day": 126.6,
       "like_rate": 2.25,
       "traits": [],
-      "days": 9.6
+      "days": 10.2
     },
     {
       "id": "23eSKkHi5XY",
@@ -205,14 +205,27 @@
       "views": 1291,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 120.3,
+      "views_per_day": 113.6,
       "like_rate": 2.56,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 10.7
+      "days": 11.4
+    },
+    {
+      "id": "YiNKS-SokOQ",
+      "title": "ดินแดนที่พระอาทิตย์ไม่เคยตกดินนานหลายเดือน",
+      "published": "2026-10-20T17:13:29Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-20T01:57:25+00:00"
+  "fetched_at": "2026-10-20T17:13:34+00:00"
 }
