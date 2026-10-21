@@ -1,49 +1,49 @@
 {
   "channel": "world",
-  "checked_at": "2026-10-20T01:57:24+00:00",
+  "checked_at": "2026-10-21T01:44:25+00:00",
   "healthy": true,
   "checks": [
     {
       "name": "youtube",
       "ok": true,
       "essential": true,
-      "detail": "รอบรู้ 1นาที | ผู้ติดตาม 44 | คลิป 10",
-      "ms": 1305
+      "detail": "รอบรู้ 1นาที | ผู้ติดตาม 46 | คลิป 11",
+      "ms": 584
     },
     {
       "name": "pollinations",
       "ok": true,
       "essential": true,
-      "detail": "371 โมเดล | รุ่นภาพที่ตั้งไว้ยังอยู่ครบ",
-      "ms": 338
+      "detail": "539 โมเดล | รุ่นภาพที่ตั้งไว้ยังอยู่ครบ",
+      "ms": 524
     },
     {
       "name": "edge-tts",
-      "ok": false,
+      "ok": true,
       "essential": false,
-      "detail": "NoAudioReceived: No audio was received. Please verify that your parameters are correct.",
-      "ms": 3410
+      "detail": "th-TH-NiwatNeural พากย์ได้จริง (11,232 ไบต์)",
+      "ms": 662
     },
     {
       "name": "gemini",
       "ok": true,
       "essential": false,
       "detail": "ใช้ได้ 4/4 รุ่น | ตัวแรก gemini-3.8-flash",
-      "ms": 176
+      "ms": 213
     },
     {
       "name": "kaggle",
       "ok": true,
       "essential": false,
       "detail": "เชื่อมต่อได้",
-      "ms": 930
+      "ms": 622
     },
     {
       "name": "huggingface",
       "ok": true,
       "essential": false,
       "detail": "zerogpu-aoti/wan2-2-fp8da-aoti-faster กำลังทำงาน",
-      "ms": 95
+      "ms": 135
     }
   ]
 }
