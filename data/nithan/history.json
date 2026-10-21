@@ -322,6 +322,21 @@
       },
       "voice": "edge-tts",
       "at": "2026-10-20T16:55:01+00:00"
+    },
+    {
+      "ok": true,
+      "title": "ลุงยอมจ่ายค่าตัดผมทุกวัน รู้เหตุผลจริงแล้วน้ำตาซึม",
+      "premise": "ชายชราที่แทบไม่มีผมยอมจ่ายเงินมาตัดผมทุกวัน เพียงเพื่อขอฟังเสียงกรรไกรขยับใกล้หู ก่อนที่ประสาทการได้ยินของเขาจะดับลงตลอดกาล",
+      "video_id": "Ft_htyx4omA",
+      "seconds": 479,
+      "writer": "gemini",
+      "animated": 5,
+      "scenes": 6,
+      "backends": {
+        "huggingface": 5
+      },
+      "voice": "gtts",
+      "at": "2026-10-21T19:14:51+00:00"
     }
   ],
   "premises": [
@@ -350,6 +365,7 @@
     "เจ้าของร้านขายร่มสงสัยว่าทำไมหญิงสาวคนหนึ่งยอมซื้อร่มสีดำคันใหม่ทุกวันฝนตก แล้วเอาไปตากฝนทิ้งไว้ข้างถังขยะ จนกระทั่งรู้ความจริงว่าเธอทำเพื่อคนไร้บ้านที่ตาบอดและไม่กล้ารับของฟรี",
     "ช่างปั๊มกุญแจหนุ่มสงสัยว่าทำไมคุณยายถึงยอมจ่ายเงินปั๊มกุญแจเปล่าที่ไม่มีร่องทุกสัปดาห์ จนกระทั่งได้รู้ความจริงสุดซึ้งเกี่ยวกับสามีที่เป็นอัลไซเมอร์",
     "A young librarian notices a man checking out the same torn book every day and carefully sewing it back together, only to find he is secretly archiving letters hidden in the binding for people to find later.",
-    "A young barista notices an elderly man buying expensive plain water every morning just to pour it into a crack in the pavement outside, only to discover a heartbreaking secret."
+    "A young barista notices an elderly man buying expensive plain water every morning just to pour it into a crack in the pavement outside, only to discover a heartbreaking secret.",
+    "ชายชราที่แทบไม่มีผมยอมจ่ายเงินมาตัดผมทุกวัน เพียงเพื่อขอฟังเสียงกรรไกรขยับใกล้หู ก่อนที่ประสาทการได้ยินของเขาจะดับลงตลอดกาล"
   ]
 }

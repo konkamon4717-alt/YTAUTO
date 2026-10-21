@@ -1,6 +1,21 @@
 {
-  "updated_at": "2026-10-21T18:15:45+00:00",
+  "updated_at": "2026-10-21T19:14:51+00:00",
   "runs": [
+    {
+      "ok": true,
+      "title": "ลุงยอมจ่ายค่าตัดผมทุกวัน รู้เหตุผลจริงแล้วน้ำตาซึม",
+      "premise": "ชายชราที่แทบไม่มีผมยอมจ่ายเงินมาตัดผมทุกวัน เพียงเพื่อขอฟังเสียงกรรไกรขยับใกล้หู ก่อนที่ประสาทการได้ยินของเขาจะดับลงตลอดกาล",
+      "video_id": "Ft_htyx4omA",
+      "seconds": 479,
+      "writer": "gemini",
+      "animated": 5,
+      "scenes": 6,
+      "backends": {
+        "huggingface": 5
+      },
+      "voice": "gtts",
+      "at": "2026-10-21T19:14:51+00:00"
+    },
     {
       "ok": false,
       "error": "RuntimeError: เขียนบทไม่สำเร็จทุกตัว:\n  gemini: RuntimeError: ทุกรุ่นของ Gemini ใช้ไม่ได้: gemini-3.8-flash: HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experien | gemini-3.6\n  pollinations: RuntimeError: ทุกโมเดลของ Pollinations ใช้ไม่ได้: opus-5-max: HTTP 400: {\"success\":false,\"error\":{\"message\":\"Invalid model or alias: \\\"communi | GPT-5.5-xHigh: HTTP",
@@ -333,14 +348,6 @@
       "video_id": null,
       "seconds": 96,
       "at": "2026-09-17T03:02:23+00:00"
-    },
-    {
-      "ok": true,
-      "title": "ไข่ฟองที่หายไป",
-      "premise": "เด็กชายขายไข่ที่ชอบโกงลูกค้าทีละฟอง จนวันหนึ่งได้รู้ว่าคนที่เขาโกงมาตลอดคือคนที่ช่วยชีวิตแม่เขาไว้",
-      "video_id": null,
-      "seconds": 244,
-      "at": "2026-09-17T02:22:34+00:00"
     }
   ]
 }

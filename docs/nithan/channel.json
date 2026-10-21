@@ -4,7 +4,7 @@
     "id": "UCi7FXWHfZICU-tk6EBvIvzQ",
     "subscribers": 46,
     "views": 19636,
-    "videos": 17
+    "videos": 18
   },
   "videos": [
     {
@@ -15,7 +15,7 @@
       "views": 1199,
       "likes": 18,
       "comments": 0,
-      "views_per_day": 1135.6,
+      "views_per_day": 1093.1,
       "like_rate": 1.5,
       "traits": [
         "ความถี่",
@@ -31,7 +31,7 @@
       "views": 1117,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 566.1,
+      "views_per_day": 554.6,
       "like_rate": 1.7,
       "traits": [
         "ความถี่",
@@ -47,7 +47,7 @@
       "views": 1113,
       "likes": 20,
       "comments": 0,
-      "views_per_day": 359.0,
+      "views_per_day": 354.3,
       "like_rate": 1.8,
       "traits": [
         "อารมณ์แรง"
@@ -62,13 +62,13 @@
       "views": 1160,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 273.8,
+      "views_per_day": 271.2,
       "like_rate": 1.9,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 4.2
+      "days": 4.3
     },
     {
       "id": "K7eDye3r_ys",
@@ -78,13 +78,13 @@
       "views": 1445,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 276.2,
+      "views_per_day": 274.0,
       "like_rate": 1.94,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 5.2
+      "days": 5.3
     },
     {
       "id": "Wm93n7mXdgA",
@@ -94,12 +94,12 @@
       "views": 1264,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 203.0,
+      "views_per_day": 201.7,
       "like_rate": 2.14,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 6.2
+      "days": 6.3
     },
     {
       "id": "-3eSGZBXNu8",
@@ -109,12 +109,12 @@
       "views": 1634,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 226.1,
+      "views_per_day": 224.8,
       "like_rate": 1.47,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 7.2
+      "days": 7.3
     },
     {
       "id": "5-h7FboaP0c",
@@ -124,10 +124,10 @@
       "views": 1086,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 131.9,
+      "views_per_day": 131.2,
       "like_rate": 1.57,
       "traits": [],
-      "days": 8.2
+      "days": 8.3
     },
     {
       "id": "Lip4vEyuFa8",
@@ -137,7 +137,7 @@
       "views": 1832,
       "likes": 44,
       "comments": 0,
-      "views_per_day": 194.9,
+      "views_per_day": 194.1,
       "like_rate": 2.4,
       "traits": [
         "ความถี่",
@@ -153,12 +153,12 @@
       "views": 1358,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 120.8,
+      "views_per_day": 120.4,
       "like_rate": 1.77,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 11.2
+      "days": 11.3
     },
     {
       "id": "pZi7FJyHjEY",
@@ -168,13 +168,13 @@
       "views": 1222,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 99.8,
+      "views_per_day": 99.5,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 12.2
+      "days": 12.3
     },
     {
       "id": "ZQpvIsa0c8A",
@@ -184,13 +184,13 @@
       "views": 1750,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 132.2,
+      "views_per_day": 131.8,
       "like_rate": 1.6,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 13.2
+      "days": 13.3
     },
     {
       "id": "hyfmbTfZqBg",
@@ -200,13 +200,13 @@
       "views": 1607,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 110.5,
+      "views_per_day": 110.2,
       "like_rate": 1.8,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 14.5
+      "days": 14.6
     },
     {
       "id": "8-Zy5rZlH00",
@@ -285,8 +285,24 @@
       "like_rate": 0.0,
       "traits": [],
       "days": 34.5
+    },
+    {
+      "id": "Ft_htyx4omA",
+      "title": "ลุงยอมจ่ายค่าตัดผมทุกวัน รู้เหตุผลจริงแล้วน้ำตาซึม",
+      "published": "2026-10-21T19:14:44Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [
+        "ความถี่",
+        "อารมณ์แรง"
+      ],
+      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-21T18:15:46+00:00"
+  "fetched_at": "2026-10-21T19:14:52+00:00"
 }
