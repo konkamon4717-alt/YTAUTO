@@ -3,22 +3,35 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 53,
-    "views": 23802,
+    "views": 23809,
     "videos": 13
   },
   "videos": [
+    {
+      "id": "v89g4zmYRjU",
+      "title": "ป่าที่ทั้งผืนคือต้นไม้เพียงต้นเดียว",
+      "published": "2026-10-22T17:51:11Z",
+      "privacy": "public",
+      "views": 9,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 36.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
+    },
     {
       "id": "Evxe1dSEIpA",
       "title": "แม่น้ำอเมซอน สายน้ำที่ไม่มีสะพานข้ามเลยสักแห่งเดียว",
       "published": "2026-10-21T17:19:07Z",
       "privacy": "public",
-      "views": 1475,
+      "views": 1472,
       "likes": 28,
       "comments": 1,
-      "views_per_day": 1443.1,
+      "views_per_day": 1381.0,
       "like_rate": 1.9,
       "traits": [],
-      "days": 1.0
+      "days": 1.1
     },
     {
       "id": "YiNKS-SokOQ",
@@ -28,10 +41,10 @@
       "views": 1281,
       "likes": 32,
       "comments": 0,
-      "views_per_day": 632.3,
+      "views_per_day": 619.0,
       "like_rate": 2.5,
       "traits": [],
-      "days": 2.0
+      "days": 2.1
     },
     {
       "id": "UbKKSxk3AXo",
@@ -41,20 +54,20 @@
       "views": 1408,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 477.8,
+      "views_per_day": 470.8,
       "like_rate": 1.7,
       "traits": [],
-      "days": 2.9
+      "days": 3.0
     },
     {
       "id": "Wf6aOOah7rU",
       "title": "เมืองใต้ดินลึกแปดสิบเมตร ที่เคยซ่อนคนได้ถึงสองหมื่นคน",
       "published": "2026-10-18T15:55:30Z",
       "privacy": "public",
-      "views": 1521,
+      "views": 1522,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 372.8,
+      "views_per_day": 369.1,
       "like_rate": 2.3,
       "traits": [
         "ความลับ"
@@ -69,12 +82,12 @@
       "views": 1686,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 323.2,
+      "views_per_day": 320.5,
       "like_rate": 1.66,
       "traits": [
         "คำถาม"
       ],
-      "days": 5.2
+      "days": 5.3
     },
     {
       "id": "jMz_OLrFsWg",
@@ -84,12 +97,12 @@
       "views": 1288,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 207.4,
+      "views_per_day": 206.0,
       "like_rate": 1.86,
       "traits": [
         "ความลับ"
       ],
-      "days": 6.2
+      "days": 6.3
     },
     {
       "id": "6GYs0eHvlAM",
@@ -99,7 +112,7 @@
       "views": 1586,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 220.1,
+      "views_per_day": 218.8,
       "like_rate": 1.83,
       "traits": [],
       "days": 7.2
@@ -112,10 +125,10 @@
       "views": 1325,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 161.5,
+      "views_per_day": 160.6,
       "like_rate": 1.66,
       "traits": [],
-      "days": 8.2
+      "days": 8.3
     },
     {
       "id": "qCzjRnxtojM",
@@ -125,10 +138,10 @@
       "views": 1366,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 148.3,
+      "views_per_day": 147.6,
       "like_rate": 3.15,
       "traits": [],
-      "days": 9.2
+      "days": 9.3
     },
     {
       "id": "GFIe9yZhPYg",
@@ -138,7 +151,7 @@
       "views": 1283,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 123.7,
+      "views_per_day": 123.2,
       "like_rate": 2.73,
       "traits": [
         "ความถี่"
@@ -153,7 +166,7 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 114.9,
+      "views_per_day": 114.4,
       "like_rate": 2.74,
       "traits": [],
       "days": 11.1
@@ -166,7 +179,7 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 78.4,
+      "views_per_day": 78.0,
       "like_rate": 2.51,
       "traits": [],
       "days": 11.2
@@ -179,10 +192,10 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 121.3,
+      "views_per_day": 120.9,
       "like_rate": 2.57,
       "traits": [],
-      "days": 11.2
+      "days": 11.3
     },
     {
       "id": "0iK9FQvX5Qg",
@@ -192,10 +205,10 @@
       "views": 2033,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 167.9,
+      "views_per_day": 167.3,
       "like_rate": 2.66,
       "traits": [],
-      "days": 12.1
+      "days": 12.2
     },
     {
       "id": "urz_NtM6hEA",
@@ -205,7 +218,7 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 119.6,
+      "views_per_day": 119.2,
       "like_rate": 1.79,
       "traits": [],
       "days": 12.2
@@ -218,10 +231,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 105.6,
+      "views_per_day": 105.2,
       "like_rate": 2.25,
       "traits": [],
-      "days": 12.2
+      "days": 12.3
     },
     {
       "id": "23eSKkHi5XY",
@@ -231,27 +244,14 @@
       "views": 1291,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 96.4,
+      "views_per_day": 96.1,
       "like_rate": 2.56,
       "traits": [
         "ความขัดแย้ง"
       ],
       "days": 13.4
-    },
-    {
-      "id": "v89g4zmYRjU",
-      "title": "ป่าที่ทั้งผืนคือต้นไม้เพียงต้นเดียว",
-      "published": "2026-10-22T17:50:51Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [],
-      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-22T17:50:58+00:00"
+  "fetched_at": "2026-10-22T18:54:00+00:00"
 }
