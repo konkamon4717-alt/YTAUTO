@@ -2,9 +2,9 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 54,
-    "views": 25208,
-    "videos": 13
+    "subscribers": 57,
+    "views": 25417,
+    "videos": 14
   },
   "videos": [
     {
@@ -12,67 +12,67 @@
       "title": "ป่าที่ทั้งผืนคือต้นไม้เพียงต้นเดียว",
       "published": "2026-10-22T17:51:11Z",
       "privacy": "public",
-      "views": 1368,
-      "likes": 29,
+      "views": 1388,
+      "likes": 28,
       "comments": 0,
-      "views_per_day": 4189.9,
-      "like_rate": 2.12,
+      "views_per_day": 1385.5,
+      "like_rate": 2.02,
       "traits": [],
-      "days": 0.3
+      "days": 1.0
     },
     {
       "id": "Evxe1dSEIpA",
       "title": "แม่น้ำอเมซอน สายน้ำที่ไม่มีสะพานข้ามเลยสักแห่งเดียว",
       "published": "2026-10-21T17:19:07Z",
       "privacy": "public",
-      "views": 1499,
-      "likes": 29,
+      "views": 1642,
+      "likes": 31,
       "comments": 1,
-      "views_per_day": 1111.4,
-      "like_rate": 1.93,
+      "views_per_day": 811.2,
+      "like_rate": 1.89,
       "traits": [],
-      "days": 1.3
+      "days": 2.0
     },
     {
       "id": "YiNKS-SokOQ",
       "title": "ดินแดนที่พระอาทิตย์ไม่เคยตกดินนานหลายเดือน",
       "published": "2026-10-20T17:13:46Z",
       "privacy": "public",
-      "views": 1284,
+      "views": 1289,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 545.8,
-      "like_rate": 2.57,
+      "views_per_day": 425.7,
+      "like_rate": 2.56,
       "traits": [],
-      "days": 2.4
+      "days": 3.0
     },
     {
       "id": "UbKKSxk3AXo",
       "title": "ปลาทะเลลึกที่รูปร่างบิดเบี้ยวเพราะแรงกดทับของมหาสมุทร",
       "published": "2026-10-19T19:07:48Z",
       "privacy": "public",
-      "views": 1409,
-      "likes": 24,
+      "views": 1442,
+      "likes": 27,
       "comments": 0,
-      "views_per_day": 430.5,
-      "like_rate": 1.7,
+      "views_per_day": 365.2,
+      "like_rate": 1.87,
       "traits": [],
-      "days": 3.3
+      "days": 3.9
     },
     {
       "id": "Wf6aOOah7rU",
       "title": "เมืองใต้ดินลึกแปดสิบเมตร ที่เคยซ่อนคนได้ถึงสองหมื่นคน",
       "published": "2026-10-18T15:55:30Z",
       "privacy": "public",
-      "views": 1525,
+      "views": 1530,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 346.1,
-      "like_rate": 2.3,
+      "views_per_day": 301.1,
+      "like_rate": 2.29,
       "traits": [
         "ความลับ"
       ],
-      "days": 4.4
+      "days": 5.1
     },
     {
       "id": "8IXB5qL8GzE",
@@ -82,12 +82,12 @@
       "views": 1688,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 304.5,
+      "views_per_day": 271.5,
       "like_rate": 1.66,
       "traits": [
         "คำถาม"
       ],
-      "days": 5.5
+      "days": 6.2
     },
     {
       "id": "jMz_OLrFsWg",
@@ -97,12 +97,12 @@
       "views": 1289,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 197.2,
+      "views_per_day": 178.7,
       "like_rate": 1.86,
       "traits": [
         "ความลับ"
       ],
-      "days": 6.5
+      "days": 7.2
     },
     {
       "id": "6GYs0eHvlAM",
@@ -112,10 +112,10 @@
       "views": 1587,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 210.7,
+      "views_per_day": 193.3,
       "like_rate": 1.83,
       "traits": [],
-      "days": 7.5
+      "days": 8.2
     },
     {
       "id": "5yltO_ljXfQ",
@@ -125,38 +125,38 @@
       "views": 1326,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 155.4,
+      "views_per_day": 144.0,
       "like_rate": 1.66,
       "traits": [],
-      "days": 8.5
+      "days": 9.2
     },
     {
       "id": "qCzjRnxtojM",
       "title": "น้ำตกสีแดงสดปานเลือด ที่ไหลออกมาจากใต้ธารน้ำแข็งแอนตาร์กติกา",
       "published": "2026-10-13T12:43:28Z",
       "privacy": "public",
-      "views": 1367,
+      "views": 1369,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 143.3,
-      "like_rate": 3.15,
+      "views_per_day": 134.0,
+      "like_rate": 3.14,
       "traits": [],
-      "days": 9.5
+      "days": 10.2
     },
     {
       "id": "GFIe9yZhPYg",
       "title": "สถานที่ที่มีฟ้าผ่ามากที่สุดในโลก นานสิบชั่วโมงติดต่อกันทุกคืน",
       "published": "2026-10-12T08:57:55Z",
       "privacy": "public",
-      "views": 1283,
+      "views": 1284,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 119.9,
+      "views_per_day": 112.9,
       "like_rate": 2.73,
       "traits": [
         "ความถี่"
       ],
-      "days": 10.7
+      "days": 11.4
     },
     {
       "id": "plEJBPKtWvs",
@@ -166,10 +166,10 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 111.6,
+      "views_per_day": 105.4,
       "like_rate": 2.74,
       "traits": [],
-      "days": 11.4
+      "days": 12.1
     },
     {
       "id": "cSsiwc7jZo0",
@@ -179,10 +179,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 76.1,
+      "views_per_day": 71.9,
       "like_rate": 2.51,
       "traits": [],
-      "days": 11.5
+      "days": 12.2
     },
     {
       "id": "964pejBlN0E",
@@ -192,10 +192,10 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 117.9,
+      "views_per_day": 111.4,
       "like_rate": 2.57,
       "traits": [],
-      "days": 11.6
+      "days": 12.2
     },
     {
       "id": "0iK9FQvX5Qg",
@@ -205,10 +205,10 @@
       "views": 2033,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 163.5,
+      "views_per_day": 155.0,
       "like_rate": 2.66,
       "traits": [],
-      "days": 12.4
+      "days": 13.1
     },
     {
       "id": "urz_NtM6hEA",
@@ -218,10 +218,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 116.5,
+      "views_per_day": 110.5,
       "like_rate": 1.79,
       "traits": [],
-      "days": 12.5
+      "days": 13.2
     },
     {
       "id": "DbLMjGhbHxk",
@@ -231,10 +231,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 102.9,
+      "views_per_day": 97.6,
       "like_rate": 2.25,
       "traits": [],
-      "days": 12.5
+      "days": 13.2
     },
     {
       "id": "23eSKkHi5XY",
@@ -244,14 +244,27 @@
       "views": 1291,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 94.1,
+      "views_per_day": 89.7,
       "like_rate": 2.56,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 13.7
+      "days": 14.4
+    },
+    {
+      "id": "fpSQ-Reg9BM",
+      "title": "ยอดเขาที่อยู่ใกล้อวกาศที่สุด ไม่ใช่เอเวอเรสต์",
+      "published": "2026-10-23T17:53:37Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-23T01:41:20+00:00"
+  "fetched_at": "2026-10-23T17:53:43+00:00"
 }
