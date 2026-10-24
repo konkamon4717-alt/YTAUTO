@@ -3,10 +3,23 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 60,
-    "views": 26762,
+    "views": 26770,
     "videos": 15
   },
   "videos": [
+    {
+      "id": "BN5JwqqJ1Pw",
+      "title": "ดินแดนที่แห้งแล้งที่สุดในโลก ไม่ได้อยู่ในทะเลทราย",
+      "published": "2026-10-24T16:28:57Z",
+      "privacy": "public",
+      "views": 8,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 32.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
+    },
     {
       "id": "fpSQ-Reg9BM",
       "title": "ยอดเขาที่อยู่ใกล้อวกาศที่สุด ไม่ใช่เอเวอเรสต์",
@@ -15,10 +28,10 @@
       "views": 1162,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 1235.4,
+      "views_per_day": 1211.2,
       "like_rate": 2.32,
       "traits": [],
-      "days": 0.9
+      "days": 1.0
     },
     {
       "id": "v89g4zmYRjU",
@@ -28,10 +41,10 @@
       "views": 1389,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 715.0,
+      "views_per_day": 708.2,
       "like_rate": 2.09,
       "traits": [],
-      "days": 1.9
+      "days": 2.0
     },
     {
       "id": "Evxe1dSEIpA",
@@ -41,7 +54,7 @@
       "views": 1800,
       "likes": 33,
       "comments": 1,
-      "views_per_day": 607.1,
+      "views_per_day": 603.3,
       "like_rate": 1.83,
       "traits": [],
       "days": 3.0
@@ -54,7 +67,7 @@
       "views": 1297,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 326.8,
+      "views_per_day": 325.3,
       "like_rate": 2.54,
       "traits": [],
       "days": 4.0
@@ -67,7 +80,7 @@
       "views": 1448,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 296.1,
+      "views_per_day": 295.0,
       "like_rate": 1.8,
       "traits": [],
       "days": 4.9
@@ -80,7 +93,7 @@
       "views": 1532,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 254.4,
+      "views_per_day": 253.6,
       "like_rate": 2.28,
       "traits": [
         "ความลับ"
@@ -95,7 +108,7 @@
       "views": 1688,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 235.8,
+      "views_per_day": 235.2,
       "like_rate": 1.66,
       "traits": [
         "คำถาม"
@@ -110,7 +123,7 @@
       "views": 1290,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 158.2,
+      "views_per_day": 157.9,
       "like_rate": 1.86,
       "traits": [
         "ความลับ"
@@ -125,10 +138,10 @@
       "views": 1587,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 173.5,
+      "views_per_day": 173.1,
       "like_rate": 1.83,
       "traits": [],
-      "days": 9.1
+      "days": 9.2
     },
     {
       "id": "5yltO_ljXfQ",
@@ -138,10 +151,10 @@
       "views": 1326,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 130.6,
+      "views_per_day": 130.4,
       "like_rate": 1.66,
       "traits": [],
-      "days": 10.1
+      "days": 10.2
     },
     {
       "id": "qCzjRnxtojM",
@@ -151,7 +164,7 @@
       "views": 1369,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 122.7,
+      "views_per_day": 122.5,
       "like_rate": 3.14,
       "traits": [],
       "days": 11.2
@@ -164,7 +177,7 @@
       "views": 1285,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 104.4,
+      "views_per_day": 104.2,
       "like_rate": 2.72,
       "traits": [
         "ความถี่"
@@ -179,10 +192,10 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 97.8,
+      "views_per_day": 97.6,
       "like_rate": 2.74,
       "traits": [],
-      "days": 13.0
+      "days": 13.1
     },
     {
       "id": "cSsiwc7jZo0",
@@ -192,7 +205,7 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 66.7,
+      "views_per_day": 66.6,
       "like_rate": 2.51,
       "traits": [],
       "days": 13.1
@@ -205,7 +218,7 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 103.4,
+      "views_per_day": 103.3,
       "like_rate": 2.57,
       "traits": [],
       "days": 13.2
@@ -218,7 +231,7 @@
       "views": 2039,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 145.1,
+      "views_per_day": 144.9,
       "like_rate": 2.65,
       "traits": [],
       "days": 14.1
@@ -231,7 +244,7 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 103.1,
+      "views_per_day": 103.0,
       "like_rate": 1.79,
       "traits": [],
       "days": 14.1
@@ -244,7 +257,7 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 91.1,
+      "views_per_day": 91.0,
       "like_rate": 2.25,
       "traits": [],
       "days": 14.2
@@ -257,27 +270,14 @@
       "views": 1291,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 84.2,
+      "views_per_day": 84.1,
       "like_rate": 2.56,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 15.3
-    },
-    {
-      "id": "BN5JwqqJ1Pw",
-      "title": "ดินแดนที่แห้งแล้งที่สุดในโลก ไม่ได้อยู่ในทะเลทราย",
-      "published": "2026-10-24T16:28:31Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [],
-      "days": 0.2
+      "days": 15.4
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-24T16:28:37+00:00"
+  "fetched_at": "2026-10-24T16:55:40+00:00"
 }
