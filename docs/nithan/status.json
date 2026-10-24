@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-10-24T15:50:28+00:00",
+  "updated_at": "2026-10-24T16:54:48+00:00",
   "runs": [
+    {
+      "ok": false,
+      "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/A%20warm%20vintage%20bookstore%20interior%20with%20soft%20sunlight\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/A%20warm%20vintage%20bookstore%20interior%20with%20soft%20s\n  flux.1-schnell: 402 Client Error: Payment Required f",
+      "seconds": 319,
+      "at": "2026-10-24T16:54:48+00:00"
+    },
     {
       "ok": false,
       "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20close-up%20of%20hands%20carefully%20tearing%20the%20fi\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20close-up%20of%20hands%20carefully%20tearing%20t\n  flux.1-schnell: 402 Client Error: Payment Required f",
@@ -341,12 +347,6 @@
       "backends": {},
       "voice": "pollinations",
       "at": "2026-09-17T09:10:01+00:00"
-    },
-    {
-      "ok": false,
-      "error": "RuntimeError: เขียนบทไม่สำเร็จทุกตัว:\n  gemini: RuntimeError: HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Pl\n  pollinations: ReadTimeout: HTTPSConnectionPool(host='gen.pollinations.ai', port=443): Read timed out. (read timeout=240)",
-      "seconds": 445,
-      "at": "2026-09-17T08:43:45+00:00"
     }
   ]
 }
