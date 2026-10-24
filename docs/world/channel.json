@@ -2,8 +2,8 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 57,
-    "views": 25442,
+    "subscribers": 61,
+    "views": 26611,
     "videos": 14
   },
   "videos": [
@@ -12,65 +12,65 @@
       "title": "ยอดเขาที่อยู่ใกล้อวกาศที่สุด ไม่ใช่เอเวอเรสต์",
       "published": "2026-10-23T17:54:09Z",
       "privacy": "public",
-      "views": 14,
-      "likes": 0,
+      "views": 1126,
+      "likes": 26,
       "comments": 0,
-      "views_per_day": 56.0,
-      "like_rate": 0.0,
+      "views_per_day": 3447.0,
+      "like_rate": 2.31,
       "traits": [],
-      "days": 0.2
+      "days": 0.3
     },
     {
       "id": "v89g4zmYRjU",
       "title": "ป่าที่ทั้งผืนคือต้นไม้เพียงต้นเดียว",
       "published": "2026-10-22T17:51:11Z",
       "privacy": "public",
-      "views": 1390,
+      "views": 1388,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 1313.1,
+      "views_per_day": 1044.6,
       "like_rate": 2.09,
       "traits": [],
-      "days": 1.1
+      "days": 1.3
     },
     {
       "id": "Evxe1dSEIpA",
       "title": "แม่น้ำอเมซอน สายน้ำที่ไม่มีสะพานข้ามเลยสักแห่งเดียว",
       "published": "2026-10-21T17:19:07Z",
       "privacy": "public",
-      "views": 1651,
-      "likes": 31,
+      "views": 1699,
+      "likes": 33,
       "comments": 1,
-      "views_per_day": 793.4,
-      "like_rate": 1.88,
+      "views_per_day": 722.7,
+      "like_rate": 1.94,
       "traits": [],
-      "days": 2.1
+      "days": 2.4
     },
     {
       "id": "YiNKS-SokOQ",
       "title": "ดินแดนที่พระอาทิตย์ไม่เคยตกดินนานหลายเดือน",
       "published": "2026-10-20T17:13:46Z",
       "privacy": "public",
-      "views": 1289,
+      "views": 1292,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 417.9,
-      "like_rate": 2.56,
+      "views_per_day": 385.1,
+      "like_rate": 2.55,
       "traits": [],
-      "days": 3.1
+      "days": 3.4
     },
     {
       "id": "UbKKSxk3AXo",
       "title": "ปลาทะเลลึกที่รูปร่างบิดเบี้ยวเพราะแรงกดทับของมหาสมุทร",
       "published": "2026-10-19T19:07:48Z",
       "privacy": "public",
-      "views": 1442,
-      "likes": 27,
+      "views": 1448,
+      "likes": 26,
       "comments": 0,
-      "views_per_day": 360.0,
-      "like_rate": 1.87,
+      "views_per_day": 338.7,
+      "like_rate": 1.8,
       "traits": [],
-      "days": 4.0
+      "days": 4.3
     },
     {
       "id": "Wf6aOOah7rU",
@@ -80,12 +80,12 @@
       "views": 1530,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 297.7,
+      "views_per_day": 282.9,
       "like_rate": 2.29,
       "traits": [
         "ความลับ"
       ],
-      "days": 5.1
+      "days": 5.4
     },
     {
       "id": "8IXB5qL8GzE",
@@ -95,12 +95,12 @@
       "views": 1688,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 269.0,
+      "views_per_day": 257.9,
       "like_rate": 1.66,
       "traits": [
         "คำถาม"
       ],
-      "days": 6.3
+      "days": 6.5
     },
     {
       "id": "jMz_OLrFsWg",
@@ -110,12 +110,12 @@
       "views": 1289,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 177.3,
+      "views_per_day": 171.0,
       "like_rate": 1.86,
       "traits": [
         "ความลับ"
       ],
-      "days": 7.3
+      "days": 7.5
     },
     {
       "id": "6GYs0eHvlAM",
@@ -125,10 +125,10 @@
       "views": 1587,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 192.0,
+      "views_per_day": 185.9,
       "like_rate": 1.83,
       "traits": [],
-      "days": 8.3
+      "days": 8.5
     },
     {
       "id": "5yltO_ljXfQ",
@@ -138,10 +138,10 @@
       "views": 1326,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 143.1,
+      "views_per_day": 139.1,
       "like_rate": 1.66,
       "traits": [],
-      "days": 9.3
+      "days": 9.5
     },
     {
       "id": "qCzjRnxtojM",
@@ -151,25 +151,25 @@
       "views": 1369,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 133.3,
+      "views_per_day": 129.9,
       "like_rate": 3.14,
       "traits": [],
-      "days": 10.3
+      "days": 10.5
     },
     {
       "id": "GFIe9yZhPYg",
       "title": "สถานที่ที่มีฟ้าผ่ามากที่สุดในโลก นานสิบชั่วโมงติดต่อกันทุกคืน",
       "published": "2026-10-12T08:57:55Z",
       "privacy": "public",
-      "views": 1284,
+      "views": 1285,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 112.3,
-      "like_rate": 2.73,
+      "views_per_day": 109.8,
+      "like_rate": 2.72,
       "traits": [
         "ความถี่"
       ],
-      "days": 11.4
+      "days": 11.7
     },
     {
       "id": "plEJBPKtWvs",
@@ -179,10 +179,10 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 104.9,
+      "views_per_day": 102.6,
       "like_rate": 2.74,
       "traits": [],
-      "days": 12.2
+      "days": 12.4
     },
     {
       "id": "cSsiwc7jZo0",
@@ -192,10 +192,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 71.6,
+      "views_per_day": 70.0,
       "like_rate": 2.51,
       "traits": [],
-      "days": 12.2
+      "days": 12.5
     },
     {
       "id": "964pejBlN0E",
@@ -205,23 +205,23 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 110.9,
+      "views_per_day": 108.5,
       "like_rate": 2.57,
       "traits": [],
-      "days": 12.3
+      "days": 12.6
     },
     {
       "id": "0iK9FQvX5Qg",
       "title": "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
       "published": "2026-10-10T15:12:30Z",
       "privacy": "public",
-      "views": 2033,
+      "views": 2034,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 154.4,
-      "like_rate": 2.66,
+      "views_per_day": 151.4,
+      "like_rate": 2.65,
       "traits": [],
-      "days": 13.2
+      "days": 13.4
     },
     {
       "id": "urz_NtM6hEA",
@@ -231,10 +231,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 110.0,
+      "views_per_day": 107.8,
       "like_rate": 1.79,
       "traits": [],
-      "days": 13.2
+      "days": 13.5
     },
     {
       "id": "DbLMjGhbHxk",
@@ -244,10 +244,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 97.2,
+      "views_per_day": 95.3,
       "like_rate": 2.25,
       "traits": [],
-      "days": 13.3
+      "days": 13.6
     },
     {
       "id": "23eSKkHi5XY",
@@ -257,14 +257,14 @@
       "views": 1291,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 89.3,
+      "views_per_day": 87.7,
       "like_rate": 2.56,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 14.4
+      "days": 14.7
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-23T19:15:29+00:00"
+  "fetched_at": "2026-10-24T01:44:32+00:00"
 }
