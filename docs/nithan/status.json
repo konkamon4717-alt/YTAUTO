@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-10-24T16:54:48+00:00",
+  "updated_at": "2026-10-24T17:56:35+00:00",
   "runs": [
+    {
+      "ok": false,
+      "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20shot%20of%20a%20young%20Thai%20boy%20placing%20a%20sma\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20shot%20of%20a%20young%20Thai%20boy%20placing%20\n  flux.1-schnell: 402 Client Error: Payment Required f",
+      "seconds": 419,
+      "at": "2026-10-24T17:56:35+00:00"
+    },
     {
       "ok": false,
       "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/A%20warm%20vintage%20bookstore%20interior%20with%20soft%20sunlight\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/A%20warm%20vintage%20bookstore%20interior%20with%20soft%20s\n  flux.1-schnell: 402 Client Error: Payment Required f",
@@ -334,19 +340,6 @@
       "backends": {},
       "voice": "edge-tts",
       "at": "2026-09-18T04:29:04+00:00"
-    },
-    {
-      "ok": true,
-      "title": "ความลับของนาฬิกาเรือนเก่าที่หยุดเดินทุกเดือน",
-      "premise": "ช่างซ่อมนาฬิกาหนุ่มพบว่ายายที่นำนาฬิกามาซ่อมฟรีทุกเดือนไม่ได้ทำมันพัง แต่ตั้งใจหมุนกลับเพราะแค่อยากมีเพื่อนคุยแก้เหงา",
-      "video_id": "L52UHMV1E0g",
-      "seconds": 308,
-      "writer": "gemini",
-      "animated": 0,
-      "scenes": 6,
-      "backends": {},
-      "voice": "pollinations",
-      "at": "2026-09-17T09:10:01+00:00"
     }
   ]
 }
