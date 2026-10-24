@@ -2,9 +2,9 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 61,
-    "views": 26611,
-    "videos": 14
+    "subscribers": 60,
+    "views": 26762,
+    "videos": 15
   },
   "videos": [
     {
@@ -12,52 +12,52 @@
       "title": "ยอดเขาที่อยู่ใกล้อวกาศที่สุด ไม่ใช่เอเวอเรสต์",
       "published": "2026-10-23T17:54:09Z",
       "privacy": "public",
-      "views": 1126,
-      "likes": 26,
+      "views": 1162,
+      "likes": 27,
       "comments": 0,
-      "views_per_day": 3447.0,
-      "like_rate": 2.31,
+      "views_per_day": 1235.4,
+      "like_rate": 2.32,
       "traits": [],
-      "days": 0.3
+      "days": 0.9
     },
     {
       "id": "v89g4zmYRjU",
       "title": "ป่าที่ทั้งผืนคือต้นไม้เพียงต้นเดียว",
       "published": "2026-10-22T17:51:11Z",
       "privacy": "public",
-      "views": 1388,
+      "views": 1389,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 1044.6,
+      "views_per_day": 715.0,
       "like_rate": 2.09,
       "traits": [],
-      "days": 1.3
+      "days": 1.9
     },
     {
       "id": "Evxe1dSEIpA",
       "title": "แม่น้ำอเมซอน สายน้ำที่ไม่มีสะพานข้ามเลยสักแห่งเดียว",
       "published": "2026-10-21T17:19:07Z",
       "privacy": "public",
-      "views": 1699,
+      "views": 1800,
       "likes": 33,
       "comments": 1,
-      "views_per_day": 722.7,
-      "like_rate": 1.94,
+      "views_per_day": 607.1,
+      "like_rate": 1.83,
       "traits": [],
-      "days": 2.4
+      "days": 3.0
     },
     {
       "id": "YiNKS-SokOQ",
       "title": "ดินแดนที่พระอาทิตย์ไม่เคยตกดินนานหลายเดือน",
       "published": "2026-10-20T17:13:46Z",
       "privacy": "public",
-      "views": 1292,
+      "views": 1297,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 385.1,
-      "like_rate": 2.55,
+      "views_per_day": 326.8,
+      "like_rate": 2.54,
       "traits": [],
-      "days": 3.4
+      "days": 4.0
     },
     {
       "id": "UbKKSxk3AXo",
@@ -67,25 +67,25 @@
       "views": 1448,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 338.7,
+      "views_per_day": 296.1,
       "like_rate": 1.8,
       "traits": [],
-      "days": 4.3
+      "days": 4.9
     },
     {
       "id": "Wf6aOOah7rU",
       "title": "เมืองใต้ดินลึกแปดสิบเมตร ที่เคยซ่อนคนได้ถึงสองหมื่นคน",
       "published": "2026-10-18T15:55:30Z",
       "privacy": "public",
-      "views": 1530,
+      "views": 1532,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 282.9,
-      "like_rate": 2.29,
+      "views_per_day": 254.4,
+      "like_rate": 2.28,
       "traits": [
         "ความลับ"
       ],
-      "days": 5.4
+      "days": 6.0
     },
     {
       "id": "8IXB5qL8GzE",
@@ -95,27 +95,27 @@
       "views": 1688,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 257.9,
+      "views_per_day": 235.8,
       "like_rate": 1.66,
       "traits": [
         "คำถาม"
       ],
-      "days": 6.5
+      "days": 7.2
     },
     {
       "id": "jMz_OLrFsWg",
       "title": "ทะเลทรายซาฮาราที่ซ่อนแหล่งน้ำมหาศาลไว้ใต้ผืนทราย",
       "published": "2026-10-16T12:48:25Z",
       "privacy": "public",
-      "views": 1289,
+      "views": 1290,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 171.0,
+      "views_per_day": 158.2,
       "like_rate": 1.86,
       "traits": [
         "ความลับ"
       ],
-      "days": 7.5
+      "days": 8.2
     },
     {
       "id": "6GYs0eHvlAM",
@@ -125,10 +125,10 @@
       "views": 1587,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 185.9,
+      "views_per_day": 173.5,
       "like_rate": 1.83,
       "traits": [],
-      "days": 8.5
+      "days": 9.1
     },
     {
       "id": "5yltO_ljXfQ",
@@ -138,10 +138,10 @@
       "views": 1326,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 139.1,
+      "views_per_day": 130.6,
       "like_rate": 1.66,
       "traits": [],
-      "days": 9.5
+      "days": 10.1
     },
     {
       "id": "qCzjRnxtojM",
@@ -151,10 +151,10 @@
       "views": 1369,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 129.9,
+      "views_per_day": 122.7,
       "like_rate": 3.14,
       "traits": [],
-      "days": 10.5
+      "days": 11.2
     },
     {
       "id": "GFIe9yZhPYg",
@@ -164,12 +164,12 @@
       "views": 1285,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 109.8,
+      "views_per_day": 104.4,
       "like_rate": 2.72,
       "traits": [
         "ความถี่"
       ],
-      "days": 11.7
+      "days": 12.3
     },
     {
       "id": "plEJBPKtWvs",
@@ -179,10 +179,10 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 102.6,
+      "views_per_day": 97.8,
       "like_rate": 2.74,
       "traits": [],
-      "days": 12.4
+      "days": 13.0
     },
     {
       "id": "cSsiwc7jZo0",
@@ -192,10 +192,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 70.0,
+      "views_per_day": 66.7,
       "like_rate": 2.51,
       "traits": [],
-      "days": 12.5
+      "days": 13.1
     },
     {
       "id": "964pejBlN0E",
@@ -205,23 +205,23 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 108.5,
+      "views_per_day": 103.4,
       "like_rate": 2.57,
       "traits": [],
-      "days": 12.6
+      "days": 13.2
     },
     {
       "id": "0iK9FQvX5Qg",
       "title": "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
       "published": "2026-10-10T15:12:30Z",
       "privacy": "public",
-      "views": 2034,
+      "views": 2039,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 151.4,
+      "views_per_day": 145.1,
       "like_rate": 2.65,
       "traits": [],
-      "days": 13.4
+      "days": 14.1
     },
     {
       "id": "urz_NtM6hEA",
@@ -231,10 +231,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 107.8,
+      "views_per_day": 103.1,
       "like_rate": 1.79,
       "traits": [],
-      "days": 13.5
+      "days": 14.1
     },
     {
       "id": "DbLMjGhbHxk",
@@ -244,10 +244,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 95.3,
+      "views_per_day": 91.1,
       "like_rate": 2.25,
       "traits": [],
-      "days": 13.6
+      "days": 14.2
     },
     {
       "id": "23eSKkHi5XY",
@@ -257,14 +257,27 @@
       "views": 1291,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 87.7,
+      "views_per_day": 84.2,
       "like_rate": 2.56,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 14.7
+      "days": 15.3
+    },
+    {
+      "id": "BN5JwqqJ1Pw",
+      "title": "ดินแดนที่แห้งแล้งที่สุดในโลก ไม่ได้อยู่ในทะเลทราย",
+      "published": "2026-10-24T16:28:31Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-24T01:44:32+00:00"
+  "fetched_at": "2026-10-24T16:28:37+00:00"
 }
