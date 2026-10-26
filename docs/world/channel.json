@@ -2,8 +2,8 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 63,
-    "views": 28139,
+    "subscribers": 65,
+    "views": 29074,
     "videos": 16
   },
   "videos": [
@@ -12,65 +12,65 @@
       "title": "แม่น้ำเดือดในป่าแอมะซอน ไม่ได้เกิดจากภูเขาไฟ",
       "published": "2026-10-25T16:09:29Z",
       "privacy": "public",
-      "views": 2,
-      "likes": 0,
+      "views": 874,
+      "likes": 16,
       "comments": 0,
-      "views_per_day": 8.0,
-      "like_rate": 0.0,
+      "views_per_day": 2271.6,
+      "like_rate": 1.83,
       "traits": [],
-      "days": 0.2
+      "days": 0.4
     },
     {
       "id": "BN5JwqqJ1Pw",
       "title": "ดินแดนที่แห้งแล้งที่สุดในโลก ไม่ได้อยู่ในทะเลทราย",
       "published": "2026-10-24T16:28:57Z",
       "privacy": "public",
-      "views": 1223,
+      "views": 1256,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 1140.5,
-      "like_rate": 2.13,
+      "views_per_day": 916.0,
+      "like_rate": 2.07,
       "traits": [],
-      "days": 1.1
+      "days": 1.4
     },
     {
       "id": "fpSQ-Reg9BM",
       "title": "ยอดเขาที่อยู่ใกล้อวกาศที่สุด ไม่ใช่เอเวอเรสต์",
       "published": "2026-10-23T17:54:09Z",
       "privacy": "public",
-      "views": 1184,
+      "views": 1192,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 588.1,
-      "like_rate": 2.28,
+      "views_per_day": 515.6,
+      "like_rate": 2.27,
       "traits": [],
-      "days": 2.0
+      "days": 2.3
     },
     {
       "id": "v89g4zmYRjU",
       "title": "ป่าที่ทั้งผืนคือต้นไม้เพียงต้นเดียว",
       "published": "2026-10-22T17:51:11Z",
       "privacy": "public",
-      "views": 1391,
+      "views": 1394,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 461.3,
+      "views_per_day": 420.6,
       "like_rate": 2.08,
       "traits": [],
-      "days": 3.0
+      "days": 3.3
     },
     {
       "id": "Evxe1dSEIpA",
       "title": "แม่น้ำอเมซอน สายน้ำที่ไม่มีสะพานข้ามเลยสักแห่งเดียว",
       "published": "2026-10-21T17:19:07Z",
       "privacy": "public",
-      "views": 1913,
+      "views": 1929,
       "likes": 36,
       "comments": 2,
-      "views_per_day": 473.8,
-      "like_rate": 1.88,
+      "views_per_day": 444.8,
+      "like_rate": 1.87,
       "traits": [],
-      "days": 4.0
+      "days": 4.3
     },
     {
       "id": "YiNKS-SokOQ",
@@ -80,38 +80,38 @@
       "views": 1300,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 257.9,
+      "views_per_day": 243.4,
       "like_rate": 2.54,
       "traits": [],
-      "days": 5.0
+      "days": 5.3
     },
     {
       "id": "UbKKSxk3AXo",
       "title": "ปลาทะเลลึกที่รูปร่างบิดเบี้ยวเพราะแรงกดทับของมหาสมุทร",
       "published": "2026-10-19T19:07:48Z",
       "privacy": "public",
-      "views": 1450,
+      "views": 1451,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 243.2,
+      "views_per_day": 231.8,
       "like_rate": 1.79,
       "traits": [],
-      "days": 6.0
+      "days": 6.3
     },
     {
       "id": "Wf6aOOah7rU",
       "title": "เมืองใต้ดินลึกแปดสิบเมตร ที่เคยซ่อนคนได้ถึงสองหมื่นคน",
       "published": "2026-10-18T15:55:30Z",
       "privacy": "public",
-      "views": 1534,
+      "views": 1535,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 216.2,
+      "views_per_day": 207.6,
       "like_rate": 2.28,
       "traits": [
         "ความลับ"
       ],
-      "days": 7.1
+      "days": 7.4
     },
     {
       "id": "8IXB5qL8GzE",
@@ -121,12 +121,12 @@
       "views": 1689,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 205.2,
+      "views_per_day": 198.0,
       "like_rate": 1.66,
       "traits": [
         "คำถาม"
       ],
-      "days": 8.2
+      "days": 8.5
     },
     {
       "id": "jMz_OLrFsWg",
@@ -136,12 +136,12 @@
       "views": 1291,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 139.9,
+      "views_per_day": 135.5,
       "like_rate": 1.86,
       "traits": [
         "ความลับ"
       ],
-      "days": 9.2
+      "days": 9.5
     },
     {
       "id": "6GYs0eHvlAM",
@@ -151,10 +151,10 @@
       "views": 1588,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 155.4,
+      "views_per_day": 150.9,
       "like_rate": 1.83,
       "traits": [],
-      "days": 10.2
+      "days": 10.5
     },
     {
       "id": "5yltO_ljXfQ",
@@ -164,10 +164,10 @@
       "views": 1327,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 118.2,
+      "views_per_day": 115.2,
       "like_rate": 1.66,
       "traits": [],
-      "days": 11.2
+      "days": 11.5
     },
     {
       "id": "qCzjRnxtojM",
@@ -177,10 +177,10 @@
       "views": 1370,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 112.0,
+      "views_per_day": 109.4,
       "like_rate": 3.14,
       "traits": [],
-      "days": 12.2
+      "days": 12.5
     },
     {
       "id": "GFIe9yZhPYg",
@@ -190,12 +190,12 @@
       "views": 1286,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 96.1,
+      "views_per_day": 94.0,
       "like_rate": 2.72,
       "traits": [
         "ความถี่"
       ],
-      "days": 13.4
+      "days": 13.7
     },
     {
       "id": "plEJBPKtWvs",
@@ -205,10 +205,10 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 90.4,
+      "views_per_day": 88.5,
       "like_rate": 2.74,
       "traits": [],
-      "days": 14.1
+      "days": 14.4
     },
     {
       "id": "cSsiwc7jZo0",
@@ -218,10 +218,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 61.7,
+      "views_per_day": 60.4,
       "like_rate": 2.51,
       "traits": [],
-      "days": 14.2
+      "days": 14.5
     },
     {
       "id": "964pejBlN0E",
@@ -231,23 +231,23 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 95.6,
+      "views_per_day": 93.7,
       "like_rate": 2.57,
       "traits": [],
-      "days": 14.2
+      "days": 14.5
     },
     {
       "id": "0iK9FQvX5Qg",
       "title": "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
       "published": "2026-10-10T15:12:30Z",
       "privacy": "public",
-      "views": 2040,
+      "views": 2041,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 134.9,
+      "views_per_day": 132.3,
       "like_rate": 2.65,
       "traits": [],
-      "days": 15.1
+      "days": 15.4
     },
     {
       "id": "urz_NtM6hEA",
@@ -257,10 +257,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 95.9,
+      "views_per_day": 94.0,
       "like_rate": 1.79,
       "traits": [],
-      "days": 15.2
+      "days": 15.5
     },
     {
       "id": "DbLMjGhbHxk",
@@ -270,10 +270,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 84.7,
+      "views_per_day": 83.1,
       "like_rate": 2.25,
       "traits": [],
-      "days": 15.2
+      "days": 15.5
     },
     {
       "id": "23eSKkHi5XY",
@@ -283,14 +283,14 @@
       "views": 1292,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 78.7,
+      "views_per_day": 77.3,
       "like_rate": 2.55,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 16.4
+      "days": 16.7
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-25T18:13:03+00:00"
+  "fetched_at": "2026-10-26T01:23:31+00:00"
 }
