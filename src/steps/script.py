@@ -18,6 +18,7 @@ SCHEMA = {
         "hashtags": {"type": "array", "items": {"type": "string"}},
         "character_sheet": {"type": "string"},
         "thumbnail_text": {"type": "string"},
+        "subject_query": {"type": "string"},
         "scenes": {
             "type": "array",
             "items": {

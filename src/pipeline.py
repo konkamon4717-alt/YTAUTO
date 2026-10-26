@@ -149,13 +149,17 @@ def make_video(cfg: dict, work: Path, story: dict | None = None) -> tuple[Path, 
     stills: list[Path] = []
     credits: list[dict] = []
     used_urls: set[str] = set()
+    approved: list[dict] = []
     seed = int(time.time())
 
     for index, scene in enumerate(scenes):
         image_path = work / f"scene_{index:02d}.jpg"
         if from_stock:
             from .steps import stock
-            credits.append(stock.fetch(scene["image_prompt"], image_path, cfg, used_urls))
+            credits.append(stock.fetch(
+                scene["image_prompt"], image_path, cfg, used_urls,
+                context=f"{story['title']} — {story.get('premise', '')} — ฉากนี้: {scene['narration']}",
+                approved=approved, subject=story.get("subject_query", "")))
         else:
             prompt = images.build_prompt(
                 scene["image_prompt"], story["character_sheet"], cfg["images"]["style"],

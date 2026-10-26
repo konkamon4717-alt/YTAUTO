@@ -15,6 +15,7 @@
 """
 import html
 import re
+import time
 import subprocess
 
 import requests
@@ -99,6 +100,9 @@ def _wikimedia(query: str) -> list[dict]:
         licence = _clean(meta.get("LicenseShortName", {}).get("value", "")) or "ดูที่ต้นทาง"
         out.append({
             "url": info.get("thumburl") or info.get("url"),
+            # Commons ใช้ขนาดภาพย่อมาตรฐานชุดหนึ่ง เปลี่ยนตัวเลขในลิงก์เป็น 500 ได้ภาพเล็กพอให้ AI ดู
+            # เดิมแทนเฉพาะ "1600px" แต่ลิงก์จริงใช้ขนาดอื่น เลยได้ไฟล์เต็มขนาดหลาย MB มาแทน
+            "thumb": re.sub(r"/\d+px-", "/500px-", info.get("thumburl") or "") or None,
             "title": page.get("title", "").replace("File:", ""),
             "author": author[:80],
             "license": licence,
@@ -123,6 +127,7 @@ def _openverse(query: str) -> list[dict]:
             continue
         out.append({
             "url": item.get("url"),
+            "thumb": item.get("thumbnail"),
             "title": item.get("title") or query,
             "author": (item.get("creator") or "ไม่ระบุชื่อ")[:80],
             "license": (item.get("license") or "").upper(),
@@ -145,6 +150,7 @@ def _nasa(query: str) -> list[dict]:
             continue
         out.append({
             "url": links[0].get("href"),
+            "thumb": links[0].get("href"),
             "title": data.get("title") or query,
             "author": data.get("center") or "NASA",
             "license": "สาธารณสมบัติ",
@@ -192,6 +198,107 @@ def compose(src, out_path, width: int, height: int) -> None:
         raise RuntimeError("จัดภาพไม่สำเร็จ:\n" + result.stderr[-400:])
 
 
+# ---------- ให้ AI ดูภาพจริงก่อนเลือก ----------
+
+VISION_PROMPT = """You are the photo editor of a factual YouTube Shorts channel.
+
+STORY (the truth you must match): {context}
+Search words used for this scene: {query}
+
+Below are {n} candidate photos, numbered 0 to {last} in order.
+Pick the ONE photo that a viewer would accept as a real photo of THIS STORY's subject and place.
+
+Judge against the STORY, not the search words. The search words can be wrong or too broad.
+If the story says something is NOT X, a photo of X is wrong even if the search words mention X.
+
+Reject a photo if it is any of these:
+- a different subject, place, animal or object than the story (a whale in a story about a forest,
+  a volcano in Iceland in a story about a river in the Amazon, a zoo exhibit instead of the real place)
+- a diagram, simulation, satellite false-colour image, map, chart, illustration, painting, engraving,
+  cartoon, collage or screenshot
+- mostly text, a logo, or people posing unrelated to the subject
+
+- a look-alike: a different mountain, river or forest that only looks similar.
+  If the story names a specific place or thing, the photo must BE that place or thing.
+  Use each photo's title (listed below) to check what it really is.
+
+Photo titles:
+{titles}
+
+If none of them clearly fits, answer best = -1. A wrong photo is worse than no photo.
+Give a short reason in English."""
+
+VISION_SCHEMA = {
+    "type": "object",
+    "properties": {"best": {"type": "integer"}, "reason": {"type": "string"}},
+    "required": ["best"],
+}
+
+
+def _vision_pick(cands: list[dict], query: str, context: str, cfg: dict) -> int:
+    """ส่งภาพตัวเลือกให้ Gemini ดู แล้วคืนลำดับภาพที่ตรงเรื่องที่สุด หรือ -1 ถ้าไม่มี
+
+    การค้นด้วยคำอย่างเดียวคืนภาพที่ "คำตรง" แต่ "ภาพผิด" บ่อยมาก
+    เช่นค้นสิ่งมีชีวิตที่ใหญ่ที่สุดแล้วได้หางวาฬมาใส่คลิปเรื่องป่า
+    หรือเรื่องแม่น้ำเดือดที่ไม่ได้เกิดจากภูเขาไฟ กลับได้ภาพภูเขาไฟในไอซ์แลนด์
+    ถ้าเรียก AI ไม่ได้จะโยน error ให้คนเรียกตัดสินใจเอง ไม่แอบเลือกมั่ว ๆ แทน
+    """
+    import base64
+    import json
+    from ..config import secret
+
+    parts, kept = [], []
+    for c in cands:
+        url = c.get("thumb") or c["url"]
+        try:
+            r = requests.get(url, timeout=20, headers={"User-Agent": UA})
+            r.raise_for_status()
+        except Exception:  # noqa: BLE001 - โหลดภาพตัวอย่างไม่ได้ก็ตัดตัวนี้ทิ้ง
+            continue
+        mime = (r.headers.get("content-type") or "image/jpeg").split(";")[0]
+        if not mime.startswith("image/") or len(r.content) > 1_500_000:
+            continue
+        kept.append(c)
+        parts.append({"inline_data": {"mime_type": mime,
+                                      "data": base64.b64encode(r.content).decode()}})
+    if not kept:
+        return -1
+
+    titles = "\n".join(f"{i}: {c['title'][:90]}" for i, c in enumerate(kept))
+    prompt = VISION_PROMPT.format(context=context or query, query=query, titles=titles,
+                                  n=len(kept), last=len(kept) - 1)
+    body = {"contents": [{"parts": [{"text": prompt}, *parts]}],
+            "generationConfig": {"temperature": 0, "responseMimeType": "application/json",
+                                 "responseSchema": VISION_SCHEMA}}
+    last = None
+    # รุ่นเล็กตอบใน 4-5 วินาที รุ่นใหญ่ 8-11 วินาที แต่ดูภาพว่าตรงเรื่องไหมได้พอกัน
+    models = (cfg.get("images") or {}).get("vision_models") or         ["gemini-3.1-flash-lite", "gemini-3.5-flash", "gemini-3.6-flash"]
+    for model in models:
+        try:
+            r = requests.post(
+                f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+                headers={"x-goog-api-key": secret("GEMINI_API_KEY")}, json=body, timeout=90)
+            if r.status_code in (429, 500, 502, 503, 504):
+                last = f"{model} {r.status_code}"
+                print(f"      ตรวจภาพด้วย {model} ไม่ได้ ({r.status_code}) ลองรุ่นถัดไป")
+                continue
+            r.raise_for_status()
+            text = r.json()["candidates"][0]["content"]["parts"][0]["text"]
+            answer = json.loads(text)
+            best = int(answer.get("best", -1))
+            reason = str(answer.get("reason", ""))[:110]
+            if 0 <= best < len(kept):
+                print(f"      AI เลือกภาพ: {kept[best]['title'][:50]} — {reason}")
+                # คืนลำดับในรายการเดิม ไม่ใช่ในรายการที่ตัดตัวโหลดไม่ได้ทิ้งไปแล้ว
+                return cands.index(kept[best])
+            print(f"      AI ไม่รับภาพชุด '{query}' — {reason}")
+            return -1
+        except Exception as exc:  # noqa: BLE001 - ลองรุ่นถัดไป
+            last = f"{model} {type(exc).__name__}: {str(exc)[:80]}"
+            print(f"      ตรวจภาพด้วย {model} ไม่ได้ ({last})")
+    raise RuntimeError(f"ตรวจภาพด้วย AI ไม่ได้: {last}")
+
+
 def _variants(query: str) -> list[str]:
     """ไล่ผ่อนคำค้นลงทีละขั้นเมื่อของเดิมไม่เจอ
 
@@ -208,16 +315,23 @@ def _variants(query: str) -> list[str]:
     return out
 
 
-def fetch(query: str, out_path, cfg: dict, used: set[str] | None = None) -> dict:
+def fetch(query: str, out_path, cfg: dict, used: set[str] | None = None,
+          context: str = "", approved: list[dict] | None = None, subject: str = "") -> dict:
     """หาภาพของฉากหนึ่ง คืนข้อมูลเครดิตที่ต้องเอาไปใส่คำอธิบายคลิป
 
     used เก็บ url ที่ใช้ไปแล้วในคลิปนี้ กันไม่ให้ได้ภาพเดียวกันสองฉาก
-    ซึ่งเกิดบ่อยเพราะคำค้นของฉากใกล้เคียงกันมักให้ผลลัพธ์ชุดเดียวกัน
+    context คือชื่อเรื่องกับบทของฉาก ให้ AI รู้ว่าภาพต้องเกี่ยวกับอะไร
+    approved เก็บภาพที่ AI รับรองแล้วในคลิปนี้ ใช้ซ้ำได้เมื่อฉากไหนหาภาพที่ตรงไม่เจอ
+    เพราะภาพซ้ำหนึ่งฉากยังดีกว่าภาพผิดเรื่อง ซึ่งคนดูเห็นแล้วเสียความเชื่อถือทันที
+    subject คือคำค้นของหัวเรื่องหลักทั้งคลิป เช่น "Pando aspen clone"
+    ใช้ค้นสำรองเมื่อคำค้นของฉากกว้างเกินจนไม่มีภาพตรง ซึ่งภาพของหัวเรื่องหลักมีแน่นอน
     """
     used = used if used is not None else set()
+    approved = approved if approved is not None else []
     width = cfg["images"].get("width") or cfg["video"]["width"]
     height = cfg["images"].get("height") or cfg["video"]["height"]
     allowed = cfg["images"].get("stock_sources") or [name for name, _ in SOURCES]
+    use_vision = cfg["images"].get("vision_check", True)
     problems = []
 
     def _grab(hit) -> bool:
@@ -233,9 +347,23 @@ def fetch(query: str, out_path, cfg: dict, used: set[str] | None = None) -> dict
             problems.append(f"{hit['title'][:20]}: {type(exc).__name__}")
             return False
 
-    spare = None   # ภาพที่เคยใช้ไปแล้วในคลิปนี้ เก็บไว้เป็นทางสุดท้าย
+    def _first_ok(cands):
+        for hit in cands[:4]:
+            if _grab(hit):
+                used.add(hit["url"])
+                return hit
+        return None
 
-    for term in _variants(query):
+    first_unchecked = None   # ใช้เฉพาะเมื่อไม่มีภาพไหนผ่านเลยในฉากแรกของคลิป
+
+    terms = _variants(query)
+    if subject and subject.lower() not in [t.lower() for t in terms]:
+        terms.insert(1, subject)
+    vision_answered = False   # AI ตอบได้อย่างน้อยหนึ่งครั้ง แปลว่าภาพที่ไม่ผ่านคือภาพที่ถูกปฏิเสธจริง
+
+    for term in terms:
+        # รวมผลจากทุกคลังก่อนแล้วค่อยให้ AI เลือก ไม่หยุดที่คลังแรกที่เจออะไรก็ได้
+        pool = []
         for name, search in SOURCES:
             if name not in allowed:
                 continue
@@ -244,30 +372,94 @@ def fetch(query: str, out_path, cfg: dict, used: set[str] | None = None) -> dict
             except Exception as exc:  # noqa: BLE001 - คลังล่มไม่ควรทำให้ทั้งคลิปพัง
                 problems.append(f"{name}: {type(exc).__name__}")
                 continue
-
             photos = [h for h in hits if _looks_like_photo(h["title"])]
-            # ถ้าคัดจนไม่เหลืออะไรเลย ยอมใช้ของเดิมดีกว่าไม่มีภาพ
-            hits = sorted(photos or hits, key=lambda h: -_score(h, term))
+            pool += sorted(photos or hits, key=lambda h: -_score(h, term))[:4]
 
-            fresh = [h for h in hits if h["url"] not in used]
-            spare = spare or next(iter(hits), None)
+        seen, fresh = set(), []
+        for h in pool:
+            if h["url"] in used or h["url"] in seen:
+                continue
+            seen.add(h["url"])
+            fresh.append(h)
+        fresh = fresh[:6]
+        if not fresh:
+            continue
+        first_unchecked = first_unchecked or fresh[0]
 
-            for hit in fresh[:4]:
-                if _grab(hit):
-                    used.add(hit["url"])
-                    return hit
+        if not use_vision:
+            hit = _first_ok(fresh)
+            if hit:
+                return hit
+            continue
 
-    # ภาพซ้ำในคลิปเดียวกันไม่สวย แต่ยังดีกว่าทิ้งคลิปทั้งคลิปเพราะฉากเดียว
-    if spare and _grab(spare):
-        return spare
+        try:
+            try:
+                pick = _vision_pick(fresh, term, context, cfg)
+            except RuntimeError:
+                # ส่วนใหญ่คือโควตาต่อนาทีเต็ม รอสักพักแล้วลองอีกครั้งก่อนยอมแพ้
+                time.sleep(30)
+                pick = _vision_pick(fresh, term, context, cfg)
+        except RuntimeError as exc:
+            if vision_answered:
+                # AI เคยตอบในฉากนี้แล้ว ภาพที่เหลือคือภาพที่ยังไม่ผ่าน ไม่หยิบมาใช้มั่ว ๆ
+                problems.append(str(exc))
+                if subject and term == subject and terms.count(subject) < 2:
+                    terms.append(subject)   # หัวเรื่องหลักสำคัญที่สุด ลองใหม่ตอนท้ายอีกรอบ
+                continue
+            # AI ล่มทั้งรอบ ถอยไปใช้วิธีเลือกจากคะแนนคำค้นแทนการหยุดทั้งคลิป
+            problems.append(str(exc))
+            print(f"      เตือน: {exc} — เลือกภาพจากคะแนนคำค้นแทน")
+            use_vision = False
+            hit = _first_ok(fresh)
+            if hit:
+                return hit
+            continue
+
+        vision_answered = True
+        if pick >= 0 and _grab(fresh[pick]):
+            hit = fresh[pick]
+            used.add(hit["url"])
+            approved.append(hit)
+            return hit
+        problems.append(f"'{term}': ไม่มีภาพที่ตรงเรื่อง")
+
+    # ไม่เจอภาพที่ตรงเรื่องเลย ใช้ภาพที่รับรองแล้วจากฉากก่อนซ้ำ ดีกว่าใส่ภาพผิด
+    for hit in reversed(approved):
+        if _grab(hit):
+            print("      ฉากนี้หาภาพที่ตรงไม่เจอ ใช้ภาพของฉากก่อนซ้ำ")
+            return hit
+
+    # ถ้า AI ตรวจแล้วปฏิเสธทุกภาพ ห้ามหยิบภาพพวกนั้นมาใช้ เพราะมันคือภาพที่ "รู้แล้ว" ว่าผิดเรื่อง
+    # ใช้ฉากพื้นหลังเรียบแทน ซึ่งไม่ทำให้คนดูเข้าใจผิด
+    if vision_answered:
+        _plain_card(out_path, width, height)
+        print(f"      ไม่มีภาพที่ตรงเรื่องสำหรับ '{query}' ใช้ฉากพื้นหลังเรียบแทน")
+        return {"url": "", "title": "", "author": "", "license": "", "source": "", "via": "card"}
+
+    # AI ใช้ไม่ได้เลยทั้งรอบ ถอยไปใช้ภาพที่คะแนนคำค้นดีที่สุด ดีกว่าหยุดทั้งคลิป
+    if first_unchecked and _grab(first_unchecked):
+        print(f"      เตือน: ตรวจภาพไม่ได้ ใช้ภาพจากคะแนนคำค้นสำหรับ '{query}'")
+        return first_unchecked
 
     raise RuntimeError(f"หาภาพสำหรับ '{query}' ไม่ได้ — {'; '.join(problems[:4])}")
+
+
+def _plain_card(out_path, width: int, height: int) -> None:
+    """ฉากพื้นหลังเรียบโทนเดียวกับช่อง ใช้แทนภาพเมื่อหาภาพที่ตรงเรื่องไม่ได้จริง ๆ"""
+    vf = (f"color=c=0x0b1424:s={width}x{height},"
+          f"geq=r='11+30*exp(-((X-{width}*0.3)^2+(Y-{height}*0.35)^2)/(2*({width}*0.35)^2))':"
+          f"g='20+60*exp(-((X-{width}*0.3)^2+(Y-{height}*0.35)^2)/(2*({width}*0.35)^2))':"
+          f"b='36+70*exp(-((X-{width}*0.7)^2+(Y-{height}*0.7)^2)/(2*({width}*0.4)^2))'")
+    subprocess.run(["ffmpeg", "-y", "-f", "lavfi", "-i", vf, "-frames:v", "1", "-q:v", "3", str(out_path)],
+                   capture_output=True, check=True)
 
 
 def credit_lines(credits: list[dict]) -> str:
     """รวมเครดิตเป็นข้อความสำหรับท้ายคำอธิบายคลิป ตัดใบที่ซ้ำกันออก"""
     seen, lines = set(), []
     for c in credits:
+        if not c.get("url"):
+            continue
         key = (c["title"], c["author"])
         if key in seen:
             continue
