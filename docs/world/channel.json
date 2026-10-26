@@ -3,8 +3,8 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 65,
-    "views": 29379,
-    "videos": 16
+    "views": 29378,
+    "videos": 17
   },
   "videos": [
     {
@@ -12,26 +12,26 @@
       "title": "แม่น้ำเดือดในป่าแอมะซอน ไม่ได้เกิดจากภูเขาไฟ",
       "published": "2026-10-25T16:09:29Z",
       "privacy": "public",
-      "views": 1116,
+      "views": 1112,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 984.9,
-      "like_rate": 1.43,
+      "views_per_day": 929.3,
+      "like_rate": 1.44,
       "traits": [],
-      "days": 1.1
+      "days": 1.2
     },
     {
       "id": "BN5JwqqJ1Pw",
       "title": "ดินแดนที่แห้งแล้งที่สุดในโลก ไม่ได้อยู่ในทะเลทราย",
       "published": "2026-10-24T16:28:57Z",
       "privacy": "public",
-      "views": 1293,
-      "likes": 28,
+      "views": 1295,
+      "likes": 27,
       "comments": 0,
-      "views_per_day": 610.0,
-      "like_rate": 2.17,
+      "views_per_day": 593.2,
+      "like_rate": 2.08,
       "traits": [],
-      "days": 2.1
+      "days": 2.2
     },
     {
       "id": "fpSQ-Reg9BM",
@@ -41,7 +41,7 @@
       "views": 1203,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 393.1,
+      "views_per_day": 385.1,
       "like_rate": 2.24,
       "traits": [],
       "days": 3.1
@@ -54,7 +54,7 @@
       "views": 1394,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 343.1,
+      "views_per_day": 337.9,
       "like_rate": 2.08,
       "traits": [],
       "days": 4.1
@@ -67,7 +67,7 @@
       "views": 1940,
       "likes": 36,
       "comments": 2,
-      "views_per_day": 381.5,
+      "views_per_day": 376.8,
       "like_rate": 1.86,
       "traits": [],
       "days": 5.1
@@ -80,10 +80,10 @@
       "views": 1301,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 213.7,
+      "views_per_day": 211.5,
       "like_rate": 2.54,
       "traits": [],
-      "days": 6.1
+      "days": 6.2
     },
     {
       "id": "UbKKSxk3AXo",
@@ -93,10 +93,10 @@
       "views": 1451,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 207.0,
+      "views_per_day": 205.2,
       "like_rate": 1.79,
       "traits": [],
-      "days": 7.0
+      "days": 7.1
     },
     {
       "id": "Wf6aOOah7rU",
@@ -106,12 +106,12 @@
       "views": 1535,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 188.5,
+      "views_per_day": 187.1,
       "like_rate": 2.28,
       "traits": [
         "ความลับ"
       ],
-      "days": 8.1
+      "days": 8.2
     },
     {
       "id": "8IXB5qL8GzE",
@@ -121,7 +121,7 @@
       "views": 1689,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 182.0,
+      "views_per_day": 180.8,
       "like_rate": 1.66,
       "traits": [
         "คำถาม"
@@ -136,7 +136,7 @@
       "views": 1293,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 125.9,
+      "views_per_day": 125.1,
       "like_rate": 1.86,
       "traits": [
         "ความลับ"
@@ -148,10 +148,10 @@
       "title": "ทะเลสาบสีแดงในแอฟริกา ที่เปลี่ยนร่างสัตว์ให้กลายเป็นหิน",
       "published": "2026-10-15T12:54:18Z",
       "privacy": "public",
-      "views": 1588,
+      "views": 1589,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 140.9,
+      "views_per_day": 140.2,
       "like_rate": 1.83,
       "traits": [],
       "days": 11.3
@@ -164,7 +164,7 @@
       "views": 1327,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 108.2,
+      "views_per_day": 107.6,
       "like_rate": 1.66,
       "traits": [],
       "days": 12.3
@@ -177,7 +177,7 @@
       "views": 1370,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 103.2,
+      "views_per_day": 102.7,
       "like_rate": 3.14,
       "traits": [],
       "days": 13.3
@@ -190,12 +190,12 @@
       "views": 1286,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 89.1,
+      "views_per_day": 88.7,
       "like_rate": 2.72,
       "traits": [
         "ความถี่"
       ],
-      "days": 14.4
+      "days": 14.5
     },
     {
       "id": "plEJBPKtWvs",
@@ -205,7 +205,7 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 84.1,
+      "views_per_day": 83.8,
       "like_rate": 2.74,
       "traits": [],
       "days": 15.2
@@ -218,10 +218,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 57.5,
+      "views_per_day": 57.2,
       "like_rate": 2.51,
       "traits": [],
-      "days": 15.2
+      "days": 15.3
     },
     {
       "id": "964pejBlN0E",
@@ -231,10 +231,10 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 89.1,
+      "views_per_day": 88.7,
       "like_rate": 2.57,
       "traits": [],
-      "days": 15.3
+      "days": 15.4
     },
     {
       "id": "0iK9FQvX5Qg",
@@ -244,7 +244,7 @@
       "views": 2042,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 126.3,
+      "views_per_day": 125.8,
       "like_rate": 2.64,
       "traits": [],
       "days": 16.2
@@ -257,10 +257,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 89.7,
+      "views_per_day": 89.3,
       "like_rate": 1.79,
       "traits": [],
-      "days": 16.2
+      "days": 16.3
     },
     {
       "id": "DbLMjGhbHxk",
@@ -270,7 +270,7 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 79.3,
+      "views_per_day": 79.0,
       "like_rate": 2.25,
       "traits": [],
       "days": 16.3
@@ -283,14 +283,27 @@
       "views": 1292,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 74.0,
+      "views_per_day": 73.8,
       "like_rate": 2.55,
       "traits": [
         "ความขัดแย้ง"
       ],
       "days": 17.5
+    },
+    {
+      "id": "HzeCFWNvL5M",
+      "title": "สงครามระหว่างประเทศที่จบลงในเวลาไม่ถึงสี่สิบนาที",
+      "published": "2026-10-26T20:52:32Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-26T19:21:10+00:00"
+  "fetched_at": "2026-10-26T20:52:38+00:00"
 }

@@ -1,6 +1,19 @@
 {
-  "updated_at": "2026-10-26T19:21:09+00:00",
+  "updated_at": "2026-10-26T20:52:37+00:00",
   "runs": [
+    {
+      "ok": true,
+      "title": "สงครามระหว่างประเทศที่จบลงในเวลาไม่ถึงสี่สิบนาที",
+      "premise": "สงครามแองโกล-แซนซิบาร์ในปี 1896 เป็นสงครามระหว่างประเทศที่สั้นที่สุดในประวัติศาสตร์โลก โดยกินเวลาเพียง 38 นาทีเท่านั้น",
+      "video_id": "HzeCFWNvL5M",
+      "seconds": 2198,
+      "writer": "gemini",
+      "animated": 0,
+      "scenes": 6,
+      "backends": {},
+      "voice": "edge-tts",
+      "at": "2026-10-26T20:52:37+00:00"
+    },
     {
       "ok": false,
       "error": "RuntimeError: เขียนบทไม่สำเร็จทุกตัว:\n  gemini: RuntimeError: ทุกรุ่นของ Gemini ใช้ไม่ได้: gemini-3.8-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. ( | gemini-3.6\n  pollinations: RuntimeError: ทุกโมเดลของ Pollinations ใช้ไม่ได้: GLM-4.6: HTTP 400: {\"success\":false,\"error\":{\"message\":\"Invalid model or alias: \\\"communi | Kimi-K2-Instruct-0905:",
