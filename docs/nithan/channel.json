@@ -15,7 +15,7 @@
       "views": 1174,
       "likes": 35,
       "comments": 1,
-      "views_per_day": 285.8,
+      "views_per_day": 283.7,
       "like_rate": 2.98,
       "traits": [
         "ความถี่",
@@ -31,13 +31,13 @@
       "views": 392,
       "likes": 10,
       "comments": 0,
-      "views_per_day": 77.8,
+      "views_per_day": 77.3,
       "like_rate": 2.55,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 5.0
+      "days": 5.1
     },
     {
       "id": "suPbKtBVsyg",
@@ -47,13 +47,13 @@
       "views": 1303,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 212.3,
+      "views_per_day": 211.2,
       "like_rate": 1.61,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 6.1
+      "days": 6.2
     },
     {
       "id": "TCf48wGdG2A",
@@ -63,7 +63,7 @@
       "views": 1117,
       "likes": 18,
       "comments": 0,
-      "views_per_day": 158.3,
+      "views_per_day": 157.6,
       "like_rate": 1.61,
       "traits": [
         "ความถี่",
@@ -79,7 +79,7 @@
       "views": 1113,
       "likes": 20,
       "comments": 0,
-      "views_per_day": 136.0,
+      "views_per_day": 135.5,
       "like_rate": 1.8,
       "traits": [
         "อารมณ์แรง"
@@ -94,7 +94,7 @@
       "views": 1161,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 124.6,
+      "views_per_day": 124.2,
       "like_rate": 1.89,
       "traits": [
         "ความถี่",
@@ -110,7 +110,7 @@
       "views": 1452,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 140.8,
+      "views_per_day": 140.3,
       "like_rate": 1.93,
       "traits": [
         "ความถี่",
@@ -126,7 +126,7 @@
       "views": 1268,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 112.1,
+      "views_per_day": 111.8,
       "like_rate": 2.13,
       "traits": [
         "อารมณ์แรง"
@@ -141,7 +141,7 @@
       "views": 1636,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 132.9,
+      "views_per_day": 132.6,
       "like_rate": 1.47,
       "traits": [
         "อารมณ์แรง"
@@ -156,7 +156,7 @@
       "views": 1087,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 81.6,
+      "views_per_day": 81.4,
       "like_rate": 1.56,
       "traits": [],
       "days": 13.3
@@ -169,7 +169,7 @@
       "views": 1832,
       "likes": 44,
       "comments": 0,
-      "views_per_day": 126.5,
+      "views_per_day": 126.2,
       "like_rate": 2.4,
       "traits": [
         "ความถี่",
@@ -185,12 +185,12 @@
       "views": 1358,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 83.2,
+      "views_per_day": 83.0,
       "like_rate": 1.77,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 16.3
+      "days": 16.4
     },
     {
       "id": "pZi7FJyHjEY",
@@ -200,13 +200,13 @@
       "views": 1222,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 70.5,
+      "views_per_day": 70.4,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 17.3
+      "days": 17.4
     },
     {
       "id": "ZQpvIsa0c8A",
@@ -216,13 +216,13 @@
       "views": 1750,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 95.5,
+      "views_per_day": 95.4,
       "like_rate": 1.6,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 18.3
+      "days": 18.4
     },
     {
       "id": "hyfmbTfZqBg",
@@ -232,13 +232,13 @@
       "views": 1607,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 81.9,
+      "views_per_day": 81.8,
       "like_rate": 1.8,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 19.6
+      "days": 19.7
     },
     {
       "id": "8-Zy5rZlH00",
@@ -270,7 +270,7 @@
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 38.6
+      "days": 38.7
     },
     {
       "id": "uxeId4AUBLI",
@@ -320,5 +320,5 @@
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-26T20:15:12+00:00"
+  "fetched_at": "2026-10-26T20:59:23+00:00"
 }
