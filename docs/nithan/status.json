@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-10-26T19:11:17+00:00",
+  "updated_at": "2026-10-26T20:15:11+00:00",
   "runs": [
+    {
+      "ok": false,
+      "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/A%20Thai%20motorcycle%20taxi%20driver%20looking%20thoughtful%20nea\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/A%20Thai%20motorcycle%20taxi%20driver%20looking%20thoughtfu\n  flux.1-schnell: 402 Client Error: Payment Required f",
+      "seconds": 237,
+      "at": "2026-10-26T20:15:11+00:00"
+    },
     {
       "ok": false,
       "error": "RuntimeError: เขียนบทไม่สำเร็จทุกตัว:\n  gemini: RuntimeError: ทุกรุ่นของ Gemini ใช้ไม่ได้: gemini-3.8-flash: HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experien | gemini-3.6\n  pollinations: RuntimeError: ทุกโมเดลของ Pollinations ใช้ไม่ได้: opus-5-max: HTTP 400: {\"success\":false,\"error\":{\"message\":\"Invalid model or alias: \\\"communi | GPT-5.5-xHigh: HTTP",
@@ -300,21 +306,6 @@
       },
       "voice": "edge-tts",
       "at": "2026-10-08T12:33:40+00:00"
-    },
-    {
-      "ok": true,
-      "title": "ป้าเอารองเท้าเด็กข้างเดียวมาซ่อมทุกเดือน ความจริงทำเอากลั้นน้ำตาไม่อยู่",
-      "premise": "หญิงชรานำรองเท้าเด็กข้างเดียวมาจ้างช่างซ่อมขัดเงาทุกเดือน จนวันหนึ่งช่างได้รู้เหตุผลแท้จริงที่ทำให้เขาต้องกลั้นน้ำตา",
-      "video_id": "hyfmbTfZqBg",
-      "seconds": 321,
-      "writer": "gemini",
-      "animated": 6,
-      "scenes": 6,
-      "backends": {
-        "huggingface": 6
-      },
-      "voice": "edge-tts",
-      "at": "2026-10-07T05:14:15+00:00"
     }
   ]
 }
