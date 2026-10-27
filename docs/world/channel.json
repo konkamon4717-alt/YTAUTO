@@ -3,35 +3,48 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 65,
-    "views": 29378,
+    "views": 30453,
     "videos": 17
   },
   "videos": [
+    {
+      "id": "HzeCFWNvL5M",
+      "title": "สงครามระหว่างประเทศที่จบลงในเวลาไม่ถึงสี่สิบนาที",
+      "published": "2026-10-26T20:52:55Z",
+      "privacy": "public",
+      "views": 1050,
+      "likes": 17,
+      "comments": 1,
+      "views_per_day": 4200.0,
+      "like_rate": 1.62,
+      "traits": [],
+      "days": 0.2
+    },
     {
       "id": "zBQJAl2kuQ4",
       "title": "แม่น้ำเดือดในป่าแอมะซอน ไม่ได้เกิดจากภูเขาไฟ",
       "published": "2026-10-25T16:09:29Z",
       "privacy": "public",
-      "views": 1112,
+      "views": 1125,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 929.3,
-      "like_rate": 1.44,
+      "views_per_day": 793.3,
+      "like_rate": 1.42,
       "traits": [],
-      "days": 1.2
+      "days": 1.4
     },
     {
       "id": "BN5JwqqJ1Pw",
       "title": "ดินแดนที่แห้งแล้งที่สุดในโลก ไม่ได้อยู่ในทะเลทราย",
       "published": "2026-10-24T16:28:57Z",
       "privacy": "public",
-      "views": 1295,
+      "views": 1306,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 593.2,
-      "like_rate": 2.08,
+      "views_per_day": 543.1,
+      "like_rate": 2.07,
       "traits": [],
-      "days": 2.2
+      "days": 2.4
     },
     {
       "id": "fpSQ-Reg9BM",
@@ -41,10 +54,10 @@
       "views": 1203,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 385.1,
+      "views_per_day": 359.6,
       "like_rate": 2.24,
       "traits": [],
-      "days": 3.1
+      "days": 3.3
     },
     {
       "id": "v89g4zmYRjU",
@@ -54,23 +67,23 @@
       "views": 1394,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 337.9,
+      "views_per_day": 320.6,
       "like_rate": 2.08,
       "traits": [],
-      "days": 4.1
+      "days": 4.3
     },
     {
       "id": "Evxe1dSEIpA",
       "title": "แม่น้ำอเมซอน สายน้ำที่ไม่มีสะพานข้ามเลยสักแห่งเดียว",
       "published": "2026-10-21T17:19:07Z",
       "privacy": "public",
-      "views": 1940,
+      "views": 1941,
       "likes": 36,
       "comments": 2,
-      "views_per_day": 376.8,
-      "like_rate": 1.86,
+      "views_per_day": 361.5,
+      "like_rate": 1.85,
       "traits": [],
-      "days": 5.1
+      "days": 5.4
     },
     {
       "id": "YiNKS-SokOQ",
@@ -80,10 +93,10 @@
       "views": 1301,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 211.5,
+      "views_per_day": 204.1,
       "like_rate": 2.54,
       "traits": [],
-      "days": 6.2
+      "days": 6.4
     },
     {
       "id": "UbKKSxk3AXo",
@@ -93,10 +106,10 @@
       "views": 1451,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 205.2,
+      "views_per_day": 198.9,
       "like_rate": 1.79,
       "traits": [],
-      "days": 7.1
+      "days": 7.3
     },
     {
       "id": "Wf6aOOah7rU",
@@ -106,12 +119,12 @@
       "views": 1535,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 187.1,
+      "views_per_day": 182.1,
       "like_rate": 2.28,
       "traits": [
         "ความลับ"
       ],
-      "days": 8.2
+      "days": 8.4
     },
     {
       "id": "8IXB5qL8GzE",
@@ -121,12 +134,12 @@
       "views": 1689,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 180.8,
+      "views_per_day": 176.6,
       "like_rate": 1.66,
       "traits": [
         "คำถาม"
       ],
-      "days": 9.3
+      "days": 9.6
     },
     {
       "id": "jMz_OLrFsWg",
@@ -136,12 +149,12 @@
       "views": 1293,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 125.1,
+      "views_per_day": 122.5,
       "like_rate": 1.86,
       "traits": [
         "ความลับ"
       ],
-      "days": 10.3
+      "days": 10.6
     },
     {
       "id": "6GYs0eHvlAM",
@@ -151,10 +164,10 @@
       "views": 1589,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 140.2,
+      "views_per_day": 137.5,
       "like_rate": 1.83,
       "traits": [],
-      "days": 11.3
+      "days": 11.6
     },
     {
       "id": "5yltO_ljXfQ",
@@ -164,10 +177,10 @@
       "views": 1327,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 107.6,
+      "views_per_day": 105.7,
       "like_rate": 1.66,
       "traits": [],
-      "days": 12.3
+      "days": 12.6
     },
     {
       "id": "qCzjRnxtojM",
@@ -177,10 +190,10 @@
       "views": 1370,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 102.7,
+      "views_per_day": 101.0,
       "like_rate": 3.14,
       "traits": [],
-      "days": 13.3
+      "days": 13.6
     },
     {
       "id": "GFIe9yZhPYg",
@@ -190,12 +203,12 @@
       "views": 1286,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 88.7,
+      "views_per_day": 87.4,
       "like_rate": 2.72,
       "traits": [
         "ความถี่"
       ],
-      "days": 14.5
+      "days": 14.7
     },
     {
       "id": "plEJBPKtWvs",
@@ -205,10 +218,10 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 83.8,
+      "views_per_day": 82.6,
       "like_rate": 2.74,
       "traits": [],
-      "days": 15.2
+      "days": 15.5
     },
     {
       "id": "cSsiwc7jZo0",
@@ -218,10 +231,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 57.2,
+      "views_per_day": 56.4,
       "like_rate": 2.51,
       "traits": [],
-      "days": 15.3
+      "days": 15.5
     },
     {
       "id": "964pejBlN0E",
@@ -231,10 +244,10 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 88.7,
+      "views_per_day": 87.5,
       "like_rate": 2.57,
       "traits": [],
-      "days": 15.4
+      "days": 15.6
     },
     {
       "id": "0iK9FQvX5Qg",
@@ -244,10 +257,10 @@
       "views": 2042,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 125.8,
+      "views_per_day": 124.1,
       "like_rate": 2.64,
       "traits": [],
-      "days": 16.2
+      "days": 16.5
     },
     {
       "id": "urz_NtM6hEA",
@@ -257,10 +270,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 89.3,
+      "views_per_day": 88.1,
       "like_rate": 1.79,
       "traits": [],
-      "days": 16.3
+      "days": 16.5
     },
     {
       "id": "DbLMjGhbHxk",
@@ -270,10 +283,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 79.0,
+      "views_per_day": 77.9,
       "like_rate": 2.25,
       "traits": [],
-      "days": 16.3
+      "days": 16.6
     },
     {
       "id": "23eSKkHi5XY",
@@ -283,27 +296,14 @@
       "views": 1292,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 73.8,
+      "views_per_day": 72.8,
       "like_rate": 2.55,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 17.5
-    },
-    {
-      "id": "HzeCFWNvL5M",
-      "title": "สงครามระหว่างประเทศที่จบลงในเวลาไม่ถึงสี่สิบนาที",
-      "published": "2026-10-26T20:52:32Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [],
-      "days": 0.2
+      "days": 17.7
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-26T20:52:38+00:00"
+  "fetched_at": "2026-10-27T02:11:39+00:00"
 }
