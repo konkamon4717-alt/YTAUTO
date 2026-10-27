@@ -3,10 +3,23 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 68,
-    "views": 30531,
+    "views": 30544,
     "videos": 18
   },
   "videos": [
+    {
+      "id": "EvUykg8ag0s",
+      "title": "รอยแยกซิลฟรา จุดที่คุณสามารถแตะสองทวีปได้พร้อมกัน",
+      "published": "2026-10-27T18:20:51Z",
+      "privacy": "public",
+      "views": 12,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 48.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
+    },
     {
       "id": "HzeCFWNvL5M",
       "title": "สงครามระหว่างประเทศที่จบลงในเวลาไม่ถึงสี่สิบนาที",
@@ -15,7 +28,7 @@
       "views": 1072,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 1198.9,
+      "views_per_day": 1136.4,
       "like_rate": 1.59,
       "traits": [],
       "days": 0.9
@@ -25,10 +38,10 @@
       "title": "แม่น้ำเดือดในป่าแอมะซอน ไม่ได้เกิดจากภูเขาไฟ",
       "published": "2026-10-25T16:09:29Z",
       "privacy": "public",
-      "views": 1139,
+      "views": 1140,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 544.7,
+      "views_per_day": 532.7,
       "like_rate": 1.4,
       "traits": [],
       "days": 2.1
@@ -38,10 +51,10 @@
       "title": "ดินแดนที่แห้งแล้งที่สุดในโลก ไม่ได้อยู่ในทะเลทราย",
       "published": "2026-10-24T16:28:57Z",
       "privacy": "public",
-      "views": 1338,
+      "views": 1337,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 434.8,
+      "views_per_day": 427.6,
       "like_rate": 2.02,
       "traits": [],
       "days": 3.1
@@ -54,10 +67,10 @@
       "views": 1202,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 299.1,
+      "views_per_day": 295.5,
       "like_rate": 2.25,
       "traits": [],
-      "days": 4.0
+      "days": 4.1
     },
     {
       "id": "v89g4zmYRjU",
@@ -67,23 +80,23 @@
       "views": 1394,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 277.7,
+      "views_per_day": 275.0,
       "like_rate": 2.08,
       "traits": [],
-      "days": 5.0
+      "days": 5.1
     },
     {
       "id": "Evxe1dSEIpA",
       "title": "แม่น้ำอเมซอน สายน้ำที่ไม่มีสะพานข้ามเลยสักแห่งเดียว",
       "published": "2026-10-21T17:19:07Z",
       "privacy": "public",
-      "views": 1949,
+      "views": 1950,
       "likes": 36,
       "comments": 2,
-      "views_per_day": 322.5,
+      "views_per_day": 320.1,
       "like_rate": 1.85,
       "traits": [],
-      "days": 6.0
+      "days": 6.1
     },
     {
       "id": "YiNKS-SokOQ",
@@ -93,10 +106,10 @@
       "views": 1301,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 184.6,
+      "views_per_day": 183.4,
       "like_rate": 2.54,
       "traits": [],
-      "days": 7.0
+      "days": 7.1
     },
     {
       "id": "UbKKSxk3AXo",
@@ -106,7 +119,7 @@
       "views": 1451,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 182.1,
+      "views_per_day": 181.0,
       "like_rate": 1.79,
       "traits": [],
       "days": 8.0
@@ -119,7 +132,7 @@
       "views": 1536,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 168.8,
+      "views_per_day": 167.9,
       "like_rate": 2.28,
       "traits": [
         "ความลับ"
@@ -134,12 +147,12 @@
       "views": 1689,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 165.0,
+      "views_per_day": 164.2,
       "like_rate": 1.66,
       "traits": [
         "คำถาม"
       ],
-      "days": 10.2
+      "days": 10.3
     },
     {
       "id": "jMz_OLrFsWg",
@@ -149,12 +162,12 @@
       "views": 1293,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 115.1,
+      "views_per_day": 114.6,
       "like_rate": 1.86,
       "traits": [
         "ความลับ"
       ],
-      "days": 11.2
+      "days": 11.3
     },
     {
       "id": "6GYs0eHvlAM",
@@ -164,10 +177,10 @@
       "views": 1590,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 130.0,
+      "views_per_day": 129.5,
       "like_rate": 1.82,
       "traits": [],
-      "days": 12.2
+      "days": 12.3
     },
     {
       "id": "5yltO_ljXfQ",
@@ -177,10 +190,10 @@
       "views": 1327,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 100.3,
+      "views_per_day": 100.0,
       "like_rate": 1.66,
       "traits": [],
-      "days": 13.2
+      "days": 13.3
     },
     {
       "id": "qCzjRnxtojM",
@@ -190,10 +203,10 @@
       "views": 1370,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 96.2,
+      "views_per_day": 95.9,
       "like_rate": 3.14,
       "traits": [],
-      "days": 14.2
+      "days": 14.3
     },
     {
       "id": "GFIe9yZhPYg",
@@ -203,7 +216,7 @@
       "views": 1287,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 83.6,
+      "views_per_day": 83.4,
       "like_rate": 2.72,
       "traits": [
         "ความถี่"
@@ -218,10 +231,10 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 79.1,
+      "views_per_day": 78.9,
       "like_rate": 2.74,
       "traits": [],
-      "days": 16.1
+      "days": 16.2
     },
     {
       "id": "cSsiwc7jZo0",
@@ -231,7 +244,7 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 54.1,
+      "views_per_day": 53.9,
       "like_rate": 2.51,
       "traits": [],
       "days": 16.2
@@ -244,10 +257,10 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 83.8,
+      "views_per_day": 83.6,
       "like_rate": 2.57,
       "traits": [],
-      "days": 16.2
+      "days": 16.3
     },
     {
       "id": "0iK9FQvX5Qg",
@@ -257,10 +270,10 @@
       "views": 2042,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 119.2,
+      "views_per_day": 118.9,
       "like_rate": 2.64,
       "traits": [],
-      "days": 17.1
+      "days": 17.2
     },
     {
       "id": "urz_NtM6hEA",
@@ -270,7 +283,7 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 84.7,
+      "views_per_day": 84.4,
       "like_rate": 1.79,
       "traits": [],
       "days": 17.2
@@ -283,10 +296,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 74.9,
+      "views_per_day": 74.7,
       "like_rate": 2.25,
       "traits": [],
-      "days": 17.2
+      "days": 17.3
     },
     {
       "id": "23eSKkHi5XY",
@@ -296,27 +309,14 @@
       "views": 1292,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 70.2,
+      "views_per_day": 70.0,
       "like_rate": 2.55,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 18.4
-    },
-    {
-      "id": "EvUykg8ag0s",
-      "title": "รอยแยกซิลฟรา จุดที่คุณสามารถแตะสองทวีปได้พร้อมกัน",
-      "published": "2026-10-27T18:20:20Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [],
-      "days": 0.2
+      "days": 18.5
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-27T18:20:28+00:00"
+  "fetched_at": "2026-10-27T19:31:20+00:00"
 }
