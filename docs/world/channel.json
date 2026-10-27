@@ -2,9 +2,9 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 65,
-    "views": 30453,
-    "videos": 17
+    "subscribers": 68,
+    "views": 30531,
+    "videos": 18
   },
   "videos": [
     {
@@ -12,52 +12,52 @@
       "title": "สงครามระหว่างประเทศที่จบลงในเวลาไม่ถึงสี่สิบนาที",
       "published": "2026-10-26T20:52:55Z",
       "privacy": "public",
-      "views": 1050,
+      "views": 1072,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 4200.0,
-      "like_rate": 1.62,
+      "views_per_day": 1198.9,
+      "like_rate": 1.59,
       "traits": [],
-      "days": 0.2
+      "days": 0.9
     },
     {
       "id": "zBQJAl2kuQ4",
       "title": "แม่น้ำเดือดในป่าแอมะซอน ไม่ได้เกิดจากภูเขาไฟ",
       "published": "2026-10-25T16:09:29Z",
       "privacy": "public",
-      "views": 1125,
+      "views": 1139,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 793.3,
-      "like_rate": 1.42,
+      "views_per_day": 544.7,
+      "like_rate": 1.4,
       "traits": [],
-      "days": 1.4
+      "days": 2.1
     },
     {
       "id": "BN5JwqqJ1Pw",
       "title": "ดินแดนที่แห้งแล้งที่สุดในโลก ไม่ได้อยู่ในทะเลทราย",
       "published": "2026-10-24T16:28:57Z",
       "privacy": "public",
-      "views": 1306,
+      "views": 1338,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 543.1,
-      "like_rate": 2.07,
+      "views_per_day": 434.8,
+      "like_rate": 2.02,
       "traits": [],
-      "days": 2.4
+      "days": 3.1
     },
     {
       "id": "fpSQ-Reg9BM",
       "title": "ยอดเขาที่อยู่ใกล้อวกาศที่สุด ไม่ใช่เอเวอเรสต์",
       "published": "2026-10-23T17:54:09Z",
       "privacy": "public",
-      "views": 1203,
+      "views": 1202,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 359.6,
-      "like_rate": 2.24,
+      "views_per_day": 299.1,
+      "like_rate": 2.25,
       "traits": [],
-      "days": 3.3
+      "days": 4.0
     },
     {
       "id": "v89g4zmYRjU",
@@ -67,23 +67,23 @@
       "views": 1394,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 320.6,
+      "views_per_day": 277.7,
       "like_rate": 2.08,
       "traits": [],
-      "days": 4.3
+      "days": 5.0
     },
     {
       "id": "Evxe1dSEIpA",
       "title": "แม่น้ำอเมซอน สายน้ำที่ไม่มีสะพานข้ามเลยสักแห่งเดียว",
       "published": "2026-10-21T17:19:07Z",
       "privacy": "public",
-      "views": 1941,
+      "views": 1949,
       "likes": 36,
       "comments": 2,
-      "views_per_day": 361.5,
+      "views_per_day": 322.5,
       "like_rate": 1.85,
       "traits": [],
-      "days": 5.4
+      "days": 6.0
     },
     {
       "id": "YiNKS-SokOQ",
@@ -93,10 +93,10 @@
       "views": 1301,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 204.1,
+      "views_per_day": 184.6,
       "like_rate": 2.54,
       "traits": [],
-      "days": 6.4
+      "days": 7.0
     },
     {
       "id": "UbKKSxk3AXo",
@@ -106,25 +106,25 @@
       "views": 1451,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 198.9,
+      "views_per_day": 182.1,
       "like_rate": 1.79,
       "traits": [],
-      "days": 7.3
+      "days": 8.0
     },
     {
       "id": "Wf6aOOah7rU",
       "title": "เมืองใต้ดินลึกแปดสิบเมตร ที่เคยซ่อนคนได้ถึงสองหมื่นคน",
       "published": "2026-10-18T15:55:30Z",
       "privacy": "public",
-      "views": 1535,
+      "views": 1536,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 182.1,
+      "views_per_day": 168.8,
       "like_rate": 2.28,
       "traits": [
         "ความลับ"
       ],
-      "days": 8.4
+      "days": 9.1
     },
     {
       "id": "8IXB5qL8GzE",
@@ -134,12 +134,12 @@
       "views": 1689,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 176.6,
+      "views_per_day": 165.0,
       "like_rate": 1.66,
       "traits": [
         "คำถาม"
       ],
-      "days": 9.6
+      "days": 10.2
     },
     {
       "id": "jMz_OLrFsWg",
@@ -149,25 +149,25 @@
       "views": 1293,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 122.5,
+      "views_per_day": 115.1,
       "like_rate": 1.86,
       "traits": [
         "ความลับ"
       ],
-      "days": 10.6
+      "days": 11.2
     },
     {
       "id": "6GYs0eHvlAM",
       "title": "ทะเลสาบสีแดงในแอฟริกา ที่เปลี่ยนร่างสัตว์ให้กลายเป็นหิน",
       "published": "2026-10-15T12:54:18Z",
       "privacy": "public",
-      "views": 1589,
+      "views": 1590,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 137.5,
-      "like_rate": 1.83,
+      "views_per_day": 130.0,
+      "like_rate": 1.82,
       "traits": [],
-      "days": 11.6
+      "days": 12.2
     },
     {
       "id": "5yltO_ljXfQ",
@@ -177,10 +177,10 @@
       "views": 1327,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 105.7,
+      "views_per_day": 100.3,
       "like_rate": 1.66,
       "traits": [],
-      "days": 12.6
+      "days": 13.2
     },
     {
       "id": "qCzjRnxtojM",
@@ -190,25 +190,25 @@
       "views": 1370,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 101.0,
+      "views_per_day": 96.2,
       "like_rate": 3.14,
       "traits": [],
-      "days": 13.6
+      "days": 14.2
     },
     {
       "id": "GFIe9yZhPYg",
       "title": "สถานที่ที่มีฟ้าผ่ามากที่สุดในโลก นานสิบชั่วโมงติดต่อกันทุกคืน",
       "published": "2026-10-12T08:57:55Z",
       "privacy": "public",
-      "views": 1286,
+      "views": 1287,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 87.4,
+      "views_per_day": 83.6,
       "like_rate": 2.72,
       "traits": [
         "ความถี่"
       ],
-      "days": 14.7
+      "days": 15.4
     },
     {
       "id": "plEJBPKtWvs",
@@ -218,10 +218,10 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 82.6,
+      "views_per_day": 79.1,
       "like_rate": 2.74,
       "traits": [],
-      "days": 15.5
+      "days": 16.1
     },
     {
       "id": "cSsiwc7jZo0",
@@ -231,10 +231,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 56.4,
+      "views_per_day": 54.1,
       "like_rate": 2.51,
       "traits": [],
-      "days": 15.5
+      "days": 16.2
     },
     {
       "id": "964pejBlN0E",
@@ -244,10 +244,10 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 87.5,
+      "views_per_day": 83.8,
       "like_rate": 2.57,
       "traits": [],
-      "days": 15.6
+      "days": 16.2
     },
     {
       "id": "0iK9FQvX5Qg",
@@ -257,10 +257,10 @@
       "views": 2042,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 124.1,
+      "views_per_day": 119.2,
       "like_rate": 2.64,
       "traits": [],
-      "days": 16.5
+      "days": 17.1
     },
     {
       "id": "urz_NtM6hEA",
@@ -270,10 +270,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 88.1,
+      "views_per_day": 84.7,
       "like_rate": 1.79,
       "traits": [],
-      "days": 16.5
+      "days": 17.2
     },
     {
       "id": "DbLMjGhbHxk",
@@ -283,10 +283,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 77.9,
+      "views_per_day": 74.9,
       "like_rate": 2.25,
       "traits": [],
-      "days": 16.6
+      "days": 17.2
     },
     {
       "id": "23eSKkHi5XY",
@@ -296,14 +296,27 @@
       "views": 1292,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 72.8,
+      "views_per_day": 70.2,
       "like_rate": 2.55,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 17.7
+      "days": 18.4
+    },
+    {
+      "id": "EvUykg8ag0s",
+      "title": "รอยแยกซิลฟรา จุดที่คุณสามารถแตะสองทวีปได้พร้อมกัน",
+      "published": "2026-10-27T18:20:20Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-27T02:11:39+00:00"
+  "fetched_at": "2026-10-27T18:20:28+00:00"
 }
