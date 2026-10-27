@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-10-26T20:59:22+00:00",
+  "updated_at": "2026-10-27T17:58:50+00:00",
   "runs": [
+    {
+      "ok": false,
+      "error": "RuntimeError: เขียนบทไม่สำเร็จทุกตัว:\n  gemini: RuntimeError: ทุกรุ่นของ Gemini ใช้ไม่ได้: gemini-3.8-flash: HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experien | gemini-3.6\n  pollinations: RuntimeError: ทุกโมเดลของ Pollinations ใช้ไม่ได้: opus-5-max: HTTP 400: {\"success\":false,\"error\":{\"message\":\"Invalid model or alias: \\\"communi | GPT-5.5-xHigh: HTTP",
+      "seconds": 283,
+      "at": "2026-10-27T17:58:50+00:00"
+    },
     {
       "ok": false,
       "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20shot%20of%20a%20modern%20laundromat%20at%20night%2C%20\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20shot%20of%20a%20modern%20laundromat%20at%20nigh\n  flux.1-schnell: 402 Client Error: Payment Required f",
@@ -282,21 +288,6 @@
       },
       "voice": "edge-tts",
       "at": "2026-10-10T12:27:05+00:00"
-    },
-    {
-      "ok": true,
-      "title": "ลุงแท็กซี่ซื้อดอกไม้เหี่ยวร้อยบาททุกวัน รู้เหตุผลแล้วกลั้นน้ำตาไม่อยู่",
-      "premise": "ลุงแท็กซี่คนหนึ่งยอมจ่ายเงินแพง ๆ เพื่อซื้อดอกไม้เหี่ยวจากเด็กขายดอกไม้ริมทาง เพื่อช่วยให้เธอได้กลับบ้านนอนเร็ว ๆ เพราะนึกถึงลูกสาวที่เสียชีวิตไปแล้ว",
-      "video_id": "pZi7FJyHjEY",
-      "seconds": 412,
-      "writer": "gemini",
-      "animated": 2,
-      "scenes": 6,
-      "backends": {
-        "huggingface": 2
-      },
-      "voice": "edge-tts",
-      "at": "2026-10-09T12:29:34+00:00"
     }
   ]
 }
