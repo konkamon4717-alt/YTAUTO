@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-10-27T19:23:23+00:00",
+  "updated_at": "2026-10-27T19:55:00+00:00",
   "runs": [
+    {
+      "ok": false,
+      "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20close-up%20of%20a%20clear%20plastic%20spray%20bottle%2\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20close-up%20of%20a%20clear%20plastic%20spray%20b\n  flux.1-schnell: 402 Client Error: Payment Required f",
+      "seconds": 368,
+      "at": "2026-10-27T19:55:00+00:00"
+    },
     {
       "ok": false,
       "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20medium%20shot%20of%20a%2024-year-old%20Thai%20woman%2C\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20medium%20shot%20of%20a%2024-year-old%20Thai%20w\n  flux.1-schnell: 402 Client Error: Payment Required f",
@@ -273,12 +279,6 @@
       "error": "RuntimeError: พากย์เสียงไม่สำเร็จทุกตัว:\n  edge-tts: RuntimeError: ลอง 3 ครั้งแล้วยังไม่ได้: No audio was received. Please verify that your parameters are correct.\n  pollinations: HTTPError: 400 Client Error: Bad Request for url: https://gen.pollinations.ai/v1/audio/speech\n  gtts: ModuleNotFoundError: No module named 'gtts'",
       "seconds": 123,
       "at": "2026-10-11T13:46:40+00:00"
-    },
-    {
-      "ok": false,
-      "error": "RuntimeError: พากย์เสียงไม่สำเร็จทุกตัว:\n  edge-tts: RuntimeError: ลอง 3 ครั้งแล้วยังไม่ได้: No audio was received. Please verify that your parameters are correct.\n  pollinations: HTTPError: 400 Client Error: Bad Request for url: https://gen.pollinations.ai/v1/audio/speech\n  gtts: ModuleNotFoundError: No module named 'gtts'",
-      "seconds": 96,
-      "at": "2026-10-11T12:23:43+00:00"
     }
   ]
 }
