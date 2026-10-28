@@ -3,20 +3,33 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 73,
-    "views": 31770,
+    "views": 31776,
     "videos": 19
   },
   "videos": [
+    {
+      "id": "A_C3WLlxQxU",
+      "title": "ถ้ำโมวิเล นิเวศปิดตายห้าล้านปีที่สิ่งมีชีวิตอยู่ได้โดยไม่มีแสง",
+      "published": "2026-10-28T18:55:22Z",
+      "privacy": "public",
+      "views": 3,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 12.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
+    },
     {
       "id": "EvUykg8ag0s",
       "title": "รอยแยกซิลฟรา จุดที่คุณสามารถแตะสองทวีปได้พร้อมกัน",
       "published": "2026-10-27T18:20:51Z",
       "privacy": "public",
-      "views": 1160,
+      "views": 1162,
       "likes": 27,
       "comments": 2,
-      "views_per_day": 1133.0,
-      "like_rate": 2.33,
+      "views_per_day": 1125.1,
+      "like_rate": 2.32,
       "traits": [],
       "days": 1.0
     },
@@ -28,7 +41,7 @@
       "views": 1087,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 566.7,
+      "views_per_day": 564.0,
       "like_rate": 1.56,
       "traits": [],
       "days": 1.9
@@ -41,7 +54,7 @@
       "views": 1148,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 368.5,
+      "views_per_day": 367.5,
       "like_rate": 1.39,
       "traits": [],
       "days": 3.1
@@ -51,10 +64,10 @@
       "title": "ดินแดนที่แห้งแล้งที่สุดในโลก ไม่ได้อยู่ในทะเลทราย",
       "published": "2026-10-24T16:28:57Z",
       "privacy": "public",
-      "views": 1350,
+      "views": 1351,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 329.1,
+      "views_per_day": 328.7,
       "like_rate": 2.0,
       "traits": [],
       "days": 4.1
@@ -67,10 +80,10 @@
       "views": 1208,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 239.6,
+      "views_per_day": 239.1,
       "like_rate": 2.24,
       "traits": [],
-      "days": 5.0
+      "days": 5.1
     },
     {
       "id": "v89g4zmYRjU",
@@ -80,10 +93,10 @@
       "views": 1400,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 231.6,
+      "views_per_day": 231.3,
       "like_rate": 2.07,
       "traits": [],
-      "days": 6.0
+      "days": 6.1
     },
     {
       "id": "Evxe1dSEIpA",
@@ -93,7 +106,7 @@
       "views": 1958,
       "likes": 36,
       "comments": 2,
-      "views_per_day": 277.1,
+      "views_per_day": 276.7,
       "like_rate": 1.84,
       "traits": [],
       "days": 7.1
@@ -106,7 +119,7 @@
       "views": 1303,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 161.5,
+      "views_per_day": 161.3,
       "like_rate": 2.53,
       "traits": [],
       "days": 8.1
@@ -119,7 +132,7 @@
       "views": 1453,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 161.6,
+      "views_per_day": 161.4,
       "like_rate": 1.79,
       "traits": [],
       "days": 9.0
@@ -132,7 +145,7 @@
       "views": 1540,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 152.1,
+      "views_per_day": 152.0,
       "like_rate": 2.27,
       "traits": [
         "ความลับ"
@@ -147,7 +160,7 @@
       "views": 1691,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 150.2,
+      "views_per_day": 150.0,
       "like_rate": 1.66,
       "traits": [
         "คำถาม"
@@ -190,7 +203,7 @@
       "views": 1329,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 93.3,
+      "views_per_day": 93.2,
       "like_rate": 1.66,
       "traits": [],
       "days": 14.3
@@ -216,7 +229,7 @@
       "views": 1288,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 78.5,
+      "views_per_day": 78.4,
       "like_rate": 2.72,
       "traits": [
         "ความถี่"
@@ -257,7 +270,7 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 78.9,
+      "views_per_day": 78.8,
       "like_rate": 2.57,
       "traits": [],
       "days": 17.3
@@ -296,7 +309,7 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 70.7,
+      "views_per_day": 70.6,
       "like_rate": 2.25,
       "traits": [],
       "days": 18.3
@@ -309,27 +322,14 @@
       "views": 1292,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 66.5,
+      "views_per_day": 66.4,
       "like_rate": 2.55,
       "traits": [
         "ความขัดแย้ง"
       ],
       "days": 19.4
-    },
-    {
-      "id": "A_C3WLlxQxU",
-      "title": "ถ้ำโมวิเล นิเวศปิดตายห้าล้านปีที่สิ่งมีชีวิตอยู่ได้โดยไม่มีแสง",
-      "published": "2026-10-28T18:55:00Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [],
-      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-28T18:55:06+00:00"
+  "fetched_at": "2026-10-28T19:08:07+00:00"
 }
