@@ -15,7 +15,7 @@
       "views": 1174,
       "likes": 35,
       "comments": 1,
-      "views_per_day": 193.7,
+      "views_per_day": 192.4,
       "like_rate": 2.98,
       "traits": [
         "ความถี่",
@@ -31,7 +31,7 @@
       "views": 392,
       "likes": 10,
       "comments": 0,
-      "views_per_day": 56.0,
+      "views_per_day": 55.7,
       "like_rate": 2.55,
       "traits": [
         "ความถี่",
@@ -47,7 +47,7 @@
       "views": 1303,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 161.0,
+      "views_per_day": 160.2,
       "like_rate": 1.61,
       "traits": [
         "ความถี่",
@@ -63,13 +63,13 @@
       "views": 1117,
       "likes": 18,
       "comments": 0,
-      "views_per_day": 124.0,
+      "views_per_day": 123.4,
       "like_rate": 1.61,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 9.0
+      "days": 9.1
     },
     {
       "id": "ADOIIE0Ug_4",
@@ -79,12 +79,12 @@
       "views": 1113,
       "likes": 20,
       "comments": 0,
-      "views_per_day": 109.8,
+      "views_per_day": 109.4,
       "like_rate": 1.8,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 10.1
+      "days": 10.2
     },
     {
       "id": "o54REzRRy8Y",
@@ -94,7 +94,7 @@
       "views": 1161,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 103.0,
+      "views_per_day": 102.6,
       "like_rate": 1.89,
       "traits": [
         "ความถี่",
@@ -110,7 +110,7 @@
       "views": 1452,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 118.4,
+      "views_per_day": 117.9,
       "like_rate": 1.93,
       "traits": [
         "ความถี่",
@@ -126,7 +126,7 @@
       "views": 1268,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 95.6,
+      "views_per_day": 95.3,
       "like_rate": 2.13,
       "traits": [
         "อารมณ์แรง"
@@ -141,7 +141,7 @@
       "views": 1636,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 114.7,
+      "views_per_day": 114.4,
       "like_rate": 1.47,
       "traits": [
         "อารมณ์แรง"
@@ -156,7 +156,7 @@
       "views": 1087,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 71.2,
+      "views_per_day": 71.0,
       "like_rate": 1.56,
       "traits": [],
       "days": 15.3
@@ -169,13 +169,13 @@
       "views": 1832,
       "likes": 44,
       "comments": 0,
-      "views_per_day": 111.5,
+      "views_per_day": 111.2,
       "like_rate": 2.4,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 16.4
+      "days": 16.5
     },
     {
       "id": "SsMdCbnHpvM",
@@ -185,7 +185,7 @@
       "views": 1358,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 74.3,
+      "views_per_day": 74.1,
       "like_rate": 1.77,
       "traits": [
         "อารมณ์แรง"
@@ -200,7 +200,7 @@
       "views": 1222,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 63.4,
+      "views_per_day": 63.3,
       "like_rate": 1.39,
       "traits": [
         "ความถี่",
@@ -216,7 +216,7 @@
       "views": 1750,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 86.3,
+      "views_per_day": 86.1,
       "like_rate": 1.6,
       "traits": [
         "คำถาม",
@@ -232,7 +232,7 @@
       "views": 1607,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 74.5,
+      "views_per_day": 74.3,
       "like_rate": 1.8,
       "traits": [
         "ความถี่",
@@ -254,7 +254,7 @@
         "คำถาม",
         "ความถี่"
       ],
-      "days": 37.7
+      "days": 37.8
     },
     {
       "id": "klm0ozmRhsE",
@@ -287,7 +287,7 @@
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 40.6
+      "days": 40.7
     },
     {
       "id": "L52UHMV1E0g",
@@ -303,7 +303,7 @@
         "ความถี่",
         "ความลับ"
       ],
-      "days": 41.4
+      "days": 41.5
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -316,9 +316,9 @@
       "views_per_day": 0.1,
       "like_rate": 0.0,
       "traits": [],
-      "days": 41.5
+      "days": 41.6
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-28T19:06:30+00:00"
+  "fetched_at": "2026-10-28T20:07:58+00:00"
 }

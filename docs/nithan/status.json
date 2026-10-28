@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-10-28T19:06:29+00:00",
+  "updated_at": "2026-10-28T20:07:57+00:00",
   "runs": [
+    {
+      "ok": false,
+      "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20shot%20of%20a%20worn%20wooden%20park%20bench%20under%2\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20shot%20of%20a%20worn%20wooden%20park%20bench%20\n  flux.1-schnell: 402 Client Error: Payment Required f",
+      "seconds": 234,
+      "at": "2026-10-28T20:07:57+00:00"
+    },
     {
       "ok": false,
       "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/A%20cinematic%20close-up%20of%20a%20young%20Thai%20boy%20with%20me\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/A%20cinematic%20close-up%20of%20a%20young%20Thai%20boy%20wi\n  flux.1-schnell: 402 Client Error: Payment Required f",
@@ -264,21 +270,6 @@
       },
       "voice": "gtts",
       "at": "2026-10-13T12:36:12+00:00"
-    },
-    {
-      "ok": true,
-      "title": "ลุงจ้างช่างปล่อยลมยางจักรยานทุกวัน รู้เหตุผลแล้วน้ำตาซึม",
-      "premise": "ช่างซ่อมจักรยานหนุ่มสงสัยว่าทำไมชายชราถึงยอมจ่ายเงินให้เขาปล่อยลมยางจักรยานทุกวัน จนกระทั่งแอบตามไปจึงพบความจริงสุดอบอุ่นหัวใจ",
-      "video_id": "Lip4vEyuFa8",
-      "seconds": 491,
-      "writer": "gemini",
-      "animated": 6,
-      "scenes": 6,
-      "backends": {
-        "huggingface": 6
-      },
-      "voice": "pollinations",
-      "at": "2026-10-12T08:42:13+00:00"
     }
   ]
 }
