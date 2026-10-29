@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-10-29T18:29:30+00:00",
+  "updated_at": "2026-10-29T19:13:14+00:00",
   "runs": [
+    {
+      "ok": false,
+      "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/A%209-year-old%20Thai%20schoolboy%20sitting%20in%20the%20backseat%\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/A%209-year-old%20Thai%20schoolboy%20sitting%20in%20the%20ba\n  flux.1-schnell: 402 Client Error: Payment Required f",
+      "seconds": 329,
+      "at": "2026-10-29T19:13:14+00:00"
+    },
     {
       "ok": false,
       "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20close-up%20of%20a%20young%20Asian%20woman%20looking%20\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20close-up%20of%20a%20young%20Asian%20woman%20loo\n  flux.1-schnell: 402 Client Error: Payment Required f",
@@ -246,21 +252,6 @@
       },
       "voice": "edge-tts",
       "at": "2026-10-15T12:49:04+00:00"
-    },
-    {
-      "ok": true,
-      "title": "ยายซื้อไอศกรีมทิ้งขยะทุกเที่ยงคืน รู้เหตุผลแล้วน้ำตาซึม",
-      "premise": "พนักงานร้านสะดวกซื้อสงสัยว่าทำไมยายถึงยอมซื้อไอศกรีมมาทิ้งขยะหน้าร้านทุกเที่ยงคืน จนคืนหนึ่งแอบดูถึงได้รู้ว่ายายวางไอศกรีมพร้อมโน้ตไว้ให้ลูกชายที่เป็นคนเก็บขยะ",
-      "video_id": "-3eSGZBXNu8",
-      "seconds": 600,
-      "writer": "gemini",
-      "animated": 6,
-      "scenes": 6,
-      "backends": {
-        "huggingface": 6
-      },
-      "voice": "edge-tts",
-      "at": "2026-10-14T12:46:59+00:00"
     }
   ]
 }
