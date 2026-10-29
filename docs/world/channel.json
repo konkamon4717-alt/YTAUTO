@@ -3,10 +3,23 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 75,
-    "views": 32957,
+    "views": 32968,
     "videos": 20
   },
   "videos": [
+    {
+      "id": "AufCUCYbKPQ",
+      "title": "เกาะโซโคตรา ดินแดนที่วิวัฒนาการแยกจากโลกสี่ล้านปี",
+      "published": "2026-10-29T18:44:14Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
+    },
     {
       "id": "A_C3WLlxQxU",
       "title": "ถ้ำโมวิเล นิเวศปิดตายห้าล้านปีที่สิ่งมีชีวิตอยู่ได้โดยไม่มีแสง",
@@ -15,7 +28,7 @@
       "views": 1094,
       "likes": 18,
       "comments": 0,
-      "views_per_day": 1102.7,
+      "views_per_day": 1080.0,
       "like_rate": 1.65,
       "traits": [],
       "days": 1.0
@@ -25,11 +38,11 @@
       "title": "รอยแยกซิลฟรา จุดที่คุณสามารถแตะสองทวีปได้พร้อมกัน",
       "published": "2026-10-27T18:20:51Z",
       "privacy": "public",
-      "views": 1201,
+      "views": 1212,
       "likes": 28,
       "comments": 2,
-      "views_per_day": 595.7,
-      "like_rate": 2.33,
+      "views_per_day": 595.0,
+      "like_rate": 2.31,
       "traits": [],
       "days": 2.0
     },
@@ -41,7 +54,7 @@
       "views": 1100,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 377.9,
+      "views_per_day": 375.3,
       "like_rate": 1.55,
       "traits": [],
       "days": 2.9
@@ -54,7 +67,7 @@
       "views": 1156,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 281.5,
+      "views_per_day": 280.0,
       "like_rate": 1.38,
       "traits": [],
       "days": 4.1
@@ -67,7 +80,7 @@
       "views": 1356,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 266.2,
+      "views_per_day": 265.1,
       "like_rate": 1.99,
       "traits": [],
       "days": 5.1
@@ -80,10 +93,10 @@
       "views": 1212,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 200.8,
+      "views_per_day": 200.2,
       "like_rate": 2.31,
       "traits": [],
-      "days": 6.0
+      "days": 6.1
     },
     {
       "id": "v89g4zmYRjU",
@@ -93,10 +106,10 @@
       "views": 1402,
       "likes": 31,
       "comments": 0,
-      "views_per_day": 199.2,
+      "views_per_day": 198.7,
       "like_rate": 2.21,
       "traits": [],
-      "days": 7.0
+      "days": 7.1
     },
     {
       "id": "Evxe1dSEIpA",
@@ -106,7 +119,7 @@
       "views": 1969,
       "likes": 37,
       "comments": 2,
-      "views_per_day": 244.3,
+      "views_per_day": 243.7,
       "like_rate": 1.88,
       "traits": [],
       "days": 8.1
@@ -119,7 +132,7 @@
       "views": 1305,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 144.0,
+      "views_per_day": 143.7,
       "like_rate": 2.61,
       "traits": [],
       "days": 9.1
@@ -132,7 +145,7 @@
       "views": 1454,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 145.6,
+      "views_per_day": 145.3,
       "like_rate": 1.86,
       "traits": [],
       "days": 10.0
@@ -145,7 +158,7 @@
       "views": 1542,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 138.7,
+      "views_per_day": 138.4,
       "like_rate": 2.27,
       "traits": [
         "ความลับ"
@@ -160,7 +173,7 @@
       "views": 1691,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 138.0,
+      "views_per_day": 137.8,
       "like_rate": 1.66,
       "traits": [
         "คำถาม"
@@ -175,12 +188,12 @@
       "views": 1297,
       "likes": 25,
       "comments": 0,
-      "views_per_day": 97.9,
+      "views_per_day": 97.8,
       "like_rate": 1.93,
       "traits": [
         "ความลับ"
       ],
-      "days": 13.2
+      "days": 13.3
     },
     {
       "id": "6GYs0eHvlAM",
@@ -190,10 +203,10 @@
       "views": 1594,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 111.9,
+      "views_per_day": 111.8,
       "like_rate": 1.82,
       "traits": [],
-      "days": 14.2
+      "days": 14.3
     },
     {
       "id": "5yltO_ljXfQ",
@@ -203,10 +216,10 @@
       "views": 1329,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 87.2,
+      "views_per_day": 87.1,
       "like_rate": 1.66,
       "traits": [],
-      "days": 15.2
+      "days": 15.3
     },
     {
       "id": "qCzjRnxtojM",
@@ -216,7 +229,7 @@
       "views": 1372,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 84.4,
+      "views_per_day": 84.3,
       "like_rate": 3.13,
       "traits": [],
       "days": 16.3
@@ -229,7 +242,7 @@
       "views": 1289,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 74.1,
+      "views_per_day": 74.0,
       "like_rate": 2.72,
       "traits": [
         "ความถี่"
@@ -244,10 +257,10 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 70.3,
+      "views_per_day": 70.2,
       "like_rate": 2.74,
       "traits": [],
-      "days": 18.1
+      "days": 18.2
     },
     {
       "id": "cSsiwc7jZo0",
@@ -257,7 +270,7 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 48.1,
+      "views_per_day": 48.0,
       "like_rate": 2.51,
       "traits": [],
       "days": 18.2
@@ -270,7 +283,7 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 74.6,
+      "views_per_day": 74.5,
       "like_rate": 2.57,
       "traits": [],
       "days": 18.3
@@ -283,10 +296,10 @@
       "views": 2043,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 106.7,
+      "views_per_day": 106.6,
       "like_rate": 2.64,
       "traits": [],
-      "days": 19.1
+      "days": 19.2
     },
     {
       "id": "urz_NtM6hEA",
@@ -296,7 +309,7 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 75.8,
+      "views_per_day": 75.7,
       "like_rate": 1.79,
       "traits": [],
       "days": 19.2
@@ -328,21 +341,8 @@
         "ความขัดแย้ง"
       ],
       "days": 20.4
-    },
-    {
-      "id": "AufCUCYbKPQ",
-      "title": "เกาะโซโคตรา ดินแดนที่วิวัฒนาการแยกจากโลกสี่ล้านปี",
-      "published": "2026-10-29T18:43:49Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [],
-      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-29T18:43:58+00:00"
+  "fetched_at": "2026-10-29T19:13:59+00:00"
 }
