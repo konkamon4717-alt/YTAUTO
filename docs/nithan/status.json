@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-10-29T19:13:14+00:00",
+  "updated_at": "2026-10-29T20:09:22+00:00",
   "runs": [
+    {
+      "ok": false,
+      "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/A%20young%20shopkeeper%20in%20a%20dark%20blue%20denim%20shirt%20wa\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/A%20young%20shopkeeper%20in%20a%20dark%20blue%20denim%20shi\n  flux.1-schnell: 402 Client Error: Payment Required f",
+      "seconds": 368,
+      "at": "2026-10-29T20:09:22+00:00"
+    },
     {
       "ok": false,
       "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/A%209-year-old%20Thai%20schoolboy%20sitting%20in%20the%20backseat%\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/A%209-year-old%20Thai%20schoolboy%20sitting%20in%20the%20ba\n  flux.1-schnell: 402 Client Error: Payment Required f",
@@ -237,21 +243,6 @@
       },
       "voice": "edge-tts",
       "at": "2026-10-16T12:40:31+00:00"
-    },
-    {
-      "ok": true,
-      "title": "ชายสั่งกาแฟวางทิ้งไว้ทุกเย็น รู้เหตุผลจริงแล้วน้ำตาซึม",
-      "premise": "A mysterious man comes to a cafe every day to order a drink but leaves it untouched on the table, only to reveal the reason is a silent vigil for a lost love who never arrived.",
-      "video_id": "Wm93n7mXdgA",
-      "seconds": 696,
-      "writer": "gemini",
-      "animated": 6,
-      "scenes": 6,
-      "backends": {
-        "huggingface": 6
-      },
-      "voice": "edge-tts",
-      "at": "2026-10-15T12:49:04+00:00"
     }
   ]
 }
