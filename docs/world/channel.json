@@ -2,9 +2,9 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 74,
-    "views": 32892,
-    "videos": 19
+    "subscribers": 75,
+    "views": 32957,
+    "videos": 20
   },
   "videos": [
     {
@@ -12,52 +12,52 @@
       "title": "ถ้ำโมวิเล นิเวศปิดตายห้าล้านปีที่สิ่งมีชีวิตอยู่ได้โดยไม่มีแสง",
       "published": "2026-10-28T18:55:22Z",
       "privacy": "public",
-      "views": 1081,
-      "likes": 19,
+      "views": 1094,
+      "likes": 18,
       "comments": 0,
-      "views_per_day": 3390.5,
-      "like_rate": 1.76,
+      "views_per_day": 1102.7,
+      "like_rate": 1.65,
       "traits": [],
-      "days": 0.3
+      "days": 1.0
     },
     {
       "id": "EvUykg8ag0s",
       "title": "รอยแยกซิลฟรา จุดที่คุณสามารถแตะสองทวีปได้พร้อมกัน",
       "published": "2026-10-27T18:20:51Z",
       "privacy": "public",
-      "views": 1165,
+      "views": 1201,
       "likes": 28,
       "comments": 2,
-      "views_per_day": 867.6,
-      "like_rate": 2.4,
+      "views_per_day": 595.7,
+      "like_rate": 2.33,
       "traits": [],
-      "days": 1.3
+      "days": 2.0
     },
     {
       "id": "HzeCFWNvL5M",
       "title": "สงครามระหว่างประเทศที่จบลงในเวลาไม่ถึงสี่สิบนาที",
       "published": "2026-10-26T20:52:55Z",
       "privacy": "public",
-      "views": 1095,
+      "views": 1100,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 489.5,
+      "views_per_day": 377.9,
       "like_rate": 1.55,
       "traits": [],
-      "days": 2.2
+      "days": 2.9
     },
     {
       "id": "zBQJAl2kuQ4",
       "title": "แม่น้ำเดือดในป่าแอมะซอน ไม่ได้เกิดจากภูเขาไฟ",
       "published": "2026-10-25T16:09:29Z",
       "privacy": "public",
-      "views": 1153,
+      "views": 1156,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 335.8,
-      "like_rate": 1.39,
+      "views_per_day": 281.5,
+      "like_rate": 1.38,
       "traits": [],
-      "days": 3.4
+      "days": 4.1
     },
     {
       "id": "BN5JwqqJ1Pw",
@@ -67,10 +67,10 @@
       "views": 1356,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 306.8,
+      "views_per_day": 266.2,
       "like_rate": 1.99,
       "traits": [],
-      "days": 4.4
+      "days": 5.1
     },
     {
       "id": "fpSQ-Reg9BM",
@@ -80,10 +80,10 @@
       "views": 1212,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 226.1,
+      "views_per_day": 200.8,
       "like_rate": 2.31,
       "traits": [],
-      "days": 5.4
+      "days": 6.0
     },
     {
       "id": "v89g4zmYRjU",
@@ -91,25 +91,25 @@
       "published": "2026-10-22T17:51:11Z",
       "privacy": "public",
       "views": 1402,
-      "likes": 30,
+      "likes": 31,
       "comments": 0,
-      "views_per_day": 220.3,
-      "like_rate": 2.14,
+      "views_per_day": 199.2,
+      "like_rate": 2.21,
       "traits": [],
-      "days": 6.4
+      "days": 7.0
     },
     {
       "id": "Evxe1dSEIpA",
       "title": "แม่น้ำอเมซอน สายน้ำที่ไม่มีสะพานข้ามเลยสักแห่งเดียว",
       "published": "2026-10-21T17:19:07Z",
       "privacy": "public",
-      "views": 1965,
+      "views": 1969,
       "likes": 37,
       "comments": 2,
-      "views_per_day": 266.1,
+      "views_per_day": 244.3,
       "like_rate": 1.88,
       "traits": [],
-      "days": 7.4
+      "days": 8.1
     },
     {
       "id": "YiNKS-SokOQ",
@@ -119,10 +119,10 @@
       "views": 1305,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 155.6,
+      "views_per_day": 144.0,
       "like_rate": 2.61,
       "traits": [],
-      "days": 8.4
+      "days": 9.1
     },
     {
       "id": "UbKKSxk3AXo",
@@ -132,25 +132,25 @@
       "views": 1454,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 156.2,
+      "views_per_day": 145.6,
       "like_rate": 1.86,
       "traits": [],
-      "days": 9.3
+      "days": 10.0
     },
     {
       "id": "Wf6aOOah7rU",
       "title": "เมืองใต้ดินลึกแปดสิบเมตร ที่เคยซ่อนคนได้ถึงสองหมื่นคน",
       "published": "2026-10-18T15:55:30Z",
       "privacy": "public",
-      "views": 1541,
+      "views": 1542,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 147.6,
+      "views_per_day": 138.7,
       "like_rate": 2.27,
       "traits": [
         "ความลับ"
       ],
-      "days": 10.4
+      "days": 11.1
     },
     {
       "id": "8IXB5qL8GzE",
@@ -160,12 +160,12 @@
       "views": 1691,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 146.0,
+      "views_per_day": 138.0,
       "like_rate": 1.66,
       "traits": [
         "คำถาม"
       ],
-      "days": 11.6
+      "days": 12.3
     },
     {
       "id": "jMz_OLrFsWg",
@@ -175,25 +175,25 @@
       "views": 1297,
       "likes": 25,
       "comments": 0,
-      "views_per_day": 103.2,
+      "views_per_day": 97.9,
       "like_rate": 1.93,
       "traits": [
         "ความลับ"
       ],
-      "days": 12.6
+      "days": 13.2
     },
     {
       "id": "6GYs0eHvlAM",
       "title": "ทะเลสาบสีแดงในแอฟริกา ที่เปลี่ยนร่างสัตว์ให้กลายเป็นหิน",
       "published": "2026-10-15T12:54:18Z",
       "privacy": "public",
-      "views": 1592,
+      "views": 1594,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 117.3,
+      "views_per_day": 111.9,
       "like_rate": 1.82,
       "traits": [],
-      "days": 13.6
+      "days": 14.2
     },
     {
       "id": "5yltO_ljXfQ",
@@ -203,10 +203,10 @@
       "views": 1329,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 91.2,
+      "views_per_day": 87.2,
       "like_rate": 1.66,
       "traits": [],
-      "days": 14.6
+      "days": 15.2
     },
     {
       "id": "qCzjRnxtojM",
@@ -216,25 +216,25 @@
       "views": 1372,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 88.1,
+      "views_per_day": 84.4,
       "like_rate": 3.13,
       "traits": [],
-      "days": 15.6
+      "days": 16.3
     },
     {
       "id": "GFIe9yZhPYg",
       "title": "สถานที่ที่มีฟ้าผ่ามากที่สุดในโลก นานสิบชั่วโมงติดต่อกันทุกคืน",
       "published": "2026-10-12T08:57:55Z",
       "privacy": "public",
-      "views": 1288,
+      "views": 1289,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 77.0,
+      "views_per_day": 74.1,
       "like_rate": 2.72,
       "traits": [
         "ความถี่"
       ],
-      "days": 16.7
+      "days": 17.4
     },
     {
       "id": "plEJBPKtWvs",
@@ -244,10 +244,10 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 73.0,
+      "views_per_day": 70.3,
       "like_rate": 2.74,
       "traits": [],
-      "days": 17.5
+      "days": 18.1
     },
     {
       "id": "cSsiwc7jZo0",
@@ -257,10 +257,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 49.9,
+      "views_per_day": 48.1,
       "like_rate": 2.51,
       "traits": [],
-      "days": 17.5
+      "days": 18.2
     },
     {
       "id": "964pejBlN0E",
@@ -270,10 +270,10 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 77.4,
+      "views_per_day": 74.6,
       "like_rate": 2.57,
       "traits": [],
-      "days": 17.6
+      "days": 18.3
     },
     {
       "id": "0iK9FQvX5Qg",
@@ -283,10 +283,10 @@
       "views": 2043,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 110.6,
+      "views_per_day": 106.7,
       "like_rate": 2.64,
       "traits": [],
-      "days": 18.5
+      "days": 19.1
     },
     {
       "id": "urz_NtM6hEA",
@@ -296,10 +296,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 78.5,
+      "views_per_day": 75.8,
       "like_rate": 1.79,
       "traits": [],
-      "days": 18.5
+      "days": 19.2
     },
     {
       "id": "DbLMjGhbHxk",
@@ -309,10 +309,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 69.5,
+      "views_per_day": 67.0,
       "like_rate": 2.25,
       "traits": [],
-      "days": 18.6
+      "days": 19.3
     },
     {
       "id": "23eSKkHi5XY",
@@ -322,14 +322,27 @@
       "views": 1292,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 65.4,
+      "views_per_day": 63.2,
       "like_rate": 2.55,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 19.8
+      "days": 20.4
+    },
+    {
+      "id": "AufCUCYbKPQ",
+      "title": "เกาะโซโคตรา ดินแดนที่วิวัฒนาการแยกจากโลกสี่ล้านปี",
+      "published": "2026-10-29T18:43:49Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-29T02:34:28+00:00"
+  "fetched_at": "2026-10-29T18:43:58+00:00"
 }
