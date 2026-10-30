@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-10-30T18:51:12+00:00",
+  "updated_at": "2026-10-30T19:59:17+00:00",
   "runs": [
+    {
+      "ok": false,
+      "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/An%20elderly%20man%20handing%20a%20100-baht%20banknote%20across%20\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/An%20elderly%20man%20handing%20a%20100-baht%20banknote%20ac\n  flux.1-schnell: 402 Client Error: Payment Required f",
+      "seconds": 531,
+      "at": "2026-10-30T19:59:17+00:00"
+    },
     {
       "ok": false,
       "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20shot%20of%20a%20weathered%20elderly%20hand%20gently%20\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20shot%20of%20a%20weathered%20elderly%20hand%20ge\n  flux.1-schnell: 402 Client Error: Payment Required f",
@@ -210,21 +216,6 @@
       },
       "voice": "edge-tts",
       "at": "2026-10-19T18:54:02+00:00"
-    },
-    {
-      "ok": true,
-      "title": "ยายปั๊มกุญแจเปล่าทุกอาทิตย์ รู้เหตุผลจริงแล้วน้ำตาซึม",
-      "premise": "ช่างปั๊มกุญแจหนุ่มสงสัยว่าทำไมคุณยายถึงยอมจ่ายเงินปั๊มกุญแจเปล่าที่ไม่มีร่องทุกสัปดาห์ จนกระทั่งได้รู้ความจริงสุดซึ้งเกี่ยวกับสามีที่เป็นอัลไซเมอร์",
-      "video_id": "ADOIIE0Ug_4",
-      "seconds": 351,
-      "writer": "gemini",
-      "animated": 6,
-      "scenes": 6,
-      "backends": {
-        "huggingface": 6
-      },
-      "voice": "edge-tts",
-      "at": "2026-10-18T15:50:54+00:00"
     }
   ]
 }
