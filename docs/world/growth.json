@@ -452,9 +452,10 @@
   {
     "date": "2026-10-30",
     "subscribers": 80,
-    "views": 34222,
+    "views": 34236,
     "videos": 21,
     "per_video": {
+      "H7W11F5c-vY": 14,
       "AufCUCYbKPQ": 1205,
       "A_C3WLlxQxU": 1102,
       "EvUykg8ag0s": 1241,
@@ -479,8 +480,7 @@
       "0iK9FQvX5Qg": 2044,
       "urz_NtM6hEA": 1455,
       "DbLMjGhbHxk": 1291,
-      "23eSKkHi5XY": 1292,
-      "H7W11F5c-vY": 0
+      "23eSKkHi5XY": 1292
     }
   }
 ]

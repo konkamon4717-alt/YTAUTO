@@ -3,10 +3,23 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 80,
-    "views": 34222,
+    "views": 34236,
     "videos": 21
   },
   "videos": [
+    {
+      "id": "H7W11F5c-vY",
+      "title": "ทะเลสาบไบคาล แหล่งน้ำจืดที่มีปริมาณน้ำมากกว่าห้ามหาทะเลสาบรวมกัน",
+      "published": "2026-10-30T18:18:22Z",
+      "privacy": "public",
+      "views": 14,
+      "likes": 1,
+      "comments": 0,
+      "views_per_day": 56.0,
+      "like_rate": 7.14,
+      "traits": [],
+      "days": 0.2
+    },
     {
       "id": "AufCUCYbKPQ",
       "title": "เกาะโซโคตรา ดินแดนที่วิวัฒนาการแยกจากโลกสี่ล้านปี",
@@ -15,7 +28,7 @@
       "views": 1205,
       "likes": 38,
       "comments": 0,
-      "views_per_day": 1227.4,
+      "views_per_day": 1198.5,
       "like_rate": 3.15,
       "traits": [],
       "days": 1.0
@@ -28,7 +41,7 @@
       "views": 1102,
       "likes": 18,
       "comments": 0,
-      "views_per_day": 558.3,
+      "views_per_day": 551.6,
       "like_rate": 1.63,
       "traits": [],
       "days": 2.0
@@ -41,7 +54,7 @@
       "views": 1241,
       "likes": 28,
       "comments": 2,
-      "views_per_day": 413.9,
+      "views_per_day": 410.7,
       "like_rate": 2.26,
       "traits": [],
       "days": 3.0
@@ -54,7 +67,7 @@
       "views": 1101,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 282.9,
+      "views_per_day": 281.1,
       "like_rate": 1.54,
       "traits": [],
       "days": 3.9
@@ -67,7 +80,7 @@
       "views": 1156,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 227.1,
+      "views_per_day": 226.1,
       "like_rate": 1.38,
       "traits": [],
       "days": 5.1
@@ -80,7 +93,7 @@
       "views": 1359,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 223.7,
+      "views_per_day": 222.8,
       "like_rate": 1.99,
       "traits": [],
       "days": 6.1
@@ -93,7 +106,7 @@
       "views": 1212,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 172.7,
+      "views_per_day": 172.2,
       "like_rate": 2.31,
       "traits": [],
       "days": 7.0
@@ -106,7 +119,7 @@
       "views": 1403,
       "likes": 31,
       "comments": 0,
-      "views_per_day": 175.0,
+      "views_per_day": 174.5,
       "like_rate": 2.21,
       "traits": [],
       "days": 8.0
@@ -119,10 +132,10 @@
       "views": 1972,
       "likes": 37,
       "comments": 2,
-      "views_per_day": 218.1,
+      "views_per_day": 217.6,
       "like_rate": 1.88,
       "traits": [],
-      "days": 9.0
+      "days": 9.1
     },
     {
       "id": "YiNKS-SokOQ",
@@ -132,10 +145,10 @@
       "views": 1305,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 129.9,
+      "views_per_day": 129.6,
       "like_rate": 2.61,
       "traits": [],
-      "days": 10.0
+      "days": 10.1
     },
     {
       "id": "UbKKSxk3AXo",
@@ -145,7 +158,7 @@
       "views": 1454,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 132.6,
+      "views_per_day": 132.3,
       "like_rate": 1.86,
       "traits": [],
       "days": 11.0
@@ -158,7 +171,7 @@
       "views": 1542,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 127.4,
+      "views_per_day": 127.2,
       "like_rate": 2.27,
       "traits": [
         "ความลับ"
@@ -173,12 +186,12 @@
       "views": 1691,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 127.8,
+      "views_per_day": 127.5,
       "like_rate": 1.66,
       "traits": [
         "คำถาม"
       ],
-      "days": 13.2
+      "days": 13.3
     },
     {
       "id": "jMz_OLrFsWg",
@@ -188,12 +201,12 @@
       "views": 1298,
       "likes": 25,
       "comments": 0,
-      "views_per_day": 91.2,
+      "views_per_day": 91.1,
       "like_rate": 1.93,
       "traits": [
         "ความลับ"
       ],
-      "days": 14.2
+      "days": 14.3
     },
     {
       "id": "6GYs0eHvlAM",
@@ -203,7 +216,7 @@
       "views": 1596,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 104.8,
+      "views_per_day": 104.7,
       "like_rate": 1.82,
       "traits": [],
       "days": 15.2
@@ -216,7 +229,7 @@
       "views": 1329,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 81.9,
+      "views_per_day": 81.8,
       "like_rate": 1.66,
       "traits": [],
       "days": 16.2
@@ -229,10 +242,10 @@
       "views": 1372,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 79.6,
+      "views_per_day": 79.5,
       "like_rate": 3.13,
       "traits": [],
-      "days": 17.2
+      "days": 17.3
     },
     {
       "id": "GFIe9yZhPYg",
@@ -242,7 +255,7 @@
       "views": 1289,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 70.1,
+      "views_per_day": 70.0,
       "like_rate": 2.72,
       "traits": [
         "ความถี่"
@@ -257,7 +270,7 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 66.7,
+      "views_per_day": 66.6,
       "like_rate": 2.74,
       "traits": [],
       "days": 19.1
@@ -270,7 +283,7 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 45.6,
+      "views_per_day": 45.5,
       "like_rate": 2.51,
       "traits": [],
       "days": 19.2
@@ -283,10 +296,10 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 70.8,
+      "views_per_day": 70.7,
       "like_rate": 2.57,
       "traits": [],
-      "days": 19.2
+      "days": 19.3
     },
     {
       "id": "0iK9FQvX5Qg",
@@ -296,10 +309,10 @@
       "views": 2044,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 101.5,
+      "views_per_day": 101.4,
       "like_rate": 2.64,
       "traits": [],
-      "days": 20.1
+      "days": 20.2
     },
     {
       "id": "urz_NtM6hEA",
@@ -309,7 +322,7 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 72.1,
+      "views_per_day": 72.0,
       "like_rate": 1.79,
       "traits": [],
       "days": 20.2
@@ -322,10 +335,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 63.8,
+      "views_per_day": 63.7,
       "like_rate": 2.25,
       "traits": [],
-      "days": 20.2
+      "days": 20.3
     },
     {
       "id": "23eSKkHi5XY",
@@ -341,21 +354,8 @@
         "ความขัดแย้ง"
       ],
       "days": 21.4
-    },
-    {
-      "id": "H7W11F5c-vY",
-      "title": "ทะเลสาบไบคาล แหล่งน้ำจืดที่มีปริมาณน้ำมากกว่าห้ามหาทะเลสาบรวมกัน",
-      "published": "2026-10-30T18:17:49Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [],
-      "days": 0.2
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-10-30T18:17:57+00:00"
+  "fetched_at": "2026-10-30T18:52:05+00:00"
 }
