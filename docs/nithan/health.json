@@ -1,6 +1,6 @@
 {
   "channel": "nithan",
-  "checked_at": "2026-10-29T02:34:01+00:00",
+  "checked_at": "2026-10-30T02:43:05+00:00",
   "healthy": true,
   "checks": [
     {
@@ -8,42 +8,42 @@
       "ok": true,
       "essential": true,
       "detail": "nithan1min | ผู้ติดตาม 47 | คลิป 19",
-      "ms": 653
+      "ms": 694
     },
     {
       "name": "pollinations",
       "ok": true,
       "essential": true,
-      "detail": "400 โมเดล | รุ่นภาพที่ตั้งไว้ยังอยู่ครบ",
-      "ms": 412
+      "detail": "404 โมเดล | รุ่นภาพที่ตั้งไว้ยังอยู่ครบ",
+      "ms": 381
     },
     {
       "name": "edge-tts",
       "ok": true,
       "essential": false,
       "detail": "th-TH-PremwadeeNeural พากย์ได้จริง (11,232 ไบต์)",
-      "ms": 537
+      "ms": 719
     },
     {
       "name": "gemini",
       "ok": true,
       "essential": false,
       "detail": "ใช้ได้ 4/4 รุ่น | ตัวแรก gemini-3.8-flash",
-      "ms": 257
+      "ms": 124
     },
     {
       "name": "kaggle",
       "ok": true,
       "essential": false,
       "detail": "เชื่อมต่อได้",
-      "ms": 650
+      "ms": 879
     },
     {
       "name": "huggingface",
       "ok": true,
       "essential": false,
       "detail": "zerogpu-aoti/wan2-2-fp8da-aoti-faster กำลังทำงาน",
-      "ms": 123
+      "ms": 117
     }
   ]
 }
