@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-10-29T20:09:22+00:00",
+  "updated_at": "2026-10-30T18:02:51+00:00",
   "runs": [
+    {
+      "ok": false,
+      "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/A%2010-year-old%20Thai%20boy%20with%20short%20black%20hair%20in%20\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/A%2010-year-old%20Thai%20boy%20with%20short%20black%20hair%\n  flux.1-schnell: 402 Client Error: Payment Required f",
+      "seconds": 364,
+      "at": "2026-10-30T18:02:51+00:00"
+    },
     {
       "ok": false,
       "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/A%20young%20shopkeeper%20in%20a%20dark%20blue%20denim%20shirt%20wa\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/A%20young%20shopkeeper%20in%20a%20dark%20blue%20denim%20shi\n  flux.1-schnell: 402 Client Error: Payment Required f",
@@ -228,21 +234,6 @@
       },
       "voice": "gtts",
       "at": "2026-10-17T12:35:16+00:00"
-    },
-    {
-      "ok": true,
-      "title": "ลุงซื้อน้ำเต้าหู้แขวนทิ้งไว้ทุกเช้าตรู่ รู้เหตุผลแล้วน้ำตาซึม",
-      "premise": "พ่อค้าน้ำเต้าหู้หนุ่มสงสัยว่าทำไมลุงคนกวาดถนนถึงยอมจ่ายเงินซื้อน้ำเต้าหู้สองถุง แต่แขวนทิ้งไว้ที่ร้านถุงหนึ่งทุกเช้ามืด จนกระทั่งได้รู้เหตุผลแท้จริงที่ทำให้เขาต้องกลั้นน้ำตา",
-      "video_id": "K7eDye3r_ys",
-      "seconds": 250,
-      "writer": "gemini",
-      "animated": 2,
-      "scenes": 6,
-      "backends": {
-        "huggingface": 2
-      },
-      "voice": "edge-tts",
-      "at": "2026-10-16T12:40:31+00:00"
     }
   ]
 }
