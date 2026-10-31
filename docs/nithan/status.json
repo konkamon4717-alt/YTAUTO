@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-10-30T19:59:17+00:00",
+  "updated_at": "2026-10-31T17:13:47+00:00",
   "runs": [
+    {
+      "ok": false,
+      "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20portrait%20of%20a%20young%20street%20musician%20tuning\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20portrait%20of%20a%20young%20street%20musician%2\n  flux.1-schnell: 402 Client Error: Payment Required f",
+      "seconds": 223,
+      "at": "2026-10-31T17:13:47+00:00"
+    },
     {
       "ok": false,
       "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/An%20elderly%20man%20handing%20a%20100-baht%20banknote%20across%20\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/An%20elderly%20man%20handing%20a%20100-baht%20banknote%20ac\n  flux.1-schnell: 402 Client Error: Payment Required f",
@@ -201,21 +207,6 @@
       },
       "voice": "edge-tts",
       "at": "2026-10-20T16:55:01+00:00"
-    },
-    {
-      "ok": true,
-      "title": "ชายหนุ่มยืมหนังสือเล่มเดิมทุกวัน รู้เหตุผลจริงแล้วน้ำตาซึม",
-      "premise": "A young librarian notices a man checking out the same torn book every day and carefully sewing it back together, only to find he is secretly archiving letters hidden in the binding for people to find later.",
-      "video_id": "TCf48wGdG2A",
-      "seconds": 866,
-      "writer": "gemini",
-      "animated": 6,
-      "scenes": 6,
-      "backends": {
-        "huggingface": 6
-      },
-      "voice": "edge-tts",
-      "at": "2026-10-19T18:54:02+00:00"
     }
   ]
 }
