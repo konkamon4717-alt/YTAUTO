@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-10-31T17:56:10+00:00",
+  "updated_at": "2026-10-31T19:08:55+00:00",
   "runs": [
+    {
+      "ok": false,
+      "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20medium%20shot%20of%20an%20elderly%20frail%20Asian%20ma\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20medium%20shot%20of%20an%20elderly%20frail%20Asi\n  flux.1-schnell: 402 Client Error: Payment Required f",
+      "seconds": 264,
+      "at": "2026-10-31T19:08:55+00:00"
+    },
     {
       "ok": false,
       "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20shot%20inside%20a%20cozy%20rustic%20flower%20shop%2C%2\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20shot%20inside%20a%20cozy%20rustic%20flower%20sh\n  flux.1-schnell: 402 Client Error: Payment Required f",
@@ -192,12 +198,6 @@
       "error": "RuntimeError: เขียนบทไม่สำเร็จทุกตัว:\n  gemini: RuntimeError: ทุกรุ่นของ Gemini ใช้ไม่ได้: gemini-3.8-flash: HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experien | gemini-3.6\n  pollinations: RuntimeError: ทุกโมเดลของ Pollinations ใช้ไม่ได้: opus-5-max: HTTP 400: {\"success\":false,\"error\":{\"message\":\"Invalid model or alias: \\\"communi | GPT-5.5-xHigh: HTTP",
       "seconds": 275,
       "at": "2026-10-21T18:15:45+00:00"
-    },
-    {
-      "ok": false,
-      "error": "RuntimeError: เขียนบทไม่สำเร็จทุกตัว:\n  gemini: RuntimeError: ทุกรุ่นของ Gemini ใช้ไม่ได้: gemini-3.8-flash: HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experien | gemini-3.6\n  pollinations: RuntimeError: ทุกโมเดลของ Pollinations ใช้ไม่ได้: opus-5-max: HTTP 400: {\"success\":false,\"error\":{\"message\":\"Invalid model or alias: \\\"communi | GPT-5.5-xHigh: HTTP",
-      "seconds": 261,
-      "at": "2026-10-21T17:07:30+00:00"
     }
   ]
 }
