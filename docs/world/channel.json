@@ -3,8 +3,8 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 87,
-    "views": 36644,
-    "videos": 22
+    "views": 36671,
+    "videos": 23
   },
   "videos": [
     {
@@ -12,65 +12,65 @@
       "title": "ถ้ำไนกา แดนคริสตัลยักษ์ใต้ดินที่มนุษย์อยู่ได้ไม่เกินสิบนาที",
       "published": "2026-10-31T17:38:44Z",
       "privacy": "public",
-      "views": 1083,
-      "likes": 15,
+      "views": 1092,
+      "likes": 16,
       "comments": 0,
-      "views_per_day": 2974.1,
-      "like_rate": 1.39,
+      "views_per_day": 1067.7,
+      "like_rate": 1.47,
       "traits": [],
-      "days": 0.4
+      "days": 1.0
     },
     {
       "id": "H7W11F5c-vY",
       "title": "ทะเลสาบไบคาล แหล่งน้ำจืดที่มีปริมาณน้ำมากกว่าห้ามหาทะเลสาบรวมกัน",
       "published": "2026-10-30T18:18:22Z",
       "privacy": "public",
-      "views": 1193,
+      "views": 1197,
       "likes": 42,
       "comments": 0,
-      "views_per_day": 892.5,
-      "like_rate": 3.52,
+      "views_per_day": 599.9,
+      "like_rate": 3.51,
       "traits": [],
-      "days": 1.3
+      "days": 2.0
     },
     {
       "id": "AufCUCYbKPQ",
       "title": "เกาะโซโคตรา ดินแดนที่วิวัฒนาการแยกจากโลกสี่ล้านปี",
       "published": "2026-10-29T18:44:14Z",
       "privacy": "public",
-      "views": 1226,
+      "views": 1233,
       "likes": 39,
       "comments": 0,
-      "views_per_day": 528.8,
-      "like_rate": 3.18,
+      "views_per_day": 414.1,
+      "like_rate": 3.16,
       "traits": [],
-      "days": 2.3
+      "days": 3.0
     },
     {
       "id": "A_C3WLlxQxU",
       "title": "ถ้ำโมวิเล นิเวศปิดตายห้าล้านปีที่สิ่งมีชีวิตอยู่ได้โดยไม่มีแสง",
       "published": "2026-10-28T18:55:22Z",
       "privacy": "public",
-      "views": 1120,
+      "views": 1121,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 338.3,
-      "like_rate": 1.7,
+      "views_per_day": 282.4,
+      "like_rate": 1.69,
       "traits": [],
-      "days": 3.3
+      "days": 4.0
     },
     {
       "id": "EvUykg8ag0s",
       "title": "รอยแยกซิลฟรา จุดที่คุณสามารถแตะสองทวีปได้พร้อมกัน",
       "published": "2026-10-27T18:20:51Z",
       "privacy": "public",
-      "views": 1258,
+      "views": 1261,
       "likes": 28,
       "comments": 2,
-      "views_per_day": 290.2,
-      "like_rate": 2.23,
+      "views_per_day": 252.5,
+      "like_rate": 2.22,
       "traits": [],
-      "days": 4.3
+      "days": 5.0
     },
     {
       "id": "HzeCFWNvL5M",
@@ -80,10 +80,10 @@
       "views": 1108,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 211.9,
+      "views_per_day": 188.2,
       "like_rate": 1.53,
       "traits": [],
-      "days": 5.2
+      "days": 5.9
     },
     {
       "id": "zBQJAl2kuQ4",
@@ -93,10 +93,10 @@
       "views": 1162,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 180.8,
+      "views_per_day": 164.0,
       "like_rate": 1.38,
       "traits": [],
-      "days": 6.4
+      "days": 7.1
     },
     {
       "id": "BN5JwqqJ1Pw",
@@ -106,10 +106,10 @@
       "views": 1368,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 184.6,
+      "views_per_day": 169.5,
       "like_rate": 1.97,
       "traits": [],
-      "days": 7.4
+      "days": 8.1
     },
     {
       "id": "fpSQ-Reg9BM",
@@ -119,10 +119,10 @@
       "views": 1218,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 145.8,
+      "views_per_day": 135.2,
       "like_rate": 2.3,
       "traits": [],
-      "days": 8.4
+      "days": 9.0
     },
     {
       "id": "v89g4zmYRjU",
@@ -132,23 +132,23 @@
       "views": 1408,
       "likes": 31,
       "comments": 0,
-      "views_per_day": 150.5,
+      "views_per_day": 140.6,
       "like_rate": 2.2,
       "traits": [],
-      "days": 9.4
+      "days": 10.0
     },
     {
       "id": "Evxe1dSEIpA",
       "title": "แม่น้ำอเมซอน สายน้ำที่ไม่มีสะพานข้ามเลยสักแห่งเดียว",
       "published": "2026-10-21T17:19:07Z",
       "privacy": "public",
-      "views": 1980,
+      "views": 1981,
       "likes": 37,
       "comments": 2,
-      "views_per_day": 190.8,
+      "views_per_day": 179.5,
       "like_rate": 1.87,
       "traits": [],
-      "days": 10.4
+      "days": 11.0
     },
     {
       "id": "YiNKS-SokOQ",
@@ -158,10 +158,10 @@
       "views": 1310,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 115.1,
+      "views_per_day": 108.8,
       "like_rate": 2.6,
       "traits": [],
-      "days": 11.4
+      "days": 12.0
     },
     {
       "id": "UbKKSxk3AXo",
@@ -171,10 +171,10 @@
       "views": 1459,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 118.6,
+      "views_per_day": 112.6,
       "like_rate": 1.85,
       "traits": [],
-      "days": 12.3
+      "days": 13.0
     },
     {
       "id": "Wf6aOOah7rU",
@@ -184,12 +184,12 @@
       "views": 1549,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 115.3,
+      "views_per_day": 109.9,
       "like_rate": 2.26,
       "traits": [
         "ความลับ"
       ],
-      "days": 13.4
+      "days": 14.1
     },
     {
       "id": "8IXB5qL8GzE",
@@ -199,27 +199,27 @@
       "views": 1696,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 116.4,
+      "views_per_day": 111.4,
       "like_rate": 1.59,
       "traits": [
         "คำถาม"
       ],
-      "days": 14.6
+      "days": 15.2
     },
     {
       "id": "jMz_OLrFsWg",
       "title": "ทะเลทรายซาฮาราที่ซ่อนแหล่งน้ำมหาศาลไว้ใต้ผืนทราย",
       "published": "2026-10-16T12:48:25Z",
       "privacy": "public",
-      "views": 1302,
+      "views": 1303,
       "likes": 25,
       "comments": 0,
-      "views_per_day": 83.6,
+      "views_per_day": 80.3,
       "like_rate": 1.92,
       "traits": [
         "ความลับ"
       ],
-      "days": 15.6
+      "days": 16.2
     },
     {
       "id": "6GYs0eHvlAM",
@@ -229,10 +229,10 @@
       "views": 1600,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 96.6,
+      "views_per_day": 92.9,
       "like_rate": 1.81,
       "traits": [],
-      "days": 16.6
+      "days": 17.2
     },
     {
       "id": "5yltO_ljXfQ",
@@ -242,10 +242,10 @@
       "views": 1333,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 75.9,
+      "views_per_day": 73.2,
       "like_rate": 1.65,
       "traits": [],
-      "days": 17.6
+      "days": 18.2
     },
     {
       "id": "qCzjRnxtojM",
@@ -255,10 +255,10 @@
       "views": 1375,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 74.0,
+      "views_per_day": 71.5,
       "like_rate": 3.13,
       "traits": [],
-      "days": 18.6
+      "days": 19.2
     },
     {
       "id": "GFIe9yZhPYg",
@@ -268,12 +268,12 @@
       "views": 1293,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 65.5,
+      "views_per_day": 63.4,
       "like_rate": 2.71,
       "traits": [
         "ความถี่"
       ],
-      "days": 19.7
+      "days": 20.4
     },
     {
       "id": "plEJBPKtWvs",
@@ -283,10 +283,10 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 62.4,
+      "views_per_day": 60.4,
       "like_rate": 2.74,
       "traits": [],
-      "days": 20.5
+      "days": 21.1
     },
     {
       "id": "cSsiwc7jZo0",
@@ -296,10 +296,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 42.6,
+      "views_per_day": 41.3,
       "like_rate": 2.51,
       "traits": [],
-      "days": 20.5
+      "days": 21.2
     },
     {
       "id": "964pejBlN0E",
@@ -309,23 +309,23 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 66.2,
+      "views_per_day": 64.1,
       "like_rate": 2.57,
       "traits": [],
-      "days": 20.6
+      "days": 21.2
     },
     {
       "id": "0iK9FQvX5Qg",
       "title": "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
       "published": "2026-10-10T15:12:30Z",
       "privacy": "public",
-      "views": 2049,
+      "views": 2050,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 95.5,
-      "like_rate": 2.64,
+      "views_per_day": 92.7,
+      "like_rate": 2.63,
       "traits": [],
-      "days": 21.5
+      "days": 22.1
     },
     {
       "id": "urz_NtM6hEA",
@@ -335,10 +335,25 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 67.6,
+      "views_per_day": 65.6,
       "like_rate": 1.79,
       "traits": [],
-      "days": 21.5
+      "days": 22.2
+    },
+    {
+      "id": "q9E6dpSEcWc",
+      "title": "พิตช์เลก ทะเลสาบยางมะตอยธรรมชาติที่คนเดินข้ามได้แต่ห้ามยืนนิ่ง",
+      "published": "2026-11-01T18:11:20Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [
+        "ความขัดแย้ง"
+      ],
+      "days": 0.2
     },
     {
       "id": "DbLMjGhbHxk",
@@ -348,10 +363,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 59.8,
+      "views_per_day": 58.1,
       "like_rate": 2.25,
       "traits": [],
-      "days": 21.6
+      "days": 22.2
     },
     {
       "id": "23eSKkHi5XY",
@@ -361,14 +376,14 @@
       "views": 1295,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 56.9,
+      "views_per_day": 55.3,
       "like_rate": 2.55,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 22.7
+      "days": 23.4
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-01T02:23:05+00:00"
+  "fetched_at": "2026-11-01T18:11:29+00:00"
 }
