@@ -3,20 +3,35 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 87,
-    "views": 36671,
+    "views": 36694,
     "videos": 23
   },
   "videos": [
+    {
+      "id": "q9E6dpSEcWc",
+      "title": "พิตช์เลก ทะเลสาบยางมะตอยธรรมชาติที่คนเดินข้ามได้แต่ห้ามยืนนิ่ง",
+      "published": "2026-11-01T18:11:48Z",
+      "privacy": "public",
+      "views": 20,
+      "likes": 2,
+      "comments": 0,
+      "views_per_day": 80.0,
+      "like_rate": 10.0,
+      "traits": [
+        "ความขัดแย้ง"
+      ],
+      "days": 0.2
+    },
     {
       "id": "IQNCAD5xqu0",
       "title": "ถ้ำไนกา แดนคริสตัลยักษ์ใต้ดินที่มนุษย์อยู่ได้ไม่เกินสิบนาที",
       "published": "2026-10-31T17:38:44Z",
       "privacy": "public",
-      "views": 1092,
+      "views": 1093,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 1067.7,
-      "like_rate": 1.47,
+      "views_per_day": 1051.3,
+      "like_rate": 1.46,
       "traits": [],
       "days": 1.0
     },
@@ -25,11 +40,11 @@
       "title": "ทะเลสาบไบคาล แหล่งน้ำจืดที่มีปริมาณน้ำมากกว่าห้ามหาทะเลสาบรวมกัน",
       "published": "2026-10-30T18:18:22Z",
       "privacy": "public",
-      "views": 1197,
+      "views": 1199,
       "likes": 42,
       "comments": 0,
-      "views_per_day": 599.9,
-      "like_rate": 3.51,
+      "views_per_day": 595.9,
+      "like_rate": 3.5,
       "traits": [],
       "days": 2.0
     },
@@ -41,7 +56,7 @@
       "views": 1233,
       "likes": 39,
       "comments": 0,
-      "views_per_day": 414.1,
+      "views_per_day": 411.8,
       "like_rate": 3.16,
       "traits": [],
       "days": 3.0
@@ -54,7 +69,7 @@
       "views": 1121,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 282.4,
+      "views_per_day": 281.2,
       "like_rate": 1.69,
       "traits": [],
       "days": 4.0
@@ -67,7 +82,7 @@
       "views": 1261,
       "likes": 28,
       "comments": 2,
-      "views_per_day": 252.5,
+      "views_per_day": 251.7,
       "like_rate": 2.22,
       "traits": [],
       "days": 5.0
@@ -80,7 +95,7 @@
       "views": 1108,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 188.2,
+      "views_per_day": 187.6,
       "like_rate": 1.53,
       "traits": [],
       "days": 5.9
@@ -93,7 +108,7 @@
       "views": 1162,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 164.0,
+      "views_per_day": 163.6,
       "like_rate": 1.38,
       "traits": [],
       "days": 7.1
@@ -106,7 +121,7 @@
       "views": 1368,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 169.5,
+      "views_per_day": 169.1,
       "like_rate": 1.97,
       "traits": [],
       "days": 8.1
@@ -119,7 +134,7 @@
       "views": 1218,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 135.2,
+      "views_per_day": 134.9,
       "like_rate": 2.3,
       "traits": [],
       "days": 9.0
@@ -132,7 +147,7 @@
       "views": 1408,
       "likes": 31,
       "comments": 0,
-      "views_per_day": 140.6,
+      "views_per_day": 140.4,
       "like_rate": 2.2,
       "traits": [],
       "days": 10.0
@@ -145,10 +160,10 @@
       "views": 1981,
       "likes": 37,
       "comments": 2,
-      "views_per_day": 179.5,
+      "views_per_day": 179.2,
       "like_rate": 1.87,
       "traits": [],
-      "days": 11.0
+      "days": 11.1
     },
     {
       "id": "YiNKS-SokOQ",
@@ -158,10 +173,10 @@
       "views": 1310,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 108.8,
+      "views_per_day": 108.7,
       "like_rate": 2.6,
       "traits": [],
-      "days": 12.0
+      "days": 12.1
     },
     {
       "id": "UbKKSxk3AXo",
@@ -171,7 +186,7 @@
       "views": 1459,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 112.6,
+      "views_per_day": 112.4,
       "like_rate": 1.85,
       "traits": [],
       "days": 13.0
@@ -184,7 +199,7 @@
       "views": 1549,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 109.9,
+      "views_per_day": 109.8,
       "like_rate": 2.26,
       "traits": [
         "ความลับ"
@@ -199,7 +214,7 @@
       "views": 1696,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 111.4,
+      "views_per_day": 111.2,
       "like_rate": 1.59,
       "traits": [
         "คำถาม"
@@ -214,7 +229,7 @@
       "views": 1303,
       "likes": 25,
       "comments": 0,
-      "views_per_day": 80.3,
+      "views_per_day": 80.2,
       "like_rate": 1.92,
       "traits": [
         "ความลับ"
@@ -229,7 +244,7 @@
       "views": 1600,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 92.9,
+      "views_per_day": 92.8,
       "like_rate": 1.81,
       "traits": [],
       "days": 17.2
@@ -242,7 +257,7 @@
       "views": 1333,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 73.2,
+      "views_per_day": 73.1,
       "like_rate": 1.65,
       "traits": [],
       "days": 18.2
@@ -255,7 +270,7 @@
       "views": 1375,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 71.5,
+      "views_per_day": 71.4,
       "like_rate": 3.13,
       "traits": [],
       "days": 19.2
@@ -312,7 +327,7 @@
       "views_per_day": 64.1,
       "like_rate": 2.57,
       "traits": [],
-      "days": 21.2
+      "days": 21.3
     },
     {
       "id": "0iK9FQvX5Qg",
@@ -322,7 +337,7 @@
       "views": 2050,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 92.7,
+      "views_per_day": 92.6,
       "like_rate": 2.63,
       "traits": [],
       "days": 22.1
@@ -341,21 +356,6 @@
       "days": 22.2
     },
     {
-      "id": "q9E6dpSEcWc",
-      "title": "พิตช์เลก ทะเลสาบยางมะตอยธรรมชาติที่คนเดินข้ามได้แต่ห้ามยืนนิ่ง",
-      "published": "2026-11-01T18:11:20Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [
-        "ความขัดแย้ง"
-      ],
-      "days": 0.2
-    },
-    {
       "id": "DbLMjGhbHxk",
       "title": "จุดบนโลกที่มนุษย์ที่ใกล้ที่สุด อยู่บนสถานีอวกาศ",
       "published": "2026-10-10T12:29:57Z",
@@ -363,10 +363,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 58.1,
+      "views_per_day": 58.0,
       "like_rate": 2.25,
       "traits": [],
-      "days": 22.2
+      "days": 22.3
     },
     {
       "id": "23eSKkHi5XY",
@@ -385,5 +385,5 @@
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-01T18:11:29+00:00"
+  "fetched_at": "2026-11-01T18:35:54+00:00"
 }
