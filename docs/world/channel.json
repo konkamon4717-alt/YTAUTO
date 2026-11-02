@@ -2,11 +2,26 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 88,
-    "views": 37767,
+    "subscribers": 89,
+    "views": 37778,
     "videos": 24
   },
   "videos": [
+    {
+      "id": "irr-Taje5Tc",
+      "title": "ทะเลสาบไคนดี ป่าสนที่ตอไม้บนผิวน้ำแห้งตายแต่ใต้น้ำยังสดใหม่",
+      "published": "2026-11-02T22:00:52Z",
+      "privacy": "public",
+      "views": 11,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 44.0,
+      "like_rate": 0.0,
+      "traits": [
+        "ความขัดแย้ง"
+      ],
+      "days": 0.2
+    },
     {
       "id": "q9E6dpSEcWc",
       "title": "พิตช์เลก ทะเลสาบยางมะตอยธรรมชาติที่คนเดินข้ามได้แต่ห้ามยืนนิ่ง",
@@ -15,7 +30,7 @@
       "views": 1074,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 926.8,
+      "views_per_day": 907.6,
       "like_rate": 1.96,
       "traits": [
         "ความขัดแย้ง"
@@ -30,7 +45,7 @@
       "views": 1107,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 507.4,
+      "views_per_day": 501.7,
       "like_rate": 1.45,
       "traits": [],
       "days": 2.2
@@ -43,7 +58,7 @@
       "views": 1202,
       "likes": 42,
       "comments": 0,
-      "views_per_day": 381.1,
+      "views_per_day": 378.1,
       "like_rate": 3.49,
       "traits": [],
       "days": 3.2
@@ -56,10 +71,10 @@
       "views": 1233,
       "likes": 39,
       "comments": 0,
-      "views_per_day": 298.1,
+      "views_per_day": 296.3,
       "like_rate": 3.16,
       "traits": [],
-      "days": 4.1
+      "days": 4.2
     },
     {
       "id": "A_C3WLlxQxU",
@@ -69,10 +84,10 @@
       "views": 1121,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 218.6,
+      "views_per_day": 217.5,
       "like_rate": 1.69,
       "traits": [],
-      "days": 5.1
+      "days": 5.2
     },
     {
       "id": "EvUykg8ag0s",
@@ -82,7 +97,7 @@
       "views": 1261,
       "likes": 28,
       "comments": 2,
-      "views_per_day": 205.0,
+      "views_per_day": 204.1,
       "like_rate": 2.22,
       "traits": [],
       "days": 6.2
@@ -95,10 +110,10 @@
       "views": 1108,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 157.2,
+      "views_per_day": 156.7,
       "like_rate": 1.53,
       "traits": [],
-      "days": 7.0
+      "days": 7.1
     },
     {
       "id": "zBQJAl2kuQ4",
@@ -108,10 +123,10 @@
       "views": 1162,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 141.0,
+      "views_per_day": 140.5,
       "like_rate": 1.38,
       "traits": [],
-      "days": 8.2
+      "days": 8.3
     },
     {
       "id": "BN5JwqqJ1Pw",
@@ -121,10 +136,10 @@
       "views": 1368,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 148.2,
+      "views_per_day": 147.8,
       "like_rate": 1.97,
       "traits": [],
-      "days": 9.2
+      "days": 9.3
     },
     {
       "id": "fpSQ-Reg9BM",
@@ -134,7 +149,7 @@
       "views": 1219,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 119.8,
+      "views_per_day": 119.6,
       "like_rate": 2.3,
       "traits": [],
       "days": 10.2
@@ -147,7 +162,7 @@
       "views": 1408,
       "likes": 31,
       "comments": 0,
-      "views_per_day": 126.0,
+      "views_per_day": 125.7,
       "like_rate": 2.2,
       "traits": [],
       "days": 11.2
@@ -160,7 +175,7 @@
       "views": 1981,
       "likes": 37,
       "comments": 2,
-      "views_per_day": 162.4,
+      "views_per_day": 162.1,
       "like_rate": 1.87,
       "traits": [],
       "days": 12.2
@@ -173,7 +188,7 @@
       "views": 1311,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 99.3,
+      "views_per_day": 99.1,
       "like_rate": 2.59,
       "traits": [],
       "days": 13.2
@@ -186,7 +201,7 @@
       "views": 1459,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 103.3,
+      "views_per_day": 103.2,
       "like_rate": 1.85,
       "traits": [],
       "days": 14.1
@@ -199,7 +214,7 @@
       "views": 1549,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 101.6,
+      "views_per_day": 101.4,
       "like_rate": 2.26,
       "traits": [
         "ความลับ"
@@ -214,7 +229,7 @@
       "views": 1696,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 103.5,
+      "views_per_day": 103.3,
       "like_rate": 1.59,
       "traits": [
         "คำถาม"
@@ -229,7 +244,7 @@
       "views": 1303,
       "likes": 25,
       "comments": 0,
-      "views_per_day": 75.0,
+      "views_per_day": 74.9,
       "like_rate": 1.92,
       "traits": [
         "ความลับ"
@@ -244,7 +259,7 @@
       "views": 1600,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 87.1,
+      "views_per_day": 86.9,
       "like_rate": 1.81,
       "traits": [],
       "days": 18.4
@@ -257,7 +272,7 @@
       "views": 1333,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 68.8,
+      "views_per_day": 68.7,
       "like_rate": 1.65,
       "traits": [],
       "days": 19.4
@@ -288,7 +303,7 @@
       "traits": [
         "ความถี่"
       ],
-      "days": 21.5
+      "days": 21.6
     },
     {
       "id": "plEJBPKtWvs",
@@ -298,7 +313,7 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 57.3,
+      "views_per_day": 57.2,
       "like_rate": 2.74,
       "traits": [],
       "days": 22.3
@@ -311,10 +326,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 39.2,
+      "views_per_day": 39.1,
       "like_rate": 2.51,
       "traits": [],
-      "days": 22.3
+      "days": 22.4
     },
     {
       "id": "964pejBlN0E",
@@ -324,7 +339,7 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 60.8,
+      "views_per_day": 60.7,
       "like_rate": 2.57,
       "traits": [],
       "days": 22.4
@@ -343,21 +358,6 @@
       "days": 23.3
     },
     {
-      "id": "irr-Taje5Tc",
-      "title": "ทะเลสาบไคนดี ป่าสนที่ตอไม้บนผิวน้ำแห้งตายแต่ใต้น้ำยังสดใหม่",
-      "published": "2026-11-02T22:00:22Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [
-        "ความขัดแย้ง"
-      ],
-      "days": 0.2
-    },
-    {
       "id": "urz_NtM6hEA",
       "title": "จุดที่ห่างไกลที่สุดบนโลก มนุษย์อวกาศยังอยู่ใกล้กว่าคนบนพื้นดิน",
       "published": "2026-10-10T13:53:57Z",
@@ -368,7 +368,7 @@
       "views_per_day": 62.3,
       "like_rate": 1.79,
       "traits": [],
-      "days": 23.3
+      "days": 23.4
     },
     {
       "id": "DbLMjGhbHxk",
@@ -378,7 +378,7 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 55.2,
+      "views_per_day": 55.1,
       "like_rate": 2.25,
       "traits": [],
       "days": 23.4
@@ -400,5 +400,5 @@
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-02T22:00:30+00:00"
+  "fetched_at": "2026-11-02T22:35:46+00:00"
 }
