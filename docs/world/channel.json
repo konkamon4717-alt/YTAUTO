@@ -2,8 +2,8 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 89,
-    "views": 37778,
+    "subscribers": 90,
+    "views": 37786,
     "videos": 24
   },
   "videos": [
@@ -12,11 +12,11 @@
       "title": "ทะเลสาบไคนดี ป่าสนที่ตอไม้บนผิวน้ำแห้งตายแต่ใต้น้ำยังสดใหม่",
       "published": "2026-11-02T22:00:52Z",
       "privacy": "public",
-      "views": 11,
-      "likes": 0,
+      "views": 19,
+      "likes": 1,
       "comments": 0,
-      "views_per_day": 44.0,
-      "like_rate": 0.0,
+      "views_per_day": 76.0,
+      "like_rate": 5.26,
       "traits": [
         "ความขัดแย้ง"
       ],
@@ -30,7 +30,7 @@
       "views": 1074,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 907.6,
+      "views_per_day": 890.8,
       "like_rate": 1.96,
       "traits": [
         "ความขัดแย้ง"
@@ -45,7 +45,7 @@
       "views": 1107,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 501.7,
+      "views_per_day": 496.7,
       "like_rate": 1.45,
       "traits": [],
       "days": 2.2
@@ -58,7 +58,7 @@
       "views": 1202,
       "likes": 42,
       "comments": 0,
-      "views_per_day": 378.1,
+      "views_per_day": 375.5,
       "like_rate": 3.49,
       "traits": [],
       "days": 3.2
@@ -71,7 +71,7 @@
       "views": 1233,
       "likes": 39,
       "comments": 0,
-      "views_per_day": 296.3,
+      "views_per_day": 294.8,
       "like_rate": 3.16,
       "traits": [],
       "days": 4.2
@@ -84,7 +84,7 @@
       "views": 1121,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 217.5,
+      "views_per_day": 216.6,
       "like_rate": 1.69,
       "traits": [],
       "days": 5.2
@@ -97,7 +97,7 @@
       "views": 1261,
       "likes": 28,
       "comments": 2,
-      "views_per_day": 204.1,
+      "views_per_day": 203.4,
       "like_rate": 2.22,
       "traits": [],
       "days": 6.2
@@ -110,7 +110,7 @@
       "views": 1108,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 156.7,
+      "views_per_day": 156.2,
       "like_rate": 1.53,
       "traits": [],
       "days": 7.1
@@ -123,7 +123,7 @@
       "views": 1162,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 140.5,
+      "views_per_day": 140.2,
       "like_rate": 1.38,
       "traits": [],
       "days": 8.3
@@ -136,7 +136,7 @@
       "views": 1368,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 147.8,
+      "views_per_day": 147.5,
       "like_rate": 1.97,
       "traits": [],
       "days": 9.3
@@ -149,7 +149,7 @@
       "views": 1219,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 119.6,
+      "views_per_day": 119.3,
       "like_rate": 2.3,
       "traits": [],
       "days": 10.2
@@ -162,7 +162,7 @@
       "views": 1408,
       "likes": 31,
       "comments": 0,
-      "views_per_day": 125.7,
+      "views_per_day": 125.5,
       "like_rate": 2.2,
       "traits": [],
       "days": 11.2
@@ -175,7 +175,7 @@
       "views": 1981,
       "likes": 37,
       "comments": 2,
-      "views_per_day": 162.1,
+      "views_per_day": 161.8,
       "like_rate": 1.87,
       "traits": [],
       "days": 12.2
@@ -188,7 +188,7 @@
       "views": 1311,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 99.1,
+      "views_per_day": 99.0,
       "like_rate": 2.59,
       "traits": [],
       "days": 13.2
@@ -201,10 +201,10 @@
       "views": 1459,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 103.2,
+      "views_per_day": 103.0,
       "like_rate": 1.85,
       "traits": [],
-      "days": 14.1
+      "days": 14.2
     },
     {
       "id": "Wf6aOOah7rU",
@@ -214,7 +214,7 @@
       "views": 1549,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 101.4,
+      "views_per_day": 101.2,
       "like_rate": 2.26,
       "traits": [
         "ความลับ"
@@ -229,7 +229,7 @@
       "views": 1696,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 103.3,
+      "views_per_day": 103.2,
       "like_rate": 1.59,
       "traits": [
         "คำถาม"
@@ -244,7 +244,7 @@
       "views": 1303,
       "likes": 25,
       "comments": 0,
-      "views_per_day": 74.9,
+      "views_per_day": 74.8,
       "like_rate": 1.92,
       "traits": [
         "ความลับ"
@@ -259,7 +259,7 @@
       "views": 1600,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 86.9,
+      "views_per_day": 86.8,
       "like_rate": 1.81,
       "traits": [],
       "days": 18.4
@@ -272,7 +272,7 @@
       "views": 1333,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 68.7,
+      "views_per_day": 68.6,
       "like_rate": 1.65,
       "traits": [],
       "days": 19.4
@@ -285,7 +285,7 @@
       "views": 1375,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 67.4,
+      "views_per_day": 67.3,
       "like_rate": 3.13,
       "traits": [],
       "days": 20.4
@@ -298,7 +298,7 @@
       "views": 1293,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 60.0,
+      "views_per_day": 59.9,
       "like_rate": 2.71,
       "traits": [
         "ความถี่"
@@ -352,7 +352,7 @@
       "views": 2050,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 88.0,
+      "views_per_day": 87.9,
       "like_rate": 2.63,
       "traits": [],
       "days": 23.3
@@ -365,7 +365,7 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 62.3,
+      "views_per_day": 62.2,
       "like_rate": 1.79,
       "traits": [],
       "days": 23.4
@@ -391,7 +391,7 @@
       "views": 1295,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 52.7,
+      "views_per_day": 52.6,
       "like_rate": 2.55,
       "traits": [
         "ความขัดแย้ง"
@@ -400,5 +400,5 @@
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-02T22:35:46+00:00"
+  "fetched_at": "2026-11-02T23:07:53+00:00"
 }
