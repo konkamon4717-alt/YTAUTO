@@ -2,9 +2,9 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 90,
-    "views": 38778,
-    "videos": 24
+    "subscribers": 93,
+    "views": 38879,
+    "videos": 25
   },
   "videos": [
     {
@@ -12,56 +12,56 @@
       "title": "ทะเลสาบไคนดี ป่าสนที่ตอไม้บนผิวน้ำแห้งตายแต่ใต้น้ำยังสดใหม่",
       "published": "2026-11-02T22:00:52Z",
       "privacy": "public",
-      "views": 1012,
-      "likes": 20,
+      "views": 1097,
+      "likes": 24,
       "comments": 0,
-      "views_per_day": 4048.0,
-      "like_rate": 1.98,
+      "views_per_day": 1211.9,
+      "like_rate": 2.19,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 0.2
+      "days": 0.9
     },
     {
       "id": "q9E6dpSEcWc",
       "title": "พิตช์เลก ทะเลสาบยางมะตอยธรรมชาติที่คนเดินข้ามได้แต่ห้ามยืนนิ่ง",
       "published": "2026-11-01T18:11:48Z",
       "privacy": "public",
-      "views": 1069,
+      "views": 1072,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 759.5,
+      "views_per_day": 519.3,
       "like_rate": 1.96,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 1.4
+      "days": 2.1
     },
     {
       "id": "IQNCAD5xqu0",
       "title": "ถ้ำไนกา แดนคริสตัลยักษ์ใต้ดินที่มนุษย์อยู่ได้ไม่เกินสิบนาที",
       "published": "2026-10-31T17:38:44Z",
       "privacy": "public",
-      "views": 1108,
+      "views": 1113,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 455.9,
+      "views_per_day": 360.5,
       "like_rate": 1.44,
       "traits": [],
-      "days": 2.4
+      "days": 3.1
     },
     {
       "id": "H7W11F5c-vY",
       "title": "ทะเลสาบไบคาล แหล่งน้ำจืดที่มีปริมาณน้ำมากกว่าห้ามหาทะเลสาบรวมกัน",
       "published": "2026-10-30T18:18:22Z",
       "privacy": "public",
-      "views": 1203,
+      "views": 1206,
       "likes": 42,
       "comments": 0,
-      "views_per_day": 353.5,
-      "like_rate": 3.49,
+      "views_per_day": 297.1,
+      "like_rate": 3.48,
       "traits": [],
-      "days": 3.4
+      "days": 4.1
     },
     {
       "id": "AufCUCYbKPQ",
@@ -71,10 +71,10 @@
       "views": 1234,
       "likes": 39,
       "comments": 0,
-      "views_per_day": 281.4,
+      "views_per_day": 244.8,
       "like_rate": 3.16,
       "traits": [],
-      "days": 4.4
+      "days": 5.0
     },
     {
       "id": "A_C3WLlxQxU",
@@ -84,23 +84,23 @@
       "views": 1121,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 208.5,
+      "views_per_day": 185.8,
       "like_rate": 1.69,
       "traits": [],
-      "days": 5.4
+      "days": 6.0
     },
     {
       "id": "EvUykg8ag0s",
       "title": "รอยแยกซิลฟรา จุดที่คุณสามารถแตะสองทวีปได้พร้อมกัน",
       "published": "2026-10-27T18:20:51Z",
       "privacy": "public",
-      "views": 1262,
+      "views": 1265,
       "likes": 28,
       "comments": 2,
-      "views_per_day": 197.1,
-      "like_rate": 2.22,
+      "views_per_day": 179.2,
+      "like_rate": 2.21,
       "traits": [],
-      "days": 6.4
+      "days": 7.1
     },
     {
       "id": "HzeCFWNvL5M",
@@ -110,10 +110,10 @@
       "views": 1108,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 151.9,
+      "views_per_day": 139.3,
       "like_rate": 1.53,
       "traits": [],
-      "days": 7.3
+      "days": 8.0
     },
     {
       "id": "zBQJAl2kuQ4",
@@ -123,10 +123,10 @@
       "views": 1162,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 136.8,
+      "views_per_day": 127.0,
       "like_rate": 1.38,
       "traits": [],
-      "days": 8.5
+      "days": 9.1
     },
     {
       "id": "BN5JwqqJ1Pw",
@@ -136,10 +136,10 @@
       "views": 1368,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 144.3,
+      "views_per_day": 135.0,
       "like_rate": 1.97,
       "traits": [],
-      "days": 9.5
+      "days": 10.1
     },
     {
       "id": "fpSQ-Reg9BM",
@@ -149,10 +149,10 @@
       "views": 1219,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 117.0,
+      "views_per_day": 110.1,
       "like_rate": 2.3,
       "traits": [],
-      "days": 10.4
+      "days": 11.1
     },
     {
       "id": "v89g4zmYRjU",
@@ -162,10 +162,10 @@
       "views": 1408,
       "likes": 31,
       "comments": 0,
-      "views_per_day": 123.3,
+      "views_per_day": 116.6,
       "like_rate": 2.2,
       "traits": [],
-      "days": 11.4
+      "days": 12.1
     },
     {
       "id": "Evxe1dSEIpA",
@@ -175,23 +175,23 @@
       "views": 1981,
       "likes": 37,
       "comments": 2,
-      "views_per_day": 159.2,
+      "views_per_day": 151.2,
       "like_rate": 1.87,
       "traits": [],
-      "days": 12.4
+      "days": 13.1
     },
     {
       "id": "YiNKS-SokOQ",
       "title": "ดินแดนที่พระอาทิตย์ไม่เคยตกดินนานหลายเดือน",
       "published": "2026-10-20T17:13:46Z",
       "privacy": "public",
-      "views": 1311,
+      "views": 1312,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 97.5,
+      "views_per_day": 93.0,
       "like_rate": 2.59,
       "traits": [],
-      "days": 13.4
+      "days": 14.1
     },
     {
       "id": "UbKKSxk3AXo",
@@ -201,10 +201,10 @@
       "views": 1459,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 101.5,
+      "views_per_day": 97.1,
       "like_rate": 1.85,
       "traits": [],
-      "days": 14.4
+      "days": 15.0
     },
     {
       "id": "Wf6aOOah7rU",
@@ -214,12 +214,12 @@
       "views": 1549,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 99.9,
+      "views_per_day": 95.9,
       "like_rate": 2.26,
       "traits": [
         "ความลับ"
       ],
-      "days": 15.5
+      "days": 16.2
     },
     {
       "id": "8IXB5qL8GzE",
@@ -229,12 +229,12 @@
       "views": 1696,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 101.9,
+      "views_per_day": 98.1,
       "like_rate": 1.59,
       "traits": [
         "คำถาม"
       ],
-      "days": 16.6
+      "days": 17.3
     },
     {
       "id": "jMz_OLrFsWg",
@@ -244,12 +244,12 @@
       "views": 1303,
       "likes": 25,
       "comments": 0,
-      "views_per_day": 73.9,
+      "views_per_day": 71.2,
       "like_rate": 1.92,
       "traits": [
         "ความลับ"
       ],
-      "days": 17.6
+      "days": 18.3
     },
     {
       "id": "6GYs0eHvlAM",
@@ -259,23 +259,23 @@
       "views": 1600,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 85.9,
+      "views_per_day": 83.0,
       "like_rate": 1.81,
       "traits": [],
-      "days": 18.6
+      "days": 19.3
     },
     {
       "id": "5yltO_ljXfQ",
       "title": "ภูเขาไฟที่พ่นเปลวไฟสีน้ำเงิน สว่างวาบออกมาท่ามกลางความมืด",
       "published": "2026-10-14T12:53:05Z",
       "privacy": "public",
-      "views": 1333,
+      "views": 1334,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 67.9,
+      "views_per_day": 65.8,
       "like_rate": 1.65,
       "traits": [],
-      "days": 19.6
+      "days": 20.3
     },
     {
       "id": "qCzjRnxtojM",
@@ -285,10 +285,10 @@
       "views": 1375,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 66.6,
+      "views_per_day": 64.6,
       "like_rate": 3.13,
       "traits": [],
-      "days": 20.6
+      "days": 21.3
     },
     {
       "id": "GFIe9yZhPYg",
@@ -298,12 +298,12 @@
       "views": 1293,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 59.3,
+      "views_per_day": 57.6,
       "like_rate": 2.71,
       "traits": [
         "ความถี่"
       ],
-      "days": 21.8
+      "days": 22.4
     },
     {
       "id": "plEJBPKtWvs",
@@ -313,10 +313,10 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 56.6,
+      "views_per_day": 55.0,
       "like_rate": 2.74,
       "traits": [],
-      "days": 22.5
+      "days": 23.2
     },
     {
       "id": "cSsiwc7jZo0",
@@ -326,10 +326,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 38.7,
+      "views_per_day": 37.6,
       "like_rate": 2.51,
       "traits": [],
-      "days": 22.6
+      "days": 23.2
     },
     {
       "id": "964pejBlN0E",
@@ -339,10 +339,23 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 60.1,
+      "views_per_day": 58.4,
       "like_rate": 2.57,
       "traits": [],
-      "days": 22.6
+      "days": 23.3
+    },
+    {
+      "id": "GFz7GZTNUOQ",
+      "title": "ตาแห่งซาฮารา วงกลมยักษ์กลางทะเลทรายที่เห็นได้จากอวกาศ",
+      "published": "2026-11-03T19:44:10Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
     },
     {
       "id": "0iK9FQvX5Qg",
@@ -352,10 +365,10 @@
       "views": 2050,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 87.1,
+      "views_per_day": 84.8,
       "like_rate": 2.63,
       "traits": [],
-      "days": 23.5
+      "days": 24.2
     },
     {
       "id": "urz_NtM6hEA",
@@ -365,10 +378,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 61.7,
+      "views_per_day": 60.0,
       "like_rate": 1.79,
       "traits": [],
-      "days": 23.6
+      "days": 24.2
     },
     {
       "id": "DbLMjGhbHxk",
@@ -378,10 +391,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 54.6,
+      "views_per_day": 53.1,
       "like_rate": 2.25,
       "traits": [],
-      "days": 23.6
+      "days": 24.3
     },
     {
       "id": "23eSKkHi5XY",
@@ -391,14 +404,14 @@
       "views": 1295,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 52.2,
+      "views_per_day": 50.8,
       "like_rate": 2.55,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 24.8
+      "days": 25.5
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-03T03:58:43+00:00"
+  "fetched_at": "2026-11-03T19:44:18+00:00"
 }
