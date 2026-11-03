@@ -3,7 +3,7 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 93,
-    "views": 38881,
+    "views": 38927,
     "videos": 25
   },
   "videos": [
@@ -12,11 +12,11 @@
       "title": "ตาแห่งซาฮารา วงกลมยักษ์กลางทะเลทรายที่เห็นได้จากอวกาศ",
       "published": "2026-11-03T19:44:35Z",
       "privacy": "public",
-      "views": 2,
-      "likes": 0,
+      "views": 36,
+      "likes": 3,
       "comments": 0,
-      "views_per_day": 8.0,
-      "like_rate": 0.0,
+      "views_per_day": 144.0,
+      "like_rate": 8.33,
       "traits": [],
       "days": 0.2
     },
@@ -25,15 +25,15 @@
       "title": "ทะเลสาบไคนดี ป่าสนที่ตอไม้บนผิวน้ำแห้งตายแต่ใต้น้ำยังสดใหม่",
       "published": "2026-11-02T22:00:52Z",
       "privacy": "public",
-      "views": 1097,
+      "views": 1111,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 1176.2,
-      "like_rate": 2.19,
+      "views_per_day": 1166.4,
+      "like_rate": 2.16,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 0.9
+      "days": 1.0
     },
     {
       "id": "q9E6dpSEcWc",
@@ -43,7 +43,7 @@
       "views": 1072,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 512.5,
+      "views_per_day": 507.7,
       "like_rate": 1.96,
       "traits": [
         "ความขัดแย้ง"
@@ -55,10 +55,10 @@
       "title": "ถ้ำไนกา แดนคริสตัลยักษ์ใต้ดินที่มนุษย์อยู่ได้ไม่เกินสิบนาที",
       "published": "2026-10-31T17:38:44Z",
       "privacy": "public",
-      "views": 1113,
+      "views": 1111,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 357.3,
+      "views_per_day": 354.4,
       "like_rate": 1.44,
       "traits": [],
       "days": 3.1
@@ -71,7 +71,7 @@
       "views": 1206,
       "likes": 42,
       "comments": 0,
-      "views_per_day": 295.1,
+      "views_per_day": 293.6,
       "like_rate": 3.48,
       "traits": [],
       "days": 4.1
@@ -84,7 +84,7 @@
       "views": 1234,
       "likes": 39,
       "comments": 0,
-      "views_per_day": 243.4,
+      "views_per_day": 242.5,
       "like_rate": 3.16,
       "traits": [],
       "days": 5.1
@@ -97,7 +97,7 @@
       "views": 1121,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 184.9,
+      "views_per_day": 184.3,
       "like_rate": 1.69,
       "traits": [],
       "days": 6.1
@@ -110,7 +110,7 @@
       "views": 1265,
       "likes": 28,
       "comments": 2,
-      "views_per_day": 178.5,
+      "views_per_day": 178.0,
       "like_rate": 2.21,
       "traits": [],
       "days": 7.1
@@ -123,7 +123,7 @@
       "views": 1108,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 138.8,
+      "views_per_day": 138.5,
       "like_rate": 1.53,
       "traits": [],
       "days": 8.0
@@ -136,7 +136,7 @@
       "views": 1162,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 126.6,
+      "views_per_day": 126.4,
       "like_rate": 1.38,
       "traits": [],
       "days": 9.2
@@ -149,7 +149,7 @@
       "views": 1368,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 134.6,
+      "views_per_day": 134.3,
       "like_rate": 1.97,
       "traits": [],
       "days": 10.2
@@ -162,7 +162,7 @@
       "views": 1219,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 109.8,
+      "views_per_day": 109.6,
       "like_rate": 2.3,
       "traits": [],
       "days": 11.1
@@ -175,7 +175,7 @@
       "views": 1408,
       "likes": 31,
       "comments": 0,
-      "views_per_day": 116.3,
+      "views_per_day": 116.1,
       "like_rate": 2.2,
       "traits": [],
       "days": 12.1
@@ -188,7 +188,7 @@
       "views": 1981,
       "likes": 37,
       "comments": 2,
-      "views_per_day": 150.9,
+      "views_per_day": 150.7,
       "like_rate": 1.87,
       "traits": [],
       "days": 13.1
@@ -201,10 +201,10 @@
       "views": 1312,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 92.8,
+      "views_per_day": 92.7,
       "like_rate": 2.59,
       "traits": [],
-      "days": 14.1
+      "days": 14.2
     },
     {
       "id": "UbKKSxk3AXo",
@@ -214,7 +214,7 @@
       "views": 1459,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 96.9,
+      "views_per_day": 96.8,
       "like_rate": 1.85,
       "traits": [],
       "days": 15.1
@@ -227,7 +227,7 @@
       "views": 1549,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 95.7,
+      "views_per_day": 95.6,
       "like_rate": 2.26,
       "traits": [
         "ความลับ"
@@ -242,7 +242,7 @@
       "views": 1696,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 97.9,
+      "views_per_day": 97.8,
       "like_rate": 1.59,
       "traits": [
         "คำถาม"
@@ -285,7 +285,7 @@
       "views": 1334,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 65.7,
+      "views_per_day": 65.6,
       "like_rate": 1.65,
       "traits": [],
       "days": 20.3
@@ -298,7 +298,7 @@
       "views": 1375,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 64.5,
+      "views_per_day": 64.4,
       "like_rate": 3.13,
       "traits": [],
       "days": 21.3
@@ -326,7 +326,7 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 55.0,
+      "views_per_day": 54.9,
       "like_rate": 2.74,
       "traits": [],
       "days": 23.2
@@ -352,10 +352,10 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 58.4,
+      "views_per_day": 58.3,
       "like_rate": 2.57,
       "traits": [],
-      "days": 23.3
+      "days": 23.4
     },
     {
       "id": "0iK9FQvX5Qg",
@@ -365,7 +365,7 @@
       "views": 2050,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 84.7,
+      "views_per_day": 84.6,
       "like_rate": 2.63,
       "traits": [],
       "days": 24.2
@@ -391,7 +391,7 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 53.1,
+      "views_per_day": 53.0,
       "like_rate": 2.25,
       "traits": [],
       "days": 24.3
@@ -413,5 +413,5 @@
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-03T20:23:56+00:00"
+  "fetched_at": "2026-11-03T20:52:25+00:00"
 }
