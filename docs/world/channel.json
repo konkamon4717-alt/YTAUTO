@@ -3,10 +3,23 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 93,
-    "views": 38879,
+    "views": 38881,
     "videos": 25
   },
   "videos": [
+    {
+      "id": "GFz7GZTNUOQ",
+      "title": "ตาแห่งซาฮารา วงกลมยักษ์กลางทะเลทรายที่เห็นได้จากอวกาศ",
+      "published": "2026-11-03T19:44:35Z",
+      "privacy": "public",
+      "views": 2,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 8.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
+    },
     {
       "id": "irr-Taje5Tc",
       "title": "ทะเลสาบไคนดี ป่าสนที่ตอไม้บนผิวน้ำแห้งตายแต่ใต้น้ำยังสดใหม่",
@@ -15,7 +28,7 @@
       "views": 1097,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 1211.9,
+      "views_per_day": 1176.2,
       "like_rate": 2.19,
       "traits": [
         "ความขัดแย้ง"
@@ -30,7 +43,7 @@
       "views": 1072,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 519.3,
+      "views_per_day": 512.5,
       "like_rate": 1.96,
       "traits": [
         "ความขัดแย้ง"
@@ -45,7 +58,7 @@
       "views": 1113,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 360.5,
+      "views_per_day": 357.3,
       "like_rate": 1.44,
       "traits": [],
       "days": 3.1
@@ -58,7 +71,7 @@
       "views": 1206,
       "likes": 42,
       "comments": 0,
-      "views_per_day": 297.1,
+      "views_per_day": 295.1,
       "like_rate": 3.48,
       "traits": [],
       "days": 4.1
@@ -71,10 +84,10 @@
       "views": 1234,
       "likes": 39,
       "comments": 0,
-      "views_per_day": 244.8,
+      "views_per_day": 243.4,
       "like_rate": 3.16,
       "traits": [],
-      "days": 5.0
+      "days": 5.1
     },
     {
       "id": "A_C3WLlxQxU",
@@ -84,10 +97,10 @@
       "views": 1121,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 185.8,
+      "views_per_day": 184.9,
       "like_rate": 1.69,
       "traits": [],
-      "days": 6.0
+      "days": 6.1
     },
     {
       "id": "EvUykg8ag0s",
@@ -97,7 +110,7 @@
       "views": 1265,
       "likes": 28,
       "comments": 2,
-      "views_per_day": 179.2,
+      "views_per_day": 178.5,
       "like_rate": 2.21,
       "traits": [],
       "days": 7.1
@@ -110,7 +123,7 @@
       "views": 1108,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 139.3,
+      "views_per_day": 138.8,
       "like_rate": 1.53,
       "traits": [],
       "days": 8.0
@@ -123,10 +136,10 @@
       "views": 1162,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 127.0,
+      "views_per_day": 126.6,
       "like_rate": 1.38,
       "traits": [],
-      "days": 9.1
+      "days": 9.2
     },
     {
       "id": "BN5JwqqJ1Pw",
@@ -136,10 +149,10 @@
       "views": 1368,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 135.0,
+      "views_per_day": 134.6,
       "like_rate": 1.97,
       "traits": [],
-      "days": 10.1
+      "days": 10.2
     },
     {
       "id": "fpSQ-Reg9BM",
@@ -149,7 +162,7 @@
       "views": 1219,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 110.1,
+      "views_per_day": 109.8,
       "like_rate": 2.3,
       "traits": [],
       "days": 11.1
@@ -162,7 +175,7 @@
       "views": 1408,
       "likes": 31,
       "comments": 0,
-      "views_per_day": 116.6,
+      "views_per_day": 116.3,
       "like_rate": 2.2,
       "traits": [],
       "days": 12.1
@@ -175,7 +188,7 @@
       "views": 1981,
       "likes": 37,
       "comments": 2,
-      "views_per_day": 151.2,
+      "views_per_day": 150.9,
       "like_rate": 1.87,
       "traits": [],
       "days": 13.1
@@ -188,7 +201,7 @@
       "views": 1312,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 93.0,
+      "views_per_day": 92.8,
       "like_rate": 2.59,
       "traits": [],
       "days": 14.1
@@ -201,10 +214,10 @@
       "views": 1459,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 97.1,
+      "views_per_day": 96.9,
       "like_rate": 1.85,
       "traits": [],
-      "days": 15.0
+      "days": 15.1
     },
     {
       "id": "Wf6aOOah7rU",
@@ -214,7 +227,7 @@
       "views": 1549,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 95.9,
+      "views_per_day": 95.7,
       "like_rate": 2.26,
       "traits": [
         "ความลับ"
@@ -229,7 +242,7 @@
       "views": 1696,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 98.1,
+      "views_per_day": 97.9,
       "like_rate": 1.59,
       "traits": [
         "คำถาม"
@@ -244,7 +257,7 @@
       "views": 1303,
       "likes": 25,
       "comments": 0,
-      "views_per_day": 71.2,
+      "views_per_day": 71.1,
       "like_rate": 1.92,
       "traits": [
         "ความลับ"
@@ -259,7 +272,7 @@
       "views": 1600,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 83.0,
+      "views_per_day": 82.8,
       "like_rate": 1.81,
       "traits": [],
       "days": 19.3
@@ -272,7 +285,7 @@
       "views": 1334,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 65.8,
+      "views_per_day": 65.7,
       "like_rate": 1.65,
       "traits": [],
       "days": 20.3
@@ -285,7 +298,7 @@
       "views": 1375,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 64.6,
+      "views_per_day": 64.5,
       "like_rate": 3.13,
       "traits": [],
       "days": 21.3
@@ -298,12 +311,12 @@
       "views": 1293,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 57.6,
+      "views_per_day": 57.5,
       "like_rate": 2.71,
       "traits": [
         "ความถี่"
       ],
-      "days": 22.4
+      "days": 22.5
     },
     {
       "id": "plEJBPKtWvs",
@@ -329,7 +342,7 @@
       "views_per_day": 37.6,
       "like_rate": 2.51,
       "traits": [],
-      "days": 23.2
+      "days": 23.3
     },
     {
       "id": "964pejBlN0E",
@@ -345,19 +358,6 @@
       "days": 23.3
     },
     {
-      "id": "GFz7GZTNUOQ",
-      "title": "ตาแห่งซาฮารา วงกลมยักษ์กลางทะเลทรายที่เห็นได้จากอวกาศ",
-      "published": "2026-11-03T19:44:10Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [],
-      "days": 0.2
-    },
-    {
       "id": "0iK9FQvX5Qg",
       "title": "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
       "published": "2026-10-10T15:12:30Z",
@@ -365,7 +365,7 @@
       "views": 2050,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 84.8,
+      "views_per_day": 84.7,
       "like_rate": 2.63,
       "traits": [],
       "days": 24.2
@@ -378,10 +378,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 60.0,
+      "views_per_day": 59.9,
       "like_rate": 1.79,
       "traits": [],
-      "days": 24.2
+      "days": 24.3
     },
     {
       "id": "DbLMjGhbHxk",
@@ -413,5 +413,5 @@
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-03T19:44:18+00:00"
+  "fetched_at": "2026-11-03T20:23:56+00:00"
 }
