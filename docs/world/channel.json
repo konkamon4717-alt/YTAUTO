@@ -3,10 +3,23 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 96,
-    "views": 40135,
+    "views": 40149,
     "videos": 26
   },
   "videos": [
+    {
+      "id": "tdAXpagG3jc",
+      "title": "วิทเทียร์ เมืองในอะแลสกาที่ประชากรเกือบทั้งหมดอาศัยในตึกเดียว",
+      "published": "2026-11-04T19:55:02Z",
+      "privacy": "public",
+      "views": 10,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 40.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
+    },
     {
       "id": "GFz7GZTNUOQ",
       "title": "ตาแห่งซาฮารา วงกลมยักษ์กลางทะเลทรายที่เห็นได้จากอวกาศ",
@@ -15,7 +28,7 @@
       "views": 1106,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 1098.2,
+      "views_per_day": 1066.8,
       "like_rate": 2.35,
       "traits": [],
       "days": 1.0
@@ -25,10 +38,10 @@
       "title": "ทะเลสาบไคนดี ป่าสนที่ตอไม้บนผิวน้ำแห้งตายแต่ใต้น้ำยังสดใหม่",
       "published": "2026-11-02T22:00:52Z",
       "privacy": "public",
-      "views": 1198,
+      "views": 1199,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 626.4,
+      "views_per_day": 617.4,
       "like_rate": 2.17,
       "traits": [
         "ความขัดแย้ง"
@@ -40,10 +53,10 @@
       "title": "พิตช์เลก ทะเลสาบยางมะตอยธรรมชาติที่คนเดินข้ามได้แต่ห้ามยืนนิ่ง",
       "published": "2026-11-01T18:11:48Z",
       "privacy": "public",
-      "views": 1094,
+      "views": 1096,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 356.2,
+      "views_per_day": 353.4,
       "like_rate": 1.92,
       "traits": [
         "ความขัดแย้ง"
@@ -58,7 +71,7 @@
       "views": 1117,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 272.8,
+      "views_per_day": 270.8,
       "like_rate": 1.43,
       "traits": [],
       "days": 4.1
@@ -71,7 +84,7 @@
       "views": 1207,
       "likes": 42,
       "comments": 0,
-      "views_per_day": 238.2,
+      "views_per_day": 236.8,
       "like_rate": 3.48,
       "traits": [],
       "days": 5.1
@@ -84,10 +97,10 @@
       "views": 1237,
       "likes": 39,
       "comments": 0,
-      "views_per_day": 204.5,
+      "views_per_day": 203.5,
       "like_rate": 3.15,
       "traits": [],
-      "days": 6.0
+      "days": 6.1
     },
     {
       "id": "A_C3WLlxQxU",
@@ -97,10 +110,10 @@
       "views": 1122,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 159.3,
+      "views_per_day": 158.7,
       "like_rate": 1.69,
       "traits": [],
-      "days": 7.0
+      "days": 7.1
     },
     {
       "id": "EvUykg8ag0s",
@@ -110,7 +123,7 @@
       "views": 1266,
       "likes": 28,
       "comments": 2,
-      "views_per_day": 157.0,
+      "views_per_day": 156.4,
       "like_rate": 2.21,
       "traits": [],
       "days": 8.1
@@ -123,7 +136,7 @@
       "views": 1110,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 123.9,
+      "views_per_day": 123.5,
       "like_rate": 1.53,
       "traits": [],
       "days": 9.0
@@ -136,7 +149,7 @@
       "views": 1164,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 114.6,
+      "views_per_day": 114.3,
       "like_rate": 1.37,
       "traits": [],
       "days": 10.2
@@ -149,21 +162,21 @@
       "views": 1369,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 122.9,
+      "views_per_day": 122.5,
       "like_rate": 1.97,
       "traits": [],
-      "days": 11.1
+      "days": 11.2
     },
     {
       "id": "fpSQ-Reg9BM",
       "title": "ยอดเขาที่อยู่ใกล้อวกาศที่สุด ไม่ใช่เอเวอเรสต์",
       "published": "2026-10-23T17:54:09Z",
       "privacy": "public",
-      "views": 1220,
+      "views": 1221,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 101.0,
-      "like_rate": 2.3,
+      "views_per_day": 100.8,
+      "like_rate": 2.29,
       "traits": [],
       "days": 12.1
     },
@@ -175,7 +188,7 @@
       "views": 1409,
       "likes": 31,
       "comments": 0,
-      "views_per_day": 107.7,
+      "views_per_day": 107.4,
       "like_rate": 2.2,
       "traits": [],
       "days": 13.1
@@ -188,7 +201,7 @@
       "views": 1984,
       "likes": 37,
       "comments": 2,
-      "views_per_day": 140.6,
+      "views_per_day": 140.3,
       "like_rate": 1.86,
       "traits": [],
       "days": 14.1
@@ -201,7 +214,7 @@
       "views": 1313,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 86.9,
+      "views_per_day": 86.7,
       "like_rate": 2.59,
       "traits": [],
       "days": 15.1
@@ -214,10 +227,10 @@
       "views": 1460,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 91.1,
+      "views_per_day": 90.9,
       "like_rate": 1.85,
       "traits": [],
-      "days": 16.0
+      "days": 16.1
     },
     {
       "id": "Wf6aOOah7rU",
@@ -227,7 +240,7 @@
       "views": 1551,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 90.4,
+      "views_per_day": 90.2,
       "like_rate": 2.26,
       "traits": [
         "ความลับ"
@@ -242,7 +255,7 @@
       "views": 1698,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 92.8,
+      "views_per_day": 92.6,
       "like_rate": 1.59,
       "traits": [
         "คำถาม"
@@ -257,7 +270,7 @@
       "views": 1303,
       "likes": 25,
       "comments": 0,
-      "views_per_day": 67.5,
+      "views_per_day": 67.4,
       "like_rate": 1.92,
       "traits": [
         "ความลับ"
@@ -272,7 +285,7 @@
       "views": 1600,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 78.8,
+      "views_per_day": 78.7,
       "like_rate": 1.81,
       "traits": [],
       "days": 20.3
@@ -285,7 +298,7 @@
       "views": 1334,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 62.7,
+      "views_per_day": 62.6,
       "like_rate": 1.65,
       "traits": [],
       "days": 21.3
@@ -298,7 +311,7 @@
       "views": 1375,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 61.7,
+      "views_per_day": 61.6,
       "like_rate": 3.13,
       "traits": [],
       "days": 22.3
@@ -339,23 +352,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 36.1,
+      "views_per_day": 36.0,
       "like_rate": 2.51,
       "traits": [],
       "days": 24.3
-    },
-    {
-      "id": "tdAXpagG3jc",
-      "title": "วิทเทียร์ เมืองในอะแลสกาที่ประชากรเกือบทั้งหมดอาศัยในตึกเดียว",
-      "published": "2026-11-04T19:54:41Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [],
-      "days": 0.2
     },
     {
       "id": "964pejBlN0E",
@@ -378,7 +378,7 @@
       "views": 2051,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 81.4,
+      "views_per_day": 81.3,
       "like_rate": 2.63,
       "traits": [],
       "days": 25.2
@@ -404,7 +404,7 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 51.0,
+      "views_per_day": 50.9,
       "like_rate": 2.25,
       "traits": [],
       "days": 25.3
@@ -426,5 +426,5 @@
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-04T19:54:46+00:00"
+  "fetched_at": "2026-11-04T20:37:33+00:00"
 }
