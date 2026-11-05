@@ -2,8 +2,8 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 97,
-    "views": 40205,
+    "subscribers": 100,
+    "views": 41336,
     "videos": 26
   },
   "videos": [
@@ -12,41 +12,41 @@
       "title": "วิทเทียร์ เมืองในอะแลสกาที่ประชากรเกือบทั้งหมดอาศัยในตึกเดียว",
       "published": "2026-11-04T19:55:02Z",
       "privacy": "public",
-      "views": 66,
-      "likes": 3,
+      "views": 1172,
+      "likes": 35,
       "comments": 0,
-      "views_per_day": 264.0,
-      "like_rate": 4.55,
+      "views_per_day": 3666.9,
+      "like_rate": 2.99,
       "traits": [],
-      "days": 0.2
+      "days": 0.3
     },
     {
       "id": "GFz7GZTNUOQ",
       "title": "ตาแห่งซาฮารา วงกลมยักษ์กลางทะเลทรายที่เห็นได้จากอวกาศ",
       "published": "2026-11-03T19:44:35Z",
       "privacy": "public",
-      "views": 1106,
+      "views": 1107,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 1043.9,
+      "views_per_day": 834.3,
       "like_rate": 2.35,
       "traits": [],
-      "days": 1.1
+      "days": 1.3
     },
     {
       "id": "irr-Taje5Tc",
       "title": "ทะเลสาบไคนดี ป่าสนที่ตอไม้บนผิวน้ำแห้งตายแต่ใต้น้ำยังสดใหม่",
       "published": "2026-11-02T22:00:52Z",
       "privacy": "public",
-      "views": 1199,
-      "likes": 26,
+      "views": 1221,
+      "likes": 27,
       "comments": 0,
-      "views_per_day": 610.2,
-      "like_rate": 2.17,
+      "views_per_day": 547.0,
+      "like_rate": 2.21,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 2.0
+      "days": 2.2
     },
     {
       "id": "q9E6dpSEcWc",
@@ -56,12 +56,12 @@
       "views": 1096,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 350.8,
+      "views_per_day": 323.2,
       "like_rate": 1.92,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 3.1
+      "days": 3.4
     },
     {
       "id": "IQNCAD5xqu0",
@@ -71,10 +71,10 @@
       "views": 1117,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 269.4,
+      "views_per_day": 253.0,
       "like_rate": 1.43,
       "traits": [],
-      "days": 4.1
+      "days": 4.4
     },
     {
       "id": "H7W11F5c-vY",
@@ -84,10 +84,10 @@
       "views": 1207,
       "likes": 42,
       "comments": 0,
-      "views_per_day": 235.8,
+      "views_per_day": 224.1,
       "like_rate": 3.48,
       "traits": [],
-      "days": 5.1
+      "days": 5.4
     },
     {
       "id": "AufCUCYbKPQ",
@@ -97,10 +97,10 @@
       "views": 1237,
       "likes": 39,
       "comments": 0,
-      "views_per_day": 202.7,
+      "views_per_day": 194.2,
       "like_rate": 3.15,
       "traits": [],
-      "days": 6.1
+      "days": 6.4
     },
     {
       "id": "A_C3WLlxQxU",
@@ -110,10 +110,10 @@
       "views": 1122,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 158.2,
+      "views_per_day": 152.4,
       "like_rate": 1.69,
       "traits": [],
-      "days": 7.1
+      "days": 7.4
     },
     {
       "id": "EvUykg8ag0s",
@@ -123,10 +123,10 @@
       "views": 1266,
       "likes": 28,
       "comments": 2,
-      "views_per_day": 156.0,
+      "views_per_day": 151.0,
       "like_rate": 2.21,
       "traits": [],
-      "days": 8.1
+      "days": 8.4
     },
     {
       "id": "HzeCFWNvL5M",
@@ -136,10 +136,10 @@
       "views": 1110,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 123.2,
+      "views_per_day": 119.6,
       "like_rate": 1.53,
       "traits": [],
-      "days": 9.0
+      "days": 9.3
     },
     {
       "id": "zBQJAl2kuQ4",
@@ -149,10 +149,10 @@
       "views": 1164,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 114.0,
+      "views_per_day": 111.1,
       "like_rate": 1.37,
       "traits": [],
-      "days": 10.2
+      "days": 10.5
     },
     {
       "id": "BN5JwqqJ1Pw",
@@ -162,10 +162,10 @@
       "views": 1369,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 122.3,
+      "views_per_day": 119.4,
       "like_rate": 1.97,
       "traits": [],
-      "days": 11.2
+      "days": 11.5
     },
     {
       "id": "fpSQ-Reg9BM",
@@ -175,10 +175,10 @@
       "views": 1221,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 100.6,
+      "views_per_day": 98.4,
       "like_rate": 2.29,
       "traits": [],
-      "days": 12.1
+      "days": 12.4
     },
     {
       "id": "v89g4zmYRjU",
@@ -188,10 +188,10 @@
       "views": 1409,
       "likes": 31,
       "comments": 0,
-      "views_per_day": 107.2,
+      "views_per_day": 105.1,
       "like_rate": 2.2,
       "traits": [],
-      "days": 13.1
+      "days": 13.4
     },
     {
       "id": "Evxe1dSEIpA",
@@ -201,10 +201,10 @@
       "views": 1984,
       "likes": 37,
       "comments": 2,
-      "views_per_day": 140.1,
+      "views_per_day": 137.5,
       "like_rate": 1.86,
       "traits": [],
-      "days": 14.2
+      "days": 14.4
     },
     {
       "id": "YiNKS-SokOQ",
@@ -214,10 +214,10 @@
       "views": 1313,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 86.6,
+      "views_per_day": 85.1,
       "like_rate": 2.59,
       "traits": [],
-      "days": 15.2
+      "days": 15.4
     },
     {
       "id": "UbKKSxk3AXo",
@@ -227,25 +227,25 @@
       "views": 1460,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 90.8,
+      "views_per_day": 89.3,
       "like_rate": 1.85,
       "traits": [],
-      "days": 16.1
+      "days": 16.4
     },
     {
       "id": "Wf6aOOah7rU",
       "title": "เมืองใต้ดินลึกแปดสิบเมตร ที่เคยซ่อนคนได้ถึงสองหมื่นคน",
       "published": "2026-10-18T15:55:30Z",
       "privacy": "public",
-      "views": 1551,
+      "views": 1553,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 90.1,
-      "like_rate": 2.26,
+      "views_per_day": 88.8,
+      "like_rate": 2.25,
       "traits": [
         "ความลับ"
       ],
-      "days": 17.2
+      "days": 17.5
     },
     {
       "id": "8IXB5qL8GzE",
@@ -255,12 +255,12 @@
       "views": 1698,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 92.5,
+      "views_per_day": 91.2,
       "like_rate": 1.59,
       "traits": [
         "คำถาม"
       ],
-      "days": 18.4
+      "days": 18.6
     },
     {
       "id": "jMz_OLrFsWg",
@@ -270,12 +270,12 @@
       "views": 1303,
       "likes": 25,
       "comments": 0,
-      "views_per_day": 67.3,
+      "views_per_day": 66.4,
       "like_rate": 1.92,
       "traits": [
         "ความลับ"
       ],
-      "days": 19.3
+      "days": 19.6
     },
     {
       "id": "6GYs0eHvlAM",
@@ -285,10 +285,10 @@
       "views": 1600,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 78.6,
+      "views_per_day": 77.6,
       "like_rate": 1.81,
       "traits": [],
-      "days": 20.3
+      "days": 20.6
     },
     {
       "id": "5yltO_ljXfQ",
@@ -298,10 +298,10 @@
       "views": 1334,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 62.5,
+      "views_per_day": 61.7,
       "like_rate": 1.65,
       "traits": [],
-      "days": 21.3
+      "days": 21.6
     },
     {
       "id": "qCzjRnxtojM",
@@ -311,10 +311,10 @@
       "views": 1375,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 61.5,
+      "views_per_day": 60.8,
       "like_rate": 3.13,
       "traits": [],
-      "days": 22.4
+      "days": 22.6
     },
     {
       "id": "GFIe9yZhPYg",
@@ -324,12 +324,12 @@
       "views": 1293,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 55.0,
+      "views_per_day": 54.4,
       "like_rate": 2.71,
       "traits": [
         "ความถี่"
       ],
-      "days": 23.5
+      "days": 23.8
     },
     {
       "id": "plEJBPKtWvs",
@@ -339,10 +339,10 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 52.6,
+      "views_per_day": 52.1,
       "like_rate": 2.74,
       "traits": [],
-      "days": 24.2
+      "days": 24.5
     },
     {
       "id": "cSsiwc7jZo0",
@@ -352,10 +352,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 36.0,
+      "views_per_day": 35.6,
       "like_rate": 2.51,
       "traits": [],
-      "days": 24.3
+      "days": 24.6
     },
     {
       "id": "964pejBlN0E",
@@ -365,10 +365,10 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 55.9,
+      "views_per_day": 55.3,
       "like_rate": 2.57,
       "traits": [],
-      "days": 24.4
+      "days": 24.6
     },
     {
       "id": "0iK9FQvX5Qg",
@@ -378,10 +378,10 @@
       "views": 2051,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 81.2,
+      "views_per_day": 80.4,
       "like_rate": 2.63,
       "traits": [],
-      "days": 25.2
+      "days": 25.5
     },
     {
       "id": "urz_NtM6hEA",
@@ -391,10 +391,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 57.5,
+      "views_per_day": 56.9,
       "like_rate": 1.79,
       "traits": [],
-      "days": 25.3
+      "days": 25.6
     },
     {
       "id": "DbLMjGhbHxk",
@@ -404,10 +404,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 50.9,
+      "views_per_day": 50.4,
       "like_rate": 2.25,
       "traits": [],
-      "days": 25.4
+      "days": 25.6
     },
     {
       "id": "23eSKkHi5XY",
@@ -417,14 +417,14 @@
       "views": 1295,
       "likes": 32,
       "comments": 0,
-      "views_per_day": 48.8,
+      "views_per_day": 48.3,
       "like_rate": 2.47,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 26.5
+      "days": 26.8
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-04T21:10:18+00:00"
+  "fetched_at": "2026-11-05T03:35:16+00:00"
 }
