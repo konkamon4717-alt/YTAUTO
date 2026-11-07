@@ -2,8 +2,8 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 101,
-    "views": 41788,
+    "subscribers": 109,
+    "views": 42945,
     "videos": 28
   },
   "videos": [
@@ -12,84 +12,84 @@
       "title": "อาโองาชิมะ หมู่บ้านญี่ปุ่นที่ตั้งอยู่กลางปล่องภูเขาไฟมีชีวิต",
       "published": "2026-11-06T19:26:30Z",
       "privacy": "public",
-      "views": 7,
-      "likes": 1,
+      "views": 801,
+      "likes": 11,
       "comments": 0,
-      "views_per_day": 28.0,
-      "like_rate": 14.29,
+      "views_per_day": 2557.9,
+      "like_rate": 1.37,
       "traits": [],
-      "days": 0.2
+      "days": 0.3
     },
     {
       "id": "85KzECw7x-Q",
       "title": "ทะเลสาบฮิลลิเออร์ ทะเลสาบสีชมพูสดที่ตักใส่อะไรก็ยังเป็นสีชมพู",
       "published": "2026-11-05T20:04:55Z",
       "privacy": "public",
-      "views": 24,
-      "likes": 0,
+      "views": 365,
+      "likes": 14,
       "comments": 0,
-      "views_per_day": 22.8,
-      "like_rate": 0.0,
+      "views_per_day": 283.7,
+      "like_rate": 3.84,
       "traits": [
         "คำถาม"
       ],
-      "days": 1.1
+      "days": 1.3
     },
     {
       "id": "tdAXpagG3jc",
       "title": "วิทเทียร์ เมืองในอะแลสกาที่ประชากรเกือบทั้งหมดอาศัยในตึกเดียว",
       "published": "2026-11-04T19:55:02Z",
       "privacy": "public",
-      "views": 1464,
+      "views": 1483,
       "likes": 40,
       "comments": 0,
-      "views_per_day": 710.9,
-      "like_rate": 2.73,
+      "views_per_day": 646.7,
+      "like_rate": 2.7,
       "traits": [],
-      "days": 2.1
+      "days": 2.3
     },
     {
       "id": "GFz7GZTNUOQ",
       "title": "ตาแห่งซาฮารา วงกลมยักษ์กลางทะเลทรายที่เห็นได้จากอวกาศ",
       "published": "2026-11-03T19:44:35Z",
       "privacy": "public",
-      "views": 1157,
+      "views": 1158,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 377.3,
+      "views_per_day": 350.8,
       "like_rate": 2.33,
       "traits": [],
-      "days": 3.1
+      "days": 3.3
     },
     {
       "id": "irr-Taje5Tc",
       "title": "ทะเลสาบไคนดี ป่าสนที่ตอไม้บนผิวน้ำแห้งตายแต่ใต้น้ำยังสดใหม่",
       "published": "2026-11-02T22:00:52Z",
       "privacy": "public",
-      "views": 1266,
+      "views": 1267,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 318.7,
+      "views_per_day": 301.2,
       "like_rate": 2.29,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 4.0
+      "days": 4.2
     },
     {
       "id": "q9E6dpSEcWc",
       "title": "พิตช์เลก ทะเลสาบยางมะตอยธรรมชาติที่คนเดินข้ามได้แต่ห้ามยืนนิ่ง",
       "published": "2026-11-01T18:11:48Z",
       "privacy": "public",
-      "views": 1106,
+      "views": 1107,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 215.5,
+      "views_per_day": 206.3,
       "like_rate": 1.9,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 5.1
+      "days": 5.4
     },
     {
       "id": "IQNCAD5xqu0",
@@ -99,10 +99,10 @@
       "views": 1117,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 181.5,
+      "views_per_day": 174.9,
       "like_rate": 1.43,
       "traits": [],
-      "days": 6.2
+      "days": 6.4
     },
     {
       "id": "H7W11F5c-vY",
@@ -112,23 +112,23 @@
       "views": 1210,
       "likes": 42,
       "comments": 0,
-      "views_per_day": 169.8,
+      "views_per_day": 164.4,
       "like_rate": 3.47,
       "traits": [],
-      "days": 7.1
+      "days": 7.4
     },
     {
       "id": "AufCUCYbKPQ",
       "title": "เกาะโซโคตรา ดินแดนที่วิวัฒนาการแยกจากโลกสี่ล้านปี",
       "published": "2026-10-29T18:44:14Z",
       "privacy": "public",
-      "views": 1239,
+      "views": 1238,
       "likes": 39,
       "comments": 0,
-      "views_per_day": 152.8,
+      "views_per_day": 148.4,
       "like_rate": 3.15,
       "traits": [],
-      "days": 8.1
+      "days": 8.3
     },
     {
       "id": "A_C3WLlxQxU",
@@ -138,23 +138,23 @@
       "views": 1124,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 123.5,
+      "views_per_day": 120.4,
       "like_rate": 1.69,
       "traits": [],
-      "days": 9.1
+      "days": 9.3
     },
     {
       "id": "EvUykg8ag0s",
       "title": "รอยแยกซิลฟรา จุดที่คุณสามารถแตะสองทวีปได้พร้อมกัน",
       "published": "2026-10-27T18:20:51Z",
       "privacy": "public",
-      "views": 1268,
+      "views": 1269,
       "likes": 28,
       "comments": 2,
-      "views_per_day": 125.2,
+      "views_per_day": 122.5,
       "like_rate": 2.21,
       "traits": [],
-      "days": 10.1
+      "days": 10.4
     },
     {
       "id": "HzeCFWNvL5M",
@@ -164,10 +164,10 @@
       "views": 1110,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 100.7,
+      "views_per_day": 98.6,
       "like_rate": 1.53,
       "traits": [],
-      "days": 11.0
+      "days": 11.3
     },
     {
       "id": "zBQJAl2kuQ4",
@@ -177,10 +177,10 @@
       "views": 1164,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 95.3,
+      "views_per_day": 93.5,
       "like_rate": 1.37,
       "traits": [],
-      "days": 12.2
+      "days": 12.4
     },
     {
       "id": "BN5JwqqJ1Pw",
@@ -190,10 +190,10 @@
       "views": 1369,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 103.7,
+      "views_per_day": 101.9,
       "like_rate": 1.97,
       "traits": [],
-      "days": 13.2
+      "days": 13.4
     },
     {
       "id": "fpSQ-Reg9BM",
@@ -203,10 +203,10 @@
       "views": 1221,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 86.3,
+      "views_per_day": 84.9,
       "like_rate": 2.29,
       "traits": [],
-      "days": 14.1
+      "days": 14.4
     },
     {
       "id": "v89g4zmYRjU",
@@ -216,10 +216,10 @@
       "views": 1409,
       "likes": 31,
       "comments": 0,
-      "views_per_day": 93.0,
+      "views_per_day": 91.6,
       "like_rate": 2.2,
       "traits": [],
-      "days": 15.1
+      "days": 15.4
     },
     {
       "id": "Evxe1dSEIpA",
@@ -229,10 +229,10 @@
       "views": 1991,
       "likes": 37,
       "comments": 2,
-      "views_per_day": 123.1,
+      "views_per_day": 121.4,
       "like_rate": 1.86,
       "traits": [],
-      "days": 16.2
+      "days": 16.4
     },
     {
       "id": "YiNKS-SokOQ",
@@ -242,10 +242,10 @@
       "views": 1313,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 76.5,
+      "views_per_day": 75.4,
       "like_rate": 2.59,
       "traits": [],
-      "days": 17.2
+      "days": 17.4
     },
     {
       "id": "UbKKSxk3AXo",
@@ -255,10 +255,10 @@
       "views": 1460,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 80.7,
+      "views_per_day": 79.7,
       "like_rate": 1.85,
       "traits": [],
-      "days": 18.1
+      "days": 18.3
     },
     {
       "id": "Wf6aOOah7rU",
@@ -268,12 +268,12 @@
       "views": 1553,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 80.8,
+      "views_per_day": 79.8,
       "like_rate": 2.19,
       "traits": [
         "ความลับ"
       ],
-      "days": 19.2
+      "days": 19.5
     },
     {
       "id": "8IXB5qL8GzE",
@@ -283,12 +283,12 @@
       "views": 1698,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 83.4,
+      "views_per_day": 82.4,
       "like_rate": 1.59,
       "traits": [
         "คำถาม"
       ],
-      "days": 20.4
+      "days": 20.6
     },
     {
       "id": "jMz_OLrFsWg",
@@ -298,12 +298,12 @@
       "views": 1303,
       "likes": 25,
       "comments": 0,
-      "views_per_day": 61.0,
+      "views_per_day": 60.4,
       "like_rate": 1.92,
       "traits": [
         "ความลับ"
       ],
-      "days": 21.4
+      "days": 21.6
     },
     {
       "id": "6GYs0eHvlAM",
@@ -313,10 +313,10 @@
       "views": 1601,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 71.6,
+      "views_per_day": 70.9,
       "like_rate": 1.81,
       "traits": [],
-      "days": 22.4
+      "days": 22.6
     },
     {
       "id": "5yltO_ljXfQ",
@@ -326,10 +326,10 @@
       "views": 1334,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 57.1,
+      "views_per_day": 56.6,
       "like_rate": 1.65,
       "traits": [],
-      "days": 23.4
+      "days": 23.6
     },
     {
       "id": "qCzjRnxtojM",
@@ -339,10 +339,10 @@
       "views": 1375,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 56.4,
+      "views_per_day": 55.9,
       "like_rate": 3.13,
       "traits": [],
-      "days": 24.4
+      "days": 24.6
     },
     {
       "id": "GFIe9yZhPYg",
@@ -352,12 +352,12 @@
       "views": 1293,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 50.7,
+      "views_per_day": 50.2,
       "like_rate": 2.71,
       "traits": [
         "ความถี่"
       ],
-      "days": 25.5
+      "days": 25.7
     },
     {
       "id": "plEJBPKtWvs",
@@ -367,10 +367,10 @@
       "views": 1276,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 48.6,
+      "views_per_day": 48.2,
       "like_rate": 2.74,
       "traits": [],
-      "days": 26.3
+      "days": 26.5
     },
     {
       "id": "cSsiwc7jZo0",
@@ -380,10 +380,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 33.3,
+      "views_per_day": 33.0,
       "like_rate": 2.51,
       "traits": [],
-      "days": 26.3
+      "days": 26.5
     },
     {
       "id": "964pejBlN0E",
@@ -393,10 +393,10 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 51.6,
+      "views_per_day": 51.2,
       "like_rate": 2.57,
       "traits": [],
-      "days": 26.4
+      "days": 26.6
     },
     {
       "id": "0iK9FQvX5Qg",
@@ -406,10 +406,10 @@
       "views": 2055,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 75.4,
+      "views_per_day": 74.8,
       "like_rate": 2.63,
       "traits": [],
-      "days": 27.3
+      "days": 27.5
     },
     {
       "id": "urz_NtM6hEA",
@@ -419,10 +419,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 53.3,
+      "views_per_day": 52.8,
       "like_rate": 1.79,
       "traits": [],
-      "days": 27.3
+      "days": 27.5
     },
     {
       "id": "DbLMjGhbHxk",
@@ -432,10 +432,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 47.2,
+      "views_per_day": 46.8,
       "like_rate": 2.25,
       "traits": [],
-      "days": 27.4
+      "days": 27.6
     },
     {
       "id": "23eSKkHi5XY",
@@ -445,14 +445,14 @@
       "views": 1298,
       "likes": 32,
       "comments": 0,
-      "views_per_day": 45.5,
+      "views_per_day": 45.1,
       "like_rate": 2.47,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 28.5
+      "days": 28.8
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-06T21:20:37+00:00"
+  "fetched_at": "2026-11-07T02:57:26+00:00"
 }
