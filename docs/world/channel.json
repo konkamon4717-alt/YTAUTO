@@ -3,78 +3,91 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 109,
-    "views": 42945,
-    "videos": 28
+    "views": 43811,
+    "videos": 29
   },
   "videos": [
+    {
+      "id": "qP_lhWgu-iM",
+      "title": "เกาะเคมาดา กรานดี ดินแดนบราซิลที่ห้ามคนขึ้นเพราะงูพิษร้ายแรง",
+      "published": "2026-11-07T17:53:53Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
+    },
     {
       "id": "zoHJDaCMYr8",
       "title": "อาโองาชิมะ หมู่บ้านญี่ปุ่นที่ตั้งอยู่กลางปล่องภูเขาไฟมีชีวิต",
       "published": "2026-11-06T19:26:30Z",
       "privacy": "public",
-      "views": 801,
+      "views": 963,
       "likes": 11,
       "comments": 0,
-      "views_per_day": 2557.9,
-      "like_rate": 1.37,
+      "views_per_day": 1029.0,
+      "like_rate": 1.14,
       "traits": [],
-      "days": 0.3
+      "days": 0.9
     },
     {
       "id": "85KzECw7x-Q",
       "title": "ทะเลสาบฮิลลิเออร์ ทะเลสาบสีชมพูสดที่ตักใส่อะไรก็ยังเป็นสีชมพู",
       "published": "2026-11-05T20:04:55Z",
       "privacy": "public",
-      "views": 365,
-      "likes": 14,
+      "views": 1019,
+      "likes": 23,
       "comments": 0,
-      "views_per_day": 283.7,
-      "like_rate": 3.84,
+      "views_per_day": 533.7,
+      "like_rate": 2.26,
       "traits": [
         "คำถาม"
       ],
-      "days": 1.3
+      "days": 1.9
     },
     {
       "id": "tdAXpagG3jc",
       "title": "วิทเทียร์ เมืองในอะแลสกาที่ประชากรเกือบทั้งหมดอาศัยในตึกเดียว",
       "published": "2026-11-04T19:55:02Z",
       "privacy": "public",
-      "views": 1483,
+      "views": 1515,
       "likes": 40,
       "comments": 0,
-      "views_per_day": 646.7,
-      "like_rate": 2.7,
+      "views_per_day": 519.5,
+      "like_rate": 2.64,
       "traits": [],
-      "days": 2.3
+      "days": 2.9
     },
     {
       "id": "GFz7GZTNUOQ",
       "title": "ตาแห่งซาฮารา วงกลมยักษ์กลางทะเลทรายที่เห็นได้จากอวกาศ",
       "published": "2026-11-03T19:44:35Z",
       "privacy": "public",
-      "views": 1158,
-      "likes": 27,
+      "views": 1162,
+      "likes": 28,
       "comments": 0,
-      "views_per_day": 350.8,
-      "like_rate": 2.33,
+      "views_per_day": 296.2,
+      "like_rate": 2.41,
       "traits": [],
-      "days": 3.3
+      "days": 3.9
     },
     {
       "id": "irr-Taje5Tc",
       "title": "ทะเลสาบไคนดี ป่าสนที่ตอไม้บนผิวน้ำแห้งตายแต่ใต้น้ำยังสดใหม่",
       "published": "2026-11-02T22:00:52Z",
       "privacy": "public",
-      "views": 1267,
+      "views": 1268,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 301.2,
+      "views_per_day": 262.6,
       "like_rate": 2.29,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 4.2
+      "days": 4.8
     },
     {
       "id": "q9E6dpSEcWc",
@@ -84,25 +97,25 @@
       "views": 1107,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 206.3,
+      "views_per_day": 184.9,
       "like_rate": 1.9,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 5.4
+      "days": 6.0
     },
     {
       "id": "IQNCAD5xqu0",
       "title": "ถ้ำไนกา แดนคริสตัลยักษ์ใต้ดินที่มนุษย์อยู่ได้ไม่เกินสิบนาที",
       "published": "2026-10-31T17:38:44Z",
       "privacy": "public",
-      "views": 1117,
+      "views": 1118,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 174.9,
+      "views_per_day": 159.5,
       "like_rate": 1.43,
       "traits": [],
-      "days": 6.4
+      "days": 7.0
     },
     {
       "id": "H7W11F5c-vY",
@@ -112,10 +125,10 @@
       "views": 1210,
       "likes": 42,
       "comments": 0,
-      "views_per_day": 164.4,
+      "views_per_day": 151.6,
       "like_rate": 3.47,
       "traits": [],
-      "days": 7.4
+      "days": 8.0
     },
     {
       "id": "AufCUCYbKPQ",
@@ -125,10 +138,10 @@
       "views": 1238,
       "likes": 39,
       "comments": 0,
-      "views_per_day": 148.4,
+      "views_per_day": 138.1,
       "like_rate": 3.15,
       "traits": [],
-      "days": 8.3
+      "days": 9.0
     },
     {
       "id": "A_C3WLlxQxU",
@@ -138,10 +151,10 @@
       "views": 1124,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 120.4,
+      "views_per_day": 112.9,
       "like_rate": 1.69,
       "traits": [],
-      "days": 9.3
+      "days": 10.0
     },
     {
       "id": "EvUykg8ag0s",
@@ -149,12 +162,12 @@
       "published": "2026-10-27T18:20:51Z",
       "privacy": "public",
       "views": 1269,
-      "likes": 28,
+      "likes": 27,
       "comments": 2,
-      "views_per_day": 122.5,
-      "like_rate": 2.21,
+      "views_per_day": 115.6,
+      "like_rate": 2.13,
       "traits": [],
-      "days": 10.4
+      "days": 11.0
     },
     {
       "id": "HzeCFWNvL5M",
@@ -164,10 +177,10 @@
       "views": 1110,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 98.6,
+      "views_per_day": 93.5,
       "like_rate": 1.53,
       "traits": [],
-      "days": 11.3
+      "days": 11.9
     },
     {
       "id": "zBQJAl2kuQ4",
@@ -177,23 +190,23 @@
       "views": 1164,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 93.5,
+      "views_per_day": 89.0,
       "like_rate": 1.37,
       "traits": [],
-      "days": 12.4
+      "days": 13.1
     },
     {
       "id": "BN5JwqqJ1Pw",
       "title": "ดินแดนที่แห้งแล้งที่สุดในโลก ไม่ได้อยู่ในทะเลทราย",
       "published": "2026-10-24T16:28:57Z",
       "privacy": "public",
-      "views": 1369,
+      "views": 1370,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 101.9,
+      "views_per_day": 97.4,
       "like_rate": 1.97,
       "traits": [],
-      "days": 13.4
+      "days": 14.1
     },
     {
       "id": "fpSQ-Reg9BM",
@@ -203,10 +216,10 @@
       "views": 1221,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 84.9,
+      "views_per_day": 81.4,
       "like_rate": 2.29,
       "traits": [],
-      "days": 14.4
+      "days": 15.0
     },
     {
       "id": "v89g4zmYRjU",
@@ -216,36 +229,36 @@
       "views": 1409,
       "likes": 31,
       "comments": 0,
-      "views_per_day": 91.6,
+      "views_per_day": 88.1,
       "like_rate": 2.2,
       "traits": [],
-      "days": 15.4
+      "days": 16.0
     },
     {
       "id": "Evxe1dSEIpA",
       "title": "แม่น้ำอเมซอน สายน้ำที่ไม่มีสะพานข้ามเลยสักแห่งเดียว",
       "published": "2026-10-21T17:19:07Z",
       "privacy": "public",
-      "views": 1991,
+      "views": 1995,
       "likes": 37,
       "comments": 2,
-      "views_per_day": 121.4,
-      "like_rate": 1.86,
+      "views_per_day": 117.2,
+      "like_rate": 1.85,
       "traits": [],
-      "days": 16.4
+      "days": 17.0
     },
     {
       "id": "YiNKS-SokOQ",
       "title": "ดินแดนที่พระอาทิตย์ไม่เคยตกดินนานหลายเดือน",
       "published": "2026-10-20T17:13:46Z",
       "privacy": "public",
-      "views": 1313,
+      "views": 1314,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 75.4,
+      "views_per_day": 72.9,
       "like_rate": 2.59,
       "traits": [],
-      "days": 17.4
+      "days": 18.0
     },
     {
       "id": "UbKKSxk3AXo",
@@ -255,25 +268,25 @@
       "views": 1460,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 79.7,
+      "views_per_day": 77.0,
       "like_rate": 1.85,
       "traits": [],
-      "days": 18.3
+      "days": 18.9
     },
     {
       "id": "Wf6aOOah7rU",
       "title": "เมืองใต้ดินลึกแปดสิบเมตร ที่เคยซ่อนคนได้ถึงสองหมื่นคน",
       "published": "2026-10-18T15:55:30Z",
       "privacy": "public",
-      "views": 1553,
+      "views": 1556,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 79.8,
+      "views_per_day": 77.5,
       "like_rate": 2.19,
       "traits": [
         "ความลับ"
       ],
-      "days": 19.5
+      "days": 20.1
     },
     {
       "id": "8IXB5qL8GzE",
@@ -283,27 +296,27 @@
       "views": 1698,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 82.4,
+      "views_per_day": 80.0,
       "like_rate": 1.59,
       "traits": [
         "คำถาม"
       ],
-      "days": 20.6
+      "days": 21.2
     },
     {
       "id": "jMz_OLrFsWg",
       "title": "ทะเลทรายซาฮาราที่ซ่อนแหล่งน้ำมหาศาลไว้ใต้ผืนทราย",
       "published": "2026-10-16T12:48:25Z",
       "privacy": "public",
-      "views": 1303,
+      "views": 1304,
       "likes": 25,
       "comments": 0,
-      "views_per_day": 60.4,
+      "views_per_day": 58.7,
       "like_rate": 1.92,
       "traits": [
         "ความลับ"
       ],
-      "days": 21.6
+      "days": 22.2
     },
     {
       "id": "6GYs0eHvlAM",
@@ -313,10 +326,10 @@
       "views": 1601,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 70.9,
+      "views_per_day": 69.0,
       "like_rate": 1.81,
       "traits": [],
-      "days": 22.6
+      "days": 23.2
     },
     {
       "id": "5yltO_ljXfQ",
@@ -326,10 +339,10 @@
       "views": 1334,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 56.6,
+      "views_per_day": 55.1,
       "like_rate": 1.65,
       "traits": [],
-      "days": 23.6
+      "days": 24.2
     },
     {
       "id": "qCzjRnxtojM",
@@ -339,25 +352,25 @@
       "views": 1375,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 55.9,
+      "views_per_day": 54.5,
       "like_rate": 3.13,
       "traits": [],
-      "days": 24.6
+      "days": 25.2
     },
     {
       "id": "GFIe9yZhPYg",
       "title": "สถานที่ที่มีฟ้าผ่ามากที่สุดในโลก นานสิบชั่วโมงติดต่อกันทุกคืน",
       "published": "2026-10-12T08:57:55Z",
       "privacy": "public",
-      "views": 1293,
+      "views": 1294,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 50.2,
-      "like_rate": 2.71,
+      "views_per_day": 49.1,
+      "like_rate": 2.7,
       "traits": [
         "ความถี่"
       ],
-      "days": 25.7
+      "days": 26.4
     },
     {
       "id": "plEJBPKtWvs",
@@ -365,12 +378,12 @@
       "published": "2026-10-11T15:18:01Z",
       "privacy": "private",
       "views": 1276,
-      "likes": 35,
+      "likes": 34,
       "comments": 0,
-      "views_per_day": 48.2,
-      "like_rate": 2.74,
+      "views_per_day": 47.1,
+      "like_rate": 2.66,
       "traits": [],
-      "days": 26.5
+      "days": 27.1
     },
     {
       "id": "cSsiwc7jZo0",
@@ -380,10 +393,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 33.0,
+      "views_per_day": 32.2,
       "like_rate": 2.51,
       "traits": [],
-      "days": 26.5
+      "days": 27.2
     },
     {
       "id": "964pejBlN0E",
@@ -393,23 +406,23 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 51.2,
+      "views_per_day": 50.0,
       "like_rate": 2.57,
       "traits": [],
-      "days": 26.6
+      "days": 27.2
     },
     {
       "id": "0iK9FQvX5Qg",
       "title": "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
       "published": "2026-10-10T15:12:30Z",
       "privacy": "public",
-      "views": 2055,
+      "views": 2056,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 74.8,
+      "views_per_day": 73.1,
       "like_rate": 2.63,
       "traits": [],
-      "days": 27.5
+      "days": 28.1
     },
     {
       "id": "urz_NtM6hEA",
@@ -419,10 +432,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 52.8,
+      "views_per_day": 51.7,
       "like_rate": 1.79,
       "traits": [],
-      "days": 27.5
+      "days": 28.2
     },
     {
       "id": "DbLMjGhbHxk",
@@ -432,10 +445,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 46.8,
+      "views_per_day": 45.7,
       "like_rate": 2.25,
       "traits": [],
-      "days": 27.6
+      "days": 28.2
     },
     {
       "id": "23eSKkHi5XY",
@@ -445,14 +458,14 @@
       "views": 1298,
       "likes": 32,
       "comments": 0,
-      "views_per_day": 45.1,
+      "views_per_day": 44.2,
       "like_rate": 2.47,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 28.8
+      "days": 29.4
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-07T02:57:26+00:00"
+  "fetched_at": "2026-11-07T17:54:04+00:00"
 }
