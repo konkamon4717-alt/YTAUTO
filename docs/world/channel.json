@@ -2,8 +2,8 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 109,
-    "views": 43854,
+    "subscribers": 112,
+    "views": 45005,
     "videos": 29
   },
   "videos": [
@@ -12,13 +12,13 @@
       "title": "เกาะเคมาดา กรานดี ดินแดนบราซิลที่ห้ามคนขึ้นเพราะงูพิษร้ายแรง",
       "published": "2026-11-07T17:54:12Z",
       "privacy": "public",
-      "views": 47,
-      "likes": 2,
+      "views": 1162,
+      "likes": 19,
       "comments": 0,
-      "views_per_day": 188.0,
-      "like_rate": 4.26,
+      "views_per_day": 3212.0,
+      "like_rate": 1.64,
       "traits": [],
-      "days": 0.2
+      "days": 0.4
     },
     {
       "id": "zoHJDaCMYr8",
@@ -28,51 +28,51 @@
       "views": 964,
       "likes": 11,
       "comments": 0,
-      "views_per_day": 967.1,
+      "views_per_day": 742.9,
       "like_rate": 1.14,
       "traits": [],
-      "days": 1.0
+      "days": 1.3
     },
     {
       "id": "85KzECw7x-Q",
       "title": "ทะเลสาบฮิลลิเออร์ ทะเลสาบสีชมพูสดที่ตักใส่อะไรก็ยังเป็นสีชมพู",
       "published": "2026-11-05T20:04:55Z",
       "privacy": "public",
-      "views": 1016,
+      "views": 1037,
       "likes": 23,
       "comments": 0,
-      "views_per_day": 515.7,
-      "like_rate": 2.26,
+      "views_per_day": 456.6,
+      "like_rate": 2.22,
       "traits": [
         "คำถาม"
       ],
-      "days": 2.0
+      "days": 2.3
     },
     {
       "id": "tdAXpagG3jc",
       "title": "วิทเทียร์ เมืองในอะแลสกาที่ประชากรเกือบทั้งหมดอาศัยในตึกเดียว",
       "published": "2026-11-04T19:55:02Z",
       "privacy": "public",
-      "views": 1514,
+      "views": 1524,
       "likes": 40,
       "comments": 0,
-      "views_per_day": 508.6,
-      "like_rate": 2.64,
+      "views_per_day": 464.9,
+      "like_rate": 2.62,
       "traits": [],
-      "days": 3.0
+      "days": 3.3
     },
     {
       "id": "GFz7GZTNUOQ",
       "title": "ตาแห่งซาฮารา วงกลมยักษ์กลางทะเลทรายที่เห็นได้จากอวกาศ",
       "published": "2026-11-03T19:44:35Z",
       "privacy": "public",
-      "views": 1162,
+      "views": 1163,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 291.6,
+      "views_per_day": 271.4,
       "like_rate": 2.41,
       "traits": [],
-      "days": 4.0
+      "days": 4.3
     },
     {
       "id": "irr-Taje5Tc",
@@ -82,12 +82,12 @@
       "views": 1268,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 259.3,
+      "views_per_day": 244.3,
       "like_rate": 2.29,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 4.9
+      "days": 5.2
     },
     {
       "id": "q9E6dpSEcWc",
@@ -97,12 +97,12 @@
       "views": 1107,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 183.0,
+      "views_per_day": 174.3,
       "like_rate": 1.9,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 6.0
+      "days": 6.3
     },
     {
       "id": "IQNCAD5xqu0",
@@ -112,10 +112,10 @@
       "views": 1118,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 158.1,
+      "views_per_day": 151.6,
       "like_rate": 1.43,
       "traits": [],
-      "days": 7.1
+      "days": 7.4
     },
     {
       "id": "H7W11F5c-vY",
@@ -125,10 +125,10 @@
       "views": 1210,
       "likes": 42,
       "comments": 0,
-      "views_per_day": 150.4,
+      "views_per_day": 145.0,
       "like_rate": 3.47,
       "traits": [],
-      "days": 8.0
+      "days": 8.3
     },
     {
       "id": "AufCUCYbKPQ",
@@ -138,10 +138,10 @@
       "views": 1238,
       "likes": 39,
       "comments": 0,
-      "views_per_day": 137.2,
+      "views_per_day": 132.7,
       "like_rate": 3.15,
       "traits": [],
-      "days": 9.0
+      "days": 9.3
     },
     {
       "id": "A_C3WLlxQxU",
@@ -151,10 +151,10 @@
       "views": 1124,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 112.2,
+      "views_per_day": 108.9,
       "like_rate": 1.69,
       "traits": [],
-      "days": 10.0
+      "days": 10.3
     },
     {
       "id": "EvUykg8ag0s",
@@ -164,10 +164,10 @@
       "views": 1269,
       "likes": 27,
       "comments": 2,
-      "views_per_day": 114.9,
+      "views_per_day": 111.9,
       "like_rate": 2.13,
       "traits": [],
-      "days": 11.0
+      "days": 11.3
     },
     {
       "id": "HzeCFWNvL5M",
@@ -177,10 +177,10 @@
       "views": 1110,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 93.0,
+      "views_per_day": 90.7,
       "like_rate": 1.53,
       "traits": [],
-      "days": 11.9
+      "days": 12.2
     },
     {
       "id": "zBQJAl2kuQ4",
@@ -190,10 +190,10 @@
       "views": 1164,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 88.6,
+      "views_per_day": 86.6,
       "like_rate": 1.37,
       "traits": [],
-      "days": 13.1
+      "days": 13.4
     },
     {
       "id": "BN5JwqqJ1Pw",
@@ -203,10 +203,10 @@
       "views": 1370,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 97.0,
+      "views_per_day": 95.0,
       "like_rate": 1.97,
       "traits": [],
-      "days": 14.1
+      "days": 14.4
     },
     {
       "id": "fpSQ-Reg9BM",
@@ -216,10 +216,10 @@
       "views": 1221,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 81.1,
+      "views_per_day": 79.5,
       "like_rate": 2.29,
       "traits": [],
-      "days": 15.1
+      "days": 15.4
     },
     {
       "id": "v89g4zmYRjU",
@@ -229,23 +229,23 @@
       "views": 1409,
       "likes": 31,
       "comments": 0,
-      "views_per_day": 87.7,
+      "views_per_day": 86.1,
       "like_rate": 2.2,
       "traits": [],
-      "days": 16.1
+      "days": 16.4
     },
     {
       "id": "Evxe1dSEIpA",
       "title": "แม่น้ำอเมซอน สายน้ำที่ไม่มีสะพานข้ามเลยสักแห่งเดียว",
       "published": "2026-10-21T17:19:07Z",
       "privacy": "public",
-      "views": 1995,
+      "views": 1997,
       "likes": 37,
       "comments": 2,
-      "views_per_day": 116.8,
+      "views_per_day": 114.9,
       "like_rate": 1.85,
       "traits": [],
-      "days": 17.1
+      "days": 17.4
     },
     {
       "id": "YiNKS-SokOQ",
@@ -255,10 +255,10 @@
       "views": 1314,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 72.6,
+      "views_per_day": 71.5,
       "like_rate": 2.59,
       "traits": [],
-      "days": 18.1
+      "days": 18.4
     },
     {
       "id": "UbKKSxk3AXo",
@@ -268,10 +268,10 @@
       "views": 1460,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 76.8,
+      "views_per_day": 75.6,
       "like_rate": 1.85,
       "traits": [],
-      "days": 19.0
+      "days": 19.3
     },
     {
       "id": "Wf6aOOah7rU",
@@ -281,12 +281,12 @@
       "views": 1556,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 77.2,
+      "views_per_day": 76.1,
       "like_rate": 2.19,
       "traits": [
         "ความลับ"
       ],
-      "days": 20.1
+      "days": 20.4
     },
     {
       "id": "8IXB5qL8GzE",
@@ -296,27 +296,27 @@
       "views": 1698,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 79.8,
+      "views_per_day": 78.7,
       "like_rate": 1.59,
       "traits": [
         "คำถาม"
       ],
-      "days": 21.3
+      "days": 21.6
     },
     {
       "id": "jMz_OLrFsWg",
       "title": "ทะเลทรายซาฮาราที่ซ่อนแหล่งน้ำมหาศาลไว้ใต้ผืนทราย",
       "published": "2026-10-16T12:48:25Z",
       "privacy": "public",
-      "views": 1303,
+      "views": 1304,
       "likes": 25,
       "comments": 0,
-      "views_per_day": 58.5,
+      "views_per_day": 57.8,
       "like_rate": 1.92,
       "traits": [
         "ความลับ"
       ],
-      "days": 22.3
+      "days": 22.6
     },
     {
       "id": "6GYs0eHvlAM",
@@ -326,10 +326,10 @@
       "views": 1601,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 68.8,
+      "views_per_day": 67.9,
       "like_rate": 1.81,
       "traits": [],
-      "days": 23.3
+      "days": 23.6
     },
     {
       "id": "5yltO_ljXfQ",
@@ -339,10 +339,10 @@
       "views": 1334,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 55.0,
+      "views_per_day": 54.3,
       "like_rate": 1.65,
       "traits": [],
-      "days": 24.3
+      "days": 24.6
     },
     {
       "id": "qCzjRnxtojM",
@@ -352,10 +352,10 @@
       "views": 1375,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 54.4,
+      "views_per_day": 53.8,
       "like_rate": 3.13,
       "traits": [],
-      "days": 25.3
+      "days": 25.6
     },
     {
       "id": "GFIe9yZhPYg",
@@ -365,12 +365,12 @@
       "views": 1294,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 49.0,
+      "views_per_day": 48.4,
       "like_rate": 2.7,
       "traits": [
         "ความถี่"
       ],
-      "days": 26.4
+      "days": 26.7
     },
     {
       "id": "plEJBPKtWvs",
@@ -380,10 +380,10 @@
       "views": 1276,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 47.0,
+      "views_per_day": 46.5,
       "like_rate": 2.66,
       "traits": [],
-      "days": 27.2
+      "days": 27.5
     },
     {
       "id": "cSsiwc7jZo0",
@@ -393,10 +393,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 32.1,
+      "views_per_day": 31.8,
       "like_rate": 2.51,
       "traits": [],
-      "days": 27.2
+      "days": 27.5
     },
     {
       "id": "964pejBlN0E",
@@ -406,23 +406,23 @@
       "views": 1362,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 49.9,
+      "views_per_day": 49.4,
       "like_rate": 2.57,
       "traits": [],
-      "days": 27.3
+      "days": 27.6
     },
     {
       "id": "0iK9FQvX5Qg",
       "title": "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
       "published": "2026-10-10T15:12:30Z",
       "privacy": "public",
-      "views": 2056,
+      "views": 2057,
       "likes": 54,
       "comments": 0,
-      "views_per_day": 73.0,
+      "views_per_day": 72.2,
       "like_rate": 2.63,
       "traits": [],
-      "days": 28.2
+      "days": 28.5
     },
     {
       "id": "urz_NtM6hEA",
@@ -432,10 +432,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 51.5,
+      "views_per_day": 51.0,
       "like_rate": 1.79,
       "traits": [],
-      "days": 28.2
+      "days": 28.5
     },
     {
       "id": "DbLMjGhbHxk",
@@ -445,10 +445,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 45.6,
+      "views_per_day": 45.2,
       "like_rate": 2.25,
       "traits": [],
-      "days": 28.3
+      "days": 28.6
     },
     {
       "id": "23eSKkHi5XY",
@@ -458,14 +458,14 @@
       "views": 1298,
       "likes": 32,
       "comments": 0,
-      "views_per_day": 44.1,
+      "views_per_day": 43.6,
       "like_rate": 2.47,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 29.5
+      "days": 29.8
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-07T19:21:52+00:00"
+  "fetched_at": "2026-11-08T02:35:08+00:00"
 }
