@@ -1,6 +1,6 @@
 {
   "channel": "nithan",
-  "checked_at": "2026-11-08T02:34:43+00:00",
+  "checked_at": "2026-11-09T02:46:41+00:00",
   "healthy": true,
   "checks": [
     {
@@ -8,42 +8,42 @@
       "ok": true,
       "essential": true,
       "detail": "nithan1min | ผู้ติดตาม 47 | คลิป 19",
-      "ms": 982
+      "ms": 1126
     },
     {
       "name": "pollinations",
       "ok": true,
       "essential": true,
-      "detail": "428 โมเดล | รุ่นภาพที่ตั้งไว้ยังอยู่ครบ",
-      "ms": 96
+      "detail": "433 โมเดล | รุ่นภาพที่ตั้งไว้ยังอยู่ครบ",
+      "ms": 175
     },
     {
       "name": "edge-tts",
       "ok": true,
       "essential": false,
       "detail": "th-TH-PremwadeeNeural พากย์ได้จริง (11,232 ไบต์)",
-      "ms": 616
+      "ms": 598
     },
     {
       "name": "gemini",
       "ok": true,
       "essential": false,
       "detail": "ใช้ได้ 4/4 รุ่น | ตัวแรก gemini-3.8-flash",
-      "ms": 176
+      "ms": 196
     },
     {
       "name": "kaggle",
       "ok": false,
       "essential": false,
       "detail": "KaggleError: kaggle kernels list --mine --page-size 1 ล้มเหลว:\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/bin/kaggle\", line 3, in <module>\n    from kaggle.cli i",
-      "ms": 302
+      "ms": 509
     },
     {
       "name": "huggingface",
       "ok": true,
       "essential": false,
       "detail": "zerogpu-aoti/wan2-2-fp8da-aoti-faster กำลังทำงาน",
-      "ms": 172
+      "ms": 154
     }
   ]
 }
