@@ -3,10 +3,23 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 116,
-    "views": 47460,
+    "views": 47467,
     "videos": 32
   },
   "videos": [
+    {
+      "id": "QkVviqrS7iQ",
+      "title": "ฉลาม สิ่งมีชีวิตที่เก่าแก่กว่าต้นไม้ต้นแรกของโลก",
+      "published": "2026-11-10T19:56:24Z",
+      "privacy": "public",
+      "views": 6,
+      "likes": 1,
+      "comments": 0,
+      "views_per_day": 24.0,
+      "like_rate": 16.67,
+      "traits": [],
+      "days": 0.2
+    },
     {
       "id": "ARCjYYRI9l4",
       "title": "ฉลาม สิ่งมีชีวิตในมหาสมุทรที่เก่าแก่กว่าต้นไม้ต้นแรกของโลก",
@@ -15,7 +28,7 @@
       "views": 1033,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 1154.3,
+      "views_per_day": 1115.5,
       "like_rate": 2.81,
       "traits": [],
       "days": 0.9
@@ -28,7 +41,7 @@
       "views": 1140,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 548.9,
+      "views_per_day": 540.8,
       "like_rate": 1.67,
       "traits": [],
       "days": 2.1
@@ -41,7 +54,7 @@
       "views": 1257,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 407.5,
+      "views_per_day": 403.4,
       "like_rate": 1.51,
       "traits": [],
       "days": 3.1
@@ -54,10 +67,10 @@
       "views": 1029,
       "likes": 11,
       "comments": 0,
-      "views_per_day": 255.9,
+      "views_per_day": 254.0,
       "like_rate": 1.07,
       "traits": [],
-      "days": 4.0
+      "days": 4.1
     },
     {
       "id": "85KzECw7x-Q",
@@ -67,7 +80,7 @@
       "views": 1081,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 216.5,
+      "views_per_day": 215.1,
       "like_rate": 2.22,
       "traits": [
         "คำถาม"
@@ -82,7 +95,7 @@
       "views": 1539,
       "likes": 40,
       "comments": 0,
-      "views_per_day": 256.5,
+      "views_per_day": 255.1,
       "like_rate": 2.6,
       "traits": [],
       "days": 6.0
@@ -95,7 +108,7 @@
       "views": 1166,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 166.4,
+      "views_per_day": 165.6,
       "like_rate": 2.4,
       "traits": [],
       "days": 7.0
@@ -108,7 +121,7 @@
       "views": 1269,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 160.4,
+      "views_per_day": 159.7,
       "like_rate": 2.29,
       "traits": [
         "ความขัดแย้ง"
@@ -123,7 +136,7 @@
       "views": 1109,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 122.2,
+      "views_per_day": 121.8,
       "like_rate": 1.89,
       "traits": [
         "ความขัดแย้ง"
@@ -138,7 +151,7 @@
       "views": 1122,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 111.1,
+      "views_per_day": 110.8,
       "like_rate": 1.43,
       "traits": [],
       "days": 10.1
@@ -151,7 +164,7 @@
       "views": 1211,
       "likes": 42,
       "comments": 0,
-      "views_per_day": 109.4,
+      "views_per_day": 109.1,
       "like_rate": 3.47,
       "traits": [],
       "days": 11.1
@@ -164,10 +177,10 @@
       "views": 1239,
       "likes": 39,
       "comments": 0,
-      "views_per_day": 102.8,
+      "views_per_day": 102.6,
       "like_rate": 3.15,
       "traits": [],
-      "days": 12.0
+      "days": 12.1
     },
     {
       "id": "A_C3WLlxQxU",
@@ -177,10 +190,10 @@
       "views": 1122,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 86.0,
+      "views_per_day": 85.8,
       "like_rate": 1.69,
       "traits": [],
-      "days": 13.0
+      "days": 13.1
     },
     {
       "id": "EvUykg8ag0s",
@@ -190,7 +203,7 @@
       "views": 1269,
       "likes": 27,
       "comments": 2,
-      "views_per_day": 90.2,
+      "views_per_day": 90.0,
       "like_rate": 2.13,
       "traits": [],
       "days": 14.1
@@ -203,7 +216,7 @@
       "views": 1113,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 74.4,
+      "views_per_day": 74.2,
       "like_rate": 1.53,
       "traits": [],
       "days": 15.0
@@ -216,7 +229,7 @@
       "views": 1165,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 72.1,
+      "views_per_day": 72.0,
       "like_rate": 1.46,
       "traits": [],
       "days": 16.2
@@ -229,10 +242,10 @@
       "views": 1384,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 80.7,
+      "views_per_day": 80.6,
       "like_rate": 1.95,
       "traits": [],
-      "days": 17.1
+      "days": 17.2
     },
     {
       "id": "fpSQ-Reg9BM",
@@ -242,7 +255,7 @@
       "views": 1222,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 67.6,
+      "views_per_day": 67.5,
       "like_rate": 2.29,
       "traits": [],
       "days": 18.1
@@ -255,7 +268,7 @@
       "views": 1411,
       "likes": 31,
       "comments": 0,
-      "views_per_day": 73.9,
+      "views_per_day": 73.8,
       "like_rate": 2.2,
       "traits": [],
       "days": 19.1
@@ -268,7 +281,7 @@
       "views": 2002,
       "likes": 38,
       "comments": 2,
-      "views_per_day": 99.6,
+      "views_per_day": 99.4,
       "like_rate": 1.9,
       "traits": [],
       "days": 20.1
@@ -281,7 +294,7 @@
       "views": 1316,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 62.3,
+      "views_per_day": 62.2,
       "like_rate": 2.58,
       "traits": [],
       "days": 21.1
@@ -294,10 +307,10 @@
       "views": 1466,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 66.5,
+      "views_per_day": 66.4,
       "like_rate": 1.84,
       "traits": [],
-      "days": 22.0
+      "days": 22.1
     },
     {
       "id": "Wf6aOOah7rU",
@@ -307,7 +320,7 @@
       "views": 1559,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 67.3,
+      "views_per_day": 67.2,
       "like_rate": 2.18,
       "traits": [
         "ความลับ"
@@ -322,7 +335,7 @@
       "views": 1700,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 70.0,
+      "views_per_day": 69.9,
       "like_rate": 1.59,
       "traits": [
         "คำถาม"
@@ -334,7 +347,7 @@
       "title": "ทะเลทรายซาฮาราที่ซ่อนแหล่งน้ำมหาศาลไว้ใต้ผืนทราย",
       "published": "2026-10-16T12:48:25Z",
       "privacy": "public",
-      "views": 1306,
+      "views": 1307,
       "likes": 25,
       "comments": 0,
       "views_per_day": 51.6,
@@ -343,19 +356,6 @@
         "ความลับ"
       ],
       "days": 25.3
-    },
-    {
-      "id": "QkVviqrS7iQ",
-      "title": "ฉลาม สิ่งมีชีวิตที่เก่าแก่กว่าต้นไม้ต้นแรกของโลก",
-      "published": "2026-11-10T19:55:54Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [],
-      "days": 0.2
     },
     {
       "id": "6GYs0eHvlAM",
@@ -378,7 +378,7 @@
       "views": 1337,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 49.0,
+      "views_per_day": 48.9,
       "like_rate": 1.65,
       "traits": [],
       "days": 27.3
@@ -419,7 +419,7 @@
       "views": 1276,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 42.3,
+      "views_per_day": 42.2,
       "like_rate": 2.66,
       "traits": [],
       "days": 30.2
@@ -471,7 +471,7 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 46.6,
+      "views_per_day": 46.5,
       "like_rate": 1.79,
       "traits": [],
       "days": 31.3
@@ -506,5 +506,5 @@
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-10T19:56:00+00:00"
+  "fetched_at": "2026-11-10T20:40:54+00:00"
 }
