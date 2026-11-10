@@ -1,49 +1,49 @@
 {
   "channel": "world",
-  "checked_at": "2026-11-09T02:47:13+00:00",
+  "checked_at": "2026-11-10T04:41:56+00:00",
   "healthy": true,
   "checks": [
     {
       "name": "youtube",
       "ok": true,
       "essential": true,
-      "detail": "รอบรู้ 1นาที | ผู้ติดตาม 113 | คลิป 30",
-      "ms": 1445
+      "detail": "รอบรู้ 1นาที | ผู้ติดตาม 115 | คลิป 31",
+      "ms": 613
     },
     {
       "name": "pollinations",
       "ok": true,
       "essential": true,
-      "detail": "433 โมเดล | รุ่นภาพที่ตั้งไว้ยังอยู่ครบ",
-      "ms": 581
+      "detail": "424 โมเดล | รุ่นภาพที่ตั้งไว้ยังอยู่ครบ",
+      "ms": 365
     },
     {
       "name": "edge-tts",
       "ok": true,
       "essential": false,
       "detail": "th-TH-NiwatNeural พากย์ได้จริง (11,232 ไบต์)",
-      "ms": 926
+      "ms": 466
     },
     {
       "name": "gemini",
       "ok": true,
       "essential": false,
       "detail": "ใช้ได้ 4/4 รุ่น | ตัวแรก gemini-3.8-flash",
-      "ms": 191
+      "ms": 129
     },
     {
       "name": "kaggle",
       "ok": false,
       "essential": false,
       "detail": "KaggleError: kaggle kernels list --mine --page-size 1 ล้มเหลว:\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.16/x64/bin/kaggle\", line 3, in <module>\n    from kaggle.cli i",
-      "ms": 482
+      "ms": 266
     },
     {
       "name": "huggingface",
       "ok": true,
       "essential": false,
       "detail": "zerogpu-aoti/wan2-2-fp8da-aoti-faster กำลังทำงาน",
-      "ms": 130
+      "ms": 123
     }
   ]
 }
