@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-11-10T19:55:59+00:00",
+  "updated_at": "2026-11-11T19:47:23+00:00",
   "runs": [
+    {
+      "ok": false,
+      "error": "ResumableUploadError: <HttpError 409 when requesting None returned \"Requested entity already exists\". Details: \"[{'message': 'Requested entity already exists', 'domain': 'global', 'reason': 'alreadyExists'}]\">",
+      "seconds": 641,
+      "at": "2026-11-11T19:47:23+00:00"
+    },
     {
       "ok": true,
       "title": "ฉลาม สิ่งมีชีวิตที่เก่าแก่กว่าต้นไม้ต้นแรกของโลก",
@@ -370,19 +376,6 @@
       "backends": {},
       "voice": "edge-tts",
       "at": "2026-10-14T12:52:44+00:00"
-    },
-    {
-      "ok": true,
-      "title": "น้ำตกสีแดงสดปานเลือด ที่ไหลออกมาจากใต้ธารน้ำแข็งแอนตาร์กติกา",
-      "premise": "น้ำตกบลัดฟอลส์ในแอนตาร์กติกา ไหลเป็นสีแดงสดคล้ายเลือด เนื่องจากน้ำเค็มโบราณที่ขังใต้ธารน้ำแข็งอุดมด้วยเหล็กทำปฏิกิริยากับอากาศจนเกิดสนิม",
-      "video_id": "qCzjRnxtojM",
-      "seconds": 364,
-      "writer": "gemini",
-      "animated": 0,
-      "scenes": 6,
-      "backends": {},
-      "voice": "gtts",
-      "at": "2026-10-13T12:43:05+00:00"
     }
   ]
 }
