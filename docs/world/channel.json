@@ -3,10 +3,23 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 120,
-    "views": 48735,
+    "views": 48748,
     "videos": 34
   },
   "videos": [
+    {
+      "id": "0HXAAEmnefU",
+      "title": "ฉลาม สิ่งมีชีวิตที่เก่าแก่กว่าต้นไม้ต้นแรกของโลก",
+      "published": "2026-11-12T20:01:23Z",
+      "privacy": "public",
+      "views": 13,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 52.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
+    },
     {
       "id": "DfsWBhOIrq0",
       "title": "เพนกวิน สิ่งมีชีวิตที่อาศัยในสนามทุ่นระเบิดได้อย่างปลอดภัย",
@@ -18,7 +31,7 @@
       "views_per_day": 0.0,
       "like_rate": 0.0,
       "traits": [],
-      "days": 1.0
+      "days": 1.1
     },
     {
       "id": "QkVviqrS7iQ",
@@ -28,7 +41,7 @@
       "views": 1170,
       "likes": 26,
       "comments": 3,
-      "views_per_day": 584.1,
+      "views_per_day": 571.2,
       "like_rate": 2.22,
       "traits": [],
       "days": 2.0
@@ -41,7 +54,7 @@
       "views": 1074,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 370.5,
+      "views_per_day": 364.9,
       "like_rate": 2.7,
       "traits": [],
       "days": 2.9
@@ -54,7 +67,7 @@
       "views": 1161,
       "likes": 20,
       "comments": 0,
-      "views_per_day": 284.5,
+      "views_per_day": 281.4,
       "like_rate": 1.72,
       "traits": [],
       "days": 4.1
@@ -67,7 +80,7 @@
       "views": 1267,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 249.0,
+      "views_per_day": 246.8,
       "like_rate": 1.5,
       "traits": [],
       "days": 5.1
@@ -80,10 +93,10 @@
       "views": 1030,
       "likes": 11,
       "comments": 0,
-      "views_per_day": 171.0,
+      "views_per_day": 169.7,
       "like_rate": 1.07,
       "traits": [],
-      "days": 6.0
+      "days": 6.1
     },
     {
       "id": "85KzECw7x-Q",
@@ -93,7 +106,7 @@
       "views": 1087,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 155.3,
+      "views_per_day": 154.3,
       "like_rate": 2.21,
       "traits": [
         "คำถาม"
@@ -108,7 +121,7 @@
       "views": 1543,
       "likes": 40,
       "comments": 0,
-      "views_per_day": 192.8,
+      "views_per_day": 191.7,
       "like_rate": 2.59,
       "traits": [],
       "days": 8.0
@@ -121,10 +134,10 @@
       "views": 1166,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 129.4,
+      "views_per_day": 128.7,
       "like_rate": 2.4,
       "traits": [],
-      "days": 9.0
+      "days": 9.1
     },
     {
       "id": "irr-Taje5Tc",
@@ -134,12 +147,12 @@
       "views": 1269,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 128.0,
+      "views_per_day": 127.4,
       "like_rate": 2.29,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 9.9
+      "days": 10.0
     },
     {
       "id": "q9E6dpSEcWc",
@@ -149,7 +162,7 @@
       "views": 1109,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 100.1,
+      "views_per_day": 99.7,
       "like_rate": 1.89,
       "traits": [
         "ความขัดแย้ง"
@@ -164,7 +177,7 @@
       "views": 1123,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 92.8,
+      "views_per_day": 92.5,
       "like_rate": 1.42,
       "traits": [],
       "days": 12.1
@@ -177,7 +190,7 @@
       "views": 1218,
       "likes": 42,
       "comments": 0,
-      "views_per_day": 93.2,
+      "views_per_day": 92.9,
       "like_rate": 3.45,
       "traits": [],
       "days": 13.1
@@ -190,7 +203,7 @@
       "views": 1241,
       "likes": 39,
       "comments": 0,
-      "views_per_day": 88.3,
+      "views_per_day": 88.0,
       "like_rate": 3.14,
       "traits": [],
       "days": 14.1
@@ -203,10 +216,10 @@
       "views": 1123,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 74.6,
+      "views_per_day": 74.4,
       "like_rate": 1.69,
       "traits": [],
-      "days": 15.0
+      "days": 15.1
     },
     {
       "id": "EvUykg8ag0s",
@@ -216,7 +229,7 @@
       "views": 1271,
       "likes": 27,
       "comments": 2,
-      "views_per_day": 79.1,
+      "views_per_day": 78.9,
       "like_rate": 2.12,
       "traits": [],
       "days": 16.1
@@ -229,7 +242,7 @@
       "views": 1113,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 65.6,
+      "views_per_day": 65.4,
       "like_rate": 1.53,
       "traits": [],
       "days": 17.0
@@ -242,7 +255,7 @@
       "views": 1165,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 64.1,
+      "views_per_day": 64.0,
       "like_rate": 1.46,
       "traits": [],
       "days": 18.2
@@ -255,10 +268,10 @@
       "views": 1384,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 72.3,
+      "views_per_day": 72.1,
       "like_rate": 1.95,
       "traits": [],
-      "days": 19.1
+      "days": 19.2
     },
     {
       "id": "fpSQ-Reg9BM",
@@ -268,7 +281,7 @@
       "views": 1222,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 60.8,
+      "views_per_day": 60.7,
       "like_rate": 2.29,
       "traits": [],
       "days": 20.1
@@ -281,7 +294,7 @@
       "views": 1411,
       "likes": 31,
       "comments": 0,
-      "views_per_day": 66.9,
+      "views_per_day": 66.8,
       "like_rate": 2.2,
       "traits": [],
       "days": 21.1
@@ -294,10 +307,10 @@
       "views": 2006,
       "likes": 38,
       "comments": 2,
-      "views_per_day": 90.7,
+      "views_per_day": 90.5,
       "like_rate": 1.89,
       "traits": [],
-      "days": 22.1
+      "days": 22.2
     },
     {
       "id": "YiNKS-SokOQ",
@@ -307,10 +320,10 @@
       "views": 1316,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 56.9,
+      "views_per_day": 56.8,
       "like_rate": 2.58,
       "traits": [],
-      "days": 23.1
+      "days": 23.2
     },
     {
       "id": "UbKKSxk3AXo",
@@ -320,10 +333,10 @@
       "views": 1466,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 61.0,
+      "views_per_day": 60.9,
       "like_rate": 1.84,
       "traits": [],
-      "days": 24.0
+      "days": 24.1
     },
     {
       "id": "Wf6aOOah7rU",
@@ -333,25 +346,12 @@
       "views": 1559,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 61.9,
+      "views_per_day": 61.8,
       "like_rate": 2.18,
       "traits": [
         "ความลับ"
       ],
       "days": 25.2
-    },
-    {
-      "id": "0HXAAEmnefU",
-      "title": "ฉลาม สิ่งมีชีวิตที่เก่าแก่กว่าต้นไม้ต้นแรกของโลก",
-      "published": "2026-11-12T20:00:58Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [],
-      "days": 0.2
     },
     {
       "id": "8IXB5qL8GzE",
@@ -361,12 +361,12 @@
       "views": 1702,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 64.7,
+      "views_per_day": 64.6,
       "like_rate": 1.59,
       "traits": [
         "คำถาม"
       ],
-      "days": 26.3
+      "days": 26.4
     },
     {
       "id": "jMz_OLrFsWg",
@@ -391,7 +391,7 @@
       "views": 1602,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 56.6,
+      "views_per_day": 56.5,
       "like_rate": 1.81,
       "traits": [],
       "days": 28.3
@@ -417,7 +417,7 @@
       "views": 1376,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 45.4,
+      "views_per_day": 45.3,
       "like_rate": 3.12,
       "traits": [],
       "days": 30.3
@@ -474,7 +474,7 @@
       "views_per_day": 42.1,
       "like_rate": 2.5,
       "traits": [],
-      "days": 32.3
+      "days": 32.4
     },
     {
       "id": "0iK9FQvX5Qg",
@@ -497,7 +497,7 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 43.8,
+      "views_per_day": 43.7,
       "like_rate": 1.79,
       "traits": [],
       "days": 33.3
@@ -510,10 +510,10 @@
       "views": 1291,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 38.8,
+      "views_per_day": 38.7,
       "like_rate": 2.25,
       "traits": [],
-      "days": 33.3
+      "days": 33.4
     },
     {
       "id": "23eSKkHi5XY",
@@ -523,7 +523,7 @@
       "views": 1299,
       "likes": 33,
       "comments": 0,
-      "views_per_day": 37.7,
+      "views_per_day": 37.6,
       "like_rate": 2.54,
       "traits": [
         "ความขัดแย้ง"
@@ -532,5 +532,5 @@
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-12T20:01:03+00:00"
+  "fetched_at": "2026-11-12T21:06:08+00:00"
 }
