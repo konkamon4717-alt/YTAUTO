@@ -79,7 +79,7 @@
       "views": 1113,
       "likes": 20,
       "comments": 0,
-      "views_per_day": 42.5,
+      "views_per_day": 42.4,
       "like_rate": 1.8,
       "traits": [
         "อารมณ์แรง"
@@ -94,13 +94,13 @@
       "views": 1161,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 42.5,
+      "views_per_day": 42.4,
       "like_rate": 1.89,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 27.3
+      "days": 27.4
     },
     {
       "id": "K7eDye3r_ys",
@@ -116,7 +116,7 @@
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 28.3
+      "days": 28.4
     },
     {
       "id": "Wm93n7mXdgA",
@@ -126,12 +126,12 @@
       "views": 1269,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 43.3,
+      "views_per_day": 43.2,
       "like_rate": 2.13,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 29.3
+      "days": 29.4
     },
     {
       "id": "-3eSGZBXNu8",
@@ -146,7 +146,7 @@
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 30.3
+      "days": 30.4
     },
     {
       "id": "5-h7FboaP0c",
@@ -159,7 +159,7 @@
       "views_per_day": 34.7,
       "like_rate": 1.56,
       "traits": [],
-      "days": 31.3
+      "days": 31.4
     },
     {
       "id": "Lip4vEyuFa8",
@@ -169,7 +169,7 @@
       "views": 1832,
       "likes": 44,
       "comments": 0,
-      "views_per_day": 56.4,
+      "views_per_day": 56.3,
       "like_rate": 2.4,
       "traits": [
         "ความถี่",
@@ -190,7 +190,7 @@
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 34.3
+      "days": 34.4
     },
     {
       "id": "pZi7FJyHjEY",
@@ -206,7 +206,7 @@
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 35.3
+      "days": 35.4
     },
     {
       "id": "ZQpvIsa0c8A",
@@ -216,13 +216,13 @@
       "views": 1750,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 48.2,
+      "views_per_day": 48.1,
       "like_rate": 1.6,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 36.3
+      "days": 36.4
     },
     {
       "id": "hyfmbTfZqBg",
@@ -238,7 +238,7 @@
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 37.6
+      "days": 37.7
     },
     {
       "id": "8-Zy5rZlH00",
@@ -320,5 +320,5 @@
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-13T20:40:25+00:00"
+  "fetched_at": "2026-11-13T21:15:12+00:00"
 }
