@@ -1,6 +1,19 @@
 {
-  "updated_at": "2026-11-13T19:45:15+00:00",
+  "updated_at": "2026-11-14T18:12:16+00:00",
   "runs": [
+    {
+      "ok": true,
+      "title": "ยอดเขาเอเวอเรสต์ จุดที่สูงที่สุดในโลก เคยอยู่ใต้มหาสมุทร",
+      "premise": "บนยอดเขาเอเวอเรสต์ซึ่งเป็นจุดที่สูงที่สุดในโลก มีการค้นพบฟอสซิลของสิ่งมีชีวิตในทะเลโบราณอายุกว่า 400 ล้านปี เนื่องจากแผ่นเปลือกโลกดันตัวขึ้นมาจากใต้พื้นมหาสมุทร",
+      "video_id": "iQhPpY7czOE",
+      "seconds": 695,
+      "writer": "gemini",
+      "animated": 0,
+      "scenes": 6,
+      "backends": {},
+      "voice": "edge-tts",
+      "at": "2026-11-14T18:12:16+00:00"
+    },
     {
       "ok": true,
       "title": "ยอดเขาธอร์ หน้าผาดิ่งชันที่สุดในโลก กับการตกนาน 26 วินาที",
@@ -363,19 +376,6 @@
       "backends": {},
       "voice": "edge-tts",
       "at": "2026-10-17T12:39:21+00:00"
-    },
-    {
-      "ok": true,
-      "title": "ทะเลทรายซาฮาราที่ซ่อนแหล่งน้ำมหาศาลไว้ใต้ผืนทราย",
-      "premise": "The Sahara Desert is not just sand, but contains massive underground reservoirs of water from ancient times.",
-      "video_id": "jMz_OLrFsWg",
-      "seconds": 400,
-      "writer": "gemini",
-      "animated": 0,
-      "scenes": 6,
-      "backends": {},
-      "voice": "edge-tts",
-      "at": "2026-10-16T12:48:09+00:00"
     }
   ]
 }
