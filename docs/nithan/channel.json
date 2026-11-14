@@ -15,7 +15,7 @@
       "views": 1175,
       "likes": 35,
       "comments": 1,
-      "views_per_day": 51.0,
+      "views_per_day": 50.9,
       "like_rate": 2.98,
       "traits": [
         "ความถี่",
@@ -63,7 +63,7 @@
       "views": 1117,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 43.0,
+      "views_per_day": 42.9,
       "like_rate": 1.52,
       "traits": [
         "ความถี่",
@@ -84,7 +84,7 @@
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 27.1
+      "days": 27.2
     },
     {
       "id": "o54REzRRy8Y",
@@ -94,7 +94,7 @@
       "views": 1161,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 41.1,
+      "views_per_day": 41.0,
       "like_rate": 1.89,
       "traits": [
         "ความถี่",
@@ -110,7 +110,7 @@
       "views": 1454,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 49.7,
+      "views_per_day": 49.6,
       "like_rate": 1.93,
       "traits": [
         "ความถี่",
@@ -169,13 +169,13 @@
       "views": 1832,
       "likes": 44,
       "comments": 0,
-      "views_per_day": 54.8,
+      "views_per_day": 54.7,
       "like_rate": 2.4,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 33.4
+      "days": 33.5
     },
     {
       "id": "SsMdCbnHpvM",
@@ -216,7 +216,7 @@
       "views": 1751,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 47.0,
+      "views_per_day": 46.9,
       "like_rate": 1.54,
       "traits": [
         "คำถาม",
@@ -232,7 +232,7 @@
       "views": 1608,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 41.7,
+      "views_per_day": 41.6,
       "like_rate": 1.8,
       "traits": [
         "ความถี่",
@@ -254,7 +254,7 @@
         "คำถาม",
         "ความถี่"
       ],
-      "days": 54.7
+      "days": 54.8
     },
     {
       "id": "klm0ozmRhsE",
@@ -320,5 +320,5 @@
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-14T18:58:33+00:00"
+  "fetched_at": "2026-11-14T19:50:19+00:00"
 }
