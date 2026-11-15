@@ -3,22 +3,35 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 127,
-    "views": 52673,
+    "views": 52696,
     "videos": 37
   },
   "videos": [
+    {
+      "id": "F9ESJd9cHdI",
+      "title": "เทือกเขาในอเมริกาและสกอตแลนด์ แท้จริงคือเทือกเขาเดียวกัน",
+      "published": "2026-11-15T18:56:58Z",
+      "privacy": "public",
+      "views": 10,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 40.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
+    },
     {
       "id": "iQhPpY7czOE",
       "title": "ยอดเขาเอเวอเรสต์ จุดที่สูงที่สุดในโลก เคยอยู่ใต้มหาสมุทร",
       "published": "2026-11-14T18:12:33Z",
       "privacy": "public",
-      "views": 1400,
+      "views": 1413,
       "likes": 30,
       "comments": 0,
-      "views_per_day": 1358.5,
-      "like_rate": 2.14,
+      "views_per_day": 1337.8,
+      "like_rate": 2.12,
       "traits": [],
-      "days": 1.0
+      "days": 1.1
     },
     {
       "id": "OFKHaOL-rAs",
@@ -28,7 +41,7 @@
       "views": 1317,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 669.9,
+      "views_per_day": 661.3,
       "like_rate": 1.97,
       "traits": [],
       "days": 2.0
@@ -41,7 +54,7 @@
       "views": 1133,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 383.4,
+      "views_per_day": 380.1,
       "like_rate": 2.29,
       "traits": [],
       "days": 3.0
@@ -67,7 +80,7 @@
       "views": 1191,
       "likes": 26,
       "comments": 3,
-      "views_per_day": 240.2,
+      "views_per_day": 239.0,
       "like_rate": 2.18,
       "traits": [],
       "days": 5.0
@@ -80,7 +93,7 @@
       "views": 1081,
       "likes": 30,
       "comments": 0,
-      "views_per_day": 184.7,
+      "views_per_day": 183.9,
       "like_rate": 2.78,
       "traits": [],
       "days": 5.9
@@ -93,10 +106,10 @@
       "views": 1159,
       "likes": 20,
       "comments": 0,
-      "views_per_day": 164.7,
+      "views_per_day": 164.1,
       "like_rate": 1.73,
       "traits": [],
-      "days": 7.0
+      "days": 7.1
     },
     {
       "id": "qP_lhWgu-iM",
@@ -106,10 +119,10 @@
       "views": 1272,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 158.1,
+      "views_per_day": 157.6,
       "like_rate": 1.49,
       "traits": [],
-      "days": 8.0
+      "days": 8.1
     },
     {
       "id": "zoHJDaCMYr8",
@@ -119,7 +132,7 @@
       "views": 1040,
       "likes": 11,
       "comments": 0,
-      "views_per_day": 115.8,
+      "views_per_day": 115.5,
       "like_rate": 1.06,
       "traits": [],
       "days": 9.0
@@ -132,7 +145,7 @@
       "views": 1093,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 109.8,
+      "views_per_day": 109.5,
       "like_rate": 2.2,
       "traits": [
         "คำถาม"
@@ -147,7 +160,7 @@
       "views": 1559,
       "likes": 40,
       "comments": 0,
-      "views_per_day": 142.3,
+      "views_per_day": 141.9,
       "like_rate": 2.57,
       "traits": [],
       "days": 11.0
@@ -160,7 +173,7 @@
       "views": 1166,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 97.4,
+      "views_per_day": 97.2,
       "like_rate": 2.4,
       "traits": [],
       "days": 12.0
@@ -173,7 +186,7 @@
       "views": 1269,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 98.6,
+      "views_per_day": 98.4,
       "like_rate": 2.29,
       "traits": [
         "ความขัดแย้ง"
@@ -188,12 +201,12 @@
       "views": 1110,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 79.1,
+      "views_per_day": 79.0,
       "like_rate": 1.89,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 14.0
+      "days": 14.1
     },
     {
       "id": "IQNCAD5xqu0",
@@ -203,7 +216,7 @@
       "views": 1127,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 74.9,
+      "views_per_day": 74.7,
       "like_rate": 1.42,
       "traits": [],
       "days": 15.1
@@ -216,10 +229,10 @@
       "views": 1219,
       "likes": 42,
       "comments": 0,
-      "views_per_day": 76.1,
+      "views_per_day": 75.9,
       "like_rate": 3.45,
       "traits": [],
-      "days": 16.0
+      "days": 16.1
     },
     {
       "id": "AufCUCYbKPQ",
@@ -229,7 +242,7 @@
       "views": 1241,
       "likes": 39,
       "comments": 0,
-      "views_per_day": 73.0,
+      "views_per_day": 72.9,
       "like_rate": 3.14,
       "traits": [],
       "days": 17.0
@@ -242,7 +255,7 @@
       "views": 1128,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 62.7,
+      "views_per_day": 62.6,
       "like_rate": 1.68,
       "traits": [],
       "days": 18.0
@@ -255,10 +268,10 @@
       "views": 1271,
       "likes": 27,
       "comments": 2,
-      "views_per_day": 66.8,
+      "views_per_day": 66.7,
       "like_rate": 2.12,
       "traits": [],
-      "days": 19.0
+      "days": 19.1
     },
     {
       "id": "HzeCFWNvL5M",
@@ -268,7 +281,7 @@
       "views": 1113,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 55.9,
+      "views_per_day": 55.8,
       "like_rate": 1.53,
       "traits": [],
       "days": 19.9
@@ -281,7 +294,7 @@
       "views": 1165,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 55.2,
+      "views_per_day": 55.1,
       "like_rate": 1.46,
       "traits": [],
       "days": 21.1
@@ -294,7 +307,7 @@
       "views": 1384,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 62.6,
+      "views_per_day": 62.5,
       "like_rate": 1.95,
       "traits": [],
       "days": 22.1
@@ -310,7 +323,7 @@
       "views_per_day": 53.0,
       "like_rate": 2.29,
       "traits": [],
-      "days": 23.0
+      "days": 23.1
     },
     {
       "id": "v89g4zmYRjU",
@@ -320,10 +333,10 @@
       "views": 1414,
       "likes": 31,
       "comments": 0,
-      "views_per_day": 58.8,
+      "views_per_day": 58.7,
       "like_rate": 2.19,
       "traits": [],
-      "days": 24.0
+      "days": 24.1
     },
     {
       "id": "Evxe1dSEIpA",
@@ -333,23 +346,10 @@
       "views": 2010,
       "likes": 38,
       "comments": 2,
-      "views_per_day": 80.2,
+      "views_per_day": 80.1,
       "like_rate": 1.89,
       "traits": [],
       "days": 25.1
-    },
-    {
-      "id": "F9ESJd9cHdI",
-      "title": "เทือกเขาในอเมริกาและสกอตแลนด์ แท้จริงคือเทือกเขาเดียวกัน",
-      "published": "2026-11-15T18:56:27Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [],
-      "days": 0.2
     },
     {
       "id": "YiNKS-SokOQ",
@@ -390,7 +390,7 @@
       "traits": [
         "ความลับ"
       ],
-      "days": 28.1
+      "days": 28.2
     },
     {
       "id": "8IXB5qL8GzE",
@@ -415,7 +415,7 @@
       "views": 1309,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 43.3,
+      "views_per_day": 43.2,
       "like_rate": 1.99,
       "traits": [
         "ความลับ"
@@ -430,7 +430,7 @@
       "views": 1602,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 51.3,
+      "views_per_day": 51.2,
       "like_rate": 1.81,
       "traits": [],
       "days": 31.3
@@ -456,7 +456,7 @@
       "views": 1376,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 41.4,
+      "views_per_day": 41.3,
       "like_rate": 3.12,
       "traits": [],
       "days": 33.3
@@ -523,7 +523,7 @@
       "views": 2060,
       "likes": 55,
       "comments": 0,
-      "views_per_day": 57.0,
+      "views_per_day": 56.9,
       "like_rate": 2.67,
       "traits": [],
       "days": 36.2
@@ -567,9 +567,9 @@
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 37.4
+      "days": 37.5
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-15T18:56:33+00:00"
+  "fetched_at": "2026-11-15T19:33:32+00:00"
 }
