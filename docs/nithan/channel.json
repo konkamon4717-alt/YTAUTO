@@ -15,13 +15,13 @@
       "views": 1175,
       "likes": 35,
       "comments": 1,
-      "views_per_day": 48.9,
+      "views_per_day": 48.8,
       "like_rate": 2.98,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 24.0
+      "days": 24.1
     },
     {
       "id": "Ft_htyx4omA",
@@ -47,7 +47,7 @@
       "views": 1303,
       "likes": 20,
       "comments": 0,
-      "views_per_day": 50.0,
+      "views_per_day": 49.9,
       "like_rate": 1.53,
       "traits": [
         "ความถี่",
@@ -63,7 +63,7 @@
       "views": 1117,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 41.4,
+      "views_per_day": 41.3,
       "like_rate": 1.52,
       "traits": [
         "ความถี่",
@@ -79,12 +79,12 @@
       "views": 1113,
       "likes": 20,
       "comments": 0,
-      "views_per_day": 39.6,
+      "views_per_day": 39.5,
       "like_rate": 1.8,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 28.1
+      "days": 28.2
     },
     {
       "id": "o54REzRRy8Y",
@@ -94,7 +94,7 @@
       "views": 1161,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 39.7,
+      "views_per_day": 39.6,
       "like_rate": 1.89,
       "traits": [
         "ความถี่",
@@ -110,7 +110,7 @@
       "views": 1454,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 48.1,
+      "views_per_day": 48.0,
       "like_rate": 1.93,
       "traits": [
         "ความถี่",
@@ -131,7 +131,7 @@
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 31.2
+      "days": 31.3
     },
     {
       "id": "-3eSGZBXNu8",
@@ -175,7 +175,7 @@
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 34.4
+      "days": 34.5
     },
     {
       "id": "SsMdCbnHpvM",
@@ -216,7 +216,7 @@
       "views": 1751,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 45.8,
+      "views_per_day": 45.7,
       "like_rate": 1.54,
       "traits": [
         "คำถาม",
@@ -320,5 +320,5 @@
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-15T18:49:25+00:00"
+  "fetched_at": "2026-11-15T19:32:46+00:00"
 }
