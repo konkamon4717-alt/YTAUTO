@@ -2,8 +2,8 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 144,
-    "views": 60724,
+    "subscribers": 145,
+    "views": 61075,
     "videos": 43
   },
   "videos": [
@@ -12,11 +12,11 @@
       "title": "หลุมเจาะโคล่า โครงการขุดใต้โลกที่ลึกยิ่งกว่ามหาสมุทร",
       "published": "2026-11-21T19:17:55Z",
       "privacy": "public",
-      "views": 19,
-      "likes": 2,
+      "views": 370,
+      "likes": 13,
       "comments": 0,
-      "views_per_day": 76.0,
-      "like_rate": 10.53,
+      "views_per_day": 1480.0,
+      "like_rate": 3.51,
       "traits": [],
       "days": 0.2
     },
@@ -28,7 +28,7 @@
       "views": 1242,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 1232.4,
+      "views_per_day": 1207.5,
       "like_rate": 1.69,
       "traits": [],
       "days": 1.0
@@ -38,10 +38,10 @@
       "title": "เมานาเคอา ภูเขาที่วัดจากฐานแล้วสูงกว่าเอเวอเรสต์",
       "published": "2026-11-19T20:37:03Z",
       "privacy": "public",
-      "views": 1220,
+      "views": 1218,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 613.4,
+      "views_per_day": 606.1,
       "like_rate": 2.79,
       "traits": [],
       "days": 2.0
@@ -54,7 +54,7 @@
       "views": 1425,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 477.1,
+      "views_per_day": 473.8,
       "like_rate": 1.96,
       "traits": [],
       "days": 3.0
@@ -67,7 +67,7 @@
       "views": 1400,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 352.9,
+      "views_per_day": 351.1,
       "like_rate": 2.07,
       "traits": [],
       "days": 4.0
@@ -80,7 +80,7 @@
       "views": 1221,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 248.1,
+      "views_per_day": 247.0,
       "like_rate": 2.21,
       "traits": [],
       "days": 4.9
@@ -93,7 +93,7 @@
       "views": 1326,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 218.9,
+      "views_per_day": 218.1,
       "like_rate": 1.96,
       "traits": [],
       "days": 6.1
@@ -103,11 +103,11 @@
       "title": "ยอดเขาเอเวอเรสต์ จุดที่สูงที่สุดในโลก เคยอยู่ใต้มหาสมุทร",
       "published": "2026-11-14T18:12:33Z",
       "privacy": "public",
-      "views": 1505,
+      "views": 1507,
       "likes": 32,
       "comments": 0,
-      "views_per_day": 212.3,
-      "like_rate": 2.13,
+      "views_per_day": 212.0,
+      "like_rate": 2.12,
       "traits": [],
       "days": 7.1
     },
@@ -119,7 +119,7 @@
       "views": 1321,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 164.6,
+      "views_per_day": 164.2,
       "like_rate": 1.97,
       "traits": [],
       "days": 8.0
@@ -132,7 +132,7 @@
       "views": 1141,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 126.6,
+      "views_per_day": 126.3,
       "like_rate": 2.37,
       "traits": [],
       "days": 9.0
@@ -158,7 +158,7 @@
       "views": 1193,
       "likes": 26,
       "comments": 3,
-      "views_per_day": 108.3,
+      "views_per_day": 108.1,
       "like_rate": 2.18,
       "traits": [],
       "days": 11.0
@@ -171,7 +171,7 @@
       "views": 1082,
       "likes": 30,
       "comments": 0,
-      "views_per_day": 90.8,
+      "views_per_day": 90.7,
       "like_rate": 2.77,
       "traits": [],
       "days": 11.9
@@ -184,7 +184,7 @@
       "views": 1162,
       "likes": 20,
       "comments": 0,
-      "views_per_day": 88.7,
+      "views_per_day": 88.6,
       "like_rate": 1.72,
       "traits": [],
       "days": 13.1
@@ -197,7 +197,7 @@
       "views": 1277,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 90.6,
+      "views_per_day": 90.4,
       "like_rate": 1.49,
       "traits": [],
       "days": 14.1
@@ -210,10 +210,10 @@
       "views": 1049,
       "likes": 11,
       "comments": 0,
-      "views_per_day": 69.8,
+      "views_per_day": 69.7,
       "like_rate": 1.05,
       "traits": [],
-      "days": 15.0
+      "days": 15.1
     },
     {
       "id": "85KzECw7x-Q",
@@ -223,7 +223,7 @@
       "views": 1096,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 68.5,
+      "views_per_day": 68.4,
       "like_rate": 2.19,
       "traits": [
         "คำถาม"
@@ -238,7 +238,7 @@
       "views": 1582,
       "likes": 40,
       "comments": 0,
-      "views_per_day": 93.0,
+      "views_per_day": 92.8,
       "like_rate": 2.53,
       "traits": [],
       "days": 17.0
@@ -269,7 +269,7 @@
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 18.9
+      "days": 19.0
     },
     {
       "id": "q9E6dpSEcWc",
@@ -279,7 +279,7 @@
       "views": 1110,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 55.3,
+      "views_per_day": 55.2,
       "like_rate": 1.89,
       "traits": [
         "ความขัดแย้ง"
@@ -294,7 +294,7 @@
       "views": 1127,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 53.4,
+      "views_per_day": 53.3,
       "like_rate": 1.42,
       "traits": [],
       "days": 21.1
@@ -307,7 +307,7 @@
       "views": 1219,
       "likes": 42,
       "comments": 0,
-      "views_per_day": 55.2,
+      "views_per_day": 55.1,
       "like_rate": 3.45,
       "traits": [],
       "days": 22.1
@@ -333,7 +333,7 @@
       "views": 1128,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 46.9,
+      "views_per_day": 46.8,
       "like_rate": 1.68,
       "traits": [],
       "days": 24.1
@@ -346,7 +346,7 @@
       "views": 1271,
       "likes": 27,
       "comments": 2,
-      "views_per_day": 50.7,
+      "views_per_day": 50.6,
       "like_rate": 2.12,
       "traits": [],
       "days": 25.1
@@ -372,7 +372,7 @@
       "views": 1165,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 42.9,
+      "views_per_day": 42.8,
       "like_rate": 1.46,
       "traits": [],
       "days": 27.2
@@ -385,7 +385,7 @@
       "views": 1385,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 49.2,
+      "views_per_day": 49.1,
       "like_rate": 2.02,
       "traits": [],
       "days": 28.2
@@ -424,7 +424,7 @@
       "views": 2019,
       "likes": 38,
       "comments": 2,
-      "views_per_day": 64.9,
+      "views_per_day": 64.8,
       "like_rate": 1.88,
       "traits": [],
       "days": 31.1
@@ -440,7 +440,7 @@
       "views_per_day": 41.1,
       "like_rate": 2.65,
       "traits": [],
-      "days": 32.1
+      "days": 32.2
     },
     {
       "id": "UbKKSxk3AXo",
@@ -463,7 +463,7 @@
       "views": 1561,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 45.7,
+      "views_per_day": 45.6,
       "like_rate": 2.18,
       "traits": [
         "ความลับ"
@@ -478,7 +478,7 @@
       "views": 1712,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 48.5,
+      "views_per_day": 48.4,
       "like_rate": 1.58,
       "traits": [
         "คำถาม"
@@ -562,7 +562,7 @@
       "views": 1276,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 31.0,
+      "views_per_day": 30.9,
       "like_rate": 2.66,
       "traits": [],
       "days": 41.2
@@ -588,10 +588,10 @@
       "views": 1362,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 33.0,
+      "views_per_day": 32.9,
       "like_rate": 2.5,
       "traits": [],
-      "days": 41.3
+      "days": 41.4
     },
     {
       "id": "0iK9FQvX5Qg",
@@ -649,5 +649,5 @@
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-21T20:21:08+00:00"
+  "fetched_at": "2026-11-21T20:51:02+00:00"
 }
