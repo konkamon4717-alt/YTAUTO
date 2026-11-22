@@ -3,10 +3,23 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 146,
-    "views": 61995,
+    "views": 61997,
     "videos": 44
   },
   "videos": [
+    {
+      "id": "-G2EPNav7uE",
+      "title": "เกาะซูร์ตเซย์ แผ่นดินกำเนิดใหม่ที่ห้ามมนุษย์ย่างก้าว",
+      "published": "2026-11-22T19:37:21Z",
+      "privacy": "public",
+      "views": 2,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 8.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
+    },
     {
       "id": "qiewdCW-igI",
       "title": "หลุมเจาะโคล่า โครงการขุดใต้โลกที่ลึกยิ่งกว่ามหาสมุทร",
@@ -15,10 +28,10 @@
       "views": 1144,
       "likes": 23,
       "comments": 3,
-      "views_per_day": 1129.1,
+      "views_per_day": 1086.9,
       "like_rate": 2.01,
       "traits": [],
-      "days": 1.0
+      "days": 1.1
     },
     {
       "id": "eFmog7Vu0eQ",
@@ -28,7 +41,7 @@
       "views": 1256,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 635.3,
+      "views_per_day": 622.9,
       "like_rate": 1.67,
       "traits": [],
       "days": 2.0
@@ -41,7 +54,7 @@
       "views": 1228,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 415.1,
+      "views_per_day": 409.7,
       "like_rate": 2.77,
       "traits": [],
       "days": 3.0
@@ -54,7 +67,7 @@
       "views": 1508,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 381.2,
+      "views_per_day": 377.5,
       "like_rate": 1.86,
       "traits": [],
       "days": 4.0
@@ -67,10 +80,10 @@
       "views": 1400,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 283.6,
+      "views_per_day": 281.4,
       "like_rate": 2.07,
       "traits": [],
-      "days": 4.9
+      "days": 5.0
     },
     {
       "id": "Df9-Za8p2B4",
@@ -80,7 +93,7 @@
       "views": 1222,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 207.4,
+      "views_per_day": 206.1,
       "like_rate": 2.21,
       "traits": [],
       "days": 5.9
@@ -93,10 +106,10 @@
       "views": 1328,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 189.0,
+      "views_per_day": 187.9,
       "like_rate": 1.96,
       "traits": [],
-      "days": 7.0
+      "days": 7.1
     },
     {
       "id": "iQhPpY7czOE",
@@ -106,7 +119,7 @@
       "views": 1518,
       "likes": 32,
       "comments": 0,
-      "views_per_day": 188.4,
+      "views_per_day": 187.5,
       "like_rate": 2.11,
       "traits": [],
       "days": 8.1
@@ -119,7 +132,7 @@
       "views": 1321,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 146.9,
+      "views_per_day": 146.2,
       "like_rate": 1.97,
       "traits": [],
       "days": 9.0
@@ -132,7 +145,7 @@
       "views": 1141,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 114.3,
+      "views_per_day": 113.8,
       "like_rate": 2.37,
       "traits": [],
       "days": 10.0
@@ -158,7 +171,7 @@
       "views": 1193,
       "likes": 26,
       "comments": 3,
-      "views_per_day": 99.5,
+      "views_per_day": 99.2,
       "like_rate": 2.18,
       "traits": [],
       "days": 12.0
@@ -171,7 +184,7 @@
       "views": 1082,
       "likes": 30,
       "comments": 0,
-      "views_per_day": 84.0,
+      "views_per_day": 83.7,
       "like_rate": 2.77,
       "traits": [],
       "days": 12.9
@@ -184,7 +197,7 @@
       "views": 1162,
       "likes": 20,
       "comments": 0,
-      "views_per_day": 82.6,
+      "views_per_day": 82.4,
       "like_rate": 1.72,
       "traits": [],
       "days": 14.1
@@ -197,7 +210,7 @@
       "views": 1277,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 84.7,
+      "views_per_day": 84.5,
       "like_rate": 1.49,
       "traits": [],
       "days": 15.1
@@ -210,7 +223,7 @@
       "views": 1050,
       "likes": 11,
       "comments": 0,
-      "views_per_day": 65.6,
+      "views_per_day": 65.4,
       "like_rate": 1.05,
       "traits": [],
       "days": 16.0
@@ -223,7 +236,7 @@
       "views": 1097,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 64.6,
+      "views_per_day": 64.5,
       "like_rate": 2.19,
       "traits": [
         "คำถาม"
@@ -238,7 +251,7 @@
       "views": 1603,
       "likes": 40,
       "comments": 0,
-      "views_per_day": 89.1,
+      "views_per_day": 88.9,
       "like_rate": 2.5,
       "traits": [],
       "days": 18.0
@@ -251,7 +264,7 @@
       "views": 1167,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 61.4,
+      "views_per_day": 61.3,
       "like_rate": 2.4,
       "traits": [],
       "days": 19.0
@@ -264,7 +277,7 @@
       "views": 1269,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 63.8,
+      "views_per_day": 63.6,
       "like_rate": 2.29,
       "traits": [
         "ความขัดแย้ง"
@@ -279,7 +292,7 @@
       "views": 1110,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 52.7,
+      "views_per_day": 52.6,
       "like_rate": 1.89,
       "traits": [
         "ความขัดแย้ง"
@@ -294,7 +307,7 @@
       "views": 1127,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 51.0,
+      "views_per_day": 50.9,
       "like_rate": 1.42,
       "traits": [],
       "days": 22.1
@@ -307,7 +320,7 @@
       "views": 1221,
       "likes": 42,
       "comments": 0,
-      "views_per_day": 53.0,
+      "views_per_day": 52.9,
       "like_rate": 3.44,
       "traits": [],
       "days": 23.1
@@ -320,10 +333,10 @@
       "views": 1244,
       "likes": 40,
       "comments": 0,
-      "views_per_day": 51.8,
+      "views_per_day": 51.7,
       "like_rate": 3.22,
       "traits": [],
-      "days": 24.0
+      "days": 24.1
     },
     {
       "id": "A_C3WLlxQxU",
@@ -333,23 +346,10 @@
       "views": 1128,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 45.1,
+      "views_per_day": 45.0,
       "like_rate": 1.68,
       "traits": [],
-      "days": 25.0
-    },
-    {
-      "id": "-G2EPNav7uE",
-      "title": "เกาะซูร์ตเซย์ แผ่นดินกำเนิดใหม่ที่ห้ามมนุษย์ย่างก้าว",
-      "published": "2026-11-22T19:36:52Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [],
-      "days": 0.2
+      "days": 25.1
     },
     {
       "id": "EvUykg8ag0s",
@@ -359,7 +359,7 @@
       "views": 1271,
       "likes": 27,
       "comments": 2,
-      "views_per_day": 48.8,
+      "views_per_day": 48.7,
       "like_rate": 2.12,
       "traits": [],
       "days": 26.1
@@ -372,10 +372,10 @@
       "views": 1113,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 41.3,
+      "views_per_day": 41.2,
       "like_rate": 1.53,
       "traits": [],
-      "days": 26.9
+      "days": 27.0
     },
     {
       "id": "zBQJAl2kuQ4",
@@ -385,10 +385,10 @@
       "views": 1165,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 41.4,
+      "views_per_day": 41.3,
       "like_rate": 1.46,
       "traits": [],
-      "days": 28.1
+      "days": 28.2
     },
     {
       "id": "BN5JwqqJ1Pw",
@@ -401,7 +401,7 @@
       "views_per_day": 47.5,
       "like_rate": 2.02,
       "traits": [],
-      "days": 29.1
+      "days": 29.2
     },
     {
       "id": "fpSQ-Reg9BM",
@@ -437,7 +437,7 @@
       "views": 2019,
       "likes": 38,
       "comments": 2,
-      "views_per_day": 62.9,
+      "views_per_day": 62.8,
       "like_rate": 1.88,
       "traits": [],
       "days": 32.1
@@ -463,10 +463,10 @@
       "views": 1468,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 43.2,
+      "views_per_day": 43.1,
       "like_rate": 1.84,
       "traits": [],
-      "days": 34.0
+      "days": 34.1
     },
     {
       "id": "Wf6aOOah7rU",
@@ -491,7 +491,7 @@
       "views": 1712,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 47.2,
+      "views_per_day": 47.1,
       "like_rate": 1.58,
       "traits": [
         "คำถาม"
@@ -547,7 +547,7 @@
       "views": 1376,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 34.2,
+      "views_per_day": 34.1,
       "like_rate": 3.12,
       "traits": [],
       "days": 40.3
@@ -565,7 +565,7 @@
       "traits": [
         "ความถี่"
       ],
-      "days": 41.4
+      "days": 41.5
     },
     {
       "id": "plEJBPKtWvs",
@@ -575,7 +575,7 @@
       "views": 1276,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 30.3,
+      "views_per_day": 30.2,
       "like_rate": 2.66,
       "traits": [],
       "days": 42.2
@@ -591,7 +591,7 @@
       "views_per_day": 20.7,
       "like_rate": 2.51,
       "traits": [],
-      "days": 42.2
+      "days": 42.3
     },
     {
       "id": "964pejBlN0E",
@@ -627,10 +627,10 @@
       "views": 1455,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 33.7,
+      "views_per_day": 33.6,
       "like_rate": 1.79,
       "traits": [],
-      "days": 43.2
+      "days": 43.3
     },
     {
       "id": "DbLMjGhbHxk",
@@ -662,5 +662,5 @@
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-22T19:36:58+00:00"
+  "fetched_at": "2026-11-22T20:33:32+00:00"
 }
