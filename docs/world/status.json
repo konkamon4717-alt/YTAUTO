@@ -1,6 +1,19 @@
 {
-  "updated_at": "2026-11-22T19:36:57+00:00",
+  "updated_at": "2026-11-23T23:56:37+00:00",
   "runs": [
+    {
+      "ok": true,
+      "title": "ภูเขาโรไรมา ดินแดนยอดเขาแบนราบที่ถูกตัดขาดจากโลก",
+      "premise": "ภูเขาโรไรมา เทือกเขาหัวตัดเรียบที่มีอายุเก่าแก่กว่าสองพันล้านปีและถูกตัดขาดจากโลกเบื้องล่างจนกลายเป็นเกาะลอยฟ้าธรรมชาติ",
+      "video_id": "1lS7W6ec_LQ",
+      "seconds": 435,
+      "writer": "gemini",
+      "animated": 0,
+      "scenes": 6,
+      "backends": {},
+      "voice": "edge-tts",
+      "at": "2026-11-23T23:56:37+00:00"
+    },
     {
       "ok": true,
       "title": "เกาะซูร์ตเซย์ แผ่นดินกำเนิดใหม่ที่ห้ามมนุษย์ย่างก้าว",
@@ -363,19 +376,6 @@
       "error": "RuntimeError: เขียนบทไม่สำเร็จทุกตัว:\n  gemini: RuntimeError: ทุกรุ่นของ Gemini ใช้ไม่ได้: gemini-3.8-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. ( | gemini-3.6\n  pollinations: RuntimeError: ทุกโมเดลของ Pollinations ใช้ไม่ได้: GLM-4.6: HTTP 400: {\"success\":false,\"error\":{\"message\":\"Invalid model or alias: \\\"communi | Kimi-K2-Instruct-0905:",
       "seconds": 531,
       "at": "2026-10-26T19:21:09+00:00"
-    },
-    {
-      "ok": true,
-      "title": "แม่น้ำเดือดในป่าแอมะซอน ไม่ได้เกิดจากภูเขาไฟ",
-      "premise": "เรื่องราวของแม่น้ำชานาย-ติมพิชกาในป่าแอมะซอนของเปรู ซึ่งมีน้ำร้อนต้มสุกได้โดยไม่มีภูเขาไฟอยู่ในบริเวณนั้นเลย",
-      "video_id": "zBQJAl2kuQ4",
-      "seconds": 287,
-      "writer": "gemini",
-      "animated": 0,
-      "scenes": 6,
-      "backends": {},
-      "voice": "edge-tts",
-      "at": "2026-10-25T16:09:09+00:00"
     }
   ]
 }
