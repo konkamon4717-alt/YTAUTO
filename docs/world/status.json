@@ -1,6 +1,19 @@
 {
-  "updated_at": "2026-11-23T23:56:37+00:00",
+  "updated_at": "2026-11-24T01:21:05+00:00",
   "runs": [
+    {
+      "ok": true,
+      "title": "ต้นสนเมธูเสลาห์ สิ่งมีชีวิตอายุสี่พันปีที่พิกัดยังเป็นความลับ",
+      "premise": "ต้นสนเมธูเสลาห์ในสหรัฐอเมริกาเป็นสิ่งมีชีวิตเดี่ยวที่เก่าแก่ที่สุดในโลก โดยมีอายุมากกว่า 4,800 ปี เกิดก่อนการสร้างมหาพีระมิดแห่งกิซา แต่ตำแหน่งพิกัดจริงยังคงถูกปิดเป็นความลับเพื่อความปลอดภัย",
+      "video_id": "mM-u8caBg-w",
+      "seconds": 227,
+      "writer": "gemini",
+      "animated": 0,
+      "scenes": 6,
+      "backends": {},
+      "voice": "edge-tts",
+      "at": "2026-11-24T01:21:05+00:00"
+    },
     {
       "ok": true,
       "title": "ภูเขาโรไรมา ดินแดนยอดเขาแบนราบที่ถูกตัดขาดจากโลก",
@@ -370,12 +383,6 @@
       "backends": {},
       "voice": "edge-tts",
       "at": "2026-10-26T20:52:37+00:00"
-    },
-    {
-      "ok": false,
-      "error": "RuntimeError: เขียนบทไม่สำเร็จทุกตัว:\n  gemini: RuntimeError: ทุกรุ่นของ Gemini ใช้ไม่ได้: gemini-3.8-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. ( | gemini-3.6\n  pollinations: RuntimeError: ทุกโมเดลของ Pollinations ใช้ไม่ได้: GLM-4.6: HTTP 400: {\"success\":false,\"error\":{\"message\":\"Invalid model or alias: \\\"communi | Kimi-K2-Instruct-0905:",
-      "seconds": 531,
-      "at": "2026-10-26T19:21:09+00:00"
     }
   ]
 }
