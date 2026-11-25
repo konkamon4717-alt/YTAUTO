@@ -31,13 +31,13 @@
       "views": 392,
       "likes": 10,
       "comments": 0,
-      "views_per_day": 11.2,
+      "views_per_day": 11.1,
       "like_rate": 2.55,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 35.1
+      "days": 35.2
     },
     {
       "id": "suPbKtBVsyg",
@@ -47,13 +47,13 @@
       "views": 1304,
       "likes": 20,
       "comments": 0,
-      "views_per_day": 36.0,
+      "views_per_day": 35.9,
       "like_rate": 1.53,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 36.2
+      "days": 36.3
     },
     {
       "id": "TCf48wGdG2A",
@@ -79,7 +79,7 @@
       "views": 1113,
       "likes": 20,
       "comments": 0,
-      "views_per_day": 29.1,
+      "views_per_day": 29.0,
       "like_rate": 1.8,
       "traits": [
         "อารมณ์แรง"
@@ -100,7 +100,7 @@
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 39.4
+      "days": 39.5
     },
     {
       "id": "K7eDye3r_ys",
@@ -110,13 +110,13 @@
       "views": 1454,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 36.0,
+      "views_per_day": 35.9,
       "like_rate": 1.93,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 40.4
+      "days": 40.5
     },
     {
       "id": "Wm93n7mXdgA",
@@ -159,7 +159,7 @@
       "views_per_day": 25.1,
       "like_rate": 1.56,
       "traits": [],
-      "days": 43.4
+      "days": 43.5
     },
     {
       "id": "Lip4vEyuFa8",
@@ -190,7 +190,7 @@
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 46.4
+      "days": 46.5
     },
     {
       "id": "pZi7FJyHjEY",
@@ -206,7 +206,7 @@
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 47.4
+      "days": 47.5
     },
     {
       "id": "ZQpvIsa0c8A",
@@ -216,13 +216,13 @@
       "views": 1751,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 36.2,
+      "views_per_day": 36.1,
       "like_rate": 1.54,
       "traits": [
         "คำถาม",
         "ความถี่"
       ],
-      "days": 48.4
+      "days": 48.5
     },
     {
       "id": "hyfmbTfZqBg",
@@ -238,7 +238,7 @@
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 49.7
+      "days": 49.8
     },
     {
       "id": "8-Zy5rZlH00",
@@ -280,7 +280,7 @@
       "views": 1166,
       "likes": 30,
       "comments": 1,
-      "views_per_day": 17.0,
+      "views_per_day": 16.9,
       "like_rate": 2.57,
       "traits": [
         "ความถี่",
@@ -320,5 +320,5 @@
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-25T22:46:30+00:00"
+  "fetched_at": "2026-11-25T23:31:00+00:00"
 }
