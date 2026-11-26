@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-11-26T21:28:37+00:00",
+  "updated_at": "2026-11-26T22:42:15+00:00",
   "runs": [
+    {
+      "ok": false,
+      "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20shot%20of%20a%20cup%20of%20hot%20black%20coffee%20on%2\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20shot%20of%20a%20cup%20of%20hot%20black%20coffee\n  flux.1-schnell: 402 Client Error: Payment Required f",
+      "seconds": 689,
+      "at": "2026-11-26T22:42:15+00:00"
+    },
     {
       "ok": false,
       "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/A%20poor%20young%20boy%20holding%20small%20coins%20at%20an%20outdo\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/A%20poor%20young%20boy%20holding%20small%20coins%20at%20an%\n  flux.1-schnell: 402 Client Error: Payment Required f",
@@ -174,12 +180,6 @@
       "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20medium%20shot%20of%20a%2070-year-old%20Asian%20man%20w\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/Cinematic%20medium%20shot%20of%20a%2070-year-old%20Asian%20\n  flux.1-schnell: 402 Client Error: Payment Required f",
       "seconds": 249,
       "at": "2026-11-16T23:43:10+00:00"
-    },
-    {
-      "ok": false,
-      "error": "RuntimeError: สร้างภาพไม่สำเร็จทุกรุ่น:\n  flux: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/An%20elderly%20Asian%20grandfather%20standing%20beside%20a%20red%2\n  gpt-image-2: 402 Client Error: Payment Required for url: https://gen.pollinations.ai/image/An%20elderly%20Asian%20grandfather%20standing%20beside%20a%\n  flux.1-schnell: 402 Client Error: Payment Required f",
-      "seconds": 382,
-      "at": "2026-11-16T23:06:01+00:00"
     }
   ]
 }
