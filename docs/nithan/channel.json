@@ -15,7 +15,7 @@
       "views": 1175,
       "likes": 35,
       "comments": 1,
-      "views_per_day": 32.5,
+      "views_per_day": 32.4,
       "like_rate": 2.98,
       "traits": [
         "ความถี่",
@@ -31,13 +31,13 @@
       "views": 392,
       "likes": 10,
       "comments": 0,
-      "views_per_day": 10.6,
+      "views_per_day": 10.5,
       "like_rate": 2.55,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 37.1
+      "days": 37.2
     },
     {
       "id": "suPbKtBVsyg",
@@ -53,7 +53,7 @@
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 38.2
+      "days": 38.3
     },
     {
       "id": "TCf48wGdG2A",
@@ -63,13 +63,13 @@
       "views": 1118,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 28.6,
+      "views_per_day": 28.5,
       "like_rate": 1.52,
       "traits": [
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 39.1
+      "days": 39.2
     },
     {
       "id": "ADOIIE0Ug_4",
@@ -141,7 +141,7 @@
       "views": 1637,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 36.9,
+      "views_per_day": 36.8,
       "like_rate": 1.47,
       "traits": [
         "อารมณ์แรง"
@@ -185,12 +185,12 @@
       "views": 1358,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 28.1,
+      "views_per_day": 28.0,
       "like_rate": 1.77,
       "traits": [
         "อารมณ์แรง"
       ],
-      "days": 48.4
+      "days": 48.5
     },
     {
       "id": "pZi7FJyHjEY",
@@ -206,7 +206,7 @@
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 49.4
+      "days": 49.5
     },
     {
       "id": "ZQpvIsa0c8A",
@@ -238,7 +238,7 @@
         "ความถี่",
         "อารมณ์แรง"
       ],
-      "days": 51.7
+      "days": 51.8
     },
     {
       "id": "8-Zy5rZlH00",
@@ -270,7 +270,7 @@
         "ความขัดแย้ง",
         "อารมณ์แรง"
       ],
-      "days": 70.7
+      "days": 70.8
     },
     {
       "id": "uxeId4AUBLI",
@@ -287,7 +287,7 @@
         "ความลับ",
         "อารมณ์แรง"
       ],
-      "days": 70.7
+      "days": 70.8
     },
     {
       "id": "L52UHMV1E0g",
@@ -303,7 +303,7 @@
         "ความถี่",
         "ความลับ"
       ],
-      "days": 71.5
+      "days": 71.6
     },
     {
       "id": "Xrtc_T0Z4To",
@@ -316,9 +316,9 @@
       "views_per_day": 0.1,
       "like_rate": 0.0,
       "traits": [],
-      "days": 71.6
+      "days": 71.7
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-27T22:22:13+00:00"
+  "fetched_at": "2026-11-27T23:18:11+00:00"
 }
