@@ -3,19 +3,32 @@
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
     "subscribers": 153,
-    "views": 60597,
-    "videos": 47
+    "views": 60659,
+    "videos": 48
   },
   "videos": [
+    {
+      "id": "y8CNW_M0I2E",
+      "title": "สะพานรากไม้แห่งเมฆาลัย ยิ่งผ่านไปร้อยปี ยิ่งแข็งแรงขึ้นเรื่อยๆ",
+      "published": "2026-11-27T21:08:18Z",
+      "privacy": "public",
+      "views": 63,
+      "likes": 3,
+      "comments": 0,
+      "views_per_day": 252.0,
+      "like_rate": 4.76,
+      "traits": [],
+      "days": 0.2
+    },
     {
       "id": "6bR2DPCphM8",
       "title": "ฉลามเป็นสัตว์ที่เกิดบนโลกก่อนต้นไม้และวงแหวนดาวเสาร์",
       "published": "2026-11-26T21:42:39Z",
       "privacy": "public",
-      "views": 1153,
+      "views": 1151,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 1181.4,
+      "views_per_day": 1119.8,
       "like_rate": 2.52,
       "traits": [],
       "days": 1.0
@@ -25,11 +38,11 @@
       "title": "เกาะไดโอมีด ห่างกันแค่สี่กิโลเมตร แต่เวลาต่างกันยี่สิบเอ็ดชั่วโมง",
       "published": "2026-11-25T21:41:01Z",
       "privacy": "public",
-      "views": 1141,
+      "views": 1142,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 577.1,
-      "like_rate": 2.37,
+      "views_per_day": 562.8,
+      "like_rate": 2.36,
       "traits": [
         "ความขัดแย้ง"
       ],
@@ -43,12 +56,12 @@
       "views": 1005,
       "likes": 18,
       "comments": 0,
-      "views_per_day": 262.8,
+      "views_per_day": 259.3,
       "like_rate": 1.79,
       "traits": [
         "ความลับ"
       ],
-      "days": 3.8
+      "days": 3.9
     },
     {
       "id": "1lS7W6ec_LQ",
@@ -58,7 +71,7 @@
       "views": 17,
       "likes": 1,
       "comments": 0,
-      "views_per_day": 4.4,
+      "views_per_day": 4.3,
       "like_rate": 5.88,
       "traits": [],
       "days": 3.9
@@ -71,7 +84,7 @@
       "views": 1207,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 238.4,
+      "views_per_day": 236.0,
       "like_rate": 1.33,
       "traits": [],
       "days": 5.1
@@ -84,7 +97,7 @@
       "views": 1180,
       "likes": 24,
       "comments": 3,
-      "views_per_day": 194.2,
+      "views_per_day": 192.5,
       "like_rate": 2.03,
       "traits": [],
       "days": 6.1
@@ -97,10 +110,10 @@
       "views": 1289,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 183.1,
+      "views_per_day": 181.7,
       "like_rate": 1.71,
       "traits": [],
-      "days": 7.0
+      "days": 7.1
     },
     {
       "id": "1dD1Yk9aSQ8",
@@ -110,10 +123,10 @@
       "views": 1252,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 156.1,
+      "views_per_day": 155.1,
       "like_rate": 2.8,
       "traits": [],
-      "days": 8.0
+      "days": 8.1
     },
     {
       "id": "D9sSSWyd4lY",
@@ -123,10 +136,10 @@
       "views": 1510,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 167.4,
+      "views_per_day": 166.5,
       "like_rate": 1.85,
       "traits": [],
-      "days": 9.0
+      "days": 9.1
     },
     {
       "id": "UzNmZDluvYc",
@@ -136,10 +149,10 @@
       "views": 1402,
       "likes": 30,
       "comments": 0,
-      "views_per_day": 140.2,
+      "views_per_day": 139.5,
       "like_rate": 2.14,
       "traits": [],
-      "days": 10.0
+      "days": 10.1
     },
     {
       "id": "Df9-Za8p2B4",
@@ -149,7 +162,7 @@
       "views": 1223,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 111.6,
+      "views_per_day": 111.1,
       "like_rate": 2.21,
       "traits": [],
       "days": 11.0
@@ -162,7 +175,7 @@
       "views": 1330,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 110.0,
+      "views_per_day": 109.5,
       "like_rate": 1.95,
       "traits": [],
       "days": 12.1
@@ -175,10 +188,10 @@
       "views": 1543,
       "likes": 32,
       "comments": 0,
-      "views_per_day": 117.6,
+      "views_per_day": 117.1,
       "like_rate": 2.07,
       "traits": [],
-      "days": 13.1
+      "days": 13.2
     },
     {
       "id": "OFKHaOL-rAs",
@@ -188,7 +201,7 @@
       "views": 1322,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 94.0,
+      "views_per_day": 93.7,
       "like_rate": 1.97,
       "traits": [],
       "days": 14.1
@@ -201,10 +214,10 @@
       "views": 1141,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 75.8,
+      "views_per_day": 75.6,
       "like_rate": 2.37,
       "traits": [],
-      "days": 15.0
+      "days": 15.1
     },
     {
       "id": "DfsWBhOIrq0",
@@ -227,10 +240,10 @@
       "views": 1193,
       "likes": 26,
       "comments": 3,
-      "views_per_day": 70.0,
+      "views_per_day": 69.8,
       "like_rate": 2.18,
       "traits": [],
-      "days": 17.0
+      "days": 17.1
     },
     {
       "id": "ARCjYYRI9l4",
@@ -240,10 +253,10 @@
       "views": 1082,
       "likes": 30,
       "comments": 0,
-      "views_per_day": 60.3,
+      "views_per_day": 60.1,
       "like_rate": 2.77,
       "traits": [],
-      "days": 17.9
+      "days": 18.0
     },
     {
       "id": "FxlJ4wc8hBE",
@@ -253,10 +266,10 @@
       "views": 1162,
       "likes": 20,
       "comments": 0,
-      "views_per_day": 60.8,
+      "views_per_day": 60.6,
       "like_rate": 1.72,
       "traits": [],
-      "days": 19.1
+      "days": 19.2
     },
     {
       "id": "qP_lhWgu-iM",
@@ -266,10 +279,10 @@
       "views": 1277,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 63.4,
+      "views_per_day": 63.3,
       "like_rate": 1.49,
       "traits": [],
-      "days": 20.1
+      "days": 20.2
     },
     {
       "id": "zoHJDaCMYr8",
@@ -279,7 +292,7 @@
       "views": 1054,
       "likes": 11,
       "comments": 0,
-      "views_per_day": 50.0,
+      "views_per_day": 49.9,
       "like_rate": 1.04,
       "traits": [],
       "days": 21.1
@@ -292,12 +305,12 @@
       "views": 1097,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 49.8,
+      "views_per_day": 49.6,
       "like_rate": 2.19,
       "traits": [
         "คำถาม"
       ],
-      "days": 22.0
+      "days": 22.1
     },
     {
       "id": "tdAXpagG3jc",
@@ -307,7 +320,7 @@
       "views": 1642,
       "likes": 41,
       "comments": 0,
-      "views_per_day": 71.2,
+      "views_per_day": 71.1,
       "like_rate": 2.5,
       "traits": [],
       "days": 23.1
@@ -320,7 +333,7 @@
       "views": 1167,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 48.5,
+      "views_per_day": 48.4,
       "like_rate": 2.4,
       "traits": [],
       "days": 24.1
@@ -333,25 +346,12 @@
       "views": 1269,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 50.8,
+      "views_per_day": 50.7,
       "like_rate": 2.29,
       "traits": [
         "ความขัดแย้ง"
       ],
       "days": 25.0
-    },
-    {
-      "id": "y8CNW_M0I2E",
-      "title": "สะพานรากไม้แห่งเมฆาลัย ยิ่งผ่านไปร้อยปี ยิ่งแข็งแรงขึ้นเรื่อยๆ",
-      "published": "2026-11-27T21:07:56Z",
-      "privacy": "public",
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
-      "views_per_day": 0.0,
-      "like_rate": 0.0,
-      "traits": [],
-      "days": 0.2
     },
     {
       "id": "q9E6dpSEcWc",
@@ -361,12 +361,12 @@
       "views": 1110,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 42.5,
+      "views_per_day": 42.4,
       "like_rate": 1.89,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 26.1
+      "days": 26.2
     },
     {
       "id": "IQNCAD5xqu0",
@@ -376,10 +376,10 @@
       "views": 1130,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 41.6,
+      "views_per_day": 41.5,
       "like_rate": 1.42,
       "traits": [],
-      "days": 27.1
+      "days": 27.2
     },
     {
       "id": "H7W11F5c-vY",
@@ -389,10 +389,10 @@
       "views": 1221,
       "likes": 42,
       "comments": 0,
-      "views_per_day": 43.4,
+      "views_per_day": 43.3,
       "like_rate": 3.44,
       "traits": [],
-      "days": 28.1
+      "days": 28.2
     },
     {
       "id": "AufCUCYbKPQ",
@@ -405,7 +405,7 @@
       "views_per_day": 42.7,
       "like_rate": 3.22,
       "traits": [],
-      "days": 29.1
+      "days": 29.2
     },
     {
       "id": "A_C3WLlxQxU",
@@ -415,7 +415,7 @@
       "views": 1128,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 37.5,
+      "views_per_day": 37.4,
       "like_rate": 1.68,
       "traits": [],
       "days": 30.1
@@ -431,7 +431,7 @@
       "views_per_day": 40.8,
       "like_rate": 2.12,
       "traits": [],
-      "days": 31.1
+      "days": 31.2
     },
     {
       "id": "HzeCFWNvL5M",
@@ -441,10 +441,10 @@
       "views": 1114,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 34.8,
+      "views_per_day": 34.7,
       "like_rate": 1.53,
       "traits": [],
-      "days": 32.0
+      "days": 32.1
     },
     {
       "id": "zBQJAl2kuQ4",
@@ -454,10 +454,10 @@
       "views": 1165,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 35.1,
+      "views_per_day": 35.0,
       "like_rate": 1.46,
       "traits": [],
-      "days": 33.2
+      "days": 33.3
     },
     {
       "id": "BN5JwqqJ1Pw",
@@ -467,7 +467,7 @@
       "views": 1385,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 40.5,
+      "views_per_day": 40.4,
       "like_rate": 2.02,
       "traits": [],
       "days": 34.2
@@ -480,10 +480,10 @@
       "views": 1222,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 34.8,
+      "views_per_day": 34.7,
       "like_rate": 2.29,
       "traits": [],
-      "days": 35.1
+      "days": 35.2
     },
     {
       "id": "v89g4zmYRjU",
@@ -493,10 +493,10 @@
       "views": 1415,
       "likes": 31,
       "comments": 0,
-      "views_per_day": 39.2,
+      "views_per_day": 39.1,
       "like_rate": 2.19,
       "traits": [],
-      "days": 36.1
+      "days": 36.2
     },
     {
       "id": "Evxe1dSEIpA",
@@ -532,7 +532,7 @@
       "views": 1468,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 37.6,
+      "views_per_day": 37.5,
       "like_rate": 1.84,
       "traits": [],
       "days": 39.1
@@ -550,7 +550,7 @@
       "traits": [
         "ความลับ"
       ],
-      "days": 40.2
+      "days": 40.3
     },
     {
       "id": "8IXB5qL8GzE",
@@ -580,7 +580,7 @@
       "traits": [
         "ความลับ"
       ],
-      "days": 42.3
+      "days": 42.4
     },
     {
       "id": "6GYs0eHvlAM",
@@ -593,7 +593,7 @@
       "views_per_day": 37.0,
       "like_rate": 1.81,
       "traits": [],
-      "days": 43.3
+      "days": 43.4
     },
     {
       "id": "5yltO_ljXfQ",
@@ -606,7 +606,7 @@
       "views_per_day": 30.2,
       "like_rate": 1.64,
       "traits": [],
-      "days": 44.3
+      "days": 44.4
     },
     {
       "id": "qCzjRnxtojM",
@@ -634,7 +634,7 @@
       "traits": [
         "ความถี่"
       ],
-      "days": 46.5
+      "days": 46.6
     },
     {
       "id": "plEJBPKtWvs",
@@ -647,7 +647,7 @@
       "views_per_day": 27.0,
       "like_rate": 2.66,
       "traits": [],
-      "days": 47.2
+      "days": 47.3
     },
     {
       "id": "cSsiwc7jZo0",
@@ -660,7 +660,7 @@
       "views_per_day": 18.5,
       "like_rate": 2.51,
       "traits": [],
-      "days": 47.3
+      "days": 47.4
     },
     {
       "id": "964pejBlN0E",
@@ -670,12 +670,12 @@
       "views": 1362,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 28.8,
+      "views_per_day": 28.7,
       "like_rate": 2.5,
       "traits": [],
       "days": 47.4
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-27T21:08:02+00:00"
+  "fetched_at": "2026-11-27T22:22:49+00:00"
 }
