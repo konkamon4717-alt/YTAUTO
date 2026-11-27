@@ -2,8 +2,8 @@
   "channel": {
     "title": "รอบรู้ 1นาที",
     "id": "UCOrCC0r3v5cTYmUmxO6JdXA",
-    "subscribers": 152,
-    "views": 62607,
+    "subscribers": 153,
+    "views": 60597,
     "videos": 47
   },
   "videos": [
@@ -12,28 +12,28 @@
       "title": "ฉลามเป็นสัตว์ที่เกิดบนโลกก่อนต้นไม้และวงแหวนดาวเสาร์",
       "published": "2026-11-26T21:42:39Z",
       "privacy": "public",
-      "views": 1122,
-      "likes": 27,
+      "views": 1153,
+      "likes": 29,
       "comments": 0,
-      "views_per_day": 3593.4,
-      "like_rate": 2.41,
+      "views_per_day": 1181.4,
+      "like_rate": 2.52,
       "traits": [],
-      "days": 0.3
+      "days": 1.0
     },
     {
       "id": "I0a_8HYmrmU",
       "title": "เกาะไดโอมีด ห่างกันแค่สี่กิโลเมตร แต่เวลาต่างกันยี่สิบเอ็ดชั่วโมง",
       "published": "2026-11-25T21:41:01Z",
       "privacy": "public",
-      "views": 1137,
+      "views": 1141,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 865.7,
+      "views_per_day": 577.1,
       "like_rate": 2.37,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 1.3
+      "days": 2.0
     },
     {
       "id": "mM-u8caBg-w",
@@ -43,38 +43,38 @@
       "views": 1005,
       "likes": 18,
       "comments": 0,
-      "views_per_day": 318.0,
+      "views_per_day": 262.8,
       "like_rate": 1.79,
       "traits": [
         "ความลับ"
       ],
-      "days": 3.2
+      "days": 3.8
     },
     {
       "id": "1lS7W6ec_LQ",
       "title": "ภูเขาโรไรมา ดินแดนยอดเขาแบนราบที่ถูกตัดขาดจากโลก",
       "published": "2026-11-23T23:56:56Z",
       "privacy": "public",
-      "views": 16,
+      "views": 17,
       "likes": 1,
       "comments": 0,
-      "views_per_day": 5.0,
-      "like_rate": 6.25,
+      "views_per_day": 4.4,
+      "like_rate": 5.88,
       "traits": [],
-      "days": 3.2
+      "days": 3.9
     },
     {
       "id": "-G2EPNav7uE",
       "title": "เกาะซูร์ตเซย์ แผ่นดินกำเนิดใหม่ที่ห้ามมนุษย์ย่างก้าว",
       "published": "2026-11-22T19:37:21Z",
       "privacy": "public",
-      "views": 1205,
+      "views": 1207,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 273.9,
+      "views_per_day": 238.4,
       "like_rate": 1.33,
       "traits": [],
-      "days": 4.4
+      "days": 5.1
     },
     {
       "id": "qiewdCW-igI",
@@ -84,10 +84,10 @@
       "views": 1180,
       "likes": 24,
       "comments": 3,
-      "views_per_day": 218.0,
+      "views_per_day": 194.2,
       "like_rate": 2.03,
       "traits": [],
-      "days": 5.4
+      "days": 6.1
     },
     {
       "id": "eFmog7Vu0eQ",
@@ -97,23 +97,23 @@
       "views": 1289,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 202.1,
+      "views_per_day": 183.1,
       "like_rate": 1.71,
       "traits": [],
-      "days": 6.4
+      "days": 7.0
     },
     {
       "id": "1dD1Yk9aSQ8",
       "title": "เมานาเคอา ภูเขาที่วัดจากฐานแล้วสูงกว่าเอเวอเรสต์",
       "published": "2026-11-19T20:37:03Z",
       "privacy": "public",
-      "views": 1249,
+      "views": 1252,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 169.8,
+      "views_per_day": 156.1,
       "like_rate": 2.8,
       "traits": [],
-      "days": 7.4
+      "days": 8.0
     },
     {
       "id": "D9sSSWyd4lY",
@@ -123,10 +123,10 @@
       "views": 1510,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 180.7,
+      "views_per_day": 167.4,
       "like_rate": 1.85,
       "traits": [],
-      "days": 8.4
+      "days": 9.0
     },
     {
       "id": "UzNmZDluvYc",
@@ -136,10 +136,10 @@
       "views": 1402,
       "likes": 30,
       "comments": 0,
-      "views_per_day": 150.2,
+      "views_per_day": 140.2,
       "like_rate": 2.14,
       "traits": [],
-      "days": 9.3
+      "days": 10.0
     },
     {
       "id": "Df9-Za8p2B4",
@@ -149,36 +149,36 @@
       "views": 1223,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 118.8,
+      "views_per_day": 111.6,
       "like_rate": 2.21,
       "traits": [],
-      "days": 10.3
+      "days": 11.0
     },
     {
       "id": "F9ESJd9cHdI",
       "title": "เทือกเขาในอเมริกาและสกอตแลนด์ แท้จริงคือเทือกเขาเดียวกัน",
       "published": "2026-11-15T18:56:58Z",
       "privacy": "public",
-      "views": 1329,
+      "views": 1330,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 116.3,
-      "like_rate": 1.96,
+      "views_per_day": 110.0,
+      "like_rate": 1.95,
       "traits": [],
-      "days": 11.4
+      "days": 12.1
     },
     {
       "id": "iQhPpY7czOE",
       "title": "ยอดเขาเอเวอเรสต์ จุดที่สูงที่สุดในโลก เคยอยู่ใต้มหาสมุทร",
       "published": "2026-11-14T18:12:33Z",
       "privacy": "public",
-      "views": 1540,
+      "views": 1543,
       "likes": 32,
       "comments": 0,
-      "views_per_day": 123.6,
-      "like_rate": 2.08,
+      "views_per_day": 117.6,
+      "like_rate": 2.07,
       "traits": [],
-      "days": 12.5
+      "days": 13.1
     },
     {
       "id": "OFKHaOL-rAs",
@@ -188,10 +188,10 @@
       "views": 1322,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 98.7,
+      "views_per_day": 94.0,
       "like_rate": 1.97,
       "traits": [],
-      "days": 13.4
+      "days": 14.1
     },
     {
       "id": "0HXAAEmnefU",
@@ -201,10 +201,10 @@
       "views": 1141,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 79.3,
+      "views_per_day": 75.8,
       "like_rate": 2.37,
       "traits": [],
-      "days": 14.4
+      "days": 15.0
     },
     {
       "id": "DfsWBhOIrq0",
@@ -217,7 +217,7 @@
       "views_per_day": 0.0,
       "like_rate": 0.0,
       "traits": [],
-      "days": 15.4
+      "days": 16.1
     },
     {
       "id": "QkVviqrS7iQ",
@@ -227,10 +227,10 @@
       "views": 1193,
       "likes": 26,
       "comments": 3,
-      "views_per_day": 72.8,
+      "views_per_day": 70.0,
       "like_rate": 2.18,
       "traits": [],
-      "days": 16.4
+      "days": 17.0
     },
     {
       "id": "ARCjYYRI9l4",
@@ -240,10 +240,10 @@
       "views": 1082,
       "likes": 30,
       "comments": 0,
-      "views_per_day": 62.6,
+      "views_per_day": 60.3,
       "like_rate": 2.77,
       "traits": [],
-      "days": 17.3
+      "days": 17.9
     },
     {
       "id": "FxlJ4wc8hBE",
@@ -253,10 +253,10 @@
       "views": 1162,
       "likes": 20,
       "comments": 0,
-      "views_per_day": 62.9,
+      "views_per_day": 60.8,
       "like_rate": 1.72,
       "traits": [],
-      "days": 18.5
+      "days": 19.1
     },
     {
       "id": "qP_lhWgu-iM",
@@ -266,23 +266,23 @@
       "views": 1277,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 65.6,
+      "views_per_day": 63.4,
       "like_rate": 1.49,
       "traits": [],
-      "days": 19.5
+      "days": 20.1
     },
     {
       "id": "zoHJDaCMYr8",
       "title": "อาโองาชิมะ หมู่บ้านญี่ปุ่นที่ตั้งอยู่กลางปล่องภูเขาไฟมีชีวิต",
       "published": "2026-11-06T19:26:30Z",
       "privacy": "public",
-      "views": 1053,
+      "views": 1054,
       "likes": 11,
       "comments": 0,
-      "views_per_day": 51.6,
+      "views_per_day": 50.0,
       "like_rate": 1.04,
       "traits": [],
-      "days": 20.4
+      "days": 21.1
     },
     {
       "id": "85KzECw7x-Q",
@@ -292,25 +292,25 @@
       "views": 1097,
       "likes": 24,
       "comments": 0,
-      "views_per_day": 51.3,
+      "views_per_day": 49.8,
       "like_rate": 2.19,
       "traits": [
         "คำถาม"
       ],
-      "days": 21.4
+      "days": 22.0
     },
     {
       "id": "tdAXpagG3jc",
       "title": "วิทเทียร์ เมืองในอะแลสกาที่ประชากรเกือบทั้งหมดอาศัยในตึกเดียว",
       "published": "2026-11-04T19:55:02Z",
       "privacy": "public",
-      "views": 1639,
+      "views": 1642,
       "likes": 41,
       "comments": 0,
-      "views_per_day": 73.2,
+      "views_per_day": 71.2,
       "like_rate": 2.5,
       "traits": [],
-      "days": 22.4
+      "days": 23.1
     },
     {
       "id": "GFz7GZTNUOQ",
@@ -320,10 +320,10 @@
       "views": 1167,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 49.9,
+      "views_per_day": 48.5,
       "like_rate": 2.4,
       "traits": [],
-      "days": 23.4
+      "days": 24.1
     },
     {
       "id": "irr-Taje5Tc",
@@ -333,12 +333,25 @@
       "views": 1269,
       "likes": 29,
       "comments": 0,
-      "views_per_day": 52.2,
+      "views_per_day": 50.8,
       "like_rate": 2.29,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 24.3
+      "days": 25.0
+    },
+    {
+      "id": "y8CNW_M0I2E",
+      "title": "สะพานรากไม้แห่งเมฆาลัย ยิ่งผ่านไปร้อยปี ยิ่งแข็งแรงขึ้นเรื่อยๆ",
+      "published": "2026-11-27T21:07:56Z",
+      "privacy": "public",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "views_per_day": 0.0,
+      "like_rate": 0.0,
+      "traits": [],
+      "days": 0.2
     },
     {
       "id": "q9E6dpSEcWc",
@@ -348,25 +361,25 @@
       "views": 1110,
       "likes": 21,
       "comments": 0,
-      "views_per_day": 43.6,
+      "views_per_day": 42.5,
       "like_rate": 1.89,
       "traits": [
         "ความขัดแย้ง"
       ],
-      "days": 25.5
+      "days": 26.1
     },
     {
       "id": "IQNCAD5xqu0",
       "title": "ถ้ำไนกา แดนคริสตัลยักษ์ใต้ดินที่มนุษย์อยู่ได้ไม่เกินสิบนาที",
       "published": "2026-10-31T17:38:44Z",
       "privacy": "public",
-      "views": 1128,
+      "views": 1130,
       "likes": 16,
       "comments": 0,
-      "views_per_day": 42.6,
+      "views_per_day": 41.6,
       "like_rate": 1.42,
       "traits": [],
-      "days": 26.5
+      "days": 27.1
     },
     {
       "id": "H7W11F5c-vY",
@@ -376,10 +389,10 @@
       "views": 1221,
       "likes": 42,
       "comments": 0,
-      "views_per_day": 44.5,
+      "views_per_day": 43.4,
       "like_rate": 3.44,
       "traits": [],
-      "days": 27.5
+      "days": 28.1
     },
     {
       "id": "AufCUCYbKPQ",
@@ -389,10 +402,10 @@
       "views": 1244,
       "likes": 40,
       "comments": 0,
-      "views_per_day": 43.7,
+      "views_per_day": 42.7,
       "like_rate": 3.22,
       "traits": [],
-      "days": 28.4
+      "days": 29.1
     },
     {
       "id": "A_C3WLlxQxU",
@@ -402,10 +415,10 @@
       "views": 1128,
       "likes": 19,
       "comments": 0,
-      "views_per_day": 38.3,
+      "views_per_day": 37.5,
       "like_rate": 1.68,
       "traits": [],
-      "days": 29.4
+      "days": 30.1
     },
     {
       "id": "EvUykg8ag0s",
@@ -415,10 +428,10 @@
       "views": 1271,
       "likes": 27,
       "comments": 2,
-      "views_per_day": 41.7,
+      "views_per_day": 40.8,
       "like_rate": 2.12,
       "traits": [],
-      "days": 30.5
+      "days": 31.1
     },
     {
       "id": "HzeCFWNvL5M",
@@ -428,10 +441,10 @@
       "views": 1114,
       "likes": 17,
       "comments": 1,
-      "views_per_day": 35.5,
+      "views_per_day": 34.8,
       "like_rate": 1.53,
       "traits": [],
-      "days": 31.3
+      "days": 32.0
     },
     {
       "id": "zBQJAl2kuQ4",
@@ -441,10 +454,10 @@
       "views": 1165,
       "likes": 17,
       "comments": 0,
-      "views_per_day": 35.8,
+      "views_per_day": 35.1,
       "like_rate": 1.46,
       "traits": [],
-      "days": 32.5
+      "days": 33.2
     },
     {
       "id": "BN5JwqqJ1Pw",
@@ -454,10 +467,10 @@
       "views": 1385,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 41.3,
+      "views_per_day": 40.5,
       "like_rate": 2.02,
       "traits": [],
-      "days": 33.5
+      "days": 34.2
     },
     {
       "id": "fpSQ-Reg9BM",
@@ -467,10 +480,10 @@
       "views": 1222,
       "likes": 28,
       "comments": 0,
-      "views_per_day": 35.5,
+      "views_per_day": 34.8,
       "like_rate": 2.29,
       "traits": [],
-      "days": 34.5
+      "days": 35.1
     },
     {
       "id": "v89g4zmYRjU",
@@ -480,23 +493,23 @@
       "views": 1415,
       "likes": 31,
       "comments": 0,
-      "views_per_day": 39.9,
+      "views_per_day": 39.2,
       "like_rate": 2.19,
       "traits": [],
-      "days": 35.5
+      "days": 36.1
     },
     {
       "id": "Evxe1dSEIpA",
       "title": "แม่น้ำอเมซอน สายน้ำที่ไม่มีสะพานข้ามเลยสักแห่งเดียว",
       "published": "2026-10-21T17:19:07Z",
       "privacy": "public",
-      "views": 2029,
+      "views": 2030,
       "likes": 38,
       "comments": 2,
-      "views_per_day": 55.6,
+      "views_per_day": 54.6,
       "like_rate": 1.87,
       "traits": [],
-      "days": 36.5
+      "days": 37.2
     },
     {
       "id": "YiNKS-SokOQ",
@@ -506,10 +519,10 @@
       "views": 1321,
       "likes": 35,
       "comments": 0,
-      "views_per_day": 35.2,
+      "views_per_day": 34.6,
       "like_rate": 2.65,
       "traits": [],
-      "days": 37.5
+      "days": 38.2
     },
     {
       "id": "UbKKSxk3AXo",
@@ -519,10 +532,10 @@
       "views": 1468,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 38.2,
+      "views_per_day": 37.6,
       "like_rate": 1.84,
       "traits": [],
-      "days": 38.4
+      "days": 39.1
     },
     {
       "id": "Wf6aOOah7rU",
@@ -532,12 +545,12 @@
       "views": 1561,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 39.5,
+      "views_per_day": 38.8,
       "like_rate": 2.18,
       "traits": [
         "ความลับ"
       ],
-      "days": 39.6
+      "days": 40.2
     },
     {
       "id": "8IXB5qL8GzE",
@@ -547,12 +560,12 @@
       "views": 1713,
       "likes": 27,
       "comments": 0,
-      "views_per_day": 42.1,
+      "views_per_day": 41.4,
       "like_rate": 1.58,
       "traits": [
         "คำถาม"
       ],
-      "days": 40.7
+      "days": 41.4
     },
     {
       "id": "jMz_OLrFsWg",
@@ -562,12 +575,12 @@
       "views": 1310,
       "likes": 26,
       "comments": 0,
-      "views_per_day": 31.4,
+      "views_per_day": 30.9,
       "like_rate": 1.98,
       "traits": [
         "ความลับ"
       ],
-      "days": 41.7
+      "days": 42.3
     },
     {
       "id": "6GYs0eHvlAM",
@@ -577,10 +590,10 @@
       "views": 1605,
       "likes": 29,
       "comments": 2,
-      "views_per_day": 37.6,
+      "views_per_day": 37.0,
       "like_rate": 1.81,
       "traits": [],
-      "days": 42.7
+      "days": 43.3
     },
     {
       "id": "5yltO_ljXfQ",
@@ -590,10 +603,10 @@
       "views": 1340,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 30.7,
+      "views_per_day": 30.2,
       "like_rate": 1.64,
       "traits": [],
-      "days": 43.7
+      "days": 44.3
     },
     {
       "id": "qCzjRnxtojM",
@@ -603,10 +616,10 @@
       "views": 1376,
       "likes": 43,
       "comments": 0,
-      "views_per_day": 30.8,
+      "views_per_day": 30.3,
       "like_rate": 3.12,
       "traits": [],
-      "days": 44.7
+      "days": 45.4
     },
     {
       "id": "GFIe9yZhPYg",
@@ -616,12 +629,12 @@
       "views": 1297,
       "likes": 36,
       "comments": 0,
-      "views_per_day": 28.3,
+      "views_per_day": 27.9,
       "like_rate": 2.78,
       "traits": [
         "ความถี่"
       ],
-      "days": 45.8
+      "days": 46.5
     },
     {
       "id": "plEJBPKtWvs",
@@ -631,10 +644,10 @@
       "views": 1276,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 27.4,
+      "views_per_day": 27.0,
       "like_rate": 2.66,
       "traits": [],
-      "days": 46.6
+      "days": 47.2
     },
     {
       "id": "cSsiwc7jZo0",
@@ -644,10 +657,10 @@
       "views": 875,
       "likes": 22,
       "comments": 0,
-      "views_per_day": 18.8,
+      "views_per_day": 18.5,
       "like_rate": 2.51,
       "traits": [],
-      "days": 46.6
+      "days": 47.3
     },
     {
       "id": "964pejBlN0E",
@@ -657,25 +670,12 @@
       "views": 1362,
       "likes": 34,
       "comments": 0,
-      "views_per_day": 29.2,
+      "views_per_day": 28.8,
       "like_rate": 2.5,
       "traits": [],
-      "days": 46.7
-    },
-    {
-      "id": "0iK9FQvX5Qg",
-      "title": "พอยต์นีโม จุดบนโลกที่มนุษย์ที่ใกล้ที่สุดคือนักบินอวกาศ",
-      "published": "2026-10-10T15:12:30Z",
-      "privacy": "public",
-      "views": 2062,
-      "likes": 55,
-      "comments": 0,
-      "views_per_day": 43.3,
-      "like_rate": 2.67,
-      "traits": [],
-      "days": 47.6
+      "days": 47.4
     }
   ],
   "analytics": null,
-  "fetched_at": "2026-11-27T05:12:16+00:00"
+  "fetched_at": "2026-11-27T21:08:02+00:00"
 }
